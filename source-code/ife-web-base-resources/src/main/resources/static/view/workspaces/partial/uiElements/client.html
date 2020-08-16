@@ -1,0 +1,208 @@
+
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+ <div fieldId="client:PersonalDetail" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+ 	<div class="item-header" ng-if="clientType() == 'PERSONAL'">
+ 		{{ item.clientSurname }} {{ item.clientGivenName }}
+ 		<div class="icon_custom">
+	 		<i class="fa fa-envelope-o"></i>
+	 		<i class="fa fa-volume-control-phone"></i>
+	 		<i class="fa fa-print"></i>
+	 	</div>
+ 	</div>
+ 	<div class="item-header" ng-if="clientType() == 'CORPORATE'">
+ 		{{ item.clientCorpName }}
+ 		<div class="icon_custom">
+	 		<i class="fa fa-envelope-o"></i>
+	 		<i class="fa fa-volume-control-phone"></i>
+	 		<i class="fa fa-print"></i>
+	 	</div>
+ 	</div>
+	<div class="row">
+		<hr>
+	</div>
+	<div class="row-group-detail">
+		<div class="item-detail">{{'v4.page.client.section.detail.' +
+			clientType() | translate}}
+		</div>
+		<div ng-if="clientType() == 'PERSONAL'" style="padding-bottom:0;">
+			<div class="row" style="padding:0;">
+				<div class="row-group-detail">
+					<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+						<label class="label-field boldImp boldImp"> {{'v4.page.client.label.title'
+							| translate}}</label> <br> 
+						<label class="value-field v3-normal-font-weight v3-normal-font-weight">
+							{{item.clientSalutationDesc}}</label>
+					</div>
+					<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+						<label class="label-field boldImp">
+							{{'v4.page.client.label.firstNm' | translate}}</label> <br> 
+						<label
+							class="value-field v3-normal-font-weight v3-normal-font-weight">
+							{{item.clientSurname}}</label>
+					</div>
+					<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+						<label class="label-field boldImp"> {{'v4.page.client.label.lastNm'
+							| translate}}</label> <br> 
+						<label class="value-field v3-normal-font-weight v3-normal-font-weight">
+							{{item.clientGivenName}}</label>
+					</div>
+					<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+						<label class="label-field boldImp"> {{'v4.page.client.label.dob' |
+							translate}}</label> <br> 
+						<label class="value-field v3-normal-font-weight v3-normal-font-weight">
+							{{item.clientDob| datetimeFilter : "DD MMM YYYY"}}</label>
+					</div>
+				</div>
+			</div>
+		<div class="row" style="padding:0;">
+			<div class="row-group-detail">
+				<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+					<label class="label-field boldImp"> {{'v4.page.client.label.gender'
+						| translate}}</label> <br> 
+					<label class="value-field v3-normal-font-weight">
+						{{item.clientGenderDesc}}</label>
+				</div>
+				<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+					<label class="label-field boldImp">
+						{{'v4.page.client.label.martialStatus' | translate}}</label> <br> 
+					<label
+						class="value-field v3-normal-font-weight">
+						{{item.clientMaritalStatusDesc}}</label>
+				</div>
+				<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+					<label class="label-field boldImp">
+						{{'v4.page.client.label.nationality' | translate}}</label> <br> 
+					<label
+						class="value-field v3-normal-font-weight"> {{item.clientNationalityDesc}}</label>
+				</div>
+				<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+					<label class="label-field boldImp"> {{'v4.page.client.label.id' |
+						translate}}</label> <br> 
+					<label class="value-field v3-normal-font-weight">
+						{{item.clientSecurityNo}}</label>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div ng-if="clientType() == 'CORPORATE'" style="padding-bottom:0;">
+			<div class="row" style="padding:0;">
+				<div class="row-group-detail">
+					<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+						<label class="label-field boldImp"> {{'v4.page.client.label.corporateName' |
+							translate}}</label> <br> 
+						<label class="value-field v3-normal-font-weight">
+							{{ item.clientCorpName }}</label>
+					</div>
+					<div class="section-body-row col-sm-6 col-md-3 col-lg-3">
+						<label class="label-field boldImp">
+							{{'v4.page.client.label.companyRegNo' | translate}}</label> <br> 
+						<label
+							class="value-field v3-normal-font-weight">
+							{{item.clientLicense}}</label>
+					</div>	
+					<div class="section-body-row col-sm-6 col-md-3 col-lg-3">
+						<label class="label-field boldImp">
+							{{'v4.page.client.label.country' | translate}}</label> <br>
+						<label class="value-field v3-normal-font-weight">
+							{{item.clientCtryOriginDesc}}</label>
+					</div>							
+					<div class="section-body-row col-sm-6 col-md-3 col-lg-3">
+						<label class="label-field boldImp">
+							{{'v4.page.client.label.incorporationDate' | translate}}</label> <br>
+						<label class="value-field v3-normal-font-weight">
+							{{item.clientDateOfIncorp | datetimeFilter : "DD MMM YYYY"}}</label>
+					</div>
+	
+				</div>
+			</div>
+			<div class="row" style="padding:0;">
+				<div class="row-group-detail">
+					<div class="section-body-row col-sm-6 col-md-4 col-lg-4">
+						<label class="label-field boldImp">
+							{{'v4.page.client.label.businessType' | translate}}</label> <br> 
+						<label
+							class="value-field v3-normal-font-weight"> {{item.clientBizTypeDesc}}</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<hr>
+	</div>
+</div>
+<div fieldId="client:Contact" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="item-detail row-group-detail">		
+		 {{'v4.page.client.section.contact' | translate}}
+	</div>
+	<div ng-if="clientType() != ''" class="row-group-detail">		
+		<div class="row" style="padding:0;">
+			<div class="row-group-detail" ng-if="clientType() == 'PERSONAL'">
+				<div class="section-body-row col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<label class="label-field boldImp"> {{'v4.page.client.label.email' | translate}}</label> <br>
+					<label class="value-field v3-normal-font-weight"> {{item.clientEmail}}</label> 
+				</div>
+				<div class="section-body-row col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<label class="label-field boldImp"> {{'v4.page.client.label.mobileNumber' | translate}}</label> <br>
+					<label class="value-field v3-normal-font-weight"> {{item.clientPhoneNum[0]}}</label> 
+				</div>
+				<div class="section-body-row col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<label class="label-field boldImp"> {{'v4.page.client.label.homeNumber' | translate}}</label> <br>
+					<label class="value-field v3-normal-font-weight"> {{item.clientPhoneNum[1]}}</label> 
+				</div>
+			</div>
+			<div class="row-detail" ng-if="clientType() == 'CORPORATE'">
+				<div class="section-body-row col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<label class="label-field boldImp"> {{'new.v4.mynewworkspace.corporate.label.TelephoneNo' | translate}}</label> <br>
+					<label class="value-field v3-normal-font-weight"> {{item.clientPhoneNo[0]}}</label> <br/>
+					<label class="value-field v3-normal-font-weight"> {{item.clientPhoneNo[1]}}</label> 
+				</div>
+				<div class="section-body-row col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<label class="label-field boldImp"> {{'new.v4.mynewworkspace.corporate.label.FasimileNo' | translate}}</label> <br>
+					<label class="value-field v3-normal-font-weight">{{item.clientFaxNo}}</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<hr>
+	</div>
+</div>
+<div fieldId="client:Address" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="item-detail row-group-detail">		
+		 {{'v4.page.client.section.address.' + clientType() | translate}}
+	</div>
+	<div ng-if="clientType() != ''" class="row-group-detail">		
+		<div class="row-group-detail row-group">
+			<div class="section-body-row col-md-4 col-lg-4">
+				<label class="value-field v3-normal-font-weight">{{item.clientBizAddr}}</label> <br>
+				<label class="value-field v3-normal-font-weight">{{item.clientAddress}}</label> <br>
+				<label class="value-field v3-normal-font-weight"></label> <br>
+				<label class="value-field v3-normal-font-weight">{{uiElement.refDetail[0].cltaddr04}}</label> <br>
+				<label class="value-field v3-normal-font-weight">{{uiElement.refDetail[0].cltaddr05}}</label> <br>
+				<label class="value-field v3-normal-font-weight">{{uiElement.refDetail[0].ctrycode}}</label> <br>
+			</div>	
+		</div>
+		<div class="row">
+			<hr>
+		</div>
+	</div>
+</div>
+

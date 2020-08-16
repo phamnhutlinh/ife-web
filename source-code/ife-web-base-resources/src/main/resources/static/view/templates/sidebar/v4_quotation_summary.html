@@ -1,0 +1,77 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+<!-- Summary Business case -->
+<ul style="width:100%">
+    <li class="v4-prototype-summaryBar-title">Summary Information</li>
+
+    <li style="margin: 10px;">
+        <div class="v4-prototype-dashboardItem-value" >
+            {{salecaseCoreService.detail.metaData.docName.value }}</div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.BusinessNumber'  | translate}}</div>
+    </li>
+    <li style="margin: 10px;" >
+        <div class="v4-prototype-dashboardItem-value">
+            {{'v4.sidebar.title.status.' + salecaseCoreService.detail.metaData.businessStatus.value | translate}}</div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.Status'  | translate}}</div>
+    </li>
+    <li style="margin: 10px;" >
+        <div class="v4-prototype-dashboardItem-value">
+            {{'v4.sidebar.title.' + salecaseCoreService.detail.metaData.productName.value | translate}}</div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.ProductName'  | translate}}</div>
+    </li>
+
+    <li style="margin: 10px;">
+
+        <div class="v4-prototype-dashboardItem-value v3-auto-text-ellipsis" >
+            {{salecaseCoreService.detail.quotations.value[0].summary.policyHolderName}}
+        </div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.PolicyHolder'  | translate}}</div>
+    </li>
+    <li style="margin: 10px;">
+
+        <div class="v4-prototype-dashboardItem-value v3-auto-text-ellipsis" >
+            {{salecaseCoreService.detail.packageFeedback.policyNumber.value}}
+        </div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.policyNumber'  | translate}}</div>
+    </li>
+    
+    <li style="margin: 10px;">
+        <div class="v4-prototype-dashboardItem-value v3-auto-text-ellipsis" ng-if="salecaseCoreService.detail.quotations.value[0].summary.insuredPremium>0">
+            {{salecaseCoreService.detail.quotations.value[0].summary.canPremiumCurrency}}&nbsp;<span  pos-autonumeric  max="999999999999999" ng-model="moduleService.detail.quotations.value[0].summary.insuredPremium"><span></div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.InsuredPremium'  | translate}}</div>
+    </li>
+    <li style="margin: 10px;">
+        <div class="v4-prototype-dashboardItem-value v3-auto-text-ellipsis" ng-if="salecaseCoreService.detail.quotations.value[0].summary.canTotalPayable>0" >
+            {{salecaseCoreService.detail.quotations.value[0].summary.canPremiumCurrency}}&nbsp;<span ng-model="salecaseCoreService.detail.quotations.value[0].summary.canTotalPayable"  pos-autonumeric  max="999999999999999"></span>
+        </div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.TotalPayable'  | translate}}</div>
+    </li>
+    <li style="margin: 10px;" >
+        <div class="v4-prototype-dashboardItem-value" ng-show="salecaseCoreService.detail.metaData.createDate.value !== null">
+            {{salecaseCoreService.detail.metaData.createDate.value | datetimeFilter:"DD/MM/YYYY" }}</div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.CreatedDate'  | translate}}</div>
+    </li>
+    <li style="margin: 10px;" >
+        <div class="v4-prototype-dashboardItem-value" ng-show="salecaseCoreService.detail.metaData.modifyDate.value !== null">
+            {{moduleService.detail.metaData.modifyDate.value | datetimeFilter:"DD/MM/YYYY" }}</div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.UpdatedDate'  | translate}}</div>
+    </li>
+</ul>
+
+

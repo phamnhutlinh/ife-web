@@ -1,0 +1,332 @@
+
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+ <div fieldId="policy:policyInformation">
+	<div>
+		<div class="row-group-detail">
+		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+			<label class="item-policy-number-big col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['policyNumber'].value}}</label> 
+		</div>
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field-policy v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.status' | translate}}</label>
+			<label class="value-field-green col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['status'].value}}</label> 
+		</div>
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field-policy v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.effectiveDate' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['effectiveDate'].value | datetimeFilter : "DD MMM YYYY"}}</label> 
+		</div>
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field-policy v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.maturityDate' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['maturityDate'].value | datetimeFilter : "DD MMM YYYY"}}</label> 
+		</div>
+		</div>
+	</div>
+</div>
+<div fieldId="policy:planAppliedDetails" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<hr>
+	<div class="item-detail">		
+		 {{'v4.page.policy.section.detail.planAppliedDetails' | translate}}
+	</div>
+	<div class="section-body">
+		<table class="table-in-section-policy v4-responsive-table-policy">
+			<tr>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.basicPlan" | translate}}</th>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.riskStatus" | translate}}</th>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.policyTerm" | translate}}</th>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.premiumTerm" | translate}}</th>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.sumInsured" | translate}}</th>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.premium" | translate}}</th>
+			</tr>
+			<tr ng-repeat="item in uiElement.refDetail track by $index">
+				<td> <label class="value-field v3-normal-font-weight"> {{item.basicPlan}}</label></td>
+				<td> <label class="value-field-green v3-normal-font-weight"> {{item.riskStatus}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.policyTerm}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.premiumTerm}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.currency}} {{item.sumInsured}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.currency}} {{item.premium}}</label></td>
+			</tr>
+		</table>
+	</div>
+	<hr>
+</div>
+<div fieldId="policy:paymentInformation" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="item-detail">		
+		 {{'v4.page.policy.section.detail.paymentInformation' | translate}}
+	</div>
+	<div class="section-body">
+		<div class="row row-group-detail">
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-4 col-lg-4">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.billingFrequency' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.billingFrequency.enum.' + uiElement.refDetail['billingFrequency'].value | translate}}</label> 
+		</div>
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-4 col-lg-4">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.billingCurrency' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['billingCurrency'].value}}</label> 
+		</div>
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-4 col-lg-4">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.nextBillDate' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"></label> 
+		</div>
+		</div>
+		<div class="row row-group-detail">
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-4 col-lg-4">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.premiumPayable' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['premiumPayable'].value}}</label> 
+		</div>
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-4 col-lg-4">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.paymentMethod' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.paymentMethod.enum.' + uiElement.refDetail['paymentMethod'].value | translate}}</label> 
+		</div>
+		</div>
+	</div>
+	<hr>
+</div>
+<div fieldId="policy:policyBenefitsAndValues" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="item-detail">		
+		 {{'v4.page.policy.section.detail.policyBenefitsAndValues' | translate}}
+	</div>
+	<div class="section-body">
+		<div class="row row-group-detail">
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-4 col-lg-4">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.outstandingPolicyLoan' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.parent.refDetail.paymentInformation.billingCurrency.value}} {{uiElement.refDetail['outstandingPolicyLoan'].value}}</label> 
+		</div>
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-4 col-lg-4">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.maxiumLoanAmoutAvaiable' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.parent.refDetail.paymentInformation.billingCurrency.value}} {{uiElement.refDetail['maxiumLoanAmoutAvaiable'].value}}</label> 
+		</div>
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-4 col-lg-4">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.surrenderValue' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.parent.refDetail.paymentInformation.billingCurrency.value}} {{uiElement.refDetail['surrenderValue'].value}}</label> 
+		</div>
+		</div>
+	</div>
+</div>
+<div fieldId="policy:unitHoldingsAndFundsValue" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<hr>
+	<div><hr</div>
+	<hr>
+	<div class="item-detail">		
+		 {{'v4.page.policy.section.detail.unitHoldingsAndFundsValue' | translate}}
+	</div>
+	<div class="section-body">
+		<table class="table-in-section-policy v4-responsive-table-policy">
+			<tr>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.fundName" | translate}}</th>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.fundCurrency" | translate}}</th>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.fundValue" | translate}}</th>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.UnitsNumber" | translate}}</th>
+			</tr>
+			<tr ng-repeat="item in uiElement.refDetail track by $index">
+				<td> <label class="value-field v3-normal-font-weight"> {{'v4.page.policy.fundName.enum.' + item.fundName | translate}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.fundCurrency}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.fundValue}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.UnitsNumber}}</label></td>
+			</tr>
+		</table>
+	</div>
+	<hr>
+</div>
+<div fieldId="policy:mailingAddress" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="item-detail">		
+		 {{'v4.page.policy.section.detail.mailingAddress' | translate}}
+	</div>
+	<div class="section-body">
+		<div class="section-body-row">
+			<label class="label-field"> {{'v4.page.policy.addressType.enum.ResidentialAddress' | translate}}</label> <br>
+			<label class="value-field" ng-if="uiElement.refDetail['block']">
+				{{uiElement.refDetail['block'].value}}</label> 	<br>
+			<label class="value-field" ng-if="uiElement.refDetail['unitNo']">
+				{{uiElement.refDetail['unitNo'].value}}</label> <br>
+			<label class="value-field" ng-if="uiElement.refDetail['building']">
+				{{uiElement.refDetail['building'].value}}</label> <br>
+			<label class="value-field" ng-if="uiElement.refDetail['city']">
+				{{uiElement.refDetail['city'].value}}</label>
+			<label class="value-field" ng-if="uiElement.refDetail['postCode']">{{uiElement.refDetail['postCode'].value | translate}}</label>
+		</div>
+	</div>
+	<hr>
+</div>
+</div>
+<div fieldId="policy:policyHolder" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="item-detail">		
+		 {{'v4.page.policy.section.detail.policyHolder' | translate}}
+	</div>
+	<div class="section-body">
+		<div class="row-group-detail">
+		<div class="section-body-row  col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.salutation' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.client.title.enum.' + uiElement.refDetail['title'].value | translate}}</label> 
+		</div>
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.firstName' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['firstName'].value}}</label> 
+		</div>
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.lastName' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['lastName'].value}}</label> 
+		</div>		
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.birthDate' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['birthDate'].value | datetimeFilter : "DD MMM YYYY"}}</label> 
+		</div>
+		</div>
+		<div class="row-group-detail">
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.gender' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.client.gender.enum.' + uiElement.refDetail['gender'].value | translate}}</label> 
+		</div>
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.marriedStatus' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.client.maritalStatus.enum.' + uiElement.refDetail['marriedStatus'].value | translate}}</label> 
+		</div>
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.nationality' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.client.country.enum.' + uiElement.refDetail['nationality'].value | translate}}</label> 
+		</div>
+		<div class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.idNumber' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['idNumber'].value}}</label> 
+		</div>
+		</div>
+	</div>
+	<hr>
+</div>
+</div>
+<div fieldId="policy:lifeInsured" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="item-detail">		
+		 {{'v4.page.policy.section.detail.lifeInsured' | translate}}
+	</div>
+	<div class="section-body">
+		<div class="row-group-detail">
+		<div class="section-body-row  col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.salutation' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.client.title.enum.' + uiElement.refDetail['title'].value | translate}}</label> 
+		</div>
+		<div class="section-body-row  col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.firstName' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['firstName'].value}}</label> 
+		</div>
+		<div class="section-body-row  col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.lastName' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['lastName'].value}}</label> 
+		</div>		
+		<div class="section-body-row  col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.birthDate' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['birthDate'].value | datetimeFilter : "DD MMM YYYY"}}</label> 
+		</div>
+		</div>
+		<div class="row-group-detail">
+		<div class="section-body-row  col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.gender' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.client.gender.enum.' + uiElement.refDetail['gender'].value | translate}}</label> 
+		</div>
+		<div class="section-body-row  col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.marriedStatus' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.client.maritalStatus.enum.' + uiElement.refDetail['marriedStatus'].value | translate}}</label> 
+		</div>
+		<div class="section-body-row  col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.nationality' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.client.country.enum.' + uiElement.refDetail['nationality'].value | translate}}</label> 
+		</div>
+		<div class="section-body-row  col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.idNumber' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['idNumber'].value}}</label> 
+		</div>
+		</div>
+	</div>
+</div>
+</div>
+<div fieldId="policy:servicingAgent" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<hr>
+	<div class="item-detail">		
+		 {{'v4.page.policy.section.detail.servicingAgent' | translate}}
+	</div>
+	<div class="section-body">
+		<div class="row-group-detail">
+		<div class="section-body-row col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.salutation' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.client.title.enum.' + uiElement.refDetail['title'].value | translate}}</label> 
+		</div>
+		<div class="section-body-row col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.firstName' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['firstName'].value}}</label> 
+		</div>
+		<div class="section-body-row col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.lastName' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['lastName'].value}}</label> 
+		</div>		
+		<div class="section-body-row col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.birthDate' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['birthDate'].value | datetimeFilter : "DD MMM YYYY"}}</label> 
+		</div>
+		</div>
+		<div class="row-group-detail">
+		<div class="section-body-row col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.gender' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.client.gender.enum.' + uiElement.refDetail['gender'].value | translate}}</label> 
+		</div>
+		<div class="section-body-row col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.marriedStatus' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.client.maritalStatus.enum.' + uiElement.refDetail['marriedStatus'].value | translate}}</label> 
+		</div>
+		<div class="section-body-row col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.nationality' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.client.country.enum.' + uiElement.refDetail['nationality'].value | translate}}</label> 
+		</div>
+		<div class="section-body-row col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.idNumber' | translate}}</label>
+			<label class="value-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail['idNumber'].value}}</label> 
+		</div>
+		</div>
+	</div>
+</div>
+</div>
+<div fieldId="policy:beneficiaryInformation" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<hr>
+	<div></div>
+	<hr>
+	<div class="item-detail">		
+		 {{'v4.page.policy.section.detail.beneficiaryInformation' | translate}}
+	</div>
+	<div class="section-body">
+		<table class="table-in-section-policy v4-responsive-table-policy">
+			<tr>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.effective" | translate}}</th>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.firstName" | translate}}</th>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.lastName" | translate}}</th>
+				<th class="col-md-1 label-field">{{"v4.page.policy.label.idNo" | translate}}</th>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.relationship" | translate}}</th>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.beneficiaryType" | translate}}</th>
+				<th class="col-md-2 label-field">{{"v4.page.policy.label.share" | translate}}</th>
+			</tr>
+			<tr ng-repeat="item in uiElement.refDetail track by $index">
+				<td> <label class="value-field v3-normal-font-weight"> {{item.effective.value | datetimeFilter : "DD MMM YYYY"}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.firstName.value}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.lastName.value}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.idNumber.value}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.relationship.value}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.beneficiaryType.value}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.share.value}}</label></td>
+			</tr>
+		</table>
+	</div>
+
+</div>
+</div>

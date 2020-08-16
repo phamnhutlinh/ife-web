@@ -1,0 +1,63 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<md-fab-speed-dial md-direction="down" class="md-scale" ng-if ="underwritingCheckEdit() || isActiveRoleIn(['UW'])">
+	<md-fab-trigger>
+		<md-button aria-label="menu" class="md-fab md-primary" id="trigger">
+			<i class="fa fa-bars"></i>
+		</md-button>
+	</md-fab-trigger>
+	<md-fab-actions>
+		<md-button class="md-fab md-raised md-mini" id="save" ng-click="operateUW('ACCEPTED')" ng-hide="moduleService.freeze == true || !isActiveRoleIn(['UW'])" ng-disabled="moduleService.detail.underwritingDecisionInfo.underwritingDecisionCd.value != 'PENDING_UW'">
+			<md-tooltip md-direction="left">{{'new.v4.mynewworkspace.actionbar.label.Accept' | translate}}</md-tooltip>
+			<i class="fa fa-check-circle"></i>
+		</md-button>
+		<md-button class="md-fab md-raised md-mini" id="compute" ng-click="operateUW('REJECTED')" ng-hide="moduleService.freeze == true || !isActiveRoleIn(['UW'])" ng-disabled="moduleService.detail.underwritingDecisionInfo.underwritingDecisionCd.value != 'PENDING_UW'">
+			<md-tooltip md-direction="left">{{'new.v4.mynewworkspace.actionbar.label.Reject' | translate}}</md-tooltip>
+			<i class="fa fa-ban"></i>
+		</md-button>
+		<md-button class="md-fab md-raised md-mini" id="submit" ng-click="operateUW('COUNTER_OFFER')" ng-hide="moduleService.freeze == true || !isActiveRoleIn(['UW'])" ng-disabled="moduleService.detail.underwritingDecisionInfo.underwritingDecisionCd.value != 'PENDING_UW'">
+			<md-tooltip md-direction="left">{{'new.v4.mynewworkspace.actionbar.label.CounterOffer' | translate}}</md-tooltip>
+			<i class="fa fa-reply"></i>
+		</md-button>
+		<md-button class="md-fab md-raised md-mini" id="submit" ng-click="sendFormLetter()" ng-hide="moduleService.freeze == true || !isActiveRoleIn(['UW'])" ng-disabled="moduleService.detail.underwritingDecisionInfo.underwritingDecisionCd.value != 'PENDING_UW'"  >
+			<md-tooltip md-direction="left">{{'new.v4.mynewworkspace.actionbar.label.SendForm' | translate}}</md-tooltip>
+			<i class="fa fa-paperclip"></i>
+		</md-button>
+	</md-fab-actions>
+</md-fab-speed-dial>
+
+<!-- For Agent Counter Offer -->
+<md-fab-speed-dial md-direction="down" class="md-scale" ng-if ="underwritingCheckEdit() || (isActiveRoleIn(['AG']) && moduleService.detail.underwritingDecisionInfo.underwritingDecisionCd.value == 'COUNTER_OFFER_CONFIRMED')">
+	<md-fab-trigger>
+		<md-button aria-label="menu" class="md-fab md-primary" id="trigger">
+			<i class="fa fa-bars"></i>
+		</md-button>
+	</md-fab-trigger>
+	<md-fab-actions>
+		<md-button class="md-fab md-raised md-mini" id="save" ng-click="operateUW('ACCEPT_COUNTER_OFFER')" ng-hide="moduleService.freeze == true || !isActiveRoleIn(['AG'])">
+			<md-tooltip md-direction="left">{{'new.v4.mynewworkspace.actionbar.label.AcceptCounterOffer' | translate}}</md-tooltip>
+			<i class="fa fa-check-circle"></i>
+		</md-button>
+		<md-button class="md-fab md-raised md-mini" id="compute" ng-click="operateUW('REJECT_COUNTER_OFFER')" ng-hide="moduleService.freeze == true || !isActiveRoleIn(['AG'])">
+			<md-tooltip md-direction="left">{{'new.v4.mynewworkspace.actionbar.label.RejectCounterOffer' | translate}}</md-tooltip>
+			<i class="fa fa-ban"></i>
+		</md-button>
+	</md-fab-actions>
+</md-fab-speed-dial>

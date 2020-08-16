@@ -1,0 +1,51 @@
+{
+  "coverType": {
+  	"value": "CO",
+  	"meta": {
+            "encryptAlgo": "",
+            "dataMinValue": "",
+            "visible": "",
+            "errorDesc": "",
+            "editable": "",
+            "dataFormat": "",
+            "dataType": "",
+            "errorCode": "",
+            "dataMinLength": "",
+            "mandatory": "true",
+            "dataMaxValue": "",
+            "dataSeq": "",
+            "dataGroup": "",
+            "captionDesc": "",
+            "enable": "",
+            "encrypt": "",
+            "captionCode": "",
+            "dataMaxLength": ""
+      }
+  },
+  "sumInsured" : {
+    "value" : "",
+    "meta" : {
+      "encryptAlgo" : "",
+      "dataMinValue" : "",
+      "stepped" : "",
+      "visible" : "true",
+      "maxvalue" : "",
+      "errorDesc" : "",
+      "editable" : "true",
+      "dataFormat" : "",
+      "dataType" : "",
+      "errorCode" : "",
+      "dataMinLength" : "",
+      "mandatory" : "true",
+      "minvalue" : "",
+      "dataMaxValue" : "",
+      "dataSeq" : "",
+      "dataGroup" : "",
+      "captionDesc" : "",
+      "enable" : "",
+      "encrypt" : "",
+      "captionCode" : "",
+      "dataMaxLength" : ""
+    }
+  }
+}

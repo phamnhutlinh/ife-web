@@ -1,0 +1,253 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (C) 2017 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div class="row" ng-init="selectedDashboard = isActiveForRole(commonService.CONSTANTS.USER_ROLES.AG.name)?'my-client-policy': isActiveForRole(commonService.CONSTANTS.USER_ROLES.PO.name)?'my-policy':''">
+	<div class="col-xs-11 v4-prototype-centerBlock v3-padding-0 card">
+		<div class="row col-xs-11 col-md-11 "
+			style="margin-top: 20px;margin-bottom: 25px;margin-left:30px;">
+			<div class="col-xs-4 col-md-4 v3-margin-auto" ng-if = "isRoleActive(commonService.CONSTANTS.USER_ROLES.AG.name)==true">
+				<div class="col-xs-12 label-field-sumary label-dasboard">
+					<div id="my-client-policy" class="active" ng-click="selectTab('my-client-policy')">
+						<p class="tab-title" style="margin-top: 14px; margin-bottom: 0px">{{'v3.dashboardportlet.portlet.label.my-policy' | translate}}</p>
+						<label class="label-section-bigger"><total-records
+								class="tab-summary"
+								listtitle="my-client-policy"
+								doc-type="policy"
+								query="{{[{
+									fields: ['ownerName'],
+									values: [ownerName]
+								},
+								{
+									fields: ['role'],
+									values: ['AG']
+								}]}}" />
+						</label>
+					</div>
+				</div>
+			</div>
+			 <div class="col-xs-4 col-md-4 v3-margin-auto" ng-if = "isRoleActive(commonService.CONSTANTS.USER_ROLES.PO.name)==true">
+				<div class="col-xs-12 label-field-sumary label-dasboard">
+					<div id="my-policy" ng-click="selectTab('my-policy')">
+						<p class="tab-title" style="margin-top: 14px; margin-bottom: 0px">{{'v3.dashboardportlet.portlet.label.my-policy' | translate}}</p>
+						<label class="label-section-bigger"><total-records
+								class="tab-summary"
+								doc-type="policy"
+								listtitle="my-client-policy"
+								query="{{[{
+									fields: ['ownerName'],
+									values: [ownerName]
+								},
+								{
+									fields: ['role'],
+									values: ['PO']
+								}]}}" />
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>		 
+	</div>
+	
+	<div class="row col-xs-12 col-md-12">
+			<div class="tab-content" ng-if="isActiveForRole(commonService.CONSTANTS.USER_ROLES.AG.name) && selectedDashboard === 'my-client-policy'">
+				<div class="listViewContainer container-fluid v3-padding-0">
+					<div class="row v3-margin-auto">
+						<document-list-view
+							datalist="clientPolicyList"
+							doctype="policy"
+							listtitle="my-client-policy"
+							isdashboard ="true"
+							ispolicylistnoelstasicsearch="true"
+							isloadlist="isLoadList"
+							dashboarddoctype="dashboardDoctype"
+							defaultquery="{{[{
+								fields: ['ownerName'],
+								values: [ownerName]
+							},
+							{
+								fields: ['role'],
+								values: [role]
+							},
+							{
+								fields: ['agentId'],
+								values: [agentId]
+							},
+							{
+								fields: ['agentType'],
+								values: [agentType]
+							},
+							{
+								fields: ['contractType'],
+								values: [contractType]
+							},
+							{
+								fields: ['businessType'],
+								values: [businessType]
+							},
+							{
+								fields: ['policyId'],
+								values: [policyId]
+							}
+							
+							]}}"
+							searchcriteria="['contractNumber']"							
+							lazy-choice-list="moduleService.lazyChoiceList"/>
+					</div>
+				</div>
+			</div>
+			<div class="tab-content" ng-if="isActiveForRole(commonService.CONSTANTS.USER_ROLES.PO.name) &&selectedDashboard === 'my-policy'">
+				<div class="listViewContainer container-fluid v3-padding-0">
+					<div class="row v3-margin-auto">
+						<document-list-view
+							datalist="policyList"
+							doctype="policy"
+							isdashboard ="true"
+							listtitle="my-client-policy"
+							isloadlist="isLoadList"
+							ispolicylistnoelstasicsearch="true"
+							dashboarddoctype="dashboardDoctype"
+							defaultquery="{{[{
+								fields: ['ownerName'],
+								values: [ownerName]
+							},
+							{
+								fields: ['role'],
+								values: ['PO']
+							}
+							 ,
+							{
+								fields: ['agentId'],
+								values: [agentId]
+							},
+							{
+								fields: ['agentType'],
+								values: [agentType]
+							},
+							{
+								fields: ['contractType'],
+								values: [contractType]
+							},
+							{
+								fields: ['businessType'],
+								values: [businessType]
+							},
+							{
+								fields: ['policyId'],
+								values: [policyId]
+							}
+							]}}"
+							searchcriteria="['contractNumber']"						
+							current-date="currentDate"
+							lazy-choice-list="moduleService.lazyChoiceList"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- <div class="tabs-vertical">
+		<div class="col-xs-3 col-md-2">
+			<ul class="tabs">
+				<li class="tab" ng-class="isActiveForRole(commonService.CONSTANTS.USER_ROLES.AG.name)?'tab-showed':'tab-hidden'">
+					<a id="my-client-policy" class="active" ng-click="selectTab('my-client-policy')">
+						<div class="col-xs-2 fa fa-suitcase fa-2x"></div>
+						<div class="col-xs-10">
+							<p class="tab-title">{{'v3.dashboardportlet.portlet.label.my-client-policy' | translate}}</p>
+							<p class="tab-summary">{{'v3.dashboardportlet.label.TotalRecords' | translate}}: <total-records
+								class="tab-summary"
+								listtitle="my-client-policy"
+								doc-type="policy"
+								query="{{[{
+									fields: ['ownerName'],
+									values: [ownerName]
+								},
+								{
+									fields: ['role'],
+									values: ['AG']
+								}]}}" /></p>
+						</div>
+					</a>
+				</li>
+				<li class="tab" ng-class="isActiveForRole(commonService.CONSTANTS.USER_ROLES.PO.name)?'tab-showed':'tab-hidden'">
+					<a id="my-policy" ng-click="selectTab('my-policy')">
+						<div class="col-xs-2 fa fa-calendar-check-o fa-2x"></div>
+						<div class="col-xs-10">
+							<p class="tab-title">{{'v3.dashboardportlet.portlet.label.my-policy' | translate}}</p>
+							<p class="tab-summary">{{'v3.dashboardportlet.label.TotalRecords' | translate}}: <total-records
+								class="tab-summary"
+								doc-type="policy"
+								listtitle="my-policy"
+								query="{{[{
+									fields: ['ownerName'],
+									values: [ownerName]
+								},
+								{
+									fields: ['role'],
+									values: ['PO']
+								}]}}" /></p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-xs-9 col-md-10">
+			<div class="tab-content" ng-class="selectedDashboard === 'my-client-policy'?'tab-showed':'tab-hidden'" ng-if="isActiveForRole(commonService.CONSTANTS.USER_ROLES.AG.name)">
+				<div class="listViewContainer container-fluid v3-padding-0">
+					<div class="row v3-margin-auto">
+						<document-list-view
+							datalist="clientPolicyList"
+							doctype="policy"
+							listtitle="my-client-policy"
+							isloadlist="isLoadList"
+							dashboarddoctype="dashboardDoctype"
+							defaultquery="{{[{
+								fields: ['ownerName'],
+								values: [ownerName]
+							},
+							{
+								fields: ['role'],
+								values: ['AG']
+							}]}}"
+							searchcriteria="['contractNumber']"							
+							lazy-choice-list="moduleService.lazyChoiceList"/>
+					</div>
+				</div>
+			</div>
+			<div class="tab-content" ng-class="selectedDashboard === 'my-policy'?'tab-showed':'tab-hidden'" ng-if="isActiveForRole(commonService.CONSTANTS.USER_ROLES.PO.name)">
+				<div class="listViewContainer container-fluid v3-padding-0">
+					<div class="row v3-margin-auto">
+						<document-list-view
+							datalist="policyList"
+							doctype="policy"
+							listtitle="my-policy"
+							isloadlist="isLoadList"
+							defaultquery="{{[{
+								fields: ['ownerName'],
+								values: [ownerName]
+							},
+							{
+								fields: ['role'],
+								values: ['PO']
+							}]}}"
+							searchcriteria="['contractNumber']"							
+							current-date="currentDate"
+							lazy-choice-list="moduleService.lazyChoiceList"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+</div>

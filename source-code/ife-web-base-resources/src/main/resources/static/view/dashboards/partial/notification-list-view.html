@@ -1,0 +1,94 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<!-- Wait for Approval -->
+<div ng-if="dashboardstatus === 'wait_for_approval'" ng-cloak>
+    <div class="row v3-margin-auto" ng-if="isListView" style="margin-bottom: 0px;">
+        <div class="col-xs-11 ipos_medium_mobile_table ipos_table_v4">
+            <div class="ipos_medium_mobile_table_table_listRow ipos_table_v4_header md-whiteframe-z1">
+                <div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.Username' | translate}}</div>
+                <div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.Email' | translate}}</div>
+                <div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.deviceID' | translate}}</div>
+                <div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.requestType' | translate}}</div>
+                <div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.approveToken' | translate}}</div>
+                <div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.rejectToken' | translate}}</div>
+            </div>
+            <md-virtual-repeat-container class="scrollStyle" md-top-index="topIndex">
+		                <div id="table-row-{{$index}}" name="dashboard-item" 
+		                     class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer repeated-item"
+		                     md-virtual-repeat="item in infiniteItems.items">
+		                    <md-card class="col-xs-12 v3-padding-0 ipos-box-opacity" style="margin: 0px;">
+		                        <div style="display: flex; padding-left: 0px; padding-right: 0px; text-align: left;">
+		                            <div class="v3-auto-text-ellipsis">{{item.name}}</div>
+		                            <div class="v3-auto-text-ellipsis">{{item.email}}</div>
+		                            <div class="v3-auto-text-ellipsis">{{item.deviceId}}</div>
+		                            <div class="v3-auto-text-ellipsis">{{item.requestType}}</div>
+		                            <div class="v3-auto-text-ellipsis">
+		                            	<a style="color: #26a69a;" class="pointer"
+											ng-click="approvalToken(item)">
+											<i class="fa fa-plus fa-2x" style="font-size: 20px;margin-left: 2rem;"></i>
+										</a>
+		                            </div>
+		                            <div class="v3-auto-text-ellipsis">
+		                            	<a style="color: #26a69a;" class="pointer"
+											ng-click="rejectToken(item)">
+											<i class="fa fa-minus fa-2x" style="font-size: 20px;margin-left: 2rem;"></i>
+										</a>
+		                            </div>
+		                        </div>
+		                    </md-card>
+		                </div>
+            </md-virtual-repeat-container>
+            <div id="table-row-{{$index}}" name="dashboard-item" ng-show = "isLoad"  ng-cloak
+                 class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer row">
+                <p><i class = "fa fa-spinner fa-spin" style="margin-right: 5px;">  </i>  Loading...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--System admin approved token dashboard-->
+<div ng-if="dashboardstatus === 'approved_list'">
+    <div class="row v3-margin-auto" ng-if="isListView" style="margin-bottom: 0px;">
+        <div class="col-xs-11 ipos_medium_mobile_table ipos_table_v4">
+            <div class="ipos_medium_mobile_table_table_listRow ipos_table_v4_header md-whiteframe-z1">
+                <div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.Username' | translate}}</div>
+                <div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.Email' | translate}}</div>
+                <div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.status' | translate}}</div>
+            </div>
+            <md-virtual-repeat-container class="scrollStyle" md-top-index="topIndex">
+		                <div id="table-row-{{$index}}" name="dashboard-item"
+		                     class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer repeated-item"
+		                     md-virtual-repeat="item in infiniteItems.items">
+		                    <md-card class="col-xs-12 v3-padding-0 ipos-box-opacity" style="margin: 0px;">
+		                        <div style="display: flex; padding-left: 0px; padding-right: 0px; text-align: left;">
+		                            <div class="v3-auto-text-ellipsis">{{item.name}}</div>
+		                            <div class="v3-auto-text-ellipsis">{{item.email}}</div>
+		                            <div class="v3-auto-text-ellipsis">{{item.adminDecision}}</div>
+		                        </div>
+		                    </md-card>
+		                </div>
+            </md-virtual-repeat-container>
+            <div id="table-row-{{$index}}" name="dashboard-item" ng-show = "isLoad"  ng-cloak
+                 class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer row">
+                <p><i class = "fa fa-spinner fa-spin" style="margin-right: 5px;">  </i>  Loading...</p>
+            </div>
+        </div>
+    </div>
+</div>

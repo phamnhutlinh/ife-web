@@ -1,0 +1,892 @@
+<!--
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+-->
+<!-- Start Policy Owner -->
+<div fieldId="policyOwner:Salutation" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'v3.mynewworkspace.illustration:PolicyOwner.Salutation'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <select id = "policyOwner_Salutation" ui-select2 ng-disabled="moduleService.freeze == true" ng-model="uiElement.refDetail.value">
+                <option ng-repeat="title in moduleService.lazyChoiceList.Title" value="{{title.key}}">{{"v4.pnc.title.enum." + title.key | translate}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="policyOwner:FirstName" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'v3.mynewworkspace.illustration:PolicyOwner.FistName'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <input id = "policyOwner_FirstName" clear-error-code alphabeticals-only ng-disabled="moduleService.freeze == true" placeholder="" type="text" maxlength="40" ng-model="uiElement.refDetail.value"/>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="policyOwner:LastName" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'v3.mynewworkspace.illustration:PolicyOwner.LastName'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <input id = "policyOwner_LastName" clear-error-code alphabeticals-only ng-disabled="moduleService.freeze == true" placeholder="" type="text" maxlength="40" ng-model="uiElement.refDetail.value"/>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="policyOwner:DOB" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'v3.mynewworkspace.illustration:PolicyOwner.DateOfBirth' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+            <input id = "policyOwner_DOB" clear-error-code ng-disabled="moduleService.freeze == true" type="text" class="datepicker" materiallize-datetime maxdate="today" dateName="new.v4.mynewworkspace.prospect.label.DateofBirth" includemaxdate = "true" formatdisplay='DD/MM/YYYY' ng-model="uiElement.refDetail.value" ng-change="uiElement.refDetail.value = configTimeZoneForSingapore(uiElement.refDetail.value); checkBirthDayPolicyOwner()"/>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="policyOwner:ANB" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'v3.mynewworkspace.illustration:PolicyOwner.AgeNearestBirthday'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <input id = "policyOwner_ANB" clear-error-code ng-disabled="true" type="text" maxlength="120" ng-model="uiElement.refDetail.value" alphabeticals-only/>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="policyOwner:Gender" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'v3.mynewworkspace.illustration:PolicyOwner.Gender'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <v3-switch-new-slide id = "policyOwner_Gender" prefix="v4.gender.enum"
+                             switch-model="uiElement.refDetail.value"
+                             switch-default-value="" switch-disabled="moduleService.freeze == true"
+                             switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['Gender'])">
+        </v3-switch-new-slide>
+        <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+    </div>
+</div>
+<div fieldId="policyOwner:SmokerStatus" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'v3.mynewworkspace.illustration:PolicyOwner.SmokingStatus'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <v3-switch-new-slide id = "policyOwner_SmokerStatus" prefix="v4.smoker.enum"
+                             switch-model="uiElement.refDetail.value"
+                             switch-default-value="" switch-disabled="moduleService.freeze == true"
+                             switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['SmokerStatus'])">
+        </v3-switch-new-slide>
+        <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+    </div>
+</div>
+<div fieldId="policyOwner:NOB" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'v3.mynewworkspace.illustration:PolicyOwner.NatureOfBusiness'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <select id = "policyOwner_NOB"  ui-select2 ng-disabled="moduleService.freeze == true" ng-model="uiElement.refDetail.value">
+                <option ng-repeat="status in moduleService.findElementInElement(moduleService.lazyChoiceList,['Industry'])" value="{{status.key}}">
+                    {{'v3.pnc.industry.enum.' + status.key | translate}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="policyOwner:Occupation" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'v3.mynewworkspace.illustration:PolicyOwner.Occupation'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <select id = "policyOwner_Occupation" ui-select2 ng-disabled="moduleService.freeze == true" ng-model="uiElement.refDetail.value">
+                <option ng-repeat="occ in moduleService.findElementInElement(moduleService.lazyChoiceList,['Occupation'])" value="{{occ.key}}">
+                    {{'v4.prospect.Occupation.enum.' + occ.key | translate}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<!-- End Policy Owner -->
+<!-- Start Life Insured -->
+<div fieldId="lifeInsured:listContact" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="shouldInitNormalQuotation() === true">
+    <div class="row v4-materialize-container" >
+        <div class="col-xs-11 col-sm-11 col-md-10">
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 padding-0">
+                <label class="text-body v4-materialize-content-center">{{::'v3.mynewworkspace.illustration:LifeInsured.SelectContact'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+                <div class="input-field no-padding-right">
+                    <select id = "select_lifeInsured_listContact" ui-select2 ng-disabled="moduleService.freeze == true" ng-model="moduleService.selectedContact">
+                        <option ng-repeat="title in contactList" value="{{title.docName}}">{{title.fullName}}</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 margin-top-27">
+                <button id = "button_lifeInsured_listContact" ng-disabled="moduleService.selectedContact == undefined ||moduleService.selectedContact == ''" class="btn btn-lg v3-btn-danger v3-fna-button-addchildren" ng-click="populateContactToLifeInsuredQuotation()"><i class="fa fa-arrow-down"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="lifeInsured:RPO" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'v3.mynewworkspace.illustration:LifeInsured.RelationshipToPolicyOwner'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field margin-right-0">
+                <select id = "lifeInsured_RPO" ui-select2 ng-disabled="moduleService.freeze == true" ng-model="uiElement.refDetail.value">
+                    <option ng-repeat="title in moduleService.lazyChoiceList.RelationshipProposer" value="{{title.key}}">{{"v4.quotation.rul.relationShip.enum." + title.key | translate}}</option>
+                </select>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="lifeInsured:Salutation" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'v3.mynewworkspace.illustration:LifeInsured.Salutation'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field margin-right-0">
+                <select id = "lifeInsured_Salutation" ui-select2 ng-disabled="moduleService.freeze == true" ng-model="uiElement.refDetail.value">
+                    <option ng-repeat="title in moduleService.lazyChoiceList.Title" value="{{title.key}}">{{"v4.pnc.title.enum." + title.key | translate}}</option>
+                </select>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="lifeInsured:FirstName" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'v3.mynewworkspace.illustration:LifeInsured.FistName'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field margin-right-0">
+                <input id = "lifeInsured_FirstName" clear-error-code ng-disabled="moduleService.freeze == true" placeholder="" type="text" maxlength="40" ng-model="uiElement.refDetail.value" alphabeticals-only/>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="lifeInsured:LastName" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'v3.mynewworkspace.illustration:LifeInsured.LastName'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field margin-right-0">
+                <input id = "lifeInsured_LastName" clear-error-code ng-disabled="moduleService.freeze == true" placeholder="" type="text" maxlength="40" ng-model="uiElement.refDetail.value" alphabeticals-only/>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="lifeInsured:DOB" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'v3.mynewworkspace.illustration:LifeInsured.DateOfBirth' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field margin-right-0">
+                <i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+                <input id = "lifeInsured_DOB" clear-error-code ng-disabled="moduleService.freeze == true" type="text" class="datepicker" materiallize-datetime maxdate="today" dateName="new.v4.mynewworkspace.prospect.label.DateofBirth" includemaxdate = "true" formatdisplay='DD/MM/YYYY' ng-model="uiElement.refDetail.value" ng-change="uiElement.refDetail.value = configTimeZoneForSingapore(uiElement.refDetail.value); checkBirthDayLifeInsure()"/>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="lifeInsured:ANB" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'v3.mynewworkspace.illustration:LifeInsured.AgeNearestBirthday'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field margin-right-0">
+                <input id = "lifeInsured_ANB" clear-error-code placeholder="" ng-disabled="true" type="text" maxlength="120" ng-model="uiElement.refDetail.value" alphabeticals-only/>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="lifeInsured:Gender" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'v3.mynewworkspace.illustration:LifeInsured.Gender'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <v3-switch-new-slide id = "lifeInsured_Gender" prefix="v4.gender.enum"
+                                 switch-model="uiElement.refDetail.value"
+                                 switch-default-value="" switch-disabled="moduleService.freeze == true"
+                                 switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['Gender'])">
+            </v3-switch-new-slide>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="lifeInsured:SmokerStatus" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'v3.mynewworkspace.illustration:LifeInsured.SmokingStatus'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <v3-switch-new-slide id = "lifeInsured_SmokerStatus" prefix="v4.smoker.enum"
+                                 switch-model="uiElement.refDetail.value"
+                                 switch-default-value="" switch-disabled="moduleService.freeze == true"
+                                 switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['SmokerStatus'])">
+            </v3-switch-new-slide>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="lifeInsured:NOB" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'v3.mynewworkspace.illustration:LifeInsured.NatureOfBusiness'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field margin-right-0">
+                <select id = "lifeInsured_NOB" ui-select2 ng-disabled="moduleService.freeze == true" ng-model="uiElement.refDetail.value">
+                    <option ng-repeat="status in moduleService.findElementInElement(moduleService.lazyChoiceList,['Industry'])" value="{{status.key}}">
+                        {{'v3.pnc.industry.enum.' + status.key | translate}}</option>
+                </select>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="lifeInsured:Occupation" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'v3.mynewworkspace.illustration:LifeInsured.Occupation'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field margin-right-0">
+                <select id = "lifeInsured_Occupation" ui-select2 ng-disabled="moduleService.freeze == true" ng-model="uiElement.refDetail.value">
+                    <option ng-repeat="occ in moduleService.findElementInElement(moduleService.lazyChoiceList,['Occupation'])" value="{{occ.key}}">
+                        {{'v4.prospect.Occupation.enum.' + occ.key | translate}}</option>
+                </select>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldID="lifeInsured:DeleteLifeInsured" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container" ng-if="shouldInitNormalQuotation() === false">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <div>
+                <button id = "lifeInsured_DeleteLifeInsured" class="btn btn-lg v3-btn-danger button-new-ui v4-prototype-middleView-main" ng-click="toggleLifeInsured(card)"><label class="label-field">{{::'v3.mynewworkspace.illustration:LifeInsured.Delete' | translate}}</label></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div fieldId="lifeInsured:DedupCheck" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container" ng-if="checkImportStandAlone()">
+        <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+            <label class="text-body">{{::'v3.mynewworkspace.illustration:LifeInsured.DeDupeCheck'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div>
+                <button ng-disabled="checkLifeInsuredInformation() === true" class="btn btn-lg v3-btn-danger button-new-ui v4-prototype-middleView-main" ng-click="dedupCheck()"><label class="label-field">{{::'v3.mynewworkspace.illustration:LifeInsured.Check' | translate}}</label></button>
+            </div>
+            <label class="text-body">{{::'v3.mynewworkspace.illustration:LifeInsured.NoteDeDupeCheck'| translate}}</label>
+        </div>
+    </div>
+</div> -->
+
+<!-- End Life Insured -->
+<!-- Basic Plan -->
+<!-- Basic Information -->
+<div fieldId="illustration:EffectiveDate" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'new.v4.mynewworkspace.illustration.label.EffectiveDate'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field">
+                <i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+                <input id = "illustration_EffectiveDate" type="text" ng-disabled="true" class="datepicker" materiallize-datetime formatdisplay='DD/MM/YYYY' ng-model="uiElement.refDetail.value" />
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="illustration:PremiumFrequency" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'new.v4.mynewworkspace.illustration.label.PremiumFrequency'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field">
+                <select id = "illustration_PremiumFrequency" ui-select2 ng-disabled="moduleService.freeze == true" ng-model="uiElement.refDetail.value">
+                    <option ng-repeat="premiumfrequency in moduleService.findElementInElement(moduleService.lazyChoiceList,['PremiumFrequency'])" value="{{premiumfrequency.key}}" ng-if="premiumfrequency.key != '00'">
+                        {{'v4.premiumFrequency.enum.' + premiumfrequency.key | translate}}</option>
+                </select>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="illustration:ContractCurrency" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'new.v4.mynewworkspace.illustration.label.ContractCurrency'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field">
+                <select id = "illustration_ContractCurrency" ui-select2 ng-disabled="moduleService.freeze == true" ng-model="uiElement.refDetail.value" ng-change="uiElement.parent.refDetail.billingCurrency.value = uiElement.refDetail.value">
+                    <option ng-repeat="premiumfrequency in moduleService.findElementInElement(moduleService.lazyChoiceList,['ContractCurrency'])" value="{{premiumfrequency.key}}">
+                        {{'v4.currency.enum.' + premiumfrequency.key | translate}}</option>
+                </select>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="illustration:BillingCurrency" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'new.v4.mynewworkspace.illustration.label.BillingCurrency' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field">
+                <select id = "illustration_BillingCurrency" ui-select2 ng-disabled="true" ng-model="uiElement.parent.refDetail.contractCurrency.value">
+                    <option ng-repeat="premiumfrequency in moduleService.findElementInElement(moduleService.lazyChoiceList,['ContractCurrency'])" value="{{premiumfrequency.key}}">
+                        {{'v4.currency.enum.' + premiumfrequency.key | translate}}</option>
+                </select>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="illustration:PolicyTerm" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'new.v4.mynewworkspace.illustration.label.PolicyTerm' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field">
+                <input id = "illustration_PolicyTerm" placeholder="" ng-disabled="true" type="text" maxlength="120" ng-model="uiElement.refDetail.value"/>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="illustration:PremiumTerm" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'new.v4.mynewworkspace.illustration.label.PremiumTerm' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field">
+                <input id = "illustration_PremiumTerm" placeholder="" ng-disabled="true" type="text" maxlength="120" ng-model="uiElement.refDetail.value"/>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="illustration:SumAssured" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'new.v4.mynewworkspace.illustration.label.SumAssured' | translate}} ({{moduleService.findElementInDetail(['contractCurrency']).value}})<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field">
+                <input id = "illustration_SumAssured" pos-autonumeric placeholder="" ng-disabled="true" type="text" maxlength="120" ng-model="uiElement.refDetail.value" decimal="0"/>
+                <!-- <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span> -->
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="illustration:RegularPremium" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+            <label class="text-body">{{::'new.v4.mynewworkspace.illustration.label.RegularPremium' | translate}} ({{moduleService.findElementInDetail(['contractCurrency']).value}}) <span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field">
+                <input id = "illustration_RegularPremium" pos-autonumeric ng-disabled="moduleService.freeze == true" placeholder="" type="text" maxlength="120" decimal="0" ng-model="uiElement.refDetail.value" ng-change="uiElement.parent.refDetail.regularPremiumCal.value=uiElement.refDetail.value"/>
+                <span class="errorMessage" ng-if="uiElement.refDetail.meta.errorCode.indexOf(';') > 0" ng-bind="(uiElement.refDetail.meta.errorCode.substring(0,uiElement.refDetail.meta.errorCode.indexOf(';')) | translate) + (uiElement.refDetail.meta.errorCode.substring(uiElement.refDetail.meta.errorCode.lastIndexOf(';') + 1) | translate)"></span>
+                <span class="errorMessage" ng-if="uiElement.refDetail.meta.errorCode.indexOf(';') < 0" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Basic Information -->
+<!-- Fund -->
+<!-- <div fieldId="illustration:FundSelection" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="col-xs-12 col-sm-12 v3-padding-0" ng-disabled="true" >
+		<div class="row v3-margin-auto" style="margin: 0px !important;display: flex;padding: 10px 0px;">
+			<label class="v3-label-search" style="font-size: 1.25em; color: black">{{'v3.dashboardportlet.label.totalFund' | translate}}</label>
+		</div>
+	</div>
+</div> -->
+<div fieldId="illustration:FundList" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v3-padding-0 marginForBasicPlan">
+    <!-- 	<div class="col-xs-12 col-sm-12" ng-disabled="true" > -->
+    <!-- 			<div class="row v3-margin-auto" style="margin: 0px !important;display: flex"> -->
+    <!-- 				<label class="v3-label-search" style="font-size: 1.25em; color: black">{{'v3.dashboardportlet.label.totalFund' | translate}}{{uiElement.refDetail.value.length}}</label> -->
+    <!--     		</div> -->
+    <!--     </div> -->
+    <div class="row col-xs-12 col-sm-11 col-md-11 col-lg-11">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <label class="label-field">{{::'new.v4.mynewworkspace.illustration.label.FundName'| translate}}<span ng-show="uiElement.refDetail.arrayDefault.fundName.meta.mandatory == 'true'">*</span></label>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <label class="label-field">{{::'new.v4.mynewworkspace.illustration.label.FundAllocated'| translate}}<span ng-show="uiElement.refDetail.arrayDefault.fundAllocated.meta.mandatory == 'true'">*</span></label>
+        </div>
+    </div>
+    <div ng-repeat="Fund in uiElement.refDetail.value">
+        <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 v3-padding-0">
+                <div class="row v4-materialize-container">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+                        <div class="input-field">
+                            <select id = "select_illustration_FundList" ui-select2 ng-disabled="moduleService.freeze == true" ng-model="Fund.fundName.value" child-ui-element="Fund.fundName.meta">
+                                <option ng-repeat="fundname in moduleService.lazyListFund[$index]" value="{{fundname.key}}">
+                                    {{'v4.quotation.rul.fund.enum.' + fundname.key | translate}}</option>
+                            </select>
+                            <span class="errorMessage" ng-bind="Fund.fundName.meta.errorCode | translate"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 v3-padding-0">
+                <div class="row v4-materialize-container">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+                        <div class="input-field">
+                            <input id = "input_illustration_FundList" pos-autonumeric ng-disabled="moduleService.freeze == true " clear-error-code placeholder="" type="text" decimal="0" max="100" min="0" ng-model="Fund.fundAllocated.value" child-ui-element="Fund.fundAllocated.meta"/>
+                            <span class="errorMessage" ng-bind="Fund.fundAllocated.meta.errorCode | translate"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-sm-1 col-lg-1">
+            <button id = "button1_illustration_FundList" ng-disabled="moduleService.freeze == true" class="button-delete-address btn v3-btn-danger v3-fna-button-addchildren button-new-ui" ng-click="removeFund($index)" ng-show="uiElement.refDetail.meta.counter > 1"><i class="fa fa-times "></i></button>
+        </div>
+    </div>
+</div>
+<div class="col-xs-3 col-sm-5">
+    <div class="col-xs-12 col-sm-12 col-md-7 col-sm-9 col-lg-5">
+        <button id = "button2_illustration_FundList" ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['funds']).meta.counter > 6 ||  checkTotalFund100() == true" class="btn btn-lg v3-btn-danger v3-fna-button-addchildren button-new-ui v4-prototype-middleView-main" ng-click="addFund()"><i style="float: left" class="fa fa-plus"></i><label class="label-field">{{::'v3.dashboardportlet.label.fund' | translate}}</label></button>
+    </div>
+</div>
+<!-- End Fund -->
+<!-- Start Single Top Up -->
+<!--<div fieldId="illustration:SingleTopUps" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="col-xs-12 col-sm-12 v3-padding-0">
+		<div class="row v3-margin-auto" style="margin: 0px !important;display: flex;padding: 10px 0px;">
+			<label class="v3-label-search" style="font-size: 1.25em; margin-left:43px;">{{'v3.dashboardportlet.label.SingleTopUps' | translate}}</label>
+			<button style="line-height: 43px; margin-left: 10px; padding: 0px; width: 40px; height: 40px; min-width: 0px !important; border-radius: 26px;" ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['singleTopUp']).meta.counter > 14" class="btn btn-lg v3-btn-danger v3-fna-button-addchildren" ng-click="moduleService.addChildEleToParentEleWithCounter(moduleService.findElementInDetail(['singleTopUp']),'value')"><i class="fa fa-plus"></i></button>
+		</div>
+	</div>
+</div> -->
+
+<div fieldId="illustration:SingleTopUpList" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v3-padding-0 marginForBasicPlan">
+    <div class="row col-xs-12 col-sm-11 col-md-11 col-lg-11" ng-disabled="true">
+        <div class="col-xs-12 col-sm-12" ng-disabled="true" >
+            <div class="row v3-margin-auto" style="margin: 0px !important;display: flex">
+                <label class="v3-label-search" style="font-size: 1.25em; color: black">{{'v3.dashboardportlet.label.totalSingleTopUps' | translate}}{{uiElement.refDetail.value.length}}</label>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <label class="label-field" ng-if="moduleService.findElementInDetail(['singleTopUp']).meta.counter > 0">{{::'new.v4.mynewworkspace.illustration.label.SingleTopUpAmount'| translate}} ({{moduleService.findElementInDetail(['contractCurrency']).value}})<span ng-show="uiElement.refDetail.arrayDefault.singleTopUpAmount.meta.mandatory == 'true'">*</span></label>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <label class="label-field" ng-if="moduleService.findElementInDetail(['singleTopUp']).meta.counter > 0 ">{{::'new.v4.mynewworkspace.illustration.label.Year'| translate}}<span ng-show="uiElement.refDetail.arrayDefault.year.meta.mandatory == 'true'">*</span></label>
+        </div>
+    </div>
+    <div ng-repeat="SingleTopUp in uiElement.refDetail.value">
+        <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 v3-padding-0">
+                <div class="row v4-materialize-container">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+                        <div class="input-field">
+                            <input id = "input1_illustration_SingleTopUpList" pos-autonumeric placeholder="" ng-disabled="moduleService.freeze == true" type="text" max="999999999999999" decimal="0" ng-model="SingleTopUp.singleTopUpAmount.value" child-ui-element="SingleTopUp.singleTopUpAmount.meta"/>
+                            <span class="errorMessage" ng-if="SingleTopUp.singleTopUpAmount.meta.errorCode.indexOf(';') > 0" ng-bind="(SingleTopUp.singleTopUpAmount.meta.errorCode.substring(0,SingleTopUp.singleTopUpAmount.meta.errorCode.indexOf(';')) | translate) + (SingleTopUp.singleTopUpAmount.meta.errorCode.substring(SingleTopUp.singleTopUpAmount.meta.errorCode.lastIndexOf(';') + 1) | translate)"></span>
+                            <span class="errorMessage" ng-if="SingleTopUp.singleTopUpAmount.meta.errorCode.indexOf(';') < 0" ng-bind="SingleTopUp.singleTopUpAmount.meta.errorCode | translate"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 v3-padding-0">
+                <div class="row v4-materialize-container">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
+                        <div class="input-field">
+                            <input id = "input2_illustration_SingleTopUpList" numbers-only clear-error-code placeholder="" ng-disabled="moduleService.freeze == true" type="text" maxlength="2" ng-model="SingleTopUp.year.value" child-ui-element="SingleTopUp.year.meta"/>
+                            <span class="errorMessage" ng-bind="SingleTopUp.year.meta.errorCode | translate"></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <button id = "button1_illustration_SingleTopUpList" ng-disabled="moduleService.freeze == true" class="button-delete-address btn v3-btn-danger v3-fna-button-addchildren button-new-ui" ng-click="removeSingleTopUp($index)" ng-show="uiElement.refDetail.meta.counter >= 1" ><i class="fa fa-times"></i></button>
+        </div>
+    </div>
+</div>
+<div class="col-xs-4 col-sm-6">
+    <div class="col-xs-12 col-sm-11 col-md-9 col-lg-6">
+        <button id = "button2_illustration_SingleTopUpList" ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['singleTopUp']).meta.counter > 9" class="btn btn-lg v3-btn-danger v3-fna-button-addchildren button-new-ui v4-prototype-middleView-main" ng-click="addSingleTopUp()"><i style="float: left" class="fa fa-plus margin-title-left-15-md"></i><label class="label-field">{{::'v3.dashboardportlet.label.SingleTopUps' | translate}}</label></button>
+    </div>
+</div>
+<!-- End Single Top Up -->
+<!-- Start Withdrawal -->
+<!-- <div fieldId="illustration:AddWithdrawals" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> -->
+<!-- 	<div class="col-xs-12 col-sm-12 v3-padding-0"> -->
+<!-- 		<div class="row v3-margin-auto" style="margin: 0px !important;display: flex;padding: 10px 0px;"> -->
+<!-- 			<label class="v3-label-search" style="font-size: 1.25em; margin-left:43px;">{{'v3.dashboardportlet.label.Withdrawals' | translate}}</label>			 -->
+<!-- 			<button style="line-height: 43px; margin-left: 10px; padding: 0px; width: 40px; height: 40px; min-width: 0px !important; border-radius: 26px;" ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['withdrawal']).meta.counter > 9" class="btn btn-lg v3-btn-danger v3-fna-button-addchildren" ng-click="moduleService.addChildEleToParentEleWithCounter(moduleService.findElementInDetail(['withdrawal']),'value')"><i class="fa fa-plus"></i></button> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+<!-- </div> -->
+<div fieldId="illustration:WithdrawalsList" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v3-padding-0 marginForBasicPlan">
+    <div class="row col-xs-12 col-sm-11 col-md-11 col-lg-11" ng-disabled="true">
+        <div class="col-xs-12 col-sm-12" ng-disabled="true" >
+            <div class="row v3-margin-auto" style="margin: 0px !important;display: flex">
+                <label class="v3-label-search" style="font-size: 1.25em; color: black">{{'v3.dashboardportlet.label.totalWithdrawals' | translate}}{{uiElement.refDetail.value.length}}</label>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <label class="label-field" ng-if="moduleService.findElementInDetail(['withdrawal']).meta.counter > 0">{{::'new.v4.mynewworkspace.illustration.label.WithdrawAmount'| translate}} ({{moduleService.findElementInDetail(['contractCurrency']).value}})<span ng-show="uiElement.refDetail.arrayDefault.withdrawalAmount.meta.mandatory == 'true'">*</span></label>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <label class="label-field" ng-if="moduleService.findElementInDetail(['withdrawal']).meta.counter > 0">{{::'new.v4.mynewworkspace.illustration.label.Year'| translate}}<span ng-show="uiElement.refDetail.arrayDefault.year.meta.mandatory == 'true'">*</span></label>
+        </div>
+    </div>
+    <div ng-repeat="Withdrawal in uiElement.refDetail.value">
+        <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 v3-padding-0">
+                <div class="row v4-materialize-container">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-content-center">
+                        <div class="input-field">
+                            <input id = "input1_illustration_WithdrawalsList" pos-autonumeric placeholder="" ng-disabled="moduleService.freeze == true" type="text" max="999999999999999" decimal="0" ng-model="Withdrawal.withdrawalAmount.value" child-ui-element="Withdrawal.withdrawalAmount.meta"/>
+                            <span class="errorMessage" ng-if="Withdrawal.withdrawalAmount.meta.errorCode.indexOf(';') > 0" ng-bind="(Withdrawal.withdrawalAmount.meta.errorCode.substring(0,Withdrawal.withdrawalAmount.meta.errorCode.indexOf(';')) | translate) + (Withdrawal.withdrawalAmount.meta.errorCode.substring(Withdrawal.withdrawalAmount.meta.errorCode.lastIndexOf(';') + 1) | translate)"></span>
+                            <span class="errorMessage" ng-if="Withdrawal.withdrawalAmount.meta.errorCode.indexOf(';') < 0" ng-bind="Withdrawal.withdrawalAmount.meta.errorCode | translate"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 v3-padding-0">
+                <div class="row v4-materialize-container">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
+                        <div class="input-field">
+                            <input id = "input2_illustration_WithdrawalsList" numbers-only clear-error-code placeholder="" ng-disabled="moduleService.freeze == true" type="text" maxlength="2" ng-model="Withdrawal.year.value" child-ui-element="Withdrawal.year.meta"/>
+                            <span class="errorMessage" ng-bind="Withdrawal.year.meta.errorCode | translate"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <button id = "button1_illustration_WithdrawalsList" ng-disabled="moduleService.freeze == true"  class="button-delete-address btn v3-btn-danger v3-fna-button-addchildren button-new-ui" ng-click="removeWithdrawal($index)" ng-show="uiElement.refDetail.meta.counter >= 1"><i class="fa fa-times"></i></button>
+        </div>
+    </div>
+</div>
+<div class="col-xs-4 col-sm-6">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+        <button id = "button2_illustration_WithdrawalsList" ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['withdrawal']).meta.counter > 9" class="btn btn-lg v3-btn-danger v3-fna-button-addchildren button-new-ui v4-prototype-middleView-main" ng-click="addWithdrawal()"><i style="float: left" class="fa fa-plus margin-title-left-15-md"></i><label class="label-field">{{::'v3.dashboardportlet.label.Withdrawals' | translate}}</label></button>
+    </div>
+</div>
+<!-- End Withdrawal -->
+<!-- Start Loading Information -->
+<!-- <div fieldId="illustration:AddLoadingInformation" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> -->
+<!-- 	<div class="col-xs-12 col-sm-12 v3-padding-0"> -->
+<!-- 		<div class="row v3-margin-auto" style="margin: 0px !important;display: flex;padding: 10px 0px;"> -->
+<!-- 			<label class="v3-label-search" style="font-size: 1.25em; margin-left:43px;">{{'v3.dashboardportlet.label.LoadingInformation' | translate}}</label>			 -->
+<!-- 			<button style="line-height: 43px; margin-left: 10px; padding: 0px; width: 40px; height: 40px; min-width: 0px !important; border-radius: 26px;" ng-disabled="moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED' || !isActiveRoleIn(['UW']) || moduleService.detail.basicPlan.loadingInformation.meta.counter > 1" class="btn btn-lg v3-btn-danger v3-fna-button-addchildren" ng-click="moduleService.addChildEleToParentEleWithCounter(moduleService.detail.basicPlan.loadingInformation,'value')"><i class="fa fa-plus"></i></button> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+<!-- </div> -->
+<div fieldId="illustration:LoadingList" >
+
+    <div class="row" >
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <label class="label-field">{{::'new.v4.mynewworkspace.illustration.label.LoadingType'| translate}}<span ng-show="loadingInfor.loadingType.meta.mandatory == 'true'">*</span></label>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <label class="label-field">{{::'new.v4.mynewworkspace.illustration.label.Reason'| translate}}<span ng-show="loadingInfor.reason.meta.mandatory == 'true'">*</span></label>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <label class="label-field">{{::'new.v4.mynewworkspace.illustration.label.Loading'| translate}}<span ng-show="loadingInfor.loading.meta.mandatory == 'true'">*</span></label>
+        </div>
+    </div>
+    <div ng-repeat="loadingInfor in uiElement.refDetail.value">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 padding-left-0">
+            <div class="row v4-materialize-container">
+                <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+                    <div class="input-field">
+                        <select id = "select1_illustration_LoadingList" ui-select2 ng-disabled="moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED' || !isActiveRoleIn(['UW'])" ng-model="loadingInfor.loadingType.value">
+                            <option ng-repeat="loadingType in moduleService.tempLazyLoadingList[$index]" value="{{loadingType.key}}">
+                                {{'v4.loadingType.enum.' + loadingType.key | translate}}</option>
+                        </select>
+                        <span class="errorMessage"  ng-if="loadingInfor.loadingType.value === '' || loadingInfor.loadingType.value == undefine" ng-bind="loadingInfor.loadingType.meta.errorCode | translate"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 padding-left-0">
+            <div class="row v4-materialize-container">
+                <div class="col-xs-11 col-sm-11 col-md-10">
+                    <div class="input-field">
+                        <select id = "select2_illustration_LoadingList" ui-select2 ng-disabled="moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED' || !isActiveRoleIn(['UW'])" ng-model="loadingInfor.reason.value">
+                            <option ng-repeat="reason in moduleService.findElementInElement(moduleService.lazyChoiceList,['LoadingReason'])" value="{{reason.key}}">
+                                {{'v4.loadingReason.enum.' + reason.key | translate}}</option>
+                        </select>
+                        <span class="errorMessage" ng-if="loadingInfor.reason.value === '' || loadingInfor.reason.value == undefine" ng-bind="loadingInfor.reason.meta.errorCode | translate"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 padding-left-0">
+            <div class="row v4-materialize-container">
+                <div class="col-xs-11 col-sm-11 col-md-10">
+                    <div class="input-field">
+                        <input id = "input_illustration_LoadingList" pos-autonumeric clear-error-code placeholder="" ng-disabled="moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED' || !isActiveRoleIn(['UW'])" type="text" max="100" ng-model="loadingInfor.loading.value" child-ui-element="loadingInfor.loading.meta"/>
+                        <span class="errorMessage" ng-if="loadingInfor.loading.value === '' || loadingInfor.loading.value == undefine" ng-bind="loadingInfor.loading.meta.errorCode | translate"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+            <button id = "button1_illustration_LoadingList" style="line-height: 43px; padding: 0px; width: 50px; height: 3rem; min-width: 0px !important;" ng-disabled="moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED' || !isActiveRoleIn(['UW'])" class="btn btn-lg v3-btn-danger v3-fna-button-addchildren button-new-ui" ng-click="removeLoadingInfor($index)" ng-show="uiElement.refDetail.meta.counter >= 1"><i class="fa fa-times"></i></button>
+        </div>
+    </div>
+</div>
+<div class="col-xs-6">
+    <button id = "button2_illustration_LoadingList" style="line-height: 43px; padding: 0px; height: 40px; min-width: 0px !important;" ng-disabled="moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED' || !isActiveRoleIn(['UW']) || moduleService.detail.basicPlan.loadingInformation.meta.counter > 1 || checkTotalLoading100() == true " class="btn btn-lg v3-btn-danger v3-fna-button-addchildren button-new-ui" ng-click="addLoadingInfor()">
+        <div style="margin-left: 10px">
+            <i class="fa fa-plus"></i>
+            <label class="label-field" style="margin-left: 5px;margin-right: 5px">{{::'v3.dashboardportlet.label.LoadingInformation' | translate}}</label></div>
+    </button>
+</div>
+
+<!-- Start Exclusions / Clauses -->
+<!-- End Loading Information -->
+<div fieldId="illustration:ExclusionsClauses" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="row v4-materialize-container">
+        <div class="input-field col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <textarea id = "illustration_ExclusionsClauses" class="materialize-textarea" ng-disabled="moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED' || !isActiveRoleIn(['UW'])" ng-model="uiElement.refDetail.value" style="min-height:100px;"></textarea>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<!-- End Exclusions / Clauses -->
+<!-- End Basic Plan -->
+<!-- Rider -->
+<!-- Rider Summary -->
+<!-- <div fieldId="illustration:RiderName" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="col-xs-10 col-sm-10 v3-padding-0">
+    	<div class="row v3-margin-auto" style="margin: 0px !important;display: flex;">
+	    	<label class="label-field" style="margin-top:5px">{{::'new.v4.mynewworkspace.illustration.label.RiderName'| translate}}<span>*</span></label>
+	    	<button style="line-height: 43px; margin-left: 10px; padding: 0px; width: 40px; height: 40px; min-width: 0px !important; border-radius: 26px;" ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['riders']).meta.counter == 3" class="btn btn-lg v3-btn-danger v3-fna-button-addchildren" ng-click="addRiderCard(card)"><i class="fa fa-plus"></i></button>
+		</div>
+		<div class="col-xs-12 col-sm-12" ng-if="moduleService.findElementInDetail(['riders']).value.length == 0">
+			<div class="col-xs-9 col-sm-9 input-field">
+					<select ui-select2 ng-disabled="moduleService.freeze == true" ng-model="moduleService.newRider">
+					    <option ng-repeat="riderName in moduleService.findElementInElement(moduleService.lazyChoiceList,['RiderNew'])" value="{{riderName.key}}">
+					    {{'v4.riderName.enum.' + riderName.key | translate}}</option>
+					</select>
+					<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+			<div class="col-xs-3 col-sm-3">
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12" ng-repeat = "rider in moduleService.findElementInDetail(['riders']).value" ng-if="moduleService.findElementInDetail(['riders']).value.length != 0">
+			<div class="col-xs-9 col-sm-9 input-field">
+					<select ui-select2 ng-disabled="moduleService.freeze == true" ng-change="refreshDetail()" ng-model="moduleService.findElementInDetail(['riders']).value[$index].riderName.value">
+					    <option ng-repeat="riderName in moduleService.lazyListRider[$index]" value="{{riderName.key}}">
+					    {{'v4.riderName.enum.' + riderName.key | translate}}</option>
+					</select>
+					<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+			<div class="col-xs-3 col-sm-3">
+				<button style="line-height: 43px; margin-left: 10px; padding: 0px; width: 40px; height: 40px; min-width: 0px !important; border-radius: 26px;" ng-disabled="moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED'" class="btn btn-lg v3-btn-danger v3-fna-button-addchildren" ng-click="removeRiderCard($index, card)"><i class="fa fa-minus"></i></button>
+			</div>
+		</div>
+	</div>
+</div> -->
+<div fieldId="illustration:RiderInformation" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="col-xs-12 col-sm-12" ng-disabled="true" >
+        <div class="row v3-margin-auto" style="margin: 0px !important;display: flex;padding: 10px 0px;">
+            <label class="v3-label-search" style="font-size: 1.5em; color: black; margin-bottom:15px; margin-left: -15px">{{'v3.dashboardportlet.label.totalRider' | translate}}{{uiElement.refDetail.value.length}}</label>
+        </div>
+    </div>
+    <div class="row v4-materialize-container" ng-repeat="riderdetail in moduleService.detail.riders.value track by $index">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 padding-left-0">
+                <label class="text-body">{{::'new.v4.mynewworkspace.illustration.label.RiderName'| translate}}<span ng-show="riderdetail.riderName.meta.mandatory == 'true'">*</span></label>
+                <div class="input-field">
+                    <select ng-attr-id="{{ 'select_illustration_RiderInformation_' + $index }}" ui-select2 ng-model="riderdetail.riderName.value">
+                        <option ng-repeat="riderNameDetail in moduleService.lazyListRider[$index]" value="{{riderNameDetail.key}}">
+                            {{'v4.riderNameDetail.enum.' + riderNameDetail.key | translate}}</option>
+                    </select>
+                    <!-- 				<span class="errorMessage" ng-bind="riderdetail.riderName.meta.errorCode | translate"></span> -->
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <label class="text-body">{{::'new.v4.mynewworkspace.illustration.label.RiderTerm' | translate}}<span ng-show="riderdetail.riderTerm.meta.mandatory == 'true'">*</span></label>
+                <div class="input-field">
+                    <input ng-attr-id="{{ 'input1_illustration_RiderInformation_' + $index }}" pos-autonumeric placeholder="" ng-disabled="moduleService.freeze == true" type="text" max="15" decimal="0" ng-model="riderdetail.riderTerm.value"/>
+                    <span class="errorMessage" ng-bind="riderdetail.riderTerm.meta.errorCode | translate"></span>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-3 col-lg-3 no-padding-left-sm" ng-if="riderdetail.riderName.value=='TRMB'|| riderdetail.riderName.value=='AAIB'">
+                <div class="row v4-materialize-container">
+                    <label class="text-body">
+                        {{::'new.v4.mynewworkspace.illustration.label.SumAssured'| translate}}({{moduleService.findElementInDetail(['contractCurrency']).value}})
+                        <span ng-show="riderdetail.riderName.meta.mandatory == 'true'">*</span>
+                    </label>
+                    <div class="input-field">
+                        <input ng-attr-id="{{ 'input2_illustration_RiderInformation_' + $index }}" pos-autonumeric placeholder="" ng-disabled="moduleService.freeze == true" type="text"
+                               maxlength="120" decimal="0" ng-model="riderdetail.sumAssured.value"/>
+                        <span class="errorMessage" ng-if="riderdetail.sumAssured.meta.errorCode.indexOf(';') > 0"
+                              ng-bind="(riderdetail.sumAssured.meta.errorCode.substring(0,riderdetail.sumAssured.meta.errorCode.indexOf(';')) | translate) + (riderdetail.sumAssured.meta.errorCode.substring(riderdetail.sumAssured.meta.errorCode.lastIndexOf(';') + 1) | translate)"></span>
+                        <span class="errorMessage" ng-if="riderdetail.sumAssured.meta.errorCode.indexOf(';') < 0" ng-bind="riderdetail.sumAssured.meta.errorCode | translate"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-3 col-lg-3 no-padding-left-sm" ng-if="riderdetail.riderName.value=='WOPU'">
+                <div class="row v4-materialize-container">
+                    <label class="text-body">{{::'new.v4.mynewworkspace.illustration.label.BenefitAmount'| translate}}({{moduleService.findElementInDetail(['contractCurrency']).value}})
+                        <!-- 					<span ng-show="riderdetail.riderName.meta.mandatory == 'true'">*</span> -->
+                    </label>
+                    <div class="input-field">
+                        <input ng-attr-id="{{ 'input3_illustration_RiderInformation_' + $index }}" pos-autonumeric placeholder="" ng-disabled="true" type="text" maxlength="120" decimal="0"
+                               ng-model="moduleService.detail.benefitAmount.value" />
+                        <span class="errorMessage" ng-bind="moduleService.detail.benefitAmount.meta.errorCode | translate"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 rider-button-remove">
+                <button ng-attr-id="{{ 'button1_illustration_RiderInformation_' + $index }}" ng-disabled="moduleService.freeze == true ||  moduleService.findElementInDetail(['addresses']).meta.counter == 1" class="button-delete-address btn v3-btn-danger v3-fna-button-addchildren button-new-ui" ng-click="removeRider(card,$index)"><i style="float: left" class="fa fa-times"></i><label class="label-field"></label></button>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-4 col-sm-3 col-md-3 col-lg-2 padding-left-0">
+        <button id = "button2_illustration_RiderInformation" ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['riders']).meta.counter == 3" class="btn btn-lg v3-btn-danger v3-fna-button-addchildren button-new-ui v4-prototype-middleView-main" ng-click="addRider(card)"><i style="float: left" class="fa fa-plus"></i><label class="text-body">Rider</label></button>
+    </div>
+</div>
+
+
+<!-- <div fieldId="illustration:RiderTerm" ng-show="card.refDetail.riderTerm.meta.visible == 'true'" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+    	<div class="col-xs-11 col-sm-11 col-md-10">
+	    	<label class="label-field">{{::'new.v4.mynewworkspace.illustration.label.RiderTerm' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+			<div class="input-field">
+				<input pos-autonumeric placeholder="" ng-disabled="moduleService.freeze == true" type="text" max="15" decimal="0" ng-model="uiElement.refDetail.value"/>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div> -->
+<!-- <div fieldId="illustration:SumAssuredInform" ng-show="card.refDetail.sumAssured.meta.visible == 'true'" class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> -->
+<!--     <div class="row v4-materialize-container"> -->
+<!--     	<div class="col-xs-11 col-sm-11 col-md-10"> -->
+<!-- 	    	<label class="label-field">{{::'new.v4.mynewworkspace.illustration.label.SumAssured' | translate}} ({{moduleService.findElementInDetail(['contractCurrency']).value}})<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label> -->
+<!-- 			<div class="input-field"> -->
+<!-- 				<input pos-autonumeric placeholder="" ng-disabled="moduleService.freeze == true" type="text" maxlength="120" decimal="0" ng-model="uiElement.refDetail.value"/> -->
+<!-- 				<span class="errorMessage" ng-if="uiElement.refDetail.meta.errorCode.indexOf(';') > 0" ng-bind="(uiElement.refDetail.meta.errorCode.substring(0,uiElement.refDetail.meta.errorCode.indexOf(';')) | translate) + (uiElement.refDetail.meta.errorCode.substring(uiElement.refDetail.meta.errorCode.lastIndexOf(';') + 1) | translate)"></span>  -->
+<!-- 				<span class="errorMessage" ng-if="uiElement.refDetail.meta.errorCode.indexOf(';') < 0" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+<!-- </div> -->
+<!-- <div fieldId="illustration:BenefitAmount" class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> -->
+<!--     <div class="row v4-materialize-container"> -->
+<!--     	<div class="col-xs-11 col-sm-11 col-md-10"> -->
+<!-- 	    	<label class="label-field">{{::'new.v4.mynewworkspace.illustration.label.BenefitAmount' | translate}} ({{moduleService.findElementInDetail(['contractCurrency']).value}})<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label> -->
+<!-- 			<div class="input-field"> -->
+<!-- 				<input pos-autonumeric placeholder="" ng-disabled="true" type="text" maxlength="120" decimal="0" ng-model="moduleService.detail.benefitAmount.value"/> -->
+<!-- 				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+<!-- 	</div>	 -->
+<!-- </div> -->
+<!-- End Rider Summary -->
+<!-- End Rider -->
+
+<div fieldId="illustration:DetailSummary">
+    <div  class="col-xs-12 col-sm-10 col-md-10 col-lg-10 bold-summary">
+        <div class="form-group row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="title-summary">{{"v4.quotation.summary.summaryQuotation" | translate}}</div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <label class="text-body">{{"v4.sidebar.title.ProductName" | translate}}</label>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <label class="text-body">{{'v4.sidebar.title.' + moduleService.detail.metaData.productName.value | translate}}</label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <label class="text-body">{{"v4.quotation.summary.quoteNo" | translate}}</label>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <label class="text-body">{{moduleService.detail.metaData.docName.value | translate}}</label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <label class="text-body">{{"v4.quotation.summary.status" | translate}}</label>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <label class="text-body">{{'v4.sidebar.title.status.' + moduleService.detail.metaData.businessStatus.value | translate}}</label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <label class="text-body">{{"v4.quotation.summary.basicPremium" | translate}}</label>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <label class="text-body">
+                    {{moduleService.detail.basicPlan.information.billingCurrency.value}}
+                    {{moduleService.detail.basicPlan.information.regularPremium.value | v3Currency}}
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <label class="text-body">{{"v4.quotation.summary.tax" | translate}}</label>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <label class="text-body">
+                    {{moduleService.detail.basicPlan.information.billingCurrency.value}}
+                    {{moduleService.detail.tax.value | v3Currency}}
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <label class="text-body">{{"v4.quotation.summary.contractFee" | translate}}</label>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <label class="text-body">
+                    {{moduleService.detail.basicPlan.information.billingCurrency.value}}
+                    {{moduleService.detail.contractFee.value | v3Currency}}
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <label class="text-body">{{"v4.quotation.summary.totalSumAssured" | translate}}</label>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <label class="text-body">
+                    {{moduleService.detail.basicPlan.information.contractCurrency.value}}
+                    {{moduleService.detail.basicPlan.information.sumAssured.value | v3Currency}}
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <label class="text-body">{{"v4.quotation.summary.createdDate" | translate}}</label>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 " ng-if = "commonService.hasValueNotEmpty(moduleService.detail.metaData.createDate.value)">
+                <label class="text-body">
+                    {{moduleService.detail.metaData.createDate.value | datetimeFilter:'DD/MM/YYYY'}}
+                </label>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 " ng-if = "!commonService.hasValueNotEmpty(moduleService.detail.metaData.createDate.value)">
+                <label class="text-body">
+                    {{moduleService.detail.basicPlan.information.effectiveDate.value | datetimeFilter:'DD/MM/YYYY'}}
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <label class="text-body">{{"v4.quotation.summary.lastUpdatedDate" | translate}}</label>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 " ng-if = "commonService.hasValueNotEmpty(moduleService.detail.metaData.modifyDate.value)">
+                <label class="text-body">
+                    {{moduleService.detail.metaData.modifyDate.value | datetimeFilter:'DD/MM/YYYY'}}
+                </label>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 " ng-if = "!commonService.hasValueNotEmpty(moduleService.detail.metaData.modifyDate.value)">
+                <label class="text-body">
+                    {{moduleService.detail.basicPlan.information.effectiveDate.value | datetimeFilter:'DD/MM/YYYY'}}
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

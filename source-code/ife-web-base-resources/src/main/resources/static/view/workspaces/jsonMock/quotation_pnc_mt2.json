@@ -1,0 +1,133 @@
+{
+  "IposDocument": {
+    "Data": {
+      "illustration:Illustration": {
+        "section": "illustration:Illustration",
+        "uiStyle": "tab",
+        "icons": {
+          "cardIcon": {
+            "content": "fa fa-pie-chart"
+          }
+        },
+        "permission": {
+          "openable": [
+            "case_openable"
+          ],
+          "editable": [
+            "case_editable"
+          ],
+          "viewable": [
+            "case_viewable"
+          ]
+        },
+        "illustration:vehicleInfo": {
+          "key": [
+            ""
+          ],
+          "section": "illustration:Illustration",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+          "vehicleInfo:vehicleClass": {
+            "key": [
+             "vehicleClass"
+            ],
+            "group": "1"
+          },
+          "vehicleInfo:cubicCapacity": {
+            "key": [
+             "cubicCapacity"
+            ],
+            "group": "1"
+          },
+           "vehicleInfo:registrationNo": {
+            "key": [
+             "registrationNo"
+            ],
+            "group": "2"
+          }
+        },
+        "illustration:coverage": {
+          "key": [
+            ""
+          ],
+          "section": "illustration:Illustration",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+          "coverage:coverFrom": {
+            "key": [
+             "coverFrom"
+            ],
+            "group": "1"
+          },
+          "coverage:coverTo": {
+            "key": [
+             "coverTo"
+            ],
+            "group": "1"
+          },
+          "coverage:coverType": {
+            "key": [
+             "coverType"
+            ],
+            "group": "2"
+          },
+          "coverage:noClaimBonus": {
+            "key": [
+             "noClaimBonus"
+            ],
+            "group": "2"
+          },
+          "coverage:contractCurrency": {
+            "key": [
+             "contractCurrency"
+            ],
+            "group": "3"
+          },
+          "coverage:sumInsured": {
+            "key": [
+             "sumInsured"
+            ],
+            "group": "3"
+          }
+        },
+        "illustration:addtionalCoverage": {
+          "key": [
+          ],
+          "section": "illustration:Illustration",
+          "addtionalCoverage:coverage": {
+            "key": [
+             "additionalCoverage"
+            ],
+            "group": "1"
+          }
+        },
+        "illustration:PremiumSumary": {
+          "key": [
+            "premiumSummary"
+          ],
+          "section": "illustration:Illustration",
+          "onOpen": "computeQuotation(true)",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+         
+          "premiumSumary:summary": {
+            "key": [
+             ""
+            ],
+            "group": "0"
+          }
+        }
+      }
+    }
+   }
+  }      
+        

@@ -1,0 +1,85 @@
+{
+  "IposDocument": {
+    "Data": {
+      "underwriting:Underwriting": {
+        "section": "underwriting:Underwriting",
+        "uiStyle": "tab",
+        "icons": {
+          "cardIcon": {
+            "content": "fa fa-pie-chart"
+          }
+        },
+        "permission": {
+          "openable": [
+            "case_openable"
+          ],
+          "editable": [
+            "case_editable"
+          ],
+          "viewable": [
+            "case_viewable"
+          ]
+        },
+        "underwriting:Findings": {
+          "key": [],
+          "section": "underwriting:Underwriting",
+          "icon": "fa fa-pencil-square-o",
+          "onOpen": "getListFinding(moduleService.detail.underwritingDecisionInfo.findingCode.value)",
+          "underwriting:FindingsList": {
+            "key": []
+          }
+        },
+        "underwriting:UnderwriterComment": {
+          "key": [],
+          "section": "underwriting:Underwriting",
+          "icon": "fa fa-pencil-square-o",
+          "permission": {
+            "openable": [
+              "underwriting_openable"
+            ],
+            "editable": [
+              "underwriting_editable"
+            ],
+            "viewable": [
+              "underwriting_viewable"
+            ]
+          },
+          "underwriting:Comment": {
+            "key": [
+              "comment"
+            ]
+          }
+        },
+        "underwriting:FormAndLetter": {
+          "key": [
+            "listFormLetter"
+          ],
+          "section": "underwriting:Underwriting",
+          "icon": "fa fa-pencil-square-o",
+          "permission": {
+            "openable": [
+              "underwriting_openable"
+            ],
+            "editable": [
+              "underwriting_editable"
+            ],
+            "viewable": [
+              "underwriting_viewable"
+            ]
+          },
+          "underwriting:Form": {
+            "key": []
+          },
+          "underwriting:Letter": {
+            "key": []
+          },
+          "underwriting:FormLetterList": {
+            "key": [
+              "listFormLetter"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

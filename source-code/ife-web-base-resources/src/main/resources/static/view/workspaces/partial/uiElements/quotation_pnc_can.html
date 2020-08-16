@@ -1,0 +1,661 @@
+	<!-- <!--
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+-->
+
+
+<!-- Declaration Period -->
+
+<div fieldId="declarationPeriod:shipmentStarts" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">
+			{{::'v3.mynewworkspace.quotation.label.shipmentStarts'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field">
+			<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+			<input id = "quotation_shipmentStarts" type="text" autocomplete="off" clear-error-code class="datepicker" materiallize-datetime ng-change ="addDayForshipmentEnds()"
+			 formatdisplay='DD/MM/YYYY' ng-model="uiElement.refDetail.value"  ng-disabled="moduleService.freeze == true || isAcceptQuotation == true || (moduleService.detail.marineOpenCoverNumber.value === moduleService.detail.marineOpenCoverInsured.id) &&
+				(!moduleService.detail.marineOpenCoverInsured.error.value) && (moduleService.detail.marineOpenCoverNumber.value)"/>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<div fieldId="declarationPeriod:shipmentEnds" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">
+			{{::'v3.mynewworkspace.quotation.label.shipmentEnds'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field">
+			<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+			<input id = "quotation_shipmentEnds" type="text" autocomplete="off" clear-error-code class="datepicker" materiallize-datetime
+			 formatdisplay='DD/MM/YYYY' ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true"/>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<div fieldId="declarationPeriod:etd" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">
+			{{::'v3.mynewworkspace.quotation.label.etd'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field">
+			<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+			<input id = "quotation_etd" type="text" autocomplete="off" clear-error-code class="datepicker" materiallize-datetime
+			 formatdisplay='DD/MM/YYYY' ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true"/>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<div fieldId="declarationPeriod:eta" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">
+			{{::'v3.mynewworkspace.quotation.label.eta'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field">
+			<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+			<input id = "quotation_eta" type="text" autocomplete="off" clear-error-code class="datepicker" materiallize-datetime ng-disabled="isAcceptQuotation == true || moduleService.freeze == true"
+			 formatdisplay='DD/MM/YYYY' ng-model="uiElement.refDetail.value"/>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<div fieldId="declarationPeriod:marineOpenCoverNumber" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container" >
+		<label class="label-field">
+			{{::'v3.mynewworkspace.quotation.label.marineOpenCoverNumber'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field">
+			<input id="vehicleInfo_marineOpenCoverNumber" clear-error-code 
+				ng-disabled="moduleService.freeze == true || isAcceptQuotation == true || (moduleService.detail.marineOpenCoverNumber.value === moduleService.detail.marineOpenCoverInsured.id) &&
+				(!moduleService.detail.marineOpenCoverInsured.error.value) && (moduleService.detail.marineOpenCoverNumber.value)"
+				type="text" maxlength="25" ng-model="uiElement.refDetail.value" /> <span
+				class="errorMessage"
+				ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+				
+				<button style="display:contents" ng-click="getMOCFromIHub()" ng-disabled ="isAcceptQuotation == true || moduleService.freeze == true || (moduleService.detail.marineOpenCoverNumber.value === moduleService.detail.marineOpenCoverInsured.id) &&
+				(!moduleService.detail.marineOpenCoverInsured.error.value) && (moduleService.detail.marineOpenCoverNumber.value) || !moduleService.detail.declarationStarts.value || !moduleService.detail.marineOpenCoverNumber.value" ><i style="margin-right: 40px;" class="fa fa-search fa-2x subfix-icon" aria-hidden="true"></i></button>
+		</div>
+	</div>
+</div>
+
+<div fieldId="declarationPeriod:marineOpenCover" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">
+			{{::'v3.mynewworkspace.quotation.label.marineOpenCover'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field" >
+			<input id="vehicleInfo_marineOpenCoverNumber" clear-error-code 
+				ng-disabled="true"
+				type="text" maxlength="200" ng-model="uiElement.refDetail.value" /> <span
+				class="errorMessage"
+				ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<!-- Insured Comm -->
+
+<div fieldId="insuredCommodity:invoiceCurrency" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="label-field">{{::'v3.mynewworkspace.quotation.label.invoiceCurrency'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+        <div class="input-field margin-right-0">
+            <select id = "quotation_invoiceCurrency" ui-select2 ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true">
+                <option ng-repeat="title in moduleService.lazyChoiceList.InvoiceCurrency" value="{{title.key}}">{{title.key}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+
+
+<div fieldId="insuredCommodity:invoiceAmount" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{::'v3.mynewworkspace.quotation.label.invoiceAmount'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+			<div class="input-field"> 
+<input type="text" maxlength="120" ng-disabled="moduleService.freeze == true"
+					ng-model="uiElement.refDetail.value"  pos-autonumeric  max="999999999999999"/>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div> 
+<div fieldId="insuredCommodity:commodity" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="label-field">{{::'v3.mynewworkspace.quotation.label.commodity'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+        <div class="input-field margin-right-0">
+            <select id = "quotation_commodity" ui-select2 ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true"  is-value = "value" when-model-update="moduleService.detail.commodityDescription"
+			when-model-update-from = "code" when-model-update-to = "description"  when-model-update-list = "moduleService.findElementInDetail(['marineOpenCoverInsured','commodityTypeMOC','value'])">
+                <option ng-repeat="itemCommodity in moduleService.findElementInDetail(['marineOpenCoverInsured','commodityTypeMOC','value'])" value="{{itemCommodity.code.value}}">{{itemCommodity.description.value}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+
+<div fieldId="insuredCommodity:packing" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="label-field">{{::'v3.mynewworkspace.quotation.label.packing'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+        <div class="input-field margin-right-0">
+            <select id = "quotation_packing" ui-select2 ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true" is-value = "value" when-model-update="moduleService.detail.packingDescription" 
+			when-model-update-from = "code" when-model-update-to = "description"  when-model-update-list = "moduleService.findElementInDetail(['marineOpenCoverInsured','packingMOC','value'])">
+                <option ng-repeat="itemPaking in  moduleService.findElementInDetail(['marineOpenCoverInsured','packingMOC','value'])" value="{{itemPaking.code.value}}">{{itemPaking.description.value}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div> 
+
+<div fieldId="insuredCommodity:interestInsured" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="label-field">{{::'v3.mynewworkspace.quotation.label.interestInsured'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+        <div class="input-field margin-right-0" style="padding-right: 0px;">
+            <textarea  id="interestInsured"  style="height:190px;font-size: large;resize: none;" ng-model="uiElement.refDetail.value" ng-change="handleinterestInsured()" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true || uiElement.refDetail.meta.mandatory == 'false' || uiElement.refDetail.meta.editable == 'false' ">
+           
+            </textarea>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+ 
+<!-- Conveyance -->
+
+ <div fieldId="conveyance:ShipmentType" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">{{::'v3.mynewworkspace.quotation.label.ShipmentType'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+		<div class="input-field margin-right-0">
+			<select id = "quotation_ShipmentType" ui-select2 ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true" ng-change = "changeShipmentType(uiElement.refDetail.value)">
+				<option ng-repeat="itemPaking in  moduleService.findElementInDetail(['marineOpenCoverInsured','shipmentMOC','value'])" value="{{itemPaking.key.value}}" >{{itemPaking.value.value}}</option>
+			</select>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<div fieldId="conveyance:Coverage" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">{{::'v3.mynewworkspace.quotation.label.Coverage'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+		<div class="input-field margin-right-0">
+			<select id = "quotation_Coverage" ui-select2 ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true">
+				<option ng-repeat="itemPaking in  moduleService.findElementInDetail(['marineOpenCoverInsured','mct','value'])" value="{{itemPaking.key.value}}">{{itemPaking.value.value}}</option>
+			</select>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<div fieldId="conveyance:Conveyance" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">{{::'v3.mynewworkspace.quotation.label.Conveyance'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+		<div class="input-field margin-right-0">
+			<select id = "quotation_Conveyance" ui-select2 ng-model="uiElement.refDetail.value" ng-change = "refreshDataByConveyance()" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true" is-value = "value" when-model-update1="moduleService.detail.conveyanceDescription"
+		 when-model-update2="moduleService.detail.marineOpenCoverInsured.liabilityLimit"	when-model-update-from = "code" when-model-update-to = "description"   when-model-update-list = "moduleService.findElementInDetail(['marineOpenCoverInsured','conv','value'])">
+				<option ng-repeat="itemPaking in  moduleService.findElementInDetail(['marineOpenCoverInsured','conv','value'])" value="{{itemPaking.code.value}}">{{itemPaking.description.value}}</option>
+			</select>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<div fieldId="conveyance:VehicleType" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="moduleService.findElementInDetail(['conveyance','value']) === 'L'">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{::'v3.mynewworkspace.quotation.label.VehicleType'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+			<div class="input-field">
+				<input type="text" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true"
+					maxlength="30"   ng-model="uiElement.refDetail.value"/>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div fieldId="conveyance:Carrier" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="moduleService.findElementInDetail(['conveyance','value']) === 'B'">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{::'v3.mynewworkspace.quotation.label.Carrier'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+			<div class="input-field">
+				<input type="text" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true"
+					maxlength="30"   ng-model="uiElement.refDetail.value"/>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div fieldId="conveyance:ConveyanceDetail" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="moduleService.findElementInDetail(['conveyance','value']) === 'S'">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">{{::'v3.mynewworkspace.quotation.label.ConveyanceDetail'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+		<div class="input-field margin-right-0" style="padding-right: 0px;">
+            <textarea id="conveyanceDetail" style="height:100px;font-size: large;resize: none;" ng-model="uiElement.refDetail.value" ng-change="handleConveyanceDetail()"
+            ng-disabled="isAcceptQuotation == true || moduleService.freeze == true || disabledConveyance == true ">
+            </textarea>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<div fieldId="conveyance:RegistrationNo" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="moduleService.findElementInDetail(['conveyance','value']) === 'L'">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{::'v3.mynewworkspace.quotation.label.RegistrationNo'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+			<div class="input-field">
+				<input type="text" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true"
+					maxlength="30"   ng-model="uiElement.refDetail.value"/>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div fieldId="conveyance:CountryFrom" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">{{::'v3.mynewworkspace.quotation.label.CountryFrom'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+		<div class="input-field margin-right-0">
+			<select id = "quotation_CountryFrom" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true || moduleService.countryFrom == 'true' " ui-select2 ng-model="uiElement.refDetail.value" is-value = "value" when-model-updatecountry="moduleService.detail.countryFromDescription" 
+			when-model-updatecountry1="moduleService.detail.countryToDescription" when-model-updateconveyance="moduleService.detail.voyageDescription" when-model-update-from = "code" when-model-update-to = "description" when-model-update-list1 = "countryToListName" when-model-update-list = "countryFromListName" ng-change="changeCountryFrom(uiElement.refDetail.value)">
+				<option ng-repeat="itemPaking in countryFromListName" value="{{itemPaking.code.value}}">{{itemPaking.description.value}}</option>
+			</select>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<div fieldId="conveyance:CountryTo" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">{{::'v3.mynewworkspace.quotation.label.CountryTo'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+		<div class="input-field margin-right-0">
+			<select id = "quotation_CountryTo" ui-select2 ng-model="uiElement.refDetail.value" ng-disabled=" moduleService.countryTo == 'true' || isAcceptQuotation == true || moduleService.freeze == true" is-value = "value" when-model-updatecountry2="moduleService.detail.countryToDescription" 
+		when-model-updatecountry1="moduleService.detail.countryFromDescription" when-model-updateconveyance="moduleService.detail.voyageDescription"	when-model-update-from = "code" when-model-update-to = "description" when-model-update-list1 = "countryFromListName"  when-model-update-list = "countryToListName" ng-change="changeCountryTo(uiElement.refDetail.value)">
+				<option ng-repeat="itemPaking in countryToListName" value="{{itemPaking.code.value}}">{{itemPaking.description.value}}</option>
+			</select>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+
+
+<div fieldId="conveyance:PortFrom" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">{{::'v3.mynewworkspace.quotation.label.PortFrom'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+		<div class="input-field margin-right-0">
+			<select id = "quotation_PortFrom" ui-select2 ng-model="uiElement.refDetail.value" ng-change="copyDescriptionPortFrom(uiElement.refDetail.value)" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true">
+				<option ng-repeat="itemPaking in portFromListName" value="{{itemPaking.key}}">{{itemPaking.group[1] ?  itemPaking.group[0] + ',' + itemPaking.group[1] :  itemPaking.group[0]}}</option>
+			</select>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<div fieldId="conveyance:PortTo" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">{{::'v3.mynewworkspace.quotation.label.PortTo'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+		<div class="input-field margin-right-0">
+			<select id = "quotation_PortTo"  ui-select2 ng-model="uiElement.refDetail.value" ng-change="copyDescriptionPortTo(uiElement.refDetail.value)" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true">
+				<option ng-repeat="itemPaking in portToListName"  value="{{itemPaking.key}}">{{itemPaking.group[1] ?  itemPaking.group[0] + ',' + itemPaking.group[1] :  itemPaking.group[0]}}</option>
+			</select>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+
+
+<div fieldId="conveyance:VoyageDescription" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">{{::'v3.mynewworkspace.quotation.label.VoyageDescription'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+		<div class="input-field margin-right-0" style="padding-right:0px;">
+			
+			 
+            <textarea id="voyage" ng-change="handleVoyage()" style="height:120px;font-size: large;resize: none;" ng-model="uiElement.refDetail.value"  ng-disabled="isAcceptQuotation == true || moduleService.freeze == true">
+           
+            </textarea>
+             <i ng-click="showMessageDescription($event)" style="float:right;margin-right:-5px;" class="fa fa-info-circle fa-2x subfix-icon" aria-hidden="true"></i>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+             <div style="border:1px;size:10px;background-color:#FFFFFF;" ng-if="enablefield==false">
+            This is the additional voyage information to be printed on the Marine Cargo Certificate. You can add supplemental details that is not available 
+            in Country of Origin/ Port of Origin/ Destination Country/ Port of Destination.
+            </div>
+      
+			<!-- <input id="vehicleInfo_VeselName" clear-error-code ng-disabled="isAcceptQuotation == true || moduleService.freeze == true" placeholder=""
+				   type="text" maxlength="30" ng-model="uiElement.refDetail.value" /> 
+				   <span
+				class="errorMessage"
+				ng-bind="uiElement.refDetail.meta.errorCode | translate"></span> -->
+		</div>
+	</div>
+</div>
+
+<div fieldId="conveyance:AWBNo" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="moduleService.findElementInDetail(['conveyance','value']) === 'A'">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{::'v3.mynewworkspace.quotation.label.AWBNo'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+			<div class="input-field">
+				<input type="text" maxlength="30" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true"
+					   ng-model="uiElement.refDetail.value"/>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div fieldId="conveyance:FlightNo" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="moduleService.findElementInDetail(['conveyance','value']) === 'A'">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{::'v3.mynewworkspace.quotation.label.FlightNo'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+			<div class="input-field">
+				<input type="text" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true"
+					maxlength="30"   ng-model="uiElement.refDetail.value"/>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div fieldId="conveyance:VeselName" class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-if="moduleService.findElementInDetail(['conveyance','value']) === 'S'">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">
+			{{::'v3.mynewworkspace.quotation.label.VeselName'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span>
+		</label>
+		<div class="input-field">
+			<i class="fa fa-search fa-2x subfix-icon" aria-hidden="true" style="margin-right: 30px;" ng-click="getMOCFromIHubForConvenyance($event)"></i>
+			<input id="vehicleInfo_VeselName" clear-error-code
+				   type="text" ng-model="uiElement.refDetail.value" ng-disabled="true"/> <span
+				class="errorMessage"
+				ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<div fieldId="conveyance:VoyageNo" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="moduleService.findElementInDetail(['conveyance','value']) === 'S'">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{::'v3.mynewworkspace.quotation.label.VoyageNo'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+			<div class="input-field">
+				<input type="text" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true" maxlength="10"
+					   ng-model="uiElement.refDetail.value"/>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div fieldId="conveyance:BillOfLandingNo" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="moduleService.findElementInDetail(['conveyance','value']) === 'S'">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{::'v3.mynewworkspace.quotation.label.BillOfLandingNo'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+			<div class="input-field">
+				<input type="text" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true"
+				maxlength="30"	   ng-model="uiElement.refDetail.value"/>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Policy Holder -->
+
+<div fieldId="policyHolder:holder" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">{{::'v3.mynewworkspace.quotation.label.policyHolder'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+		<div class="input-field margin-right-0">
+			<select id = "quotation_holder" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true" ui-select2 ng-model="uiElement.refDetail.value" ng-change = "PopulateDataForAssured (uiElement.refDetail.value)">
+				<option ng-repeat="itemPolicy in moduleService.findElementInDetail(['marineOpenCoverInsured','clients','value'])" value="{{itemPolicy.mocClientID.value}}">{{itemPolicy.mocClientName.value}}</option>
+			</select>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+
+<div fieldId="policyHolder:assured" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">{{::'v3.mynewworkspace.quotation.label.assured'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+		<div class="input-field margin-right-0" style="padding-right:0px;">
+			
+			 
+            <textarea id="assured" ng-change="handleAssured()" style="height:190px;font-size: large;resize: none;"  ng-model="uiElement.refDetail.value"  ng-disabled="isAcceptQuotation == true || moduleService.freeze == true">
+           
+            </textarea>
+             <i ng-click="showMessageDescriptionAssured($event)" style="float:right;margin-right:-5px;" class="fa fa-info-circle fa-2x subfix-icon" aria-hidden="true"></i>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+             <div style="border:1px;size:10px;background-color:#FFFFFF;" ng-if="enablefieldAssured==false">
+          This is the name of the company or individual to be printed on the Marine Cargo Certificate and who has an insurable interest in the goods at risk which is the interest insured, effects an insurance in this respect.
+            </div>
+      
+			<!-- <input id="vehicleInfo_VeselName" clear-error-code ng-disabled="isAcceptQuotation == true || moduleService.freeze == true" placeholder=""
+				   type="text" maxlength="30" ng-model="uiElement.refDetail.value" /> 
+				   <span
+				class="errorMessage"
+				ng-bind="uiElement.refDetail.meta.errorCode | translate"></span> -->
+		</div>
+	</div>
+</div>
+<!-- <div fieldId="policyHolder:assured" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="label-field">{{::'v3.mynewworkspace.quotation.label.assured'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+        <div class="input-field margin-right-0" style="padding-right: 0px;">
+            <textarea style="height:100px;font-size: large;resize: none;" ng-model="uiElement.refDetail.value"  ng-disabled="isAcceptQuotation == true || moduleService.freeze == true">
+            </textarea>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- Others -->
+
+<div fieldId="Others:lcNo" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{::'v3.mynewworkspace.quotation.label.lcNo'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+			<div class="input-field">
+				<input type="text" maxlength="30" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true"
+				style="font-size:medium;"
+					ng-model="uiElement.refDetail.value" />
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div fieldId="Others:premium" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="label-field">{{::'v3.mynewworkspace.quotation.label.premium'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+        <div class="input-field margin-right-0">
+
+            <select id = "quotation_premiumAsAgreed" ui-select2 ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true">
+                <option ng-repeat="title in moduleService.lazyChoiceList.YesNo" value="{{title.key}}"><span style="font-size:medium;">{{title.group[0]}}</span></option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<!--IGI-784 Hide L/C Term from IFE screen  -->
+<!-- <div fieldId="Others:lcTerms" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="label-field">{{::'v3.mynewworkspace.quotation.label.lcTerms'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+        <div class="input-field margin-right-0" style="padding-right: 0px;">
+            <textarea id="lcterm" ng-change="handleLcterms()" style="height:100px;font-size: large;resize: none;"  ng-model="uiElement.refDetail.value"  ng-disabled="isAcceptQuotation == true || moduleService.freeze == true">
+              
+            </textarea>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div> -->
+
+<div fieldId="Others:consignee" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="label-field">{{::'v3.mynewworkspace.quotation.label.consignee'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+        <div class="input-field margin-right-0" style="padding-right: 0px" >
+            <textarea id="consignee" ng-change="handleConsignee()" style="height:100px;font-size: large;resize: none;" ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true">
+              
+            </textarea>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+
+
+<div fieldId="Others:generalPrinted" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">
+			{{::'v3.mynewworkspace.quotation.label.generalPrinted'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span>
+		</label>
+		<div class="input-field" style=" padding-right: 60px;background: #F0F0F0;">
+			<input id="vehicleInfo_registrationNo" clear-error-code 
+				ng-disabled="true" placeholder=""
+				type="text"  style="font-size:medium;background-color: #F0F0F0;" ng-model="generalInfoTobePrinted"/> <span
+				class="errorMessage" 
+				ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+				<button  style="display:contents" ng-click="showGeneralPrinted($event)"><i style="margin-right: 40px;" class="fa fa-edit fa-2x subfix-icon" aria-hidden="true"></i></button>				
+		</div>
+	</div>
+</div>
+
+<div fieldId="Others:reprintOCP" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="label-field">{{::'v3.mynewworkspace.quotation.label.reprintOCP'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+        <div class="input-field margin-right-0">
+            <select id = "quotation_reprintOCP" ui-select2 ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true">
+                <option ng-repeat="title in moduleService.lazyChoiceList.YesNo" value="{{title.key}}" style="font-size:medium;">{{title.group[0]}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+
+<div fieldId="Others:generalInfoRef" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">
+			{{::'v3.mynewworkspace.quotation.label.generalInfoRef'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span>
+		</label>
+		<div class="input-field" style=" padding-right: 60px;background: #F0F0F0;">
+			<!-- <i class="fa fa-search fa-2x subfix-icon" aria-hidden="true" style="margin-right: 60px;"></i> -->
+			<input id="vehicleInfo_registrationNo" clear-error-code
+				style="font-size:medium;background-color: #F0F0F0;"
+				type="text" ng-model="generalInfoReferenceOnly" disabled="true" /> <span class="errorMessage"
+				ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+				<button  style="display:contents" ng-click="showGeneralPrintedForgeneralInfoRef($event)" ><i style="margin-right: 40px;" class="fa fa-edit fa-2x subfix-icon" aria-hidden="true"></i></button>				
+		</div>
+	</div>
+</div>
+
+<!-- Summary -->
+<div fieldId="premiumSummary:premium" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center" style="margin-left:125px;">
+			<label class="label-field">{{::'v3.mynewworkspace.quotation.label.premiumCurrency'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+		
+		</div>
+	</div>
+</div>
+<div fieldId="premiumSummary:premiumCurrencyValue" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+       
+        <div class="input-field margin-right-0" style="width:305px;"> 
+            <select id = "{{uiElement.refDetail.value}}" ui-select2 ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true" style="color:black;" ng-change="changepremiumCurrency(uiElement.refDetail.value)">
+                <option ng-repeat="title in moduleService.lazyChoiceList.PremiumCurrency" value="{{title.key}}">{{title.key}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="premiumSummary:exchangeRate1" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center" style="margin-left:125px;">
+			<label class="label-field">{{::'v3.mynewworkspace.quotation.label.exchangeRate'| translate}}</label>
+		
+		</div>
+	</div>
+</div>
+
+<div fieldId="premiumSummary:exchangeRateValue" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<input class="label-field" id="{{uiElement.refDetail.value}}" style="text-align: right;color:black;width: 293px;" ng-model="uiElement.refDetail.value" pos-autonumeric-number1  max="999999999999999" ng-disabled="true"/>
+		</div>
+	</div>
+</div>
+<div fieldId="premiumSummary:insuredPremium1" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center" style="margin-left:125px;">
+			<label class="label-field">{{::'v3.mynewworkspace.quotation.label.insuredPremium'| translate}}</label>
+		</div>
+	</div>
+</div>
+<div fieldId="premiumSummary:insuredPremiumValue" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<input class="label-field" id="{{uiElement.refDetail.value}}" style="text-align: right;color:black;width: 293px;"  ng-model="uiElement.refDetail.value" ng-disabled="true" pos-autonumeric   max="999999999999999"/>
+		
+		</div>
+	</div>
+</div>
+<div fieldId="premiumSummary:admin" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center" style="margin-left:125px;">
+			<label class="label-field">{{::'v3.mynewworkspace.quotation.label.adminFee'| translate}}</label>
+		
+		</div>
+	</div>
+</div>
+<div fieldId="premiumSummary:adminFeeeValue" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<input class="label-field" id="adminFee"  style="color:black;text-align: right;width: 293px;" ng-model="uiElement.refDetail.value"  ng-disabled="isAdminfee == true || moduleService.freeze == true" pos-autonumeric  max="999999999999999"/>
+		</div>
+	</div>
+	<!-- <div class="row v4-materialize-container" ng-if="isActiveRoleIn([commonService.CONSTANTS.USER_ROLES.AG.name])">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<div class="input-field" style="width:305px">
+				<input type="text" id="adminFee" maxlength="120" minlength="0" ng-minlength="0" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true"
+					style="font-size:medium;text-align: right;color:black;width: 293px;"
+					ng-model="uiElement.refDetail.value" pos-autonumeric  max="999999999999999"/>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div> -->
+</div>
+<div fieldId="premiumSummary:total" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center" style="margin-left:125px;">
+			<label class="label-field">{{::'v3.mynewworkspace.quotation.label.totalAmount'| translate}}</label>
+		
+		</div>
+	</div>
+</div>
+    <div fieldId="premiumSummary:totalAmountValue" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<input class="label-field" id="{{uiElement.refDetail.value}}" style="text-align: right;color:black;width: 293px;" ng-model="uiElement.refDetail.value" ng-disabled="true" pos-autonumeric  max="999999999999999" style="color:black;"/>
+		
+		</div>
+	</div>
+</div>

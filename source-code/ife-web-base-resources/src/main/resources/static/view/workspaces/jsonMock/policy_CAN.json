@@ -1,0 +1,35 @@
+{
+  "IposDocument": {
+    "policy:Policy": {
+      "section": "policy:Policy",
+      "key": [],
+      "permission": {
+        "openable": [
+          "account_openable"
+        ],
+        "editable": [
+          "account_editable"
+        ],
+        "viewable": [
+          "account_viewable"
+        ]
+      },
+      "policy:detail": {
+        "key": [
+        ],
+        "group": "1"
+      },
+      "declaration:detail": {
+        "key": [
+        ],
+        "group": "1"
+      },
+      "policy:email": {
+        "key": [
+        ],
+        "group": "2"
+      }        
+     
+    }
+  }
+}

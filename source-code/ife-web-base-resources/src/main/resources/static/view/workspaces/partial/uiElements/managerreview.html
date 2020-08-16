@@ -1,0 +1,155 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<!-- Manager review -->
+<div fieldId="manager:Label">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <b>{{'v4.managerreview.label:KnowYourClient' | translate}} </b>
+    </div>
+</div>
+<div fieldId="manager:Option1">
+    <div class="row v4-materialize-container">
+    	<div class="v4-materialize-content-center">
+	        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+	            <label class="text-body">{{'v4.managerreview.label:CompleteofClientDetail' | translate}}
+	            	<span ng-show="uiElement.refDetail.meta.mandatory === 'true'">*</span>
+	            </label>
+	        </div>
+	        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+	        	 <v3-switch-new-slide id="manager_Option1" prefix="v4.yesno.enum"
+			            switch-model="uiElement.refDetail.value" 
+			            switch-default-value="" switch-disabled="uiElement.refDetail.meta.enable === 'false' || freeze == true || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.DISAGREE || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.AGREE" 
+	           			switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['YesNoNA'])">
+	            </v3-switch-new-slide>
+		        <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+	        </div>
+        </div>
+    </div>
+</div>
+
+<div fieldId="manager:Option1Remark">
+    <div class="row v4-materialize-container">
+<!--         <div class="col-xs-11 col-sm-12 col-md-11 v4-materialize-content-center"> -->
+<!--             <label class="text-body">{{'v4.managerreview.label:remark' | translate}}</label>  -->
+<!--             <button style="min-width: 7px; width: 50px; display: block; height: 46px" class="btn btn-lg v3-btn-primary" ng-click="remarkManager(1)" ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.DISAGREE || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.AGREE"> -->
+<!--                 <i ng-if="remarkManagerObjective1 === false" class="fa fa-pencil-square-o" style="margin-left: -10px;"></i> -->
+<!--                 <i ng-if="remarkManagerObjective1 === true" class="fa fa-eraser" style="margin-left: -10px;"></i> -->
+<!--             </button> -->
+<!--             <div ng-if="remarkManagerObjective1 === true"> -->
+<!-- 	            <div class="input-field"> -->
+<!-- 	                <textarea placeholder="{{::'v4.textarea.placeholder.yourTextHere'| translate}}" -->
+<!-- 	                    ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.DISAGREE || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.AGREE" type="text" maxlength="255" ng-model="uiElement.refDetail.value" class="materialize-textarea" style="text-align: justify;"> -->
+<!-- 	                </textarea> -->
+<!-- 	                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span> -->
+<!-- 	            </div> -->
+<!--             </div> -->
+<!--         </div> -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="input-field">
+                <textarea id="manager_Option1Remark" placeholder="{{::'v4.textarea.placeholder.yourTextHere'| translate}}"
+                    ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.DISAGREE || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.AGREE" type="text" maxlength="255" ng-model="uiElement.refDetail.value" class="materialize-textarea" style="text-align: justify;">
+                </textarea>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div fieldId="manager:Option2">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+            <label class="text-body">{{'v4.managerreview.label:ObjectiveandPreferences' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory === 'true'">*</span>
+            </label>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        	<v3-switch-new-slide id="manager_Option2" prefix="v4.yesno.enum"
+	            switch-model="uiElement.refDetail.value"
+	            switch-default-value="" switch-disabled="uiElement.refDetail.meta.enable === 'false'
+	              || freeze == true || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.DISAGREE || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.AGREE" 
+	              switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['YesNoNA'])">
+            </v3-switch-new-slide>
+         	<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+
+<div fieldId="manager:Option2Remark">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="input-field">
+                <textarea id="manager_Option2Remark" placeholder="{{::'v4.textarea.placeholder.yourTextHere'| translate}}"
+                    ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.DISAGREE || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.AGREE" type="text" maxlength="255" ng-model="uiElement.refDetail.value" class="materialize-textarea" style="text-align: justify;">
+                </textarea>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="manager:Option3">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+            <label class="text-body">{{'v4.managerreview.label:CompleteodClientInvestment' | translate}}
+            <span ng-show="uiElement.refDetail.meta.mandatory === 'true'">*</span>
+            </label>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        	<v3-switch-new-slide id="manager_Option3" prefix="v4.yesno.enum"
+		            switch-model="uiElement.refDetail.value" 
+		            switch-default-value="" 
+		            switch-disabled="uiElement.refDetail.meta.enable === 'false' || freeze == true || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.DISAGREE || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.AGREE" 
+		            switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['YesNoNA'])">
+            </v3-switch-new-slide>
+        	<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="manager:Option3Remark">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="input-field">
+                <textarea id="manager_Option3Remark" placeholder="{{::'v4.textarea.placeholder.yourTextHere'| translate}}"
+                    ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.DISAGREE || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.AGREE" type="text" maxlength="255" ng-model="uiElement.refDetail.value" class="materialize-textarea" style="text-align: justify;">
+                </textarea>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div fieldId="manager:SupervisorValidation">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <label class="label-field">{{'v4.managerreview.label:SupervisorValidation'| translate}}</label><span ng-show="uiElement.refDetail.meta.mandatory === 'true'">*</span>
+            <br>
+            <label class="text-body">{{'v4.managerreview.label:SupervisorValidation1' | translate}} </label>
+            <br>
+            <label class="text-body"> - {{'v4.managerreview.label:SupervisorValidation2' | translate}} </label>
+            <br>
+            <label class="text-body"> - {{'v4.managerreview.label:SupervisorValidation3' | translate}} </label>
+            <br>
+            <div class="input-field">
+	             <textarea id="manager_SupervisorValidation" placeholder="{{::'v4.textarea.placeholder.yourTextHere'| translate}}"
+	                 ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.DISAGREE || moduleService.findElementInDetail(['businessStatus']).value === commonService.CONSTANTS.MANAGERREVIEW_ACTION.AGREE" type="text" maxlength="255" ng-model="uiElement.refDetail.value" class="materialize-textarea" style="text-align: justify;">
+	             </textarea>
+	             <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        	</div>
+        </div>
+    </div>
+</div>
+
+

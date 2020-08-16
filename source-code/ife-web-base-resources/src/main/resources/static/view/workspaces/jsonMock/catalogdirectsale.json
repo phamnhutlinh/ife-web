@@ -1,0 +1,94 @@
+{
+  "IposDocument": {
+    "ipos-product:BusinessCatalogModule": {
+      "section": "ipos-product:BusinessCatalogModule",
+      "permission": {
+        "openable": [
+          "catalog_case_openable"
+        ],
+        "viewable": [
+          "catalog_case_viewable"
+        ]
+      },
+      "ipos-product:Life_insurance": {
+        "section": "ipos-product:BusinessCatalogModule",
+        "permission": {
+          "openable": [
+            "catalog_case_openable"
+          ],
+          "viewable": [
+            "catalog_case_viewable"
+          ]
+        },
+        "icons": {
+          "cardIcon": {
+            "content": "fa fa-heart"
+          }
+        },
+        "disableHover": true,
+        "cssClass": "v3-box-1",
+        "key": [],
+        "isShowValidationIcon": "false",
+        "isShowNoOfEmptyField": "false",
+        "ipos-product:Regular_Unit_Linked": {
+          "section": "ipos-product:Life_insurance",
+          "disableHover": true,
+          "cssClass": "v3-box-1",
+          "key": [],
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-pie-chart"
+            }
+          },
+          "isShowValidationIcon": "false",
+          "isShowNoOfEmptyField": "false",
+          "ipos-product:UnitLinked_Table": {
+            "key": []
+          }
+        }
+      },
+      "ipos-product:General_insurance": {
+        "section": "ipos-product:BusinessCatalogModule",
+        "permission": {
+          "openable": [
+            "catalog_case_openable"
+          ],
+          "viewable": [
+            "catalog_case_viewable"
+          ]
+        },
+        "icons": {
+          "cardIcon": {
+            "content": "fa fa-shield"
+          }
+        },
+        "disableHover": true,
+        "cssClass": "v3-box-1",
+        "key": [],
+        "isShowValidationIcon": "false",
+        "isShowNoOfEmptyField": "false"       
+      },
+      "ipos-product:Group_insurance": {
+        "section": "ipos-product:BusinessCatalogModule",
+        "permission": {
+          "openable": [
+            "catalog_case_openable"
+          ],
+          "viewable": [
+            "catalog_case_viewable"
+          ]
+        },
+        "icons": {
+          "cardIcon": {
+            "content": "fa fa-object-group"
+          }
+        },
+        "disableHover": true,
+        "cssClass": "v3-box-1",
+        "key": [],
+        "isShowValidationIcon": "false",
+        "isShowNoOfEmptyField": "false"       
+      }
+    }
+  }
+}

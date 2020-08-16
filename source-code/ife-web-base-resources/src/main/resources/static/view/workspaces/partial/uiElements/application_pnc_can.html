@@ -1,0 +1,23 @@
+
+<div fieldId="review:reviewRequiredapplication" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="label-field">{{::'v3.mynewworkspace.application.label.reviewRequired'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+        <div class="input-field margin-right-0">
+            <select id = "quotation_reprintOCP" ui-select2 ng-model="uiElement.refDetail.value" ng-change ="refreshDetail(true)" ng-disabled="moduleService.freeze == true || isfreeze == true">
+                <option ng-repeat="title in moduleService.lazyChoiceList.YesNo" value="{{title.key}}" style="font-size:medium;">{{title.group[0]}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="review:reviewNotesapplication" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="label-field">{{::'v3.mynewworkspace.application.label.reviewNotes'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'"> *</span></label>
+        <div class="input-field margin-right-0" style="padding-right: 0px;">
+            <textarea style="height: 120px;font-size:large;resize: none;"  ng-model="uiElement.refDetail.value" alphabeticals-Numbers-Only  ng-disabled="moduleService.freeze == true">
+              
+            </textarea>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>

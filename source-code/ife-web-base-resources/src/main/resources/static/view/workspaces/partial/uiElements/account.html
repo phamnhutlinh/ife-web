@@ -1,0 +1,883 @@
+
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<!-- Person Info -->
+<div fieldId="user:salutation" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">
+			{{::'new.v4.mynewworkspace.prospect.label.Salutation'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field">
+			<select id = "user:salutation" ui-select2 ng-model="uiElement.refDetail.value" ng-disabled="moduleService.freeze == true ">
+				<option ng-repeat="title in moduleService.lazyChoiceList.Title" value="{{title.key}}">{{title.group[0]}}</option>
+			</select>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<div fieldId="user:UserName" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.UserName' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+			<div class="input-field">
+				<input type="text" maxlength="120"
+					   placeholder="{{'v4.user.label.UserName' | translate}}"
+					   ng-disabled="!isActionCreate()"
+					   ng-model="uiElement.refDetail.value"/>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:Gender" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.Gender'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+			<div class="input-field">
+				<div class="input-field">
+					<select id = "user:Gender" ui-select2 ng-model="uiElement.refDetail.value">
+							<option ng-repeat="gender in moduleService.lazyChoiceList.Gender" value="{{gender.key}}">{{gender.group[0]}}</option>
+					</select>
+					<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+				</div>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:FirstName" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.FirstName' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+			<div class="input-field">
+				<input type="text" maxlength="120"
+					placeholder="{{'v4.user.label.FirstName' | translate}}"
+					ng-model="uiElement.refDetail.value" />
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:LastName" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.LastName' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+			<div class="input-field">
+				<input type="text" maxlength="120"
+					placeholder="{{'v4.user.label.LastName' | translate}}"
+					ng-model="uiElement.refDetail.value" />
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:BirthDate" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.DateOfBirth' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+			<div class="input-field">
+				<input type="text" class="datepicker v4-date-picker-inside" materiallize-datetime dateType="v3.style.message.DateOfBirth" formatdisplay="DD/MM/YYYY" maxdate="today"
+					placeholder="{{'v4.user.label.DateOfBirth' | translate}}"
+					ng-model="uiElement.refDetail.value" />
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:MaritalStatus" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.MaritalStatus'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+			<div class="input-field">
+				<select ui-select2 ng-model="uiElement.refDetail.value">
+					<option ng-repeat="option in moduleService.lazyChoiceList.MaritalStatus" value="{{option.key}}">
+						{{option.group[0]}}
+					</option>
+				</select>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:Nationality" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.Nationality' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+			<div class="input-field">
+				<select ui-select2 ng-model="uiElement.refDetail.value">
+					<option ng-repeat="option in moduleService.lazyChoiceList.Country" value="{{option.key}}">
+						{{option.group[0]}}
+					</option>
+				</select>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:IDType" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.IDType' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+			<div class="input-field">
+				<select ui-select2 ng-model="uiElement.refDetail.value" ng-disabled="false">
+					<option ng-repeat="idType in moduleService.lazyChoiceList.IDType" value="{{idType.key}}">
+					{{idType.group[0]}}
+					</option>
+				</select>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:IDNumber" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.IDNumber' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+			<div class="input-field">
+				<input maxlength="120"
+					placeholder="{{'v4.user.label.IDNumber' | translate}}"
+					ng-model="uiElement.refDetail.value" />
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Other Information -->
+<div fieldId="user:Occupation" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.Occupation' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+			<div class="input-field">
+				<select ui-select2 ng-model="uiElement.refDetail.value">
+					<option ng-repeat="option in moduleService.lazyChoiceList.Occupation" value="{{option.key}}">
+						{{option.group[0]}}
+					</option>
+				</select>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Contact Information -->
+  <div fieldId="user:Email" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.Email' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+			<div class="input-field">
+				<input type="text" maxlength="120"
+					placeholder="{{'v4.user.label.Email' | translate}}"
+					ng-model="uiElement.refDetail.value" />
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:PhoneNumbers" class="col-xs-12 col-sm-6 col-md-6 col-lg-6"
+	ng-repeat="phone in uiElement.refDetail.value"
+	ng-if="$index === 0">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.PhoneNumbers' | translate}}<span ng-show="phone.meta.mandatory == 'true'">*</span></label>
+			<div class="input-field">
+				<input type="text" maxlength="120"
+					   placeholder="{{'v4.user.label.PhoneNumbers' | translate}}"
+					   ng-model="phone.value" />
+				<span class="errorMessage" ng-bind="phone.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:Addresses" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.Addresses' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+			<div class="input-field">
+				<input type="text" maxlength="120"
+					   placeholder="{{'v4.user.label.Addresses' | translate}}"
+					   ng-model="uiElement.refDetail.value[0]" />
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Insurer Profiles -->
+<div fieldId="user:ExistingInsurerProfiles">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="row v4-materialize-container">
+			<div class="v4-prototype-registration-title" style="text-align: left;">{{'v4.user.label.RegisteredInsurerProfiles' | translate}}</div>
+		</div>
+	</div>
+	<div ng-if="uiElement.refDetail.value.length < 1">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="row v4-materialize-container">
+				<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+					<label class="label-field">{{'v4.user.label.EmptyInsurerProfile' | translate}}</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div ng-if="uiElement.refDetail.value.length > 0">
+		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+			<div class="row v4-materialize-container">
+				<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+					<label class="label-field">{{'v4.user.label.PasID' | translate}}</label>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+			<div class="row v4-materialize-container">
+				<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+					<label class="label-field">{{'v4.user.label.PasName' | translate}}</label>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+			<div class="row v4-materialize-container">
+				<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+					<label class="label-field">{{'v4.user.label.PasType' | translate}}</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div ng-repeat="insurerProfile in uiElement.refDetail.value">
+		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+			<div class="row v4-materialize-container">
+				<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+					<div class="input-field">
+						<input placeholder="{{'v4.user.label.PasID' | translate}}" disabled="disabled"
+							   type="text" ng-model="insurerProfile.pasId.value" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+			<div class="row v4-materialize-container">
+				<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+					<div class="input-field">
+						<input placeholder="{{'v4.user.label.PasName' | translate}}" disabled="disabled"
+							   type="text" ng-model="insurerProfile.insurerName.value" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+			<div class="row v4-materialize-container">
+				<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+					<div class="input-field">
+						<select ui-select2 ng-model="insurerProfile.pasType.value"  disabled="disabled">
+							<option ng-repeat="option in moduleService.lazyChoiceList.PasType"
+									value="{{option.key}}">{{option.group[0]}}
+							</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+			<div style="margin-top: 10px;"
+				 ng-style="uiElement.refDetail.value.length == 1 ? {'color': '#adadad'} : {'color': 'red', 'cursor': 'pointer'}">
+				<i class="fa fa-minus-square fa-3x"
+				   ng-click="uiElement.refDetail.value.length > 1 && uiElement.refDetail.value.splice($index, 1)"></i>
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:NewInsurerProfile">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="row v4-materialize-container">
+			<div class="v4-prototype-registration-title" style="text-align: left;">{{'v4.user.label.AddInsurerProfileButton' | translate}}*</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.PasID' | translate}}*</label>
+				<div class="input-field">
+					<input placeholder="{{'v4.user.label.PasID' | translate}}"
+						   type="text" ng-model="newInsurerProfile.pasId"  />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.PasName' | translate}}*</label>
+				<div class="input-field">
+					<input placeholder="{{'v4.user.label.PasName' | translate}}"
+						   type="text" ng-model="newInsurerProfile.insurerName" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.PasType' | translate}}*</label>
+				<div class="input-field">
+					<select ui-select2 ng-model="newInsurerProfile.pasType">
+						<option ng-repeat="option in moduleService.lazyChoiceList.PasType"
+								value="{{option.key}}">{{option.group[0]}}
+						</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center" style="padding-left: 0px;">
+				<button ng-click="addNewInsurerProfile(newInsurerProfile)" class="btn waves-effect waves-light">
+					{{'v4.user.label.AddInsurerProfileButton'| translate}}
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Roles -->
+<div fieldId="user:ExistingRoles" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.RegisteredRoles' | translate}}</label>
+			<div class="input-field" style="display: flex;" ng-repeat="role in uiElement.refDetail.value">
+				
+				
+				<input disabled="disabled" ng-if="role.role.value=='AG' && role.role.value!='PR' " value="{{'AG' + ' - ' + role.pasId.value + ' - ' + role.agentName.value + ' - ' + role.pasBranch.value}}" /> <!-- {{getRoleTranslateKey(role.dn) | translateMessage}} -->
+				<input disabled="disabled" ng-if="role.role.value=='SA' && role.role.value!='PR' " value="{{'v4.user.role.'+role.role.value|translateMessage}}" /> <!-- {{getRoleTranslateKey(role.dn) | translateMessage}} -->
+				<!-- thien hoang -->
+				<!-- <input disabled="disabled" ng-if="role.role.value=='PO'  && role.role.value!='PR' " value="{{getRoleTranslateKey(role.role.value) | translateMessage}}{{role.pasType.value != null ? ' -  ' + ('v4.profile.' + role.pasType.value | translateMessage) : ''}}{{role.policyName.value != null && role.role.value == 'PO' && role.policyName.value != '' ? ' - ' + role.policyName.value : ''}}{{role.pasId.value != null && role.role.value == 'PO' && role.pasId.value != '' ? ' - ' + role.pasId.value : ''}}{{role.policyName.value != null && role.role.value == 'PO' && role.policyName.value != '' ? ' - ' + role.policyName.value : ''}}" /> {{getRoleTranslateKey(role.dn) | translateMessage}} -->
+				
+				<input disabled="disabled" ng-if="role.role.value=='PO'  && role.role.value!='PR' " value="{{getRoleTranslateKey(role.role.value) | translateMessage}}{{role.pasType.value != null ? ' -  ' + ('v4.profile.' + role.pasType.value | translateMessage) : ''}}{{role.customerId.value != null && role.role.value == 'PO' && role.customerId.value != '' ? ' - ' + role.customerId.value : ''}}{{role.pasId.value != null && role.role.value == 'PO' && role.pasId.value != '' ? ' - ' + role.pasId.value : ''}}{{role.policyName.value != null && role.role.value == 'PO' && role.policyName.value != '' ? ' - ' + role.policyName.value : ''}}" /> <!-- {{getRoleTranslateKey(role.dn) | translateMessage}} -->
+				
+			<!-- 	<input disabled="disabled" ng-if="role.role.value=='PO' && role.customerId.value=='null' &&  role.pasId.value!='null' " value="{{getRoleTranslateKey(role.role.value) | translateMessage}}{{role.pasType.value != null ? ' - ' + ('v4.profile.' + role.pasType.value | translateMessage) : ''}}{{role.role.value == 'PO' ? ' ' + role.pasId.value : ''}}" /> {{getRoleTranslateKey(role.dn) | translateMessage}}
+				<input disabled="disabled" ng-if="role.role.value=='PO' && role.customerId.value!='null' &&  role.pasId.value=='null' " value="{{getRoleTranslateKey(role.role.value) | translateMessage}}{{role.customerId.value != null ? ' - ' + ('v4.profile.' + role.pasType.value | translateMessage) : ''}}{{role.role.value == 'PO' ? ' ' + role.customerId.value : ''}}" /> {{getRoleTranslateKey(role.dn) | translateMessage}}
+				<input disabled="disabled" ng-if="role.role.value=='PO' && role.customerId.value!='null' &&  role.pasId.value!='null' " value="{{getRoleTranslateKey(role.role.value) | translateMessage}}{{role.pasType.value != null ? ' - ' + ('v4.profile.' + role.pasType.value | translateMessage) : ''}}{{role.role.value == 'PO' ? ' ' + role.pasId.value : ''}}" /> {{getRoleTranslateKey(role.dn) | translateMessage}} -->
+				<div style="margin-top: 10px;"
+				  ng-if="role.role.value!='PR' && typeOF!='view' "	 ng-style="role.role.value === 'PR' ? {'color': '#adadad','cursor': 'not-allowed', 'pointer-events': 'none'} : {'color': 'red', 'cursor': 'pointer'}">
+					<i class="fa fa-minus-square fa-3x"
+						ng-click="deleteRole(uiElement.refDetail.value,$index,role)"></i>
+				</div>
+			</div>
+			<div class="input-field" ng-if="uiElement.refDetail.value.length < 1">
+				<input disabled="disabled" value="{{'v4.user.role.EMPTY' | translate}}" />
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:NewRole" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="typeOF!='view'">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v4.user.label.NewRole' | translate}}*</label>
+			<div class="input-field">
+				<select ui-select2 ng-model="newInsurerProfile.role.value"  ng-change="clearErrorCode();valueForAgentType()">
+					<option ng-repeat="option in moduleService.lazyChoiceList.DistinctRoles | orderBy:'toString()'"
+							value="{{option}}">
+								{{'v4.user.role1.' + option | translate}}
+					</option>
+				</select>
+				<span class="errorMessage" ng-bind="newInsurerProfile.role.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Start Add New Agent Role -->
+<div fieldId="user:AddNewAgentRole" ng-if="newInsurerProfile.role.value === 'AG' && isShowOtpForm===false"> 
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.AgentID' | translate}}*</label>
+				<div class="input-field">
+					<input type="text" maxlength="120" clear-error-code
+						   placeholder="{{'v4.user.label.AgentID' | translate}}"
+						   ng-model="newInsurerProfile.pasId.value" />
+				<span class="errorMessage" ng-bind="newInsurerProfile.pasId.meta.errorCode | translate"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.AgentType' | translate}}*</label>
+				<div class="input-field">
+					<select ui-select2 ng-model="newInsurerProfile.pasType.value" ng-init="valueForAgentType()">
+						<option ng-repeat="agentType in moduleService.lazyChoiceList.AgentType" value="{{agentType.key}}">
+							{{agentType.group[0]}}
+						</option>
+					</select>
+					<span class="errorMessage" ng-bind="newInsurerProfile.pasType.meta.errorCode | translate"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="margin-left:1px;">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.AgentBranch' | translate}}</label>
+				<div class="input-field">
+					<input type="text" disabled="disabled" maxlength="120"  clear-error-code 
+					    />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="!commonService.hasValueNotEmpty($stateParams.docId) && !isActionCreate()">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.AgentVerificationCode' | translate}}*</label>
+				<div class="input-field">
+					<select ui-select2 ng-model="newInsurerProfile.otpType.value">
+						<option ng-repeat="code in moduleService.lazyChoiceList.VerificationCode" value="{{code.key}}">
+							{{code.group[0]}}
+						</option>
+					</select>
+					<span class="errorMessage" ng-bind="newInsurerProfile.otpType.meta.errorCode | translate"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="!commonService.hasValueNotEmpty($stateParams.docId) && !isActionCreate()">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field" ng-if="commonService.hasValueNotEmpty(newInsurerProfile.otpType.value)">{{'v4.user.label.AgentVerificationValue.' + newInsurerProfile.otpType.value | translate}}*</label>
+				<label class="label-field" ng-if="!commonService.hasValueNotEmpty(newInsurerProfile.otpType.value)"></label>
+				<div class="input-field">
+					<input type="text" maxlength="120" clear-error-code
+						   placeholder=""
+						   ng-model="newInsurerProfile.otpValue.value" />
+				<span class="errorMessage" ng-bind="newInsurerProfile.otpValue.meta.errorCode | translate"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<!-- End Add New Agent Role -->
+
+<!-- Start Add New PO Role -->
+<div fieldId="user:AddNewPORole" ng-if="newInsurerProfile.role.value === 'PO' && isShowOtpForm===false"> 
+	<div  class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="float: none;">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.UserID' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+				<div class="input-field">
+					<input type="text" maxlength="120" clear-error-code
+						   placeholder="{{'v4.user.label.UserID' | translate}}"
+						   ng-model="newInsurerProfile.customerId.value" alphabeticals-Numbers-Only />
+					<span class="errorMessage" ng-bind="newInsurerProfile.customerId.meta.errorCode | translate"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"></div> -->
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="float: none;">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.PolicyNumber' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+				<div class="input-field">
+					<input type="text" maxlength="120" clear-error-code alphabeticals-Numbers-Only
+						   placeholder="{{'v4.user.label.PolicyNumber' | translate}}" ng-model="newInsurerProfile.pasId.value"  />  
+					<span class="errorMessage" ng-bind="newInsurerProfile.pasId.meta.errorCode | translate"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- End Add New PO Role -->
+
+<!-- End Start New UW Role -->
+<div fieldId="user:AddNewUWRole" ng-if="newInsurerProfile.role.value === 'UW' && isShowOtpForm===false"> 
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				
+			</div>
+		</div>
+	</div>
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.Underwriting' | translate}}*</label>
+				<div class="input-field">
+					<select ui-select2 ng-model="newInsurerProfile.underwritingLevel.value">
+						<option ng-repeat="UnderwritersLevel in moduleService.lazyChoiceList.Underwritinglevel" value="{{UnderwritersLevel.key}}">
+							{{UnderwritersLevel.group[0]}}
+						</option>
+					</select>
+					<span class="errorMessage" ng-bind="newInsurerProfile.underwritingLevel.meta.errorCode | translate"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.Product' | translate}}*</label>
+				<div class="input-field">
+					<select ui-select2 ng-model="newInsurerProfile.pasType.value">
+						<option ng-repeat="poType in moduleService.lazyChoiceList.Product_Code" value="{{poType.key}}">
+							{{poType.group[0]}}
+						</option>
+					</select>
+					<span class="errorMessage" ng-bind="newInsurerProfile.pasType.meta.errorCode | translate"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				
+			</div>
+		</div>
+	</div>
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.Suminsuredlimit' | translate}}*</label>
+				<div class="input-field">
+					<input type="text" maxlength="120" clear-error-code
+						ng-model="newInsurerProfile.sumInsured.value" />
+					<span class="errorMessage" ng-bind="newInsurerProfile.sumInsured.meta.errorCode | translate"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+<!-- End Add New UW Role -->
+<!-- Start Add Role Button -->
+<div calss="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-if="isShowOtpForm===false">
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="typeOF!='view'">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<button class="btn waves-effect waves-light" style="margin-top: 15px;"
+						ng-click="checkToAddNewRole(newInsurerProfile)">
+					{{'v4.user.label.AddRoleButton'| translate}}
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Add Role Button -->
+
+<!----------------------------- Start OTP--------------------------------- -->
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-if="isShowOtpForm===true">
+	<div class="card col-xs-10 col-sm-10 col-md-10 col-lg-6 v4-prototype-centerBlock">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-prototype-registration-title">{{'v4.workspace.verificationCode'| translate}}</div>
+			<div class="row v4-materialize-container">
+				<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+					<label class="label-field" ng-if="requestSentOTP.otpTypeSend === 'SMS'">{{'v4.workspace.pleaseCheckYourTextAtPhone'| translate}}</label>
+					<label class="label-field" ng-if="requestSentOTP.otpTypeSend === 'email'">{{'v4.workspace.pleaseCheckYourTextAtEmail'| translate}}</label>
+					<div class="input-field">
+						<input placeholder="{{'v4.user.label.VerificationCode'| translate}}"
+							type="text" maxlength="120"
+							ng-model="submitOTP.otp" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4" style="text-align: center;padding-top: 10px;">
+					<button ng-click="resetIsSentOTP()" class="btn waves-effect waves-light">{{'v4.workspace.button.cancel'| translate}}</button>
+				</div>
+				<div class="col-xs-12 col-sm-4" style="text-align: center;padding-top: 10px;">
+					<button ng-click="sendOTP()" class="btn waves-effect waves-light">{{'v4.workspace.button.resendotp'| translate}}</button>
+				</div>
+				<div class="col-xs-12 col-sm-4" style="text-align: center;padding-top: 10px;">
+					 <button ng-click="selfUpgradeRole()" class="btn waves-effect waves-light">{{'v4.workspace.button.submit'| translate}}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--------------------------------- End OTP ------------------------------------>
+
+<!-- Start Existing Role -->
+<div fieldId="user:ExistingID" ng-if="card.refDetail.role.value==='PO'||card.refDetail.role.value==='AG'"> 
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field" ng-if="card.refDetail.role.value==='PO'">{{'v4.user.label.PolicyNumber' | translate}}*</label>
+				<label class="label-field" ng-if="card.refDetail.role.value==='AG'">{{'v4.user.label.AgentID' | translate}}*</label>
+				<div class="input-field">
+					<input type="text" maxlength="120"
+						   placeholder="{{'v4.user.label.PolicyNumber' | translate}}"
+						   ng-model="card.refDetail.pasId.value" 
+						   ng-disabled='true'/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--UW -->
+ <div fieldId="user:ExistingTypeUnderWritingLevel" ng-if="card.refDetail.role.value==='UW'"> 
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.Underwriting' | translate}}*</label>
+				<div class="input-field">
+					<select ui-select2 ng-model="card.refDetail.underwritingLevel.value" ng-disabled='true'>
+						<option ng-repeat="UnderwritersLevel in moduleService.lazyChoiceList.Underwritinglevel" 
+						value="{{UnderwritersLevel.key}}">
+							{{UnderwritersLevel.group[0]}}
+						</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ <div fieldId="user:ExistingTypeProduct" ng-if="card.refDetail.role.value==='UW'"> 
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field" >{{'v4.user.label.PolicyType' | translate}}*</label>
+				
+				<div class="input-field">
+					<select ui-select2 ng-model="card.refDetail.pasType.value" ng-disabled='true'>
+						<option ng-repeat="poTypePd in moduleService.lazyChoiceList.Product_Code" value="{{poTypePd.key}}">
+							{{poTypePd.group[0]}}
+						</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:ExistingSuminsuredlimit" ng-if="card.refDetail.role.value==='UW'"> 
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.Suminsuredlimit' | translate}}*</label>
+				<div class="input-field">
+					<input type="text" maxlength="120"
+						   placeholder="{{'v4.user.label.Suminsuredlimit' | translate}}"
+						   ng-model="card.refDetail.sumInsured.value" 
+						   ng-disabled='true'/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--AG  -->
+ <div fieldId="user:ExistingTypeAG" ng-if="card.refDetail.role.value==='AG'"> 
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				
+				<label class="label-field" >{{'v4.user.label.AgentType' | translate}}*</label>
+				<div class="input-field">
+					<select ui-select2 ng-model="card.refDetail.pasType.value" ng-disabled='true'>
+						<option ng-repeat="poType in moduleService.lazyChoiceList.AgentType" value="{{poType.key}}">
+							{{poTypes.group[0]}}
+						</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 
+<!--PO  -->
+ <div fieldId="user:ExistingType" ng-if="card.refDetail.role.value==='PO'"> 
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field" >{{'v4.user.label.PolicyType' | translate}}*</label>
+				
+				<div class="input-field">
+					<select ui-select2 ng-model="card.refDetail.pasType.value" ng-disabled='true'>
+						<option ng-repeat="poTypes in moduleService.lazyChoiceList.Product_Code" value="{{poTypes.key}}">
+							{{poTypes.group[0]}}
+						</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div fieldId="user:ExistingNRIC" ng-if="card.refDetail.role.value==='PO'"> 
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.AgentNRIC' | translate}}*</label>
+				<div class="input-field">
+					<input type="text" maxlength="120"
+						   placeholder="{{'v4.user.label.AgentNRIC' | translate}}"
+						   ng-model="card.refDetail.nric.value" 
+						   ng-disabled='true'/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+<div fieldId="user:ExistingEffectiveDate" ng-if="card.refDetail.role.value==='PO'"> 
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.EffectiveDate' | translate}}*</label>
+				<div class="input-field">
+					<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+                	<input clear-error-code type="text" class="datepicker" materiallize-datetime formatdisplay='DD/MM/YYYY' ng-disabled='true'
+                			ng-model="card.refDetail.effectiveDate.value" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:ExistingdobPolicyHoldere" ng-if="card.refDetail.role.value==='PO'"> 
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+					<label class="label-field">{{'v4.user.label.DateOfBirth' | translate}}*</label>
+				<div class="input-field">
+					<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+                	<input clear-error-code type="text" class="datepicker" materiallize-datetime formatdisplay='DD/MM/YYYY' ng-disabled='true'
+                			ng-model="card.refDetail.dobPolicyHolder.value" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div fieldId="user:ExistingSuminsuredlimit" ng-if="card.refDetail.role.value==='UW'"> 
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+				<label class="label-field">{{'v4.user.label.Suminsuredlimit' | translate}}*</label>
+				<div class="input-field">
+					<input type="text" maxlength="120"
+						   placeholder="{{'v4.user.label.Suminsuredlimit' | translate}}"
+						   ng-model="card.refDetail.sumInsured.value" 
+						   ng-disabled='true'/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Existing Role -->
+
+
+<!-- Password Settings -->
+<div fieldId="user:ChangePassword" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div ng-if="!aclService.hasRole('SA') || !commonService.hasValueNotEmpty($stateParams.docId)">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="row v4-materialize-container">
+				<div class="v4-prototype-registration-title" style="text-align: left;">{{'v4.user.label.ChangeYourPassword' | translate}}</div>
+			</div>
+		</div>
+		<form name="changePwdForm" novalidate>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<label class="label-field">{{'v3.login.label.CurrentPassword'| translate}} *</label>
+						<div class="input-field">
+							<input id='oldpassword' required placeholder="{{'v3.login.label.CurrentPassword'| translate}}" type="password" maxlength="20" ng-model="submitChangePwdForm.oldPassword" name="oldPassword"/>
+							<span ng-show="changePwdForm.oldPassword.$dirty && changePwdForm.oldPassword.$invalid">
+								<span class="error" ng-show="changePwdForm.oldPassword.$error.required">{{'MSG-C01' | translate}}</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<label class="label-field">{{'v3.login.label.NewPassword'| translate}} *</label>
+						<div class="input-field">
+							<input id='newpassword' required placeholder="{{'v3.login.label.NewPassword'| translate}}" type="password" maxlength="20" ng-model="submitChangePwdForm.newPassword" name="newPassword" pattern="{{commonService.CONSTANTS.PASSWORD.PATTERN}}" />
+							<span ng-show="changePwdForm.newPassword.$dirty && changePwdForm.newPassword.$invalid">
+								<span class="error" ng-show="changePwdForm.newPassword.$error.required">{{'MSG-C01' | translate}}</span>
+								<span class="error" ng-show="changePwdForm.newPassword.$error.pattern">{{'v3.user.error.message.MSG-002' | translate}}</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<label class="label-field">{{'v3.login.label.ConfirmPassword'| translate}} *</label>
+						<div class="input-field">
+							<input id='confirmpassword' placeholder="{{'v3.login.label.ConfirmPassword'| translate}}"  required type="password" maxlength="20" ng-model="submitChangePwdForm.confirmPassword" name="confirmPassword" pw-check="newpassword" />
+							<span ng-show="changePwdForm.confirmPassword.$dirty && changePwdForm.confirmPassword.$invalid">
+								<span class="error" ng-show="changePwdForm.confirmPassword.$error.required">{{'MSG-C01' | translate}}</span>
+							</span>
+							<div ng-show="changePwdForm.$error">
+								<span class="error" ng-show="changePwdForm.confirmPassword.$error.pwmatch">{{'MSG-C14' | translate}}</span> 
+		         			</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<button ng-click="changePassword()" ng-disabled="changePwdForm.oldPassword.$pristine || changePwdForm.oldPassword.$dirty && changePwdForm.oldPassword.$invalid || changePwdForm.newPassword.$pristine || changePwdForm.newPassword.$dirty && changePwdForm.newPassword.$invalid || changePwdForm.confirmPassword.$pristine || changePwdForm.confirmPassword.$dirty && changePwdForm.confirmPassword.$invalid" class="btn waves-effect waves-light">{{'v4.workspace.button.submit'| translate}}</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div ng-if="aclService.hasRole('SA') && commonService.hasValueNotEmpty($stateParams.docId)">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="row v4-materialize-container">
+				<div class="v4-prototype-registration-title" style="text-align: left;">{{'v4.user.label.ResetUserPassword' | translate}}</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="row v4-materialize-container">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<div style="margin-top: 10px;">{{'v4.user.label.ResetPasswordContent' | translate}}</div>
+					<button ng-click="resetUserPassword()" class="btn waves-effect waves-light" style="margin-top: 15px;">
+						{{'v4.user.label.ResetPasswordButton'| translate}}
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

@@ -1,0 +1,122 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div class="row" ng-init="selectedDashboard = 'wait_for_approval'">
+	<div class="col-xs-11 v4-prototype-centerBlock v3-padding-0 card">
+		<div class="row col-xs-11 col-md-11 "
+			style="margin-top: 20px; margin-left: -5px; margin-bottom: 25px">
+			<!--System admin manages user-->
+			<div class="col-xs-4 col-md-4 v3-margin-auto ">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 label-field-sumary label-dasboard">
+					<div id="wait_for_approval" class="active" ng-click="selectTab('wait_for_approval')">
+						<p class="tab-title" style="margin-top: 14px; margin-bottom: 0px">{{'v3.dashboardportlet.portlet.label.BlockedAccount' | translate}}</p>
+						<label class="label-section-bigger"><total-records
+								class="tab-summary"
+								doc-type="account"
+								query="{{[{
+								fields: ['isBlockAccount'],
+								values: ['true']
+								}]}}" />
+						</label>
+						
+					</div>
+				</div>
+				
+			</div>
+			
+	<!-- 		Wait for approval token -->
+
+			<div class="col-xs-4 col-md-4 v3-margin-auto">
+				<div class="col-xs-10 col-md-10 col-sm-10 label-field-sumary label-dasboard">
+					<div id="my_accounts" class="active" ng-click="selectTab('my_accounts')">
+						<p class="tab-title" style="margin-top: 14px; margin-bottom: 0px">{{'v3.dashboardportlet.portlet.label.user' | translate}}</p>
+						<label class="label-section-bigger"><total-records
+								class="tab-summary"
+								doc-type="account"
+								query="{{[]}}" />
+						</label>
+					</div>
+				</div>
+				<!-- start to create button to add -->
+				<div class="col-xs-2 col-md-2 col-sm-2 col-lg-2 add-new-button no-left-padding no-right-padding">
+					<i ng-click="createNewDocument(commonService.CONSTANTS.MODULE_NAME.ACCOUNT,'','',[currentRole][0])"
+						class="pointer fa fa-plus" tooltips
+						tooltip-title="Add New" tooltip-side="top" tooltip-size="medium"></i>
+				</div>
+				<!-- end -->
+			</div>
+		</div>
+	</div>
+	<!--User Management dashboard-->
+	<div class="col-xs-12 col-md-12">
+		<div class="tab-content" ng-if="selectedDashboard === 'my_accounts'">
+			<div class="listViewContainer container-fluid v3-padding-0">
+				<div class="row v3-margin-auto">
+					<document-list-view
+							datalist="userList"
+							doctype="account"
+							dashboardstatus = 'my_accounts'
+							listtitle="user"
+							isdashboard ="true"
+							isloadlist="isLoadList"
+							sortby="fullName"
+							sortorder="ASC"
+							searchcriteria="[
+								'fullName',
+								'userName',
+								'gender',
+								'isActive',
+								'email'
+							]"							
+						lazy-choice-list="moduleService.lazyChoiceList"/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Waiting for approval dashboard-->
+
+	<div class="col-xs-12 col-md-12">
+		<div class="tab-content" ng-if="selectedDashboard === 'wait_for_approval'">	
+		    <div class="row v3-margin-auto">
+				<document-list-view
+						datalist="userList"
+						doctype="account"
+						dashboardstatus = 'wait_for_approval'
+						listtitle="BlockedAccount"
+						defaultquery="{{[{
+								fields: ['isBlockAccount'],
+								values: ['true']
+								}]}}"
+						isdashboard ="true"
+						isloadlist="isLoadList"
+						searchcriteria="[
+							'fullName',
+							'userName',
+							'gender',
+							'isBlockAccount',
+							'email'
+						]"							
+					lazy-choice-list="moduleService.lazyChoiceList"/>
+			</div>
+		</div>
+	</div>
+
+
+</div>

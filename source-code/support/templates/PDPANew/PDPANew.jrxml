@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-12-07T17:09:29 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PDPANew" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="40" bottomMargin="30" uuid="d233dad0-aa93-478d-98b8-af745f414c1b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="PDPA "/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<queryString language="jsonql">
+		<![CDATA[]]>
+	</queryString>
+	<field name="FullName" class="java.lang.String">
+		<fieldDescription><![CDATA[personInformation.basic.name.full.value]]></fieldDescription>
+	</field>
+	<field name="Passport" class="java.lang.String">
+		<fieldDescription><![CDATA[personInformation.basic.idList[0].value.value]]></fieldDescription>
+	</field>
+	<field name="MailingAddress" class="java.lang.String">
+		<fieldDescription><![CDATA[personInformation.addresses[0].fullAddress.value]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<fieldDescription><![CDATA[personInformation.contacts[0].value.value]]></fieldDescription>
+	</field>
+	<field name="Mobile" class="java.lang.String">
+		<fieldDescription><![CDATA[personInformation.contacts[1].value.value]]></fieldDescription>
+	</field>
+	<field name="HomeNo" class="java.lang.String">
+		<fieldDescription><![CDATA[personInformation.contacts[2].value.value]]></fieldDescription>
+	</field>
+	<field name="OfficeNo" class="java.lang.String">
+		<fieldDescription><![CDATA[personInformation.contacts[3].value.value]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="288" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="210" height="30" uuid="6e9f3cd3-fbf1-4062-a0bf-ea38845068d2"/>
+				<textElement>
+					<font fontName="Verdana" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Aviva Financial Advisers
+Personal Data Consent Form
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="180" height="30" uuid="59ce00a1-3cc0-4609-94e9-711d4fc4875e"/>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[Full name per NRIC/Passport*]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="40" width="330" height="30" uuid="23a37393-154e-4a7a-b702-f7ff995478c3"/>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[IF(EQUALS($F{FullName}, null), "", $F{FullName})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="70" width="180" height="30" uuid="bc6d6549-aa40-44ca-84a9-b2760690c224"/>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[NRIC / Passport No*]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="70" width="330" height="30" uuid="11638f10-3e7d-40bb-b4d7-d3daffb6de2b"/>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[IF(EQUALS($F{Passport}, null), "", $F{Passport})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="100" width="510" height="30" uuid="db97f7a6-15c1-4b6d-b77c-960564973e5a"/>
+				<box leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Please provide your contact information here]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="130" width="400" height="30" uuid="9576cfd8-7a9b-4b92-beae-c17f2fdbaeb6"/>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[IF(EQUALS($F{MailingAddress}, null), "",$F{MailingAddress})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="130" width="110" height="30" uuid="2a1d41d6-b3ef-40e9-be13-3a0fe3bdb2c0"/>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[Mailing Address]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="160" width="400" height="30" uuid="6cd187b3-42a1-4dea-ba45-c7897afda0fe"/>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[IF(EQUALS($F{Email}, null), "", $F{Email})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="160" width="110" height="30" uuid="4ebdd25b-69be-4701-a8cd-8039c8a9cfa2"/>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[Email Address]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="190" width="150" height="30" uuid="01b8cbda-3301-452a-8440-e821b9ac8aa3"/>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[IF(EQUALS($F{Mobile}, null), "", $F{Mobile})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="190" width="110" height="30" uuid="17a65920-3a2e-4b1c-b590-1f51f80305e3"/>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[Mobile No]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="220" width="150" height="30" uuid="0965bb0b-f10d-4336-ac7f-d3be85777fee"/>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[IF(EQUALS($F{HomeNo}, null), "", $F{HomeNo})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="220" width="110" height="30" uuid="a6c7358f-e949-4424-b2bd-5edef3ee430f"/>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[Home Tel No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="190" width="110" height="30" uuid="bd12325a-9cb8-4568-acb2-e0dc4e99f66d"/>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[Office Tel No]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="370" y="190" width="140" height="30" uuid="a129adb1-7e7c-45dd-a31d-7799eb97ea57"/>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[IF(EQUALS($F{Mobile}, null), "", $F{Mobile})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="260" y="220" width="110" height="30" uuid="5a9b2759-ac60-4a66-8f5a-f3393ba152f5"/>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[Fax No]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="370" y="220" width="140" height="30" uuid="abcbb482-7fe3-40e7-9f97-f02505bbe768"/>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="250" width="100" height="20" uuid="3d6fcd5a-85c7-4dad-8d1e-c825f693b9ad"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[* Mandatory Fields]]></text>
+			</staticText>
+		</band>
+		<band height="334">
+			<staticText>
+				<reportElement x="0" y="0" width="20" height="20" uuid="9aff5b54-0880-48b8-bc1c-0fffe6e1e408"/>
+				<textElement>
+					<font fontName="Verdana" size="8.51"/>
+				</textElement>
+				<text><![CDATA[1) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="0" width="190" height="20" uuid="0d7aa8bb-08ff-45ad-86b7-9f3836b00350"/>
+				<textElement>
+					<font fontName="Verdana" size="8.5"/>
+				</textElement>
+				<text><![CDATA[Please tick to provide your consent]]></text>
+			</staticText>
+			<image>
+				<reportElement x="500" y="0" width="10" height="10" uuid="9cbd7b93-1eee-4e72-8043-5dfbacc4050d"/>
+				<imageExpression><![CDATA[IF(false,"resources/checked.png","resources/unchecked.png")]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="40" y="20" width="470" height="60" uuid="9165e785-e7de-4f7e-8f59-9e3b3bbef95f"/>
+				<textElement>
+					<font fontName="Verdana" size="8.5"/>
+				</textElement>
+				<text><![CDATA[I consent to Aviva Financial Advisers (AFA) collecting, using, disclosing and/or processing my personal data to provide me with marketing and promotional information and/or material on financial advisory services provided by AFA and/or investment products and financial services offered by AFA’s business partners and product providers which in the opinion of AFA may be of interest or benefit to me by way of email, call, message and/or facsimile to me at any email or telephone number provided by me to AFA from time to time.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="20" height="20" uuid="247e4f09-2eb1-4200-a3fd-9d3311b35ecf"/>
+				<textElement>
+					<font fontName="verdan" size="8.5"/>
+				</textElement>
+				<text><![CDATA[2) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="80" width="489" height="40" uuid="614a02b8-c495-4314-aa76-41c1974e7b13"/>
+				<textElement>
+					<font fontName="Verdana" size="8.5"/>
+				</textElement>
+				<text><![CDATA[I consent to Aviva Financial Advisers (AFA) collecting, using, disclosing and/or processing my personal data provided to AFA in this form and other documents, and as updated from time to time, including the disclosure and transfer of my personal data to third parties for the following purposes,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="120" width="470" height="30" uuid="33f0f6ee-dd67-4c64-a199-11e353f23f3e"/>
+				<textElement>
+					<font fontName="Verdana" size="8.5"/>
+				</textElement>
+				<text><![CDATA[Providing, administering, servicing or dealing with the financial advisory services provided by AFA (including processing of applications for any investment products);]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="120" width="20" height="20" uuid="4938cdc8-4150-4e2c-8c30-32b12017166a"/>
+				<textElement>
+					<font fontName="verdan" size="8.5"/>
+				</textElement>
+				<text><![CDATA[a)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="150" width="20" height="20" uuid="4593c974-7560-4440-b3d6-ae9c6bc4490d"/>
+				<textElement>
+					<font fontName="verdan" size="8.5"/>
+				</textElement>
+				<text><![CDATA[b)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="150" width="470" height="30" uuid="1709d628-98a1-43e3-8b24-678f952c33e2"/>
+				<textElement>
+					<font fontName="Verdana" size="8.5"/>
+				</textElement>
+				<text><![CDATA[Managing the investment products that I have purchased under the financial advisory services provided by AFA,  which may include providing information about the investment product I have purchased;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="180" width="20" height="20" uuid="56f38b12-92da-4e3b-8142-5f7897214656"/>
+				<textElement>
+					<font fontName="verdan" size="8.5"/>
+				</textElement>
+				<text><![CDATA[c)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="180" width="470" height="30" uuid="5a034122-2a84-4bad-8326-5546d46f3a2e"/>
+				<textElement>
+					<font fontName="Verdana" size="8.5"/>
+				</textElement>
+				<text><![CDATA[Complying with applicable laws, regulations, rules, guidelines, schemes or directions imposed by any regulator, government body, statutory body, law enforcement agency or dispute resolution body;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="220" width="470" height="30" uuid="e535619b-cc80-47c9-8b56-704739e7ddac"/>
+				<textElement>
+					<font fontName="Verdana" size="8.5"/>
+				</textElement>
+				<text><![CDATA[Carrying out compliance monitoring and audit reviews, due diligence checks, other screening activities and/or similar activities in accordance with AFA’ legal or regulatory obligations or risk management procedures;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="220" width="20" height="20" uuid="7908ceac-7145-4135-a222-e20adf648f71"/>
+				<textElement>
+					<font fontName="verdan" size="8.5"/>
+				</textElement>
+				<text><![CDATA[d)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="260" width="470" height="60" uuid="1cb2ef1d-861a-484c-8cc1-b8c2ef3ef3e2"/>
+				<textElement>
+					<font fontName="Verdana" size="8.5"/>
+				</textElement>
+				<text><![CDATA[Providing me with marketing and promotional information and/or material on financial advisory services provided by AFA and/or investment products and financial services offered by AFA’s business partners and product providers which in the opinion of AFA may be of interest or benefit to me by way of postal mail If you do not wish to receive such material via postal mail or email, you can withdraw your consent by contacting us at]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="260" width="20" height="20" uuid="52752131-290d-426f-a11c-6414c6910a26"/>
+				<textElement>
+					<font fontName="verdan" size="8.5"/>
+				</textElement>
+				<text><![CDATA[e)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="301" width="100" height="20" forecolor="#1E00FF" uuid="36c12996-fb08-4ef6-a3e2-28be0ba3a119"/>
+				<textElement>
+					<font fontName="Verdana" size="8.5" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[PDP@avivafa.com.sg.]]></text>
+			</staticText>
+		</band>
+		<band height="68">
+			<staticText>
+				<reportElement x="-1" y="0" width="20" height="20" uuid="924f0cb7-ce94-4b80-aaec-269316c1a11b"/>
+				<textElement>
+					<font fontName="verdan" size="8.5"/>
+				</textElement>
+				<text><![CDATA[3)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="0" width="489" height="30" uuid="352ebf8c-fe3d-4f6b-b1f5-6a25dd001359"/>
+				<textElement>
+					<font fontName="Verdana" size="8.5"/>
+				</textElement>
+				<text><![CDATA[I warrant that I am the user and/or subscriber of all the telephone numbers provided by me to AFA from time to time; and I have read, understood and agree to the above terms and the AFA Personal Data Protection Policy at]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="20" width="150" height="20" forecolor="#1E00FF" uuid="cf294f3d-7ea9-4c42-8b43-f8c8fe4264ab"/>
+				<textElement>
+					<font fontName="Verdana" size="8.5" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[www.avivafa.com.sg/pdpa.html.]]></text>
+			</staticText>
+		</band>
+		<band height="58">
+			<line direction="BottomUp">
+				<reportElement x="19" y="24" width="121" height="1" uuid="13ab8a5e-30aa-4da2-b6db-1c30a31553cf"/>
+			</line>
+			<line>
+				<reportElement x="380" y="23" width="120" height="1" uuid="b5431325-bbbf-419f-8121-35dfffdb0724"/>
+			</line>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="36" y="28" width="100" height="12" uuid="42688a71-3007-4970-a62e-cc3f434742de"/>
+				<textElement>
+					<font fontName="Verdana" size="8.5"/>
+				</textElement>
+				<text><![CDATA[Client Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="27" width="61" height="13" uuid="f3746e08-0e35-4b3d-8182-a048f81e12e7"/>
+				<textElement>
+					<font fontName="Verdana" size="8.5"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

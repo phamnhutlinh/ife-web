@@ -1,0 +1,360 @@
+{
+  "IposDocument": {
+    "Data": {
+      "case-management:CaseManagement": {
+        "section": "case-management:CaseManagement",
+        "uiStyle": "tab",
+        "icons": {
+          "cardIcon": {
+            "content": "fa fa-pie-chart"
+          }
+        },
+        "permission": {
+          "openable": [
+            "case_openable"
+          ],
+          "editable": [
+            "case_editable"
+          ],
+          "viewable": [
+            "case_viewable"
+          ]
+        },
+        "case-management-base:Proposer": {
+          "section": "case-management:CaseManagement",
+          "key": [
+            "prospects"
+          ],
+          "mandatoryCard": "true",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user"
+            },
+            "step": {
+              "content": "1"
+            }
+          },
+          "cssClass": "v3-box-6",
+          "case-management-base:AddProspect": {
+            "cardType": "action",
+            "isShowValidationIcon": "false",
+            "section": "case-management-base:Proposer",
+            "isVisible": "checkVisibleImportCardProspect(card)",
+            "key": [],
+            "onClick": "addNewProspectCard(card)",
+            "cssClass": "v3-box-6",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-user"
+              },
+              "cardIconPlus": {}
+            }
+          },
+          "case-management-base:Prospect": {
+            "key": [],
+            "cardType": "template",
+            "section": "case-management-base:Proposer",
+            "icon": "fa fa-plus",
+            "cssClass": "v3-box-6",
+            "uiStyle": "section",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-user"
+              },
+              "removeCardInList": {
+                "onClick": "removeProposer(card)"
+              }
+            }
+          },
+          "case-management-base:ImportFromExistingProspect": {
+            "key": [],
+            "isShowValidationIcon": "false",
+            "section": "case-management-base:Proposer",
+            "isVisible": "checkVisibleImportCardProspect(card)",
+            "icon": "fa fa-user",
+            "cssClass": "v3-box-6",
+            "onOpen": "searchContactPersonal",
+            "staticHtml": "list_import_prospect.html"
+          }
+        },
+        "case-management-base:FinancialNeedsAnalysis": {
+          "section": "case-management:CaseManagement",
+          "key": [
+            "fnaInside"
+          ],
+          "isVisible": "false",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-bullseye"
+            },
+            "step": {
+              "content": "2"
+            }
+          },
+          "cssClass": "v3-box-6",
+          "onClose": "isOpenFNACardFunction(false)",
+          "case-management-base:ImportFromExistingFNA": {
+            "key": [],
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-bullseye"
+              }
+            },
+            "cssClass": "v3-box-6",
+            "section": "case-management-base:FinancialNeedsAnalysis",
+            "isVisible": "!hasValueNotEmpty(moduleService.findElementInDetail(['fnaInside', 'refIdModel', 'refId']).value)",
+            "onOpen": "searchFNA",
+            "staticHtml": "list_import_fna_into_case.html"
+          },
+          "case-management-base:FNA": {
+            "key": [
+              "fnaInside"
+            ],
+            "section": "case-management-base:FinancialNeedsAnalysis",
+            "icon": "fa fa-plus",
+            "cssClass": "v3-box-6",
+            "isVisible": "hasValueNotEmpty(moduleService.findElementInDetail(['fnaInside', 'refIdModel', 'refId']).value)",
+            "onOpen": "isOpenFNACardFunction()",
+            "onClose": "isOpenFNACardFunction()",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-bullseye"
+              },
+              "removeCardInList":  {
+                "onClick": "removeFNAInside(card)",
+                "isVisible": "true"
+              }
+            },
+            "case-management-base:FNARecommendations": {
+              "key": [
+                "recommendation"
+              ],
+              "section": "case-management-base:FNA",
+              "icon": "fa fa-plus",
+              "cssClass": "v3-box-6",
+              "icons": {
+                "cardIcon": {
+                  "content": "fa fa-bullseye"
+                }
+              },
+              "case-management-base:ProductRecommendationsLebel": {
+                "key": [],
+                "group": "1"
+              },
+              "case-management-base:ProductNameRider": {
+                "key": [
+                  "metaData",
+                  "productName"
+                ],
+                "group": "2"
+              },
+              "case-management-base:Reason": {
+                "key": [
+                  "reasonPlan"
+                ],
+                "group": "3"
+              },
+              "case-management-base:Benefit": {
+                "key": [
+                  "benefitPlan"
+                ],
+                "group": "4"
+              },
+              "case-management-base:Limitation": {
+                "key": [
+                  "limitationPlan"
+                ],
+                "group": "5"
+              }
+            },
+            "case-management-base:FNADeclaration": {
+              "key": [],
+              "section": "case-management-base:FNA",
+              "icon": "fa fa-plus",
+              "cssClass": "v3-box-6",
+              "icons": {
+                "cardIcon": {
+                  "content": "fa fa-bullseye"
+                }
+              },
+              "case-management-base:Label": {
+                "key": []
+              },
+              "case-management-base:Q1": {
+                "key": [],
+                "evalRefDetail": "{client:moduleService.findElementInDetail(['client','objectQ1', 'declarationQuestion1s']), joint: moduleService.findElementInDetail(['joint','objectQ1', 'declarationQuestion1s'])}"
+              },
+              "case-management-base:Q2": {
+                "key": [],
+                "evalRefDetail": "{client:moduleService.findElementInDetail(['client','objectQ2', 'declarationQuestion2s']), joint: moduleService.findElementInDetail(['joint','objectQ2', 'declarationQuestion2s'])}"
+              },
+              "case-management-base:Q3": {
+                "key": [],
+                "evalRefDetail": "{client:moduleService.findElementInDetail(['client','objectQ3', 'declarationQuestion3s']), joint: moduleService.findElementInDetail(['joint','objectQ3', 'declarationQuestion3s'])}"
+              }
+            }
+          }
+        },
+        "case-management-base:Quotation": {
+          "section": "case-management:CaseManagement",
+           "uiStyle": "quoCard",
+          "key": [
+            "quotations"
+          ],
+          "mandatoryCard": "true",
+          "onOpen": "reSetupConcreteUiStructure(moduleService.detail, undefined, true)",
+          "cssClass": "v3-box-6",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-bar-chart"
+            },
+            "step": {
+              "content": "3"
+            }
+          },
+          "case-management-base:ImportFromExistingQuotation": {
+            "cardType": "action",
+            "section": "case-management-base:Quotation",
+            "isShowValidationIcon": "false",
+            "isVisible": "false",
+            "key": [],
+            "cssClass": "v3-box-6",
+            "onClick": "importExistingQuotationCard(card)",
+            
+            "staticHtml": "list_import_quotationst.html"
+          },
+          "case-management-base:AddQuotation": {
+            "cardType": "action",
+            "section": "case-management-base:Quotation",
+            "isShowValidationIcon": "false",
+            "isVisible": "checkVisible()",
+            "key": [],
+            "onClick": "addNewQuotationCard(card)",
+            "cssClass": "v3-box-6",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-bar-chart"
+              },
+              "cardIconPlus": {}
+            }
+          },
+          "case-management-base:NewQuotation": {
+            "key": [],
+            "uiStyle": "tab",
+            "customName": "card.refDetail.documentType.value || 'QUO'",
+            "cardType": "template",
+            "onOpen": "checkOnOpenQuotationCard(card)",
+            "section": "case-management-base:Quotation",
+            "icon": "fa fa-plus",
+            "cssClass": "v3-box-6",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-bar-chart"
+              },
+              "removeCardInList": {
+                "onClick": "removeQuotation(card)",
+                "isVisible": "card.refDetail.refBusinessStatus.value != 'ACCEPTED' && card.refDetail.documentType.value != 'UW_QUO'"
+              }
+            }
+          }
+        },
+        "case-management-base:Application": {
+          "section": "case-management:CaseManagement",
+          "onOpen": "checkOnOpenApplicationCard(card)",
+          "key": [
+            "application"
+          ],
+          "cssClass": "v3-box-6",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-cubes"
+            },
+            "step": {
+              "content": "4"
+            }
+          }
+        },
+        "case-management-base:DocumentCenter": {
+          "section": "case-management:CaseManagement",
+          "key": ["attachments"],
+          "cssClass": "v3-box-6",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-folder-o"
+            },
+            "step": {
+              "content": "5"
+            }
+          },
+          "staticHtml": "v4-file-center-documents-upload.html",
+          "onOpen": "getListLazyOptionalDocument()"
+        },
+        "case-management-base:ReviewAndApproval": {
+          "section": "case-management:CaseManagement",
+          "key": [],
+          "isVisible": "commonService.hasValueNotEmpty(moduleService.findElementInDetail(['managerreview','refId']).value) || commonService.hasValueNotEmpty(moduleService.findElementInDetail(['underwriting','refId']).value)",
+          "cssClass": "v3-box-6",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-gavel"
+            },
+            "step": {
+              "content": "6"
+            }
+          },
+           "case-management-base:Underwriting": {
+            "key": [
+              "underwriting"
+            ],
+            "isVisible": "commonService.hasValueNotEmpty(moduleService.findElementInDetail(['underwriting','refId']).value)",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-underline"
+              }
+            },
+            "permission": {
+              "openable": [
+                "underwriting_openable",
+                "app_agent"
+              ],
+              "editable": [
+                "underwriting_editable"
+              ],
+              "viewable": [
+                "underwriting_viewable",
+                "case_viewable"
+              ]
+            },
+            "cssClass": "v3-box-11",
+            "section": "case-management-base:ReviewAndApproval"
+          },
+          "case-management-base:ManagerReview": {
+            "key": [
+              "managerreview"
+            ],
+            "isVisible": "commonService.hasValueNotEmpty(moduleService.findElementInDetail(['managerreview','refId']).value)",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-pencil-square"
+              }
+            },
+            "cssClass": "v3-box-11",
+            "section": "case-management-base:ReviewAndApproval",
+            "permission": {
+              "openable": [
+                "managerreview_openable"
+              ],
+              "editable": [
+                "managerreview_editable"
+              ],
+              "viewable": [
+                "managerreview_viewable",
+                "case_viewable"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+
+<!-- Start Summary -->
+ <div id="underwriting_UWDecision" fieldId="underwriting:UWDecision" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 summary">
+	<div class="form-group form-group-lg has-success">
+		<label class="col-xs-3 label-field">{{'v3.mynewworkspace.portlet.label.underwriting.decision' | translate}}:</label>
+		<span class="col-xs-3" style="font-weight:normal"  ng-bind="uiElement.refDetail.value"></span>
+	</div>
+</div>
+<div id="underwriting_LoadingApplied" fieldId="underwriting:LoadingApplied" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 summary">
+	<div class="form-group form-group-lg has-success">
+		<label class="col-xs-3 label-field">{{'v3.mynewworkspace.portlet.label.underwriting.loadingApplied' | translate}}:</label>
+		<span class="col-xs-3" style="font-weight:normal">{{uiElement.refDetail.value}} %</span>
+	</div>
+</div>
+<!-- End Summary -->
+
+<!-- Start Findings -->
+<div id="underwriting_FindingsList" fieldId="underwriting:FindingsList" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="row v4-materialize-container">
+        <div class="text-body col-xs-12 col-sm-12 col-md-12 v4-materialize-content-center large-font-center">
+            <span >{{::'v3.mynewworkspace.portlet.label.underwriting:Findings'| translate}}</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 v4-materialize-content-center" style="text-align:  center; margin-top:  20px; font-size:  15px;">
+            <div class="row" ng-repeat="error in listFinding" style="margin: 0px;">
+            	<span><p>{{error.value}}</p></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Findings -->
+
+<!-- Start Underwriter Comment -->
+<div  fieldId="underwriting:Comment" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="row v4-materialize-container">
+        <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center form-group">
+            <label class="text-body">{{::'v3.mynewworkspace.portlet.label.underwriting:UnderwriterComment'| translate}}:<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="col-md-11" style="padding-left:0px">
+				<textarea id="underwriting_Comment" clear-error-code type="text" ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value != 'DR'" maxlength="255" class="materialize-textarea input-field form-control" ng-model="uiElement.refDetail.value" style="min-height:100px"/>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+			</div>
+        </div>
+    </div>
+</div>
+
+<!-- End Underwriter Comment -->
+
+<!-- Start UW Form & Letter -->
+
+<div  fieldId="underwriting:Form" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+    	<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="text-body">{{'v3.mynewworkspace.portlet.label.underwriting.form' | translate}}:<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+	        <div class="input-field">      
+				<select id="underwriting_Form" ui-select2 ng-model="formType" ng-click="addFormLetter(formType, true)" ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value != 'DR'" >
+                    <option ng-repeat="occ in moduleService.findElementInElement(moduleService.lazyChoiceList,['FormUnderWriting'])" value="{{occ.key}}">
+                        {{'v4.formLetter.enum.' + occ.key | translate}}</option>
+                </select>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>          
+	        </div>
+		</div>	
+	</div>
+</div>
+<!-- 
+<div fieldId="underwriting:Letter" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="row v4-materialize-container">
+    	<div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+			<label class="label-field">{{'v3.mynewworkspace.portlet.label.underwriting.letterType' | translate}}:<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+	        <div class="input-field">      
+				<select ui-select2 ng-model="letterType" ng-click="addFormLetter(letterType, false)" ng-disabled="moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value != 'DR'" >
+                    <option ng-repeat="occ in moduleService.findElementInElement(moduleService.lazyChoiceList,['LetterUnderWriting'])" value="{{occ.key}}">
+                        {{'v4.formLetter.enum.' + occ.key | translate}}</option>
+                </select>
+				<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>          
+	        </div>
+		</div>	
+	</div>
+</div>
+ -->
+<div  fieldId="underwriting:FormLetterList" class="col-xs-11 col-sm-11 col-md-11 col-lg-11" >
+	<table class="table v4-responsive-table margin-left-15">
+		<tr>
+			<th class="col-md-1">{{"v3.mynewworkspace.portlet.label.underwriting.no" | translate}}</th>
+			<th class="col-md-2">{{"v3.mynewworkspace.portlet.label.underwriting.type" | translate}}</th>
+			<th class="col-md-7">{{"v3.mynewworkspace.portlet.label.underwriting.formName" | translate}}</th>
+			<th class="v4-button-action-container col-md-1">
+			</th>
+		</tr>
+		<tr ng-if="uiElement.refDetail.value.length == 0 || uiElement.refDetail.value[0].fileName.value == undefined">
+			<td></td>
+			<td></td>
+			<td><div class="errorMessage" >{{"v3.mynewworkspace.portlet.label.underwriting.noData" | translate}}</div></td>
+			<td></td>
+		</tr>
+		<tr ng-repeat="item in uiElement.refDetail.value track by $index" ng-if="uiElement.refDetail.value[0].fileName.value != undefined">
+			<td>{{$index + 1}}
+			</td>
+			<td >{{item.fileType.value}}
+			</td>
+			<td>{{item.fileName.value}}</td>
+			<td class="text-center">
+				<div  ng-attr-id="{{ 'underwriting_FormLetterList1_' + $index }}" class="v3-button-action-remove" ng-click="removeFormLetter($index)" ng-hide="moduleService.findElementInDetail(['businessStatus']).value != 'DR'"><i class="fa fa-times"></i></div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<!-- End UW Form & Letter-->
+
+

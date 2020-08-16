@@ -1,0 +1,152 @@
+
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+<div fieldId="policy:policyInformation" id="policyInformation" class="col-xs-12 col-sm-6 col-md-3 col-lg-4 mt-3 padding-left-0">
+	<label class="item-policy-number-big col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value}}</label>
+	<label class="item-policy-number-big col-xs-12 col-sm-12 col-md-12 col-lg-12 text-bold text-16 alignt-center">Motor Commercial - MT2</label>
+</div>
+<div fieldId="policy:statcode" class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-2 mt-3">
+	<label class="label-field-policy col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.status' | translate}}</label>
+	<label class="value-field-green v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value}}</label>
+</div>
+<div fieldId="policy:ccdate"  class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3 mt-3">
+	<label class="label-field-policy col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.coverStartDate' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value | datetimeFilter : "DD MMM YYYY"}}</label>
+</div>
+<div fieldId="policy:crdate"  class="section-body-row col-xs-12 col-sm-6 col-md-3 col-lg-3 mt-3">
+	<label class="label-field-policy col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.coverEndDate' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value | datetimeFilter : "DD MMM YYYY"}}</label>
+</div>
+<div class="row"></div>
+<hr>
+<div class="item-detail pb-1">		
+	 {{'v4.page.policy.section.detail.policyInformation' | translate}}
+</div>
+<div fieldId="policy:fullname" class="section-body-row col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.section.detail.policyHolderName' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value}}</label> 
+</div>
+<div fieldId="policy:cover" class="section-body-row col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.coverTypeDescription' | translate}}</label>
+	<label  class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12">{{uiElement.refDetail.value}}</label> 
+</div>
+<div fieldId="policy:totsi" class="section-body-row col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v3.mynewworkspace.portlet.label.application.GeneralQuestion.8.sumInsured' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value | v3Currency:2}}</label> 
+</div>
+<div fieldId="policy:extra01" class="section-body-row col-xs-12 col-sm-6 col-md-4 col-lg-4 mt-1">
+	<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.premiumAmount' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value | v3Currency:2}}</label> 
+</div>
+
+<!-- Additional coverage -->
+<div class="row"></div>
+<hr>
+<div class="item-detail pb-1">		
+	 {{'v3.mynewworkspace.portlet.label.illustration:addtionalCoverage' | translate}}
+</div>
+
+<div fieldId="policy:smcp" class="section-body-row col-xs-6 col-sm-6 col-md-4 col-lg-4" ng-repeat="item in uiElement.refDetail">
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{item.value}}</label> 
+</div>
+
+<!-- End Additional coverage -->
+
+<div class="row"></div>
+<hr>
+<div class="item-detail pb-1">		
+	 {{'v4.page.policy.label.vehicleInformation' | translate}}
+</div>
+
+<div fieldId="policy:regno" class="section-body-row col-xs-6 col-sm-6 col-md-4 col-lg-4">
+	<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'pnc.mt2.application.title.registrationNo' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value}}</label> 
+</div>
+<div fieldId="policy:dpflg" class="section-body-row col-xs-6 col-sm-6 col-md-4 col-lg-4">
+	<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.poweredBy' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value}}</label> 
+</div>
+<div fieldId="policy:vhmake" class="section-body-row col-xs-6 col-sm-6 col-md-4 col-lg-4">
+	<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.makeModel' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value}}</label> 
+</div>
+
+<div fieldId="policy:vhbody" class="section-body-row col-xs-6 col-sm-6 col-md-4 col-lg-4 mt-1">
+	<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.bodyTypeSeat' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value}}</label> 
+</div>		
+<div fieldId="policy:yrmanf" class="section-body-row col-xs-6 col-sm-6 col-md-4 col-lg-4 mt-1">
+	<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.yearManufactured' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value}}</label> 
+</div>
+<div fieldId="policy:engine" class="section-body-row col-xs-6 col-sm-6 col-md-3 col-lg-4 mt-1">
+	<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.Engine' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value}}</label> 
+</div>
+
+<div fieldId="policy:chassi" class="section-body-row col-xs-12 col-sm-12 col-md-4 col-lg-4  mt-1">
+	<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.Chassic' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value}}</label> 
+</div>
+<div fieldId="policy:capcty" class="section-body-row col-xs-6 col-sm-6 col-md-4 col-lg-4  mt-1">
+	<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v3.mynewworkspace.quotation.label.cubicCapacity' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value | number:2}}</label> 
+</div>
+<div fieldId="policy:vehcls" class="section-body-row col-xs-6 col-sm-6 col-md-4 col-lg-4  mt-1">
+	<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v3.mynewworkspace.quotation.label.vehicleClass' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value}}</label> 
+</div>
+
+<div fieldId="policy:ncbamt" class="section-body-row col-xs-12 col-sm-12 col-md-4 col-lg-4  mt-1">
+	<label class="label-field col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{'v4.page.policy.label.ncdAmount' | translate}}</label>
+	<label class="label-field v3-normal-font-weight col-xs-12 col-sm-12 col-md-12 col-lg-12"> {{uiElement.refDetail.value | v3Currency}}</label> 
+</div>
+<div   fieldId="policy:nameDriver" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<hr>
+	<div class="item-detail pb-1">		
+		 {{'v4.page.policy.label.namedDriver' | translate}}
+	</div>
+	<div  class="">
+		<table class="table-in-section-policy v4-responsive-table-policy">
+			<tr>
+				<th class="label-field">{{"v4.page.policy.label.driverName" | translate}}</th>
+				<th class="label-field">{{"v4.quotation.basicQuotation.Gender" | translate}}</th>
+				<th class="label-field">{{"pnc.mt2.application.namedDrivers.dateOfBirth" | translate}}</th>
+				<th class="label-field">{{"pnc.mt2.application.namedDrivers.documentType" | translate}}</th>
+				<th class="label-field">{{"v4.user.label.IDNumber" | translate}}</th>
+				<th class="label-field">{{"pnc.mt2.application.namedDrivers.yearOfLicence" | translate}}</th>
+				<th class="label-field">{{"pnc.mt2.application.namedDrivers.licenceNumber" | translate}}</th>
+				<th class="label-field">{{"pnc.mt2.application.namedDrivers.licenceExpiry" | translate}}</th>
+				
+			</tr>
+			<tr ng-repeat="item in uiElement.refDetail.value">
+				<td> <label class="value-field v3-normal-font-weight"> {{item.zdriver.value}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.cltsex.value}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.cltdobx.value | datetimeFilter : "DD MMM YYYY"}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.docutype.value}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.secuityno.value}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.year.value}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.licenno.value}}</label></td>
+				<td> <label class="value-field v3-normal-font-weight"> {{item.licnexdt.value | datetimeFilter : "DD MMM YYYY"}}</label></td>
+			</tr>
+		</table>
+	</div>
+	<hr>
+</div>
+</div>

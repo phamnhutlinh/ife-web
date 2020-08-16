@@ -1,0 +1,37 @@
+{
+  "IposDocument": {
+    "client:Client": {
+      "section": "client:Client",
+      "key": [],
+      "permission": {
+        "openable": [
+          "account_openable"
+        ],
+        "editable": [
+          "account_editable"
+        ],
+        "viewable": [
+          "account_viewable"
+        ]
+      },
+      "client:PersonalDetail": {
+        "key": [
+            "metaDatas"
+          ],
+          "group": "1"
+      },
+      "client:Contact": {
+        "key": [
+            "metaDatas"
+          ],
+          "group": "1"
+      },
+      "client:Address": {
+        "key": [
+            "metaDatas"
+          ],
+          "group": "1"
+      }
+    }
+  }
+}

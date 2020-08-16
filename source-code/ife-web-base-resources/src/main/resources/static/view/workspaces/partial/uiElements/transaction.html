@@ -1,0 +1,375 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+<div  fieldId="transaction:ProductName" class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+    <div class="row v4-materialize-container">
+        <div class="v4-materialize-content-center">
+            <label class="text-body">{{"new.v4.transactioncenter.transactioncenter.label.ProductName" | translate}}</label>
+               <div class="input-field">
+                <select id="transaction_ProductName" ui-select2 ng-model="queryProduct.value">
+                    <option ng-repeat="status in moduleService.lazyChoiceList.ProductCode" value="{{status.key}}">
+                        {{status.group[0]}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div  fieldId="transaction:Currency" class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+    <div class="row v4-materialize-container">
+        <div class="v4-materialize-content-center">
+            <label class="text-body">{{"new.v4.transactioncenter.transactioncenter.label.Currency" | translate}}</label>
+            <div class="input-field">
+                <select id="transaction_Currency" ui-select2 ng-model="queryCurrency.value">
+                    <option ng-repeat="status in moduleService.lazyChoiceList.Currency" value="{{status.key}}">
+                    {{status.group[0]}}
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div  fieldId="transaction:DueDateFrom" class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+    <div class="row v4-materialize-container">
+        <div class="v4-materialize-content-center">
+            <label class="text-body">{{"new.v4.transactioncenter.transactioncenter.label.EffectiveDateFrom" | translate}}</label>
+            <div class="input-field">
+                <i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+                <input id="transaction_DueDateFrom" clear-error-code type="text" class="datepicker" materiallize-datetime ng-model="queryEffectiveDateFrom.value" formatdisplay='DD/MM/YYYY' formatsubmit='YYYY-MM-DD' />
+            </div>
+        </div>
+    </div>
+</div>
+<div  fieldId="transaction:DueDateTo" class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+    <div class="row v4-materialize-container">
+        <div class="v4-materialize-content-center">
+            <label class="text-body">{{"new.v4.transactioncenter.transactioncenter.label.EffectiveDateTo" | translate}}</label>
+            <div class="input-field">
+                <i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+                <input id="transaction_DueDateTo" clear-error-code type="text" class="datepicker" materiallize-datetime ng-model="queryEffectiveDateTo.value" formatdisplay='DD/MM/YYYY' formatsubmit='YYYY-MM-DD' />
+            </div>
+        </div>
+    </div>
+</div>
+<div  fieldId="transaction:Search" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ng-scope">
+    <div class="search-pending-payment">
+        <button id="transaction_Search_Button" ng-click="resetSearch(undefined, 0, pageSizes[0])" class="btn btn-lg-new-ui ng-binding">{{'v4.mynewworkspace.aviva.fna.label.search' | translate}}</button>
+    </div>
+</div>
+<div  fieldId="transaction:PaymentBasic" class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+    <div class="row v4-materialize-container">
+        <div class="v4-materialize-content-center">
+            <label class="text-body">{{"new.v4.transactioncenter.transactioncenter.label.PaymentBasis" | translate}}<span>*</span></label>
+           <div>
+                <v3-switch-new-slide id="transaction_PaymentBasic" prefix="v4.paymentbasic.enum"
+                    switch-model="moduleService.paymentBasic"
+                    switch-default-value="" switch-disabled="false"
+                    switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['PaymentBasis'])">
+                </v3-switch-new-slide>
+            </div>
+            <span class="errorMessage" ng-if="paymentBasis && moduleService.paymentBasic == undefined" ng-bind="'MSG-C01' | translate"></span>
+        </div>
+    </div>
+</div>
+<div  fieldId="transaction:Table1" class="col-xs-11 ipos_medium_mobile_table ipos_table_v4" ng-cloak>
+	<div class="hidden-xs ipos_medium_mobile_table_table_listRow ipos_table_v4_header md-whiteframe-z1 v3-margin-right-0" ng-if="isListView">
+		<div class="v3-auto-text-ellipsis ipos-box-opacity">
+			<md-checkbox id="transaction_Table1_First" aria-label="." ng-if="pendingPaymentList.length > 0" style="align: center; opacity: 100; position: sticky; line-height: 20px; display: inline-block" ng-model="a.isSelectAll" ng-change="selectAll()"></md-checkbox>
+		</div>
+		<div class="v3-auto-text-ellipsis ipos-box-opacity">
+			{{'new.v4.payment_history.label.BusinessCase' | translate}}
+		</div>
+		<div class="v3-auto-text-ellipsis ipos-box-opacity">
+			{{'new.v4.payment_history.label.Client' | translate}}
+		</div>
+		<div class="v3-auto-text-ellipsis ipos-box-opacity">
+			{{'new.v4.payment_history.label.ProductType' | translate}}
+		</div>
+		<div class="v3-auto-text-ellipsis ipos-box-opacity">
+			{{'new.v4.payment_history.label.CreatedOn' | translate}}
+		</div>
+		<div class="v3-auto-text-ellipsis ipos-box-opacity">
+			{{'new.v4.payment_history.label.LastUpdatedOn' | translate}}
+		</div>
+	</div>
+	<md-virtual-repeat-container
+				class="scrollStyle height-315 level-1-style-section" md-top-index="topIndex" ng-hide="!pendingPaymentList.length">
+			<div id="table-row-{{$index}}" name="dashboard-item" 
+				class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer repeated-item"
+				md-virtual-repeat="item in infiniteItems" md-on-demand flex>
+				<md-card class="col-xs-12 v3-padding-0 ipos-box-opacity"
+					style="margin: 0px;">
+					<div style="display: flex; padding-left: 0px; padding-right: 0px; text-align: left;">
+						<div class="v3-auto-text-ellipsis"><md-checkbox id="transaction_Table1_Second" aria-label="." style="position: sticky; opacity: 100; display: inline-block" ng-true-value="true" ng-false-value="false" ng-model="item.isCheck" ng-change="toggleSelection(item)"></md-checkbox></div>
+						<div class="v3-auto-text-ellipsis"><a href="" ng-middle-click ng-click="goToDocumentDetails(commonService.CONSTANTS.MODULE_NAME.SALECASE, item.referenceInfo.caseId, item.referenceInfo.businessType, item.referenceInfo.productCode, $event)" tooltips tooltip-title="{{item.referenceInfo.businessCaseNo}}" tooltip-side="top" tooltip-size="medium">{{item.referenceInfo.businessCaseNo}}</a></div>
+						<div class="v3-auto-text-ellipsis">{{item.payer.person.basic.name.full==null ? item.payer.corporate.coporateName : item.payer.person.basic.name.full}}</div>
+						<div class="v3-auto-text-ellipsis">{{'v3.mynewworkspace.portlet.label.ipos-product.' + item.referenceInfo.productCode | translate}}</div>
+						<div class="v3-auto-text-ellipsis">{{item.metaData.createDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+						<div class="v3-auto-text-ellipsis">{{item.metaData.modifyDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+					</div>
+				</md-card>
+			</div>
+		</md-virtual-repeat-container>
+	<!-- loading -->		
+		<div id="table-row-{{$index}}" name="dashboard-item" ng-show = "isLoad"  ng-cloak 
+				class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer row">
+				<!-- <md-progress-circular class= "md-hue-2" md-diameter="20px"></md-progress-circular> -->
+				<p><i class = "fa fa-spinner fa-spin" style="margin-right: 5px;">  </i>  Loading...</p>
+		</div>	
+		<md-divider ></md-divider>
+		<div class="text-body" ng-if="!pendingPaymentList.length" style="text-align: center; height: 100px; line-height: 100px;">
+		No item is displayed
+	</div>
+</div>
+	
+	<md-divider ng-if="!pendingPaymentList.length"></md-divider>
+	<div class="col-xs-12 no-padding-left no-padding-right container-fluid v3-margin-top-10" layout-align="center center" style="line-height: 30px">
+		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        	<div class="row v4-materialize-container">
+            	<div class="v4-materialize-content-center">
+                	<label class="text-body">{{"new.v4.transactioncenter.transactioncenter.label.PaymentMethod" | translate}}</label>
+                   	<div class="input-field">
+			        	<select id="transaction_PaymentMethod_Select_First" ui-select2 ng-model="moduleService.paymentMethod" ng-change="showPaymentInformationViaMethod()">
+			            	<option ng-repeat="status in moduleService.findElementInElement(moduleService.lazyChoiceList,['PaymentMethod'])" value="{{status.key}}">
+                       		{{status.group[0]}}
+                       		</option>
+                		</select>                			
+            		</div>
+            	</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+			<div class="row v4-materialize-container">
+				<div class="v4-materialize-content-center">
+			    	<label class="text-body">{{::'new.v4.transactioncenter.transactioncenter.label.TotalPayableAmount'| translate}}
+			        	<span ng-if="TotalPayableAmountCurrency !== undefined"> ({{TotalPayableAmountCurrency}})</span><span ng-if="moduleService.paymentBasic != undefined"> ({{"v4.paymentbasic.enum." + moduleService.paymentBasic | translate}})</span>
+			       	</label>
+			        <div class="input-field">
+			        	<input id="transaction_TotalPayableAmount_First" type="text" pos-autonumeric class="form-control" placeholder="" ng-model="totalPayableAmount" ng-disabled="true"/>
+			        </div>
+			    </div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 margin-top-43">	
+ 	 		<div ng-if="moduleService.paymentMethod">
+		        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		        	<button id="transaction_PaymentMethod_Button_ProceedtoPayment" ng-disabled="denyDuplicatePayments == false" class="btn btn-lg-new-ui button-text-font-weight line-height-33" ng-click="processToPayment()">
+		        		<label class="text-body button-text">{{"new.v3.transactioncenter.transactioncenter.button.ProceedtoPayment" | translate}}</label>
+		        		<i class="fa fa-angle-right v4-margin-left-20"></i>
+		        	</button>
+		        </div>
+		       	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		       		<button id="transaction_PaymentMethod_Button_Cancel" class="btn btn-lg-new-ui button-text-font-weight" ng-click="cancelFirstTile()">
+		       			<label class="text-body button-text">{{"new.v3.transactioncenter.transactioncenter.button.Cancel" | translate}}</label>
+		       		</button>
+		       	</div>
+			</div>	
+		</div>
+ 	</div>
+ 	<!-- <div class="col-xs-12 no-padding-left no-padding-right row">
+ 		<div class="hide-xs col-md-5"></div>	
+		<div class="col-xs-12 text-center col-sm-6 col-md-3 no-padding-left no-padding-right" style="margin-top: 41px;">							
+                <span class="col-xs-6 col-sm-7 no-padding-right" style="text-align: end !important;padding-top: 7px !important;">{{'v3.dashboardportlet.label.Itemsperpage' | translate}}</span>
+                <select class="col-xs-6 col-xs-5 no-padding-left no-padding-right form-control ipos_paging_dropdown_70" ng-model="pageSize" ng-options="size as size for size in pageSizes">
+				</select>
+		</div>
+		<dir-pagination-controls 
+			class="text-center col-xs-12 col-sm-6 col-md-4 no-padding-left no-padding-right ng-isolate-scope" 
+			boundary-links="true" 
+			max-size="100"
+			pagination-id="listtitle"
+			on-page-change="searchListPayment(searchText, newPageNumber - 1, pageSize, undefined, manualSort)">
+		</dir-pagination-controls>
+	</div>
+	 -->
+<div  fieldId="transaction:Step2_PaymentInformation" ng-if="showPaymentInformation" >
+	<div class="row v4-materialize-content-center">
+        <label class="label-section-bigger margin-top-43">{{"new.v4.transactioncenter.transactioncenter.label.PaymentInformation" | translate}}</label>                
+    </div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	    <div class="row v4-materialize-container">
+	        <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+	            <label class="text-body">{{"new.v4.transactioncenter.transactioncenter.label.PaymentSubmissionNo" | translate}} </label>
+	            <div class="input-field">
+	                <input id="transaction_Step2_PaymentInformation" clear-error-code placeholder="" ng-disabled="true" type="text" maxlength="120" ng-model="paymentSubNo" alphabeticals-only/>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	    <div class="row v4-materialize-container">
+	        <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+	            <label  class="text-body">{{"new.v4.transactioncenter.transactioncenter.label.PaymentDate" | translate}}</label>
+	            <div class="input-field">
+	                <i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+	                <input id="transaction_Step2_PaymentInformation_PaymentDate" ng-disabled="true" clear-error-code type="text" class="datepicker" materiallize-datetime ng-model="paymentDate" formatdisplay='DD/MM/YYYY'/>
+	            </div>            
+	        </div>
+	    </div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	    <div class="row v4-materialize-container">
+	        <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+	        	<label class="text-body">{{"new.v4.transactioncenter.transactioncenter.label.PaymentBasis" | translate}}<span>*</span></label>
+	           	<v3-switch-new-slide id="transaction_Step2_PaymentInformation_PaymentBasis" prefix="v4.paymentbasic.enum"
+	           		switch-model="moduleService.paymentBasic"
+	                switch-default-value="" switch-disabled="true"
+	            	switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['PaymentBasis'])">
+	            </v3-switch-new-slide>
+	            <span class="errorMessage" ng-if="paymentBasis && moduleService.paymentBasic == undefined" ng-bind="'MSG-C01' | translate"></span>
+	        </div>
+	    </div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	    <div class="row v4-materialize-container">
+	        <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+	            <label class="text-body">{{"new.v4.transactioncenter.transactioncenter.label.PayableAmount" | translate}} <span ng-if="TotalPayableAmountCurrency !== undefined"> ({{TotalPayableAmountCurrency}})</span></label>
+	             <div class="input-field">
+	                <input id="transaction_Step2_PaymentInformation_TotalPayableAmount" clear-error-code placeholder="" ng-disabled="true" type="text" maxlength="120" ng-model="totalPayableAmount" pos-autonumeric alphabeticals-only/>
+	                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	    <div class="row v4-materialize-container">
+	        <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+	            <label class="text-body">{{"new.v4.transactioncenter.transactioncenter.label.PayorName" | translate}}<span>*</span></label>
+	            <v3-switch-new-slide id="transaction_Step2_PaymentInformation_PayorName" prefix="v4.payableName.enum"
+	            	switch-model="moduleService.payorName"
+	                switch-default-value="" switch-disabled="false"
+	                switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['PayorName'])">
+	            </v3-switch-new-slide>
+	            <span class="errorMessage" ng-if="checkPayorName == true && moduleService.payorName==undefined" ng-bind="'MSG-C01' | translate"></span>
+	        </div>
+	    </div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	    <div class="row v4-materialize-container">
+	        <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+	            <label class="text-body">{{"new.v4.transactioncenter.transactioncenter.label.Remark" | translate}}</label>
+	            <div class="input-field">
+	                <input id="transaction_Step2_PaymentInformation_Remark" clear-error-code placeholder="" ng-disabled="" type="text" maxlength="120" ng-model="moduleService.comment" alphabeticals-only/>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	
+	<div ng-if="moduleService.paymentMethod == commonService.CONSTANTS.PAYMENT_METHOD.CHEQUE" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	    <div class="row v4-materialize-container">
+	        <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+	            <label class="text-body">{{"new.v3.transactioncenter.transactioncenter.label.ChequeNumber" | translate}}<span>*</span></label>
+	            <div class="input-field">
+	                <input id="transaction_Step2_PaymentInformation_ChequeNo" clear-error-code placeholder="" ng-disabled="" type="text" maxlength="120" ng-model="moduleService.chequeNo"/>
+	            </div>
+	            <span class="errorMessage" ng-if="checkChequeNo == true && moduleService.chequeNo==undefined" ng-bind="'MSG-C01' | translate"></span>
+	        </div>
+	    </div>
+	</div>
+	<div ng-if="moduleService.paymentMethod == commonService.CONSTANTS.PAYMENT_METHOD.CHEQUE" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	    <div class="row v4-materialize-container">
+	        <div class="ol-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+	            <label class="text-body">{{"new.v3.transactioncenter.transactioncenter.label.ChequeDate" | translate}}<span>*</span></label>
+	            <div class="input-field">
+	                <i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+	                <input id="transaction_Step2_PaymentInformation_ChequeDate" clear-error-code type="text" class="datepicker" materiallize-datetime ng-model="moduleService.chequeDate" formatdisplay='DD/MM/YYYY' />
+	            </div>
+	            <span class="errorMessage" ng-if="checkChequeDate == true && moduleService.chequeDate==undefined" ng-bind="'MSG-C01' | translate"></span>
+	        </div>
+	    </div>
+	</div>
+	<div ng-if="moduleService.paymentMethod == commonService.CONSTANTS.PAYMENT_METHOD.CHEQUE" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	    <div class="row v4-materialize-container">
+	        <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+	            <label class="text-body">{{"new.v3.transactioncenter.transactioncenter.label.BankName" | translate}}<span>*</span></label>
+	               <div class="input-field">
+	                <select id="transaction_Step2_PaymentInformation_BankName" ui-select2 ng-model="moduleService.bankName">
+	                    <option ng-repeat="status in moduleService.lazyChoiceList.BankName" value="{{status.key}}">
+	                        {{'v3.bankName.' + status.key | translate}}</option>
+	                </select>
+	            </div>
+	            <span class="errorMessage" ng-if="checkBankName == true  && moduleService.bankName==undefined" ng-bind="'MSG-C01' | translate"></span>
+	        </div>
+	    </div>
+	</div>
+	<div ng-if="moduleService.paymentMethod == commonService.CONSTANTS.PAYMENT_METHOD.BANK_TRANSFER" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	    <div class="row v4-materialize-container">
+	        <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+	            <label class="text-body">{{"new.v3.transactioncenter.transactioncenter.label.AdviceNo" | translate}}<span>*</span></label>
+	            <div class="input-field">
+	                <input id="transaction_Step2_PaymentInformation_AdviceNo" clear-error-code placeholder="" ng-disabled="" type="text" maxlength="120" ng-model="moduleService.adviceNo"/>
+	            </div>
+	            <span class="errorMessage" ng-if="checkAdviceNo == true && moduleService.adviceNo==undefined" ng-bind="'MSG-C01' | translate"></span>
+	        </div>
+	    </div>
+	</div>
+	<div ng-if="moduleService.paymentMethod == commonService.CONSTANTS.PAYMENT_METHOD.BANK_TRANSFER" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	    <div class="row v4-materialize-container">
+	        <div class="ol-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+	            <label class="text-body">{{"new.v3.transactioncenter.transactioncenter.label.AdviceDate" | translate}}<span>*</span></label>
+	            <div class="input-field">
+	                <i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+	                <input id="transaction_Step2_PaymentInformation_AdviceDate" clear-error-code type="text" class="datepicker" materiallize-datetime ng-model="moduleService.adviceDate" formatdisplay='DD/MM/YYYY' />
+	            </div>
+	            <span class="errorMessage" ng-if="checkAdviceDate == true && moduleService.adviceDate==undefined" ng-bind="'MSG-C01' | translate"></span>
+	        </div>
+	    </div>
+	</div>
+	<div ng-if="moduleService.passStep1Payment" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-top-36">
+	    <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+	        <div class="form-group form-group-lg has-success button-text-font-weight" hide-gt-lg>
+	            <button id="transaction_PassStep1Payment_Button1" class="btn btn-lg v3-btn-primary margin-right-10" ng-click="doRealPayment()" hide-sm hide-xs><label class="text-body button-text">{{"new.v3.transactioncenter.transactioncenter.button.Pay" | translate}}</label></button>
+	            <button id="transaction_PassStep1Payment_Button2" class="btn btn-lg v3-btn-primary margin-right-10" ng-click="doRealPayment()" hide-lg hide-md hide-gt-lg><label class="text-body button-text">{{"new.v3.transactioncenter.transactioncenter.button.Pay" | translate}}</label></button>
+	            <button id="transaction_PassStep1Payment_Button3" class="btn btn-lg v3-btn-primary right" ng-click="cancelSecondTile()"><label class="text-body button-text">{{"new.v3.transactioncenter.transactioncenter.button.Cancel" | translate}}</label></button>
+	        </div>
+	        <div class="form-group form-group-lg has-success button-text-font-weight" hide-sm hide-xs hide-md hide-lg>
+	            <button id="transaction_PassStep1Payment_Button4" class="btn btn-lg v3-btn-primary" ng-click="doRealPayment()" style="margin-right: 10px" hide-sm hide-xs><label class="text-body button-text">{{"new.v3.transactioncenter.transactioncenter.button.Pay" | translate}}</label></button>
+	            <button id="transaction_PassStep1Payment_Button5" class="btn btn-lg v3-btn-primary" ng-click="doRealPayment()" style="margin-bottom: 10px" hide-lg hide-md hide-gt-lg><label class="text-body button-text">{{"new.v3.transactioncenter.transactioncenter.button.Pay" | translate}}</label></button>
+	            <button id="transaction_PassStep1Payment_Button6" class="btn btn-lg v3-btn-primary right" ng-click="cancelSecondTile()"><label class="text-body button-text">{{"new.v3.transactioncenter.transactioncenter.button.Cancel" | translate}}</label></button>
+	        </div>
+	    </div>
+	</div>						
+</div>
+
+<!-- <div fieldId="transaction:PaymentSuccessful" class="col-xs-12 v3-column-content" ng-if="epaymentSuccessful == true">
+    <div class="row text-center v3-card-title">
+        {{"new.v3.transactioncenter.transactioncenter.label.Paymentsuccessful" | translate}}
+    </div>
+    <div class="row text-center">
+        {{"new.v3.transactioncenter.transactioncenter.label.PaymentProcessed" | translate}}
+    </div>
+    <div class="row text-center" ng-if="moduleService.paymentMethod==commonService.CONSTANTS.PAYMENT_METHOD.CREDIT_CARD">
+        {{"new.v3.transactioncenter.transactioncenter.label.PaymentDocumentNo" | translate}}: {{epaymentSubNo}}
+    </div>
+    <div class="row text-center" ng-if="moduleService.paymentMethod!=commonService.CONSTANTS.PAYMENT_METHOD.CREDIT_CARD">
+        {{"new.v3.transactioncenter.transactioncenter.label.PaymentDocumentNo" | translate}}: {{paymentSubNo}}
+    </div>
+    <div class="row text-center" ng-if="moduleService.paymentMethod==commonService.CONSTANTS.PAYMENT_METHOD.CREDIT_CARD">
+        {{"new.v3.transactioncenter.transactioncenter.label.AmountPaid" | translate}}: {{etotalPremium | number:2}} {{paidCurrency}}
+    </div>
+    <div class="row text-center" ng-if="moduleService.paymentMethod!=commonService.CONSTANTS.PAYMENT_METHOD.CREDIT_CARD">
+        {{"new.v3.transactioncenter.transactioncenter.label.AmountPaid" | translate}} <span ng-if="TotalPayableAmountCurrency !== undefined"> ({{TotalPayableAmountCurrency}})</span>: {{totalPayableAmount | number:2}}
+    </div>
+</div>
+<div fieldId="transaction:PaymentUnsuccessful" class="col-xs-12 v3-column-content" ng-if="epaymentSuccessful == false">
+    <div class="row text-center v3-card-title">
+        {{"new.v3.transactioncenter.transactioncenter.label.Paymentunsuccessful" | translate}}
+    </div>
+    <div class="row text-center">
+        {{"new.v3.transactioncenter.transactioncenter.label.Yourpaymentcannotbeprocessed" | translate}}
+    </div>
+</div> -->

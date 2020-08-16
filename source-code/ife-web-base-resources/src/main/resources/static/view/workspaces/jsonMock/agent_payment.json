@@ -1,0 +1,48 @@
+{
+  "IposDocument": {
+    "Data": {
+      "payment:Payment": {
+        "permission": {
+          "openable": [
+            "payment_openable"
+          ],
+          "editable": [
+            "payment_editable"
+          ],
+          "viewable": [
+            "payment_viewable"
+          ]
+        },       
+        "section": "payment:Payment",
+        "payment:payment-history": {
+          "section": "payment:Payment",
+          "cardType": "action",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-history"
+            }
+          },
+          "cssClass": "v3-box-1",
+          "key": [],
+          "isShowValidationIcon": "false",
+          "isShowNoOfEmptyField": "false",
+          "onClick": "goToPaymentHistory()"
+        },
+        "payment:payment-center": {
+          "section": "payment:Payment",
+          "cardType": "action",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-money"
+            }
+          },
+          "cssClass": "v3-box-1",
+          "key": [],
+          "isShowValidationIcon": "false",
+          "isShowNoOfEmptyField": "false",
+          "onClick": "goToTransaction('transaction')"
+        }      
+      }
+    }
+  }
+}

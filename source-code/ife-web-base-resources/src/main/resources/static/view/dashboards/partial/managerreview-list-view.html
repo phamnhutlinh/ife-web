@@ -1,0 +1,96 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+<div ng-controller="ManagerreListViewCtrl" ng-cloak>
+<div class="row v3-margin-auto" ng-if="isListView" style="margin-bottom: 0px;" >
+	<div class="col-xs-11 ipos_medium_mobile_table ipos_table_v4">
+		<div class="hidden-xs ipos_medium_mobile_table_table_listRow ipos_table_v4_header md-whiteframe-z1">
+			<div class="v3-auto-text-ellipsis ipos-box-opacity" list-view-sort="documentRelation.caseName">
+				{{'v4.dashboard.managerreview.label.businessCaseNumber' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity" list-view-sort="policyOwnerInfo.poName">
+				{{'v4.dashboard.managerreview.label.policyOwner' | translate}}
+			</div>	
+			<div class="v3-auto-text-ellipsis ipos-box-opacity" list-view-sort="metaData.ownerName">
+				{{'v4.dashboard.managerreview.label.agentName' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity" list-view-sort="metaData.createDate">
+				{{'v4.dashboard.managerreview.label.submissionDate' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity" list-view-sort="metaData.modifyDate">
+				{{'v4.dashboard.managerreview.label.lastUpdatedDate' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity" list-view-sort="metaData.businessStatus">
+				{{'v4.dashboard.managerreview.label.reviewStatus' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.managerreview.label.action' | translate}}
+			</div>	
+		</div>
+		<md-virtual-repeat-container
+				class="scrollStyle" md-top-index="topIndex" ng-if="datalist.length >= 1">
+		<div id="table-row-{{$index}}" name="dashboard-item" 
+			class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer repeated-item"
+			md-virtual-repeat="item in infiniteItems" md-on-demand flex 
+			ng-click="">
+			<md-card class="col-xs-12 v3-padding-0 ipos-box-opacity" style="margin: 0px;">
+				<div style="display: flex;padding-left: 0px;padding-right: 0px;text-align: left;"
+				>
+				<!-- ng-click="goToDocumentDetails(commonService.CONSTANTS.MODULE_NAME.SALECASE, item.docId, item.businessType, item.productName)" -->
+					<div class="v3-auto-text-ellipsis">{{item.caseName}}</div>
+					<div class="v3-auto-text-ellipsis">{{item.poName}}</div>
+					<div class="v3-auto-text-ellipsis">{{item.ownerName}}</div>
+					<div class="v3-auto-text-ellipsis">{{item.submissionDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+					<div class="v3-auto-text-ellipsis">{{item.modifyDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+					<div class="v3-auto-text-ellipsis">{{'v4.BusinessStatus.Managerreview.' + item.businessStatus | translate}}</div>
+					
+					
+					<div class="v3-auto-text-ellipsis v4-dashboard-btn-holder" ng-if="listtitle==='managerreview-requests-list'">
+						<md-button class="md-fab md-primary"
+								   aria-label="action-add"
+								   ng-click="pickupOrReturnManager(item, datalist, $index, 'pickup', $event)">
+							<md-icon md-font-set="material-icons">add circle</md-icon>
+						</md-button>
+					</div>	
+					
+					<div class="v3-auto-text-ellipsis v4-dashboard-btn-holder" ng-if="listtitle==='my-managerreview'">
+						<md-button class="md-fab md-primary"
+								   aria-label="action-return"
+								   ng-click="goToDocumentDetails(commonService.CONSTANTS.MODULE_NAME.SALECASE, item.caseId, item.businessType, item.productName)">
+							<md-icon md-font-set="material-icons">create circle</md-icon>
+						</md-button>
+						<md-button class="md-fab md-primary"
+								   aria-label="action-go"
+								   ng-click="pickupOrReturnManager(item, datalist, $index, 'return')">
+							<md-icon md-font-set="material-icons">reply</md-icon>
+						</md-button>
+					</div>	
+								
+				</div>
+			</md-card>
+		</div>
+		</md-virtual-repeat-container>
+		<!-- loading -->
+		<div id="table-row-{{$index}}" name="dashboard-item" ng-show = "isLoad"  ng-cloak 
+				class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer row">
+				<!-- <md-progress-circular class= "md-hue-2" md-diameter="20px"></md-progress-circular> -->
+				<p><i class = "fa fa-spinner fa-spin" style="margin-right: 5px;">  </i>  Loading...</p>
+		</div>
+	</div>
+</div>
+</div>

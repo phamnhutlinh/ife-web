@@ -1,0 +1,22 @@
+{
+  "name": "spring_data_rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "foreach": "^2.0.5",
+    "fs": "^0.0.1-security",
+    "isobject": "^2.1.0",
+    "node.extend": "^1.1.6",
+    "q": "^1.4.1",
+    "request-promise": "^4.1.1",
+    "resource": "^0.6.0",
+    "http": "^0.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "IPOS CSC",
+  "license": "ISC"
+}

@@ -1,0 +1,207 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div ng-controller="ListImportContact" class="row">
+	
+	<!-- start lazy load for list import -->
+	<document-list-view datalist="contactList" doctype="contact"
+ 						isDashboard="false"
+ 						importcaseorfna ="fna"
+						listtitle="contact-import"
+						defaultquery="{{[{
+								fields: ['metaData.ownerName'],
+								values: [ownerName]
+							}, {
+								fields: ['metaData.documentStatus'],
+								values: [
+									commonService.CONSTANTS.DOCUMENT_STATUS.VALID
+								]
+							}, {
+								fields: ['contactType'],
+								values: [
+									commonService.CONSTANTS.CONTACT_TYPE.INDIVIDUAL
+								]
+							}]}}"
+						searchcriteria="[
+								'personInformation.person.contacts.handPhone',
+								'personInformation.person.contacts.email',
+								'personInformation.person.basic.name.full',
+								'corporateInformation.basicInformation.corporateName',
+								'corporateInformation.contacts.corpEmail',
+								'corporateInformation.contacts.mainLinePhone'
+							]"
+						lazy-choice-list="moduleService.lazyChoiceList" />
+	
+	
+	<!-- end -->
+	
+	<!-- <div class="col-xs-4 col-sm-4 col-lg-4">
+      <div class="input-field ">
+         <input id="icon_prefix" type="text" class="validate" ng-model="searchText" style ="background: #f1f1f1;">
+         <label for="icon_prefix">Search</label>
+      </div>
+    </div> -->
+	<!-- table header -->
+	<!-- <div class="col-xs-12 col-sm-12 col-lg-12 row">
+		<div class="col-xs-12 ipos_medium_mobile_table ipos_table_v4">
+			<div
+				class="hidden-xs ipos_medium_mobile_table_table_listRow ipos_table_v4_header_import_list md-whiteframe-z1 ">
+				<div class="v3-auto-text-ellipsis ipos-box-opacity">
+					{{'v4.dashboard.contact.lable.name' | translate}}</div>
+				<div class="v3-auto-text-ellipsis ipos-box-opacity">
+					{{'v4.dashboard.contact.lable.Type' | translate}}
+					<i style="margin-left: 10px;font-size: 1.5em;" ng-click="toggleFilter()" class="pointer fa fa-filter fa-2x filter-header" 
+							tooltips tooltip-title="Filter" tooltip-side="top" tooltip-size="medium"
+							ng-class="{'filter-header-enable ': filter.isfilterShow, 'filter-header-disable ': !filter.isfilterShow}"></i>
+					<header-filter 
+						list-choices ="lazyChoiceList.ContactType" 
+						search-fields="[
+							'contactType'
+						]"
+						translate-prefix="v4.dashboard.contact.Type."
+						is-filter-show="filter.isfilterShow"
+						> 
+					</header-filter>
+				</div>
+				<div class="v3-auto-text-ellipsis ipos-box-opacity">
+					{{'v4.ModeOfContact.enum.TEL' | translate}}</div>
+				<div class="v3-auto-text-ellipsis ipos-box-opacity">
+					{{'v4.user.label.Email' | translate}}</div>
+				<div class="v3-auto-text-ellipsis ipos-box-opacity">
+					{{'v4.dashboard.contact.lable.CreateDate' | translate}}</div>
+				<div class="v3-auto-text-ellipsis ipos-box-opacity">
+					{{'v4.dashboard.contact.lable.UpdatedDate' | translate}}</div>
+			</div>
+		</div>
+	</div> -->
+	<!-- end -->
+	
+	<!-- table content -->
+	
+	<!-- <div id="list-import" class="col-xs-12 col-sm-12 col-lg-12 row" scrolled="increase()">
+		<div class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer repeated-item" ng-repeat="metaData in contactList | myNewWorkspaceFilter:searchText:currentState | orderBy : '-modifyDate' | limitTo: listProspectLimit track by $index">
+			<md-card ng-if="metaData.contactType == 'INDIVIDUAL'" class="col-xs-12 v3-padding-0 ipos-box-opacity" style="margin: 0px;">
+				<div ng-click="importClientJointApplicant(card, metaData.docName, $event, true)" style="display: flex;padding-left: 0px;padding-right: 0px;text-align: left;">
+					<div class="v3-auto-text-ellipsis">{{metaData.fullName}}</div>
+					<div class="v3-auto-text-ellipsis">{{metaData.contactType}}</div>
+					<div class="v3-auto-text-ellipsis">{{metaData.handPhone}}</div>
+					<div class="v3-auto-text-ellipsis">{{metaData.email}}</div>					
+					<div class="v3-auto-text-ellipsis">{{metaData.createDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+					<div class="v3-auto-text-ellipsis">{{metaData.modifyDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+				 
+					<div class="v3-auto-text-ellipsis">{{item.sourcesName}}</div>
+				
+				</div>
+			</md-card>
+			<md-card ng-if="metaData.contactType == 'CORPORATE'" class="col-xs-12 v3-padding-0 ipos-box-opacity" style="margin: 0px;">
+				<div ng-click="importClientJointApplicant(card, metaData.docName, $event, true)" style="display: flex;padding-left: 0px;padding-right: 0px;text-align: left;">
+					<div class="v3-auto-text-ellipsis">{{metaData.fullName}}</div>
+					<div class="v3-auto-text-ellipsis">{{metaData.contactType}}</div>
+					<div class="v3-auto-text-ellipsis">{{metaData.mainLinePhone}}</div>
+					<div class="v3-auto-text-ellipsis">{{metaData.corpEmail}}</div>					
+					<div class="v3-auto-text-ellipsis">{{metaData.createDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+					<div class="v3-auto-text-ellipsis">{{metaData.modifyDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+				
+					<div class="v3-auto-text-ellipsis">{{item.sourcesName}}</div>
+				
+				</div>
+			</md-card>
+			
+		</div>
+	</div> -->
+	
+	<!-- end -->
+	
+	<!-- <div class="col s12">
+		<div class="input-field col s4">
+			<input id="icon_prefix" type="text" class="validate" ng-model="searchText">
+			<label for="icon_prefix">Search</label>
+		</div>
+	</div>
+	<div id="list-import" class="list-import col-xs-12 col-sm-12 col-lg-12 v3-padding-0" scrolled="increase()">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center error">{{msg}}</div>
+		<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3" ng-repeat="metaData in contactList | myNewWorkspaceFilter:searchText:currentState | orderBy : '-modifyDate' | limitTo: listProspectLimit track by $index"
+		 ng-click="importClientJointApplicant(card, metaData.docName, $event, true)">
+			<div class="box-item-import v3-box-1 v3-live-card-item" style="text-align:center;">
+				<span ng-if="metaData.contactType == 'INDIVIDUAL'" class="v3-card-main-icon fa fa-user">
+	            </span>
+	            <span ng-if="metaData.contactType == 'CORPORATE'" class="v3-card-main-icon fa fa-users">
+	            </span>
+				<div ng-if="metaData.contactType == 'INDIVIDUAL'" title="Full Name" class="card-detail" style="font-size:16px; font-weight: bold;">
+					{{metaData.fullName}}
+				</div>
+				<div ng-if="metaData.contactType == 'CORPORATE'" title="Full Name" class="card-detail" style="font-size:16px; font-weight: bold;">
+					{{metaData.corporateName}}
+				</div>
+				<div class="v3-live-card-info">
+					<div class="container-fluid v3-padding-0">
+						<div class="row col-xs-11 v3-margin-right-0 v3-auto-text-ellipsis-2 v3-live-card-details v3-live-card-details-title">
+							<span class="card-detail" title="Quotation">
+				            	<b>Contact</b>
+				            </span>
+						</div>
+						<div ng-if="metaData.contactType == 'INDIVIDUAL'" class="row v3-margin-right-0 v3-margin-bottom-0 v3-live-card-details">
+							<div class="col-xs-12 v3-padding-0">
+								<div class="row"  style="text-transform: capitalize !important">
+									<div class="col-xs-11 v3-padding-0 v3-live-card-preview-label v4-previewlabel">
+										Full Name
+									</div>
+									<div class="col-xs-11 v3-padding-0 v3-live-card-preview-content-text-ellipsis v3-auto-text-ellipsis">
+										{{metaData.fullName}}
+									</div>
+									<div class="col-xs-11 v3-padding-0 v3-live-card-preview-label v4-previewlabel" >
+										DOB
+									</div>
+									<div class="col-xs-11 v3-padding-0 v3-live-card-preview-content">
+										{{moduleService.convertToDateTime(metaData.birthDate,'DD MMM YYYY')}}										
+									</div>
+									<div class="col-xs-11 v3-padding-0 v3-live-card-preview-label v4-previewlabel" >
+										ID Number
+									</div>
+									<div class="col-xs-11 v3-padding-0 v3-live-card-preview-content-text-ellipsis v3-auto-text-ellipsis">
+										{{metaData.idList[0].value}}
+									</div>
+								</div>
+							</div>
+						</div>
+						<div ng-if="metaData.contactType == 'CORPORATE'" class="row v3-margin-right-0 v3-live-card-details">
+							<div class="col-xs-12 v3-padding-0">
+								<div class="row"  style="text-transform: capitalize !important">
+									<div class="col-xs-11 v3-padding-0 v3-live-card-preview-label v4-previewlabel">
+										Corporate Name
+									</div>
+									<div class="col-xs-11 v3-padding-0 v3-live-card-preview-content">
+										{{metaData.corporateName}}
+									</div>
+								</div>
+							</div>
+						</div>
+						<h5 class="v3-live-card-details v3-live-card-details-footer">
+							<span class="side-icon-left">
+				            	<i class="fa fa-clock-o fa-2x"></i>                    
+				            </span>
+							<span class="side-icon-right">{{moduleService.convertToDateTime(metaData.modifyDate,'DD/MM/YYYY H:mm')}}</span>
+						</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	
+</div>

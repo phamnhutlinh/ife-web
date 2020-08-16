@@ -1,0 +1,51 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <form>
+  <md-toolbar>
+    <div class="md-toolbar-tools" style="background-color: #123274">
+    	<div class="col-xs-4"></div>
+    	<div class="col-xs-4"><h2 align="center">Important Notice</h2></div>
+    	<div class="col-xs-4" align="right">
+    		<md-button class="md-icon-button" ng-click="answer(false)">
+        	<span class ="fa Example of times fa-times"></span>
+     		</md-button>
+   		</div>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+   	<div class="col-xs-11 v3-element-container">
+		<div class="row form-group form-group-lg has-success">
+			<div class="ng-binding" style="line-height: 150%">
+				<div ng-bind-html="'v4.contact.importantnotice.Intro'| translate"></div>
+				<div ng-bind-html="'v4.contact.importantnotice.Activity_1'| translate"></div>
+				<div class="col-xs-12" ng-bind-html="'v4.contact.importantnotice.Activity_a'| translate"></div>
+				<div class="col-xs-12" ng-bind-html="'v4.contact.importantnotice.Activity_b'| translate"></div>
+				<div class="col-xs-12" ng-bind-html="'v4.contact.importantnotice.Activity_c'| translate"></div>
+				<div ng-bind-html="'v4.contact.importantnotice.Activity_2'| translate"></div>
+				<div class="col-xs-12" ng-bind-html="'v4.contact.importantnotice.Activity_a'| translate"></div>
+				<div class="col-xs-12" ng-bind-html="'v4.contact.importantnotice.Activity_b'| translate"></div>
+				<div class="col-xs-12" ng-bind-html="'v4.contact.importantnotice.Activity_c'| translate"></div>
+				<div ng-bind-html="'v4.contact.importantnotice.Activity_3'| translate"></div>
+				<div ng-bind-html="'v4.contact.importantnotice.Activity_4'| translate"></div>
+				<div style="text-indent: 30px" ng-bind-html="'v4.contact.importantnotice.Financialadvisoryservices'| translate"></div>
+				<div style="text-indent: 30px" ng-bind-html="'v4.contact.importantnotice.InvestmentProduct'| translate"></div>
+				<div style="text-indent: 30px" ng-bind-html="'v4.contact.importantnotice.AFARepresentative'| translate"></div>
+				<div style="text-indent: 30px;font-weight: bold" ng-bind-html="'v4.contact.importantnotice.CustomerKnowledgeAssessment'| translate"></div>
+				<div style="text-indent: 50px" ng-bind-html="'v4.contact.importantnotice.CustomerKnowledgeAssessment_1'| translate"></div>
+				<div style="text-indent: 50px" ng-bind-html="'v4.contact.importantnotice.CustomerKnowledgeAssessment_2'| translate"></div>
+				<div style="text-indent: 30px;font-weight: bold" ng-bind-html="'v4.contact.importantnotice.PersonalData'| translate"></div>
+				<div style="text-indent: 50px" ng-bind-html="'v4.contact.importantnotice.PersonalData_1'| translate"></div>
+				<div style="text-indent: 30px;font-weight: bold" ng-bind-html="'v4.contact.importantnotice.AFARepresentativeDeclaration'| translate"></div>
+				<div style="text-indent: 50px" ng-bind-html="'v4.contact.importantnotice.AFARepresentativeDeclaration_1'| translate"></div>
+				<div style="padding-left: 50px" ng-repeat="item in choice">
+					<md-checkbox ng-model="item.value.value"ng-true-value="'Y'" ng-disabled="true" style=""ng-false-value="'N'" md-no-ink class="v3-input-checkbox ng-binding" aria-label="check box" >
+                    {{'v4.contact.importantnotice.'+item.code.value| translate}}
+                	</md-checkbox>
+				</div>
+				<div ng-bind-html="'v4.contact.importantnotice.Notice'| translate"></div>
+			</div>
+			<div align="center"><button ng-click="answer(true)" class="v4-action-button btn btn-lg-new-ui v3-box-4 ng-binding" tabindex="0">OK</button></div>
+		</div>
+	</div>
+  </md-dialog-content>
+  </form>
+</md-dialog>

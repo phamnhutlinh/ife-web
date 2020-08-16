@@ -1,0 +1,10 @@
+<div class="v3-padding-0">
+	<!--   <section-header/> -->
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v3-margin-top-10" >
+  	 <ui-header-item ng-repeat="card in viewProp.viewObject[0]"></ui-header-item>
+  </div>
+  
+ <div class="col-xs-12 v3-margin-top-10" >
+ 	<ui-group-section-content ng-repeat="card in viewProp.viewObject[0] track by $index" level="0" index="{{$index}}"/>
+ </div>
+</div>

@@ -1,0 +1,36 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+<div class="v3-padding-0">
+  <!--   <section-header/> -->
+  <div class="row v3-margin-top-10" >
+  	 <ui-header-item ng-repeat="card in viewProp.viewObject[0]"></ui-header-item>
+  </div>
+  
+  <div class="row v3-margin-top-10" >
+       <ui-section-content class="documentList"  id="level-0-card-{{$index}}" ng-repeat="card in viewProp.viewObject[0] track by $index" level="0" when-click="chooseSection(card, 0, $index, clickEvent)"></ui-section-content>
+  </div>
+    
+</div>
+
+<!-- save button and cancel button -->
+  <!-- 
+  <div class="row" style="margin-top:20px">
+    <button class="v4-btn v4-btn-lg"> Save</button>
+    <button class="v4-btn-bg-black-txt-white v4-btn-lg v4-margin-left-20"> Cancel</button>
+  </div> -->

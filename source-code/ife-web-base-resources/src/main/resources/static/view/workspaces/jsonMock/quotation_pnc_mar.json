@@ -1,0 +1,126 @@
+{
+  "IposDocument": {
+    "Data": {
+      "illustration:Illustration": {
+        "section": "illustration:Illustration",
+        "uiStyle": "tab",
+        "icons": {
+          "cardIcon": {
+            "content": "fa fa-pie-chart"
+          }
+        },
+        "permission": {
+          "openable": [
+            "case_openable"
+          ],
+          "editable": [
+            "case_editable"
+          ],
+          "viewable": [
+            "case_viewable"
+          ]
+        },
+        "illustration:vesselInformation": {
+          "key": [
+            ""
+          ],
+          "section": "illustration:Illustration",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+          "vesselInformation:vesselName": {
+            "key": [
+             "vessleName"
+            ],
+            "group": "1"
+          },
+           "vesselInformation:voyageNumber": {
+            "key": [
+             "voyageNumber"
+            ],
+            "group": "1"
+          },
+          "vesselInformation:voyageFrom": {
+            "key": [
+             "voyageFrom"
+            ],
+            "group": "2"
+          },
+          "vesselInformation:voyageTo": {
+            "key": [
+             "voyageTo"
+            ],
+            "group": "2"
+          },
+          "vesselInformation:cargoRoute": {
+            "key": [
+             "cargoRoute"
+            ],
+            "group": "3"
+          }
+        },
+        "illustration:coverage": {
+          "key": [
+            ""
+          ],
+          "section": "illustration:Illustration",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+          "coverage:coverFrom": {
+            "key": [
+             "coverFrom"
+            ],
+            "group": "1"
+          },
+          "coverage:coverTo": {
+            "key": [
+             "coverTo"
+            ],
+            "group": "1"
+          },
+          "coverage:estimatedDeparture": {
+            "key": [
+             "estimatedDepartureDate"
+            ],
+            "group": "2"
+          }
+        },
+        "illustration:insuredCargo": {
+          "key": [""],
+          "section": "illustration:Illustration",
+          "insuredCargo:cargo": {
+            "key": [
+             "insuredCargo"
+            ],
+            "group": "1"
+          }
+        },
+        "illustration:PremiumSumary": {
+          "key": [
+            "premiumSummary"
+          ],
+          "section": "illustration:Illustration",
+          "onOpen": "computeQuotation(true)",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+         
+          "premiumSumary:marinePremiumSummary": {
+            "key": [
+             "insuredCargoSummary"
+            ],
+            "group": "0"
+          }
+        }
+      }
+    }
+   }
+  }      
+        

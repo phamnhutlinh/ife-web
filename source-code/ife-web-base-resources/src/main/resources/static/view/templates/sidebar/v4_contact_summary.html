@@ -1,0 +1,56 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+<ul style="width:100%" ng-if="moduleService.detail.contactType.value=='INDIVIDUAL'">
+    <li class="v4-prototype-summaryBar-title">Summary Information</li>
+    <li style="margin: 10px;" >
+        <div class="v4-prototype-dashboardItem-value v3-auto-text-ellipsis" ng-show="currenSummaryDetail.personInformation.person.basic.name.last.value !== null">{{currenSummaryDetail.personInformation.person.basic.name.first.value + ' ' + currenSummaryDetail.personInformation.person.basic.name.last.value}}</div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.full'  | translate}}</div>
+    </li>
+    <li style="margin: 10px;" >
+        <div class="v4-prototype-dashboardItem-value v3-auto-text-ellipsis">{{currenSummaryDetail.personInformation.person.basic.idNumber.value}}</div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.idNumber'  | translate}}</div>
+    </li>
+    <li style="margin: 10px;" >
+        <div class="v4-prototype-dashboardItem-value">{{currenSummaryDetail.personInformation.person.basic.birthDate.value | datetimeFilter:"DD/MM/YYYY"}}</div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.birthDate'  | translate}}</div>
+    </li>
+    <li style="margin: 10px;" >
+        <div class="v4-prototype-dashboardItem-value">{{'v4.gender.enum.' + currenSummaryDetail.personInformation.person.basic.genderCode.value | translate}}</div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.genderCode'  | translate}}</div>
+    </li>
+</ul>
+<ul style="width:100%" ng-if="moduleService.detail.contactType.value=='CORPORATE'">
+    <li class="v4-prototype-summaryBar-title">Summary Information</li>
+    <li style="margin: 10px;" >
+        <div class="v4-prototype-dashboardItem-value">{{currenSummaryDetail.corporateInformation.basicInformation.corporateName.value}}</div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.corName'  | translate}}</div>
+    </li>
+    <li style="margin: 10px;" >
+        <div class="v4-prototype-dashboardItem-value">{{currenSummaryDetail.corporateInformation.basicInformation.companyRegistrationNumber.value}}</div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.corRegistNum'  | translate}}</div>
+    </li>
+    <li style="margin: 10px;" >
+        <div class="v4-prototype-dashboardItem-value">{{currenSummaryDetail.corporateInformation.basicInformation.personInCharge.value}}</div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.PersonInCharge'  | translate}}</div>
+    </li>
+      <li style="margin: 10px;" >
+        <div class="v4-prototype-dashboardItem-value">{{currenSummaryDetail.corporateInformation.basicInformation.dateOfIncorporate1.value | datetimeFilter:"DD/MM/YYYY"}}</div>
+        <div class="v4-prototype-dashboardItem-title">{{'v4.sidebar.title.DateInCorporate'  | translate}}</div>
+    </li>
+</ul>

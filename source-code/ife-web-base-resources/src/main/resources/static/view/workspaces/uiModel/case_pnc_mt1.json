@@ -1,0 +1,440 @@
+{
+  "prospects": {
+    "meta": {
+      "counter": "",
+      "defaultOccurs": "",
+      "minOccurs": "",
+      "maxOccurs": "",
+      "errorCode": ""
+    },
+    "value": [],
+    "arrayDefault": {
+      "documentType": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "refId": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "refType": {
+        "value": "contact",
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "status": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "refBusinessType": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "refProductName": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "refVersion": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "refDocName": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "refBusinessStatus": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      }
+    }
+  },
+  "quotations": {
+    "meta": {
+      "counter": "",
+      "defaultOccurs": "",
+      "minOccurs": "",
+      "maxOccurs": "",
+      "errorCode": ""
+    },
+    "value": [],
+    "arrayDefault": {
+      "refId": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "refType": {
+        "value": "quotation",
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "status": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "refBusinessType": {
+        "value": "pnc",
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "refProductName": {
+        "value": "mt1",
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "refVersion": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "refDocName": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "refBusinessStatus": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "documentType": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      }
+    }
+  }
+}

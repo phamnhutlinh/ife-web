@@ -1,0 +1,144 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div class="row" ng-init="selectedDashboard = 'underwriting-requests-list'">
+		<div class="col-xs-11 v4-prototype-centerBlock v3-padding-0 card">
+			<div class="row col-xs-11 col-md-11 "
+			style="margin-top: 20px; margin-left: -5px; margin-bottom: 25px">
+				<div class=" row col-xs-4 col-md-4 v3-margin-auto">
+					<div class="col-xs-12 label-field-sumary label-dasboard">
+						<div id="underwriting-requests-list" class="active"
+							ng-click="selectTab('underwriting-requests-list')">
+							<p class="tab-title" style="margin-top: 14px; margin-bottom: 0px">{{'v3.dashboardportlet.portlet.label.underwriting-requests-list' | translate}}</p>
+							<label class="label-section-bigger"><total-records
+									class="tab-summary"
+								doc-type="underwriting"
+								query="{{[
+								{
+									fields: ['pickUp'],
+									values: [commonService.CONSTANTS.BUSINESS_OPERATION.UNDERWRITING.UNPICKUP]
+								},
+								{
+									fields: ['quotation.quotationResult.sumInsured:range'],
+									values: [0, sumInsured]
+								},
+								{
+									fields: ['result'],
+									values: [commonService.CONSTANTS.BUSINESS_OPERATION.UNDERWRITING.NOT_DECIDED]
+								}]}}" /></label>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-xs-4 col-md-4 v3-margin-auto">
+					<div class="col-xs-12 label-field-sumary label-dasboard">
+						<div id="my-underwriting" ng-click="selectTab('my-underwriting')">
+							<p class="tab-title" style="margin-top: 14px; margin-bottom: 0px">{{'v3.dashboardportlet.portlet.label.my-underwriting' | translate}}</p>
+							<label class="label-section-bigger"><total-records
+									class="tab-summary"
+								doc-type="underwriting"
+								query="{{[{
+								fields: ['underwriterName'],
+								values: [ownerName]
+							}, {
+									fields: ['pickUp'],
+									values: [commonService.CONSTANTS.BUSINESS_OPERATION.UNDERWRITING.PICKUP]
+							}, 
+							{
+									fields: ['quotation.quotationResult.sumInsured:range'],
+									values: [0, sumInsured]
+								},
+							{
+									fields: ['result'],
+									values: [commonService.CONSTANTS.BUSINESS_OPERATION.UNDERWRITING.NOT_DECIDED]
+								}]}}" /></label>
+						</div>
+					</div>
+				</div>
+
+			</div>			
+		</div>
+		<div class="row col-xs-12 col-md-12">
+			<div class="tab-content" ng-if="selectedDashboard === 'underwriting-requests-list'">
+				<div class="listViewContainer container-fluid v3-padding-0">
+					<div class="row v3-margin-auto">
+						<document-list-view
+							datalist="underwritingList"
+							doctype="underwriting"
+							isdashboard ="true"
+							listtitle="underwriting-requests-list"
+							isloadlist="isLoadList"
+							dashboarddoctype="dashboardDoctype"
+							defaultquery="{{[
+							{
+									fields: ['pickUp'],
+									values: [commonService.CONSTANTS.BUSINESS_OPERATION.UNDERWRITING.UNPICKUP]
+							}, 
+							{
+									fields: ['quotation.quotationResult.sumInsured:range'],
+									values: [0, sumInsured]
+								},
+							{
+									fields: ['result'],
+									values: [commonService.CONSTANTS.BUSINESS_OPERATION.UNDERWRITING.NOT_DECIDED]
+								}]}}"
+							searchcriteria="[
+								'documentRelation.caseName',
+								'policyOwnerInfo.poName'				
+							]"							
+							lazy-choice-list="moduleService.lazyChoiceList"/>
+					</div>
+				</div>
+			</div>
+			<div class="tab-content" ng-if="selectedDashboard === 'my-underwriting'">
+				<div class="listViewContainer container-fluid v3-padding-0">
+					<div class="row v3-margin-auto">
+						<document-list-view
+							datalist="underwritingList"
+							doctype="underwriting"
+							listtitle="my-underwriting"
+							isdashboard ="true"
+							isloadlist="isLoadList"
+							defaultquery="{{[{
+								fields: ['underwriterName'],
+								values: [ownerName]
+							}, {
+									fields: ['pickUp'],
+									values: [commonService.CONSTANTS.BUSINESS_OPERATION.UNDERWRITING.PICKUP]
+							},
+							{
+									fields: ['quotation.quotationResult.sumInsured:range'],
+									values: [0, sumInsured]
+								},
+							{
+									fields: ['result'],
+									values: [commonService.CONSTANTS.BUSINESS_OPERATION.UNDERWRITING.NOT_DECIDED]
+								}]}}"
+							searchcriteria="[
+								'documentRelation.caseName',
+								'policyOwnerInfo.poName'
+							]"							
+							current-date="currentDate"
+							lazy-choice-list="moduleService.lazyChoiceList"/>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>

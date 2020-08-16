@@ -1,0 +1,557 @@
+
+
+<!--
+
+    //*******************************************************************************
+    // * Copyright (C) 2017 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div fieldId="declaration:detail" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 10px;" ng-show="isDeclaration === true">
+	<div class="item-detail pb-1">		
+		 {{'v4.page.policy.section.detail.ShipmentDeclarationDetails' | translate}}
+	</div>
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.policyNo'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + moduleService.productId}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.policyDescription'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{item.data.metaDatas[0].polDesc}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.policyStatus'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{item.data.metaDatas[0].polStatCodeDesc}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.mocNumber'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{item.data.metaDatas[0].polMasterPol}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.policyHolderName'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{item.data.metaDatas[0].polCownName}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.Assured'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{item.data.metaDatas[0].canAssuredName}}</div>
+		
+	</div>
+	
+	<!-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		
+			<div class="cssviewdetail">
+				{{::'v4.page.policy.label.CoverTypeDescription'| translate}}
+			</div>
+			<div style="margin-left:230px;font-size:16px;"> Blank need confirm</div>
+		
+	</div> -->
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.coverStartDate'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].polCcdate| datetimeFilter : "DD/MM/YYYY"}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.coverEndDate'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].polCrdate| datetimeFilter : "DD/MM/YYYY"}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.ETA'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].canETA !='' ">{{' ' + item.data.metaDatas[0].canETA| datetimeFilter : "DD/MM/YYYY"}}</div>
+				
+			
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.ETD'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canETD| datetimeFilter : "DD/MM/YYYY"}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.Coverage'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canCoverageDesc}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.Packing'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' +  item.data.metaDatas[0].canPackDesc}}</div>
+		
+	</div>
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.Commodity'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canCmdtyDesc}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.InterestInsured'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canIntInsured}}</div>
+		
+	</div>
+	
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.ShipmentType'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canShipDesc}}</div>
+		
+	</div>
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.InvoiceAmount'| translate}}
+			</div>
+			
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"><span>{{' ' + item.data.metaDatas[0].canSICurrencyCode}}</span><span style="margin-left:10px;" ng-model="item.data.metaDatas[0].canInvoiceAmt"  pos-autonumeric  max="999999999999999"></span></div>
+		
+	</div>
+	
+	
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.conveyance'| translate}}
+			</div>	
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canConveyanceDesc}}</div>
+		
+	</div>
+	
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.ConveyanceDetail'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canConveyanceDtl}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;" ng-if="item.data.metaDatas[0].canConveyance=== 'L'">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.VehicleType'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canVehicleDesc}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;" ng-if="item.data.metaDatas[0].canConveyance=== 'L'">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.RegistrationNo'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canRegistration}}</div>
+		
+	</div>
+	
+	<!-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-if="item.data.metaDatas[0].canConveyance=== 'LD'">
+		
+			<div  class="cssviewdetail">
+				{{::'v4.page.policy.label.VehicleType'| translate}}
+			</div>
+			<div style="margin-left:230px;font-size:16px;">{{' ' + item.data.metaDatas[0].canVehicleDesc}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-if="item.data.metaDatas[0].canConveyancee === 'LD'">
+		
+			<div  class="cssviewdetail">
+				{{::'v4.page.policy.label.RegistrationNo'| translate}}
+			</div>
+			<div style="margin-left:230px;font-size:16px;">{{' ' + item.data.metaDatas[0].canRegistration}</div>
+		
+	</div> -->
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;" ng-if="item.data.metaDatas[0].canConveyance === 'A'">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.AWBNo'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' +item.data.metaDatas[0].canAWBNo}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;" ng-if="item.data.metaDatas[0].canConveyance === 'A'">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.FlightNo'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canFlightNo}}</div>
+		
+	</div>
+	<!-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-if="item.data.metaDatas[0].canConveyance === 'AR'">
+		
+			<div  class="cssviewdetail">
+				{{::'v4.page.policy.label.AWBNo'| translate}}
+			</div>
+			<div style="margin-left:230px;font-size:16px;">{{' ' +item.data.metaDatas[0].canAWBNo}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-if="item.data.metaDatas[0].canConveyance === 'AR'">
+		
+			<div  class="cssviewdetail">
+				{{::'v4.page.policy.label.FlightNo'| translate}}
+			</div>
+			<div style="margin-left:230px;font-size:16px;">{{' ' + item.data.metaDatas[0].canFlightNo}}</div>
+		
+	</div> -->
+	
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;" ng-if="item.data.metaDatas[0].canConveyance === 'M'">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.VesselName'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canVesselName}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;" ng-if="item.data.metaDatas[0].canConveyance === 'M'">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.VoyageNo'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canVoyageDesc}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;" ng-if="item.data.metaDatas[0].canConveyance === 'M'">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.BillingOfLandingNo'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canBillOfLading}}</div>
+		
+	</div>
+	<!-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-if="item.data.metaDatas[0].canConveyance === 'MR'">
+		
+			<div  class="cssviewdetail">
+				{{::'v4.page.policy.label.VesselName'| translate}}
+			</div>
+			<div style="margin-left:230px;font-size:16px;">{{' ' + item.data.metaDatas[0].canVesselName}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-if="item.data.metaDatas[0].canConveyance === 'MR'">
+		
+			<div  class="cssviewdetail">
+				{{::'v4.page.policy.label.VoyageNo'| translate}}
+			</div>
+			<div style="margin-left:230px;font-size:16px;">{{' ' + item.data.metaDatas[0].canVoyageNo}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-if="item.data.conveyanceType.code === 'MR'">
+		
+			<div  class="cssviewdetail">
+				{{::'v4.page.policy.label.BillingOfLandingNo'| translate}}
+			</div>
+			<div style="margin-left:230px;font-size:16px;">{{' ' + item.data.metaDatas[0].canBillOfLading}}</div>
+		
+	</div> -->
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.VoyageDescription'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canVoyageDesc}}</div>
+		
+	</div>
+	
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.CountryFrom'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"><span  style="font-weight:700;" ng-if="item.data.metaDatas[0].canCountryFromDesc!=''">From  </span> {{' ' + item.data.metaDatas[0].canCountryFromDesc}} <span style="font-weight:700;" ng-if="item.data.metaDatas[0].canCountryToDesc!=''">  To </span> {{' ' + item.data.metaDatas[0].canCountryToDesc}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.ConsigneeShipper'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canConsigneeShipper }}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.PortFrom'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"><span style="font-weight:700;" ng-if="item.data.metaDatas[0].canPortFromDesc!=''">From  </span> {{' ' + item.data.metaDatas[0].canPortFromDesc }} <span style="font-weight:700;" ng-if="item.data.metaDatas[0].canPortToDesc!=''">  To  </span> {{' ' + item.data.metaDatas[0].canPortToDesc}}</div>
+		
+	</div>
+	
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.LCNo'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canLCNumber}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.LCTerms'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{' ' + item.data.metaDatas[0].canLCTerms }}</div>
+		
+	</div>
+	
+	
+</div>
+
+
+<div fieldId="policy:detail" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 10px" ng-show="isDeclaration === false">
+	<div class="item-detail pb-1">		
+		 {{'v4.page.policy.section.detail.policyInformation' | translate}}
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.policyNo'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{moduleService.productId}}</div>
+		
+	</div>
+	
+	
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.policyDescription'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{item.data.metaDatas[0].polDesc}}</div>
+		
+	</div>
+		
+		
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.policyHolderName'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{item.data.metaDatas[0].polCownName}}</div>
+		
+	</div>
+
+ <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.policyStatus'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{item.data.metaDatas[0].polStatCodeDesc}}</div>
+		
+	</div>
+
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.coverStartDate'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{item.data.metaDatas[0].polCcdate| datetimeFilter : "DD/MM/YYYY"}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.coverEndDate'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{item.data.metaDatas[0].polCrdate| datetimeFilter : "DD/MM/YYYY"}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.cover'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='CAN'">{{item.data.metaDatas[0].canCoverageDesc}}</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='OCP'">{{cover}}</div>
+		
+	</div>
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:20px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.ShipmentType'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='CAN'">{{item.data.metaDatas[0].canShipDesc}}</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='OCP'">{{shipment}}</div>
+		
+	</div>
+	
+	
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="margin-top:30px;">
+		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.conveyance'| translate}}
+			</div>
+			<div>
+			<div   ng-if="item.data.metaDatas[0].polCnttype=='CAN'" style="margin-left:215px;font-size:16px;">{{item.data.metaDatas[0].canConveyanceDtl}}</div>
+			<div	ng-if="item.data.metaDatas[0].polCnttype=='OCP'" style="margin-left:215px;font-size:16px;" >
+			       <table ng-repeat="item in conveyanceList" style="width:200px;">
+			         <th style="font-weight:500;padding-top: 20px;">{{item.mocConveyanceDesc}}</th>
+			       </table>
+			</div>
+		   </div>
+	</div>
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" >
+		
+			<div class="cssviewdetail">
+				{{::'v4.page.policy.label.liabilityLimit'| translate}}({{item.data.metaDatas[0].polCurrCode}})
+			</div>
+			<div style="width:200px;margin-top:20px;">
+			<div   ng-if="item.data.metaDatas[0].polCnttype=='CAN'" style="margin-left:170px;font-size:16px;">{{item.data.conveyanceType.description}}</div>
+			<div	ng-if="item.data.metaDatas[0].polCnttype=='OCP'" style="margin-left:100px;font-size:16px;">
+			  <table ng-repeat="item in conveyanceList" style="width:200px;">
+			         <th style="font-weight:500;"><span ng-model="item.mocLiabilityLimit"  pos-autonumeric  max="999999999999999"></span></th>
+			       </table>
+			
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.packingDescription'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='CAN'">{{item.data.packingType.description}}</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='OCP'">{{packing}}</div>
+		
+	</div>
+	
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.voyageFrom'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='CAN'">{{item.data.countryFrom.description}}</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='OCP'">{{voyageFrom}}</div>
+		
+	</div>
+	
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.voyageTo'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='CAN'">{{item.data.countryTo.description}}</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='OCP'">{{voyageTo}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.commodities'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='CAN'">{{item.data.metaDatas[0].cargoDesc}}</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='OCP'">{{commodity}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.interestInsured'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='CAN'">{{item.data.metaDatas[0].cargoDesc}}</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='OCP'">{{item.data.metaDatas[0].cargoDesc}}</div>
+		
+	</div>
+	
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.marineRate'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='CAN'">{{item.data.metaDatas[0].mocMarineRate}}</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='OCP'">{{item.data.metaDatas[0].mocMarineRate}}</div>
+		
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top:10px;">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4" style="font-weight:700;">
+				{{::'v4.page.policy.label.siCurrency'| translate}}
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='CAN'">{{item.data.metaDatas[0].polCurrCode}}</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" ng-if="item.data.metaDatas[0].polCnttype=='OCP'">{{item.data.metaDatas[0].polCurrCode}}</div>
+		
+	</div>
+	
+
+<div class="row"></div>
+<br/>
+<div fieldId="policy:email" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 10px;">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">
+			{{::'v4.page.policy.label.email'| translate}}
+			
+			<i class="fa fa-envelope" aria-hidden="true" style="margin-left:5px;" ng-click="sendEmail($event)"></i>
+		</label>
+		<span style="margin-left:40px;font-size:16px;">Document Type</span>
+		<div ng-repeat="i in itemDoument.data.metaDatas">
+			<div  class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top:10px;">
+				<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+					<label class="label-field" style="display:none;">
+						{{::'v4.page.policy.label.email'| translate}}
+						<i class="fa fa-envelope" aria-hidden="true" style="margin-left:5px;"  ng-click="sendEmail($event)"></i>
+					</label>
+					<span style="margin-left:110px;"> 
+					<input type="checkbox" ng-model="namedocument"  ng-change="chooseDocument(namedocument,i.type.description)" value="i.type.description" name="i.type.description" style="opacity:1;position:initial;margin-left:-30px;" />
+
+          <a ng-click="chooseFile(i.path)" style="font-size:16px;margin-left:10px;">{{i.type.description}}</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

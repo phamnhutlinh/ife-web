@@ -1,0 +1,35 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<md-toast id="v3-ipos-popup">
+	<div class="col-xs-10 col-sm-6 col-md-5 col-lg-4 md-whiteframe-z1 v3-ipos-popup-md-toast"
+		ng-class= "{'ipos-popup-toast-success': status=='success', 'ipos-popup-toast-warning': status=='warning', 'ipos-popup-toast-error': (status=='error' || status==undefined)}">
+		<div>
+			<div class="col-xs-2" ng-class= "{'ipos-popup-alert-success': status=='success', 'ipos-popup-alert-warning': status=='warning', 'ipos-popup-alert-error': (status=='error' || status==undefined)}">				
+				<i ng-class="{'fa fa-check fa-3x': status=='success', 'fa fa-exclamation-triangle fa-3x': status=='warning', 'fa fa-exclamation fa-3x': (status=='error' || status==undefined)}"></i>
+			</div>
+			<div class="col-xs-8 v3-ipos-popup-md-toast-center-container">
+				<span class="v3-auto-text-ellipsis-4">{{message | translateMessage}}</span>
+			</div>
+			<div class="col-xs-2" ng-class= "{'ipos-popup-success-color': status=='success', 'ipos-popup-warning-color': status=='warning', 'ipos-popup-error-color': (status=='error' || status==undefined)}" >
+				<i ng-click="closeToast()"  class="fa fa-times-circle fa-2x pointer ipos-popup-remove-icon"></i>
+			</div>
+		</div>
+	</div>
+</md-toast>

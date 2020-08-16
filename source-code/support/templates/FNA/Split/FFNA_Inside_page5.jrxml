@@ -1,0 +1,3043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-11-13T16:33:28 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FFNA_Inside" pageWidth="652" pageHeight="899" columnWidth="596" leftMargin="28" rightMargin="28" topMargin="28" bottomMargin="28" uuid="ff8dab19-8960-4b31-811a-c974f3a1fa6c">
+	<property name="ireport.zoom" value="2.143588810000178"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1168"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FNA_Inside"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Text_blue_Aviva" forecolor="#004FB6" fontName="Arial" fontSize="8"/>
+	<style name="Box_Aviva" forecolor="#333333" fontName="Arial" fontSize="8">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<leftPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<bottomPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<rightPen lineWidth="0.5" lineColor="#D0D6E7"/>
+		</box>
+	</style>
+	<style name="Text_black_Aviva" forecolor="#333333" fontName="Arial" fontSize="6"/>
+	<style name="Background_title" backcolor="#EEF2FC" fontName="Arial"/>
+	<style name="Box_Aviva_Blue" fontName="Arial">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#004FB6"/>
+			<leftPen lineWidth="0.5" lineColor="#004FB6"/>
+			<bottomPen lineWidth="0.5" lineColor="#004FB6"/>
+			<rightPen lineWidth="0.5" lineColor="#004FB6"/>
+		</box>
+	</style>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hTextAlign="Center" hImageAlign="Center"/>
+	<subDataset name="Table Dataset 1" uuid="c9cb49bb-305a-4aff-9138-c023a7866d9e"/>
+	<subDataset name="New Dataset 1" uuid="8245faae-0e27-4068-be56-bfbb265a3051"/>
+	<subDataset name="Table Dataset 2" uuid="80cd41bc-36f3-4b7e-9dbf-5c0a9ce60b62"/>
+	<subDataset name="Table Dataset 3" uuid="b65a9407-6181-40a1-ad7a-508725bbbb7d"/>
+	<subDataset name="Table Dataset 4" uuid="553bb0fa-0400-4e03-91f9-f5f0f04193b9"/>
+	<parameter name="BASE_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NumberFormatter" class="java.text.NumberFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new java.text.DecimalFormat("#,###.##")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_DATETIME_FORMATTER" class="java.text.DateFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy hh:mm")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOB_FORMATTER" class="java.text.DateFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_NUMBER_FORMATTER" class="java.text.NumberFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new java.text.DecimalFormat("#,##0.##")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGES_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/images/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_FORMAT_YEAR" class="java.text.DateFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("yyyy")]]></defaultValueExpression>
+	</parameter>
+	<queryString language="jsonql">
+		<![CDATA[]]>
+	</queryString>
+	<field name="Client1_Salutation" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.basic.name.titleCode.value]]></fieldDescription>
+	</field>
+	<field name="Client1_FamilyName" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.basic.name.last.value]]></fieldDescription>
+	</field>
+	<field name="Client1_GivenName" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.basic.name.first.value]]></fieldDescription>
+	</field>
+	<field name="Client1_Gender" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.basic.genderCode.value]]></fieldDescription>
+	</field>
+	<field name="Client1_SmokerStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.basic.smokerStatus.value]]></fieldDescription>
+	</field>
+	<field name="Client1_MaritalStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.basic.maritalStatusCode.value]]></fieldDescription>
+	</field>
+	<field name="Client1_BirthDate" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.basic.birthDate.value]]></fieldDescription>
+	</field>
+	<field name="Client1_Age" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.basic.age.value]]></fieldDescription>
+	</field>
+	<field name="Client1_Email" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.contacts[0].value.value]]></fieldDescription>
+	</field>
+	<field name="Client1_NRIC_PassportNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.basic.idList.value.value]]></fieldDescription>
+	</field>
+	<field name="Client1_Contact_HomePhone" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.contacts[1].value.value]]></fieldDescription>
+	</field>
+	<field name="Client1_Contact_OfficePhone" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.contacts[2].value.value]]></fieldDescription>
+	</field>
+	<field name="Client1_Contact_HandPhone" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.contacts[3].value.value]]></fieldDescription>
+	</field>
+	<field name="Client1_Address_Residential" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.addresses[0].fullAddress.value]]></fieldDescription>
+	</field>
+	<field name="Client1_Address_Occupation" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].additionalInformation.occupationModel.occupationCode.value]]></fieldDescription>
+	</field>
+	<field name="Client1_Name_Employer" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].additionalInformation.employmentModel.employerName.value]]></fieldDescription>
+	</field>
+	<field name="Client1_Address_Employer" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].additionalInformation.employmentModel.employerAddress.value]]></fieldDescription>
+	</field>
+	<field name="Client1_EmployeeStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].additionalInformation.employmentModel.employmentStatusCode.value]]></fieldDescription>
+	</field>
+	<field name="Client1_NatureOfBusinessModel" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].additionalInformation.natureOfBusinessModel.natureOfBusinessList[0].code.value]]></fieldDescription>
+	</field>
+	<field name="Client1_Employer_AnnualIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].additionalInformation.employmentModel.annualIncome.value]]></fieldDescription>
+	</field>
+	<field name="Client1_EducationLevel" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].additionalInformation.individualAssessment.educationLevelCode.value]]></fieldDescription>
+	</field>
+	<field name="Client1_Languages_Written" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].additionalInformation.individualAssessment.languageProficiencyList[1].value.value]]></fieldDescription>
+	</field>
+	<field name="Client1_Languages_Spoken" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].additionalInformation.individualAssessment.languageProficiencyList[0].value.value]]></fieldDescription>
+	</field>
+	<field name="Client2_Salutation" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].personal.basic.name.titleCode.value]]></fieldDescription>
+	</field>
+	<field name="Client2_FamilyName" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].personal.basic.name.last.value]]></fieldDescription>
+	</field>
+	<field name="Client2_GivenName" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].personal.basic.name.first.value]]></fieldDescription>
+	</field>
+	<field name="Client2_Gender" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].personal.basic.genderCode.value]]></fieldDescription>
+	</field>
+	<field name="Client2_SmokerStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].personal.basic.smokerStatus.value]]></fieldDescription>
+	</field>
+	<field name="Client2_MaritalStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].personal.basic.maritalStatusCode.value]]></fieldDescription>
+	</field>
+	<field name="Client2_BirthDate" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].personal.basic.birthDate.value]]></fieldDescription>
+	</field>
+	<field name="Client2_Age" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].personal.basic.age.value]]></fieldDescription>
+	</field>
+	<field name="Client2_Email" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].personal.contacts[0].value.value]]></fieldDescription>
+	</field>
+	<field name="Client2_NRIC_PassportNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].personal.basic.idList.value.value]]></fieldDescription>
+	</field>
+	<field name="Client2_Contact_HomePhone" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].personal.contacts[1].value.value]]></fieldDescription>
+	</field>
+	<field name="Client2_Contact_OfficePhone" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].personal.contacts[2].value.value]]></fieldDescription>
+	</field>
+	<field name="Client2_Contact_HandPhone" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].personal.contacts[3].value.value]]></fieldDescription>
+	</field>
+	<field name="Client2_Address_Residential" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].personal.addresses[0].fullAddress.value]]></fieldDescription>
+	</field>
+	<field name="Client2_Address_Occupation" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].additionalInformation.occupationModel.occupationCode.value]]></fieldDescription>
+	</field>
+	<field name="Client2_Name_Employer" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].additionalInformation.employmentModel.employerName.value]]></fieldDescription>
+	</field>
+	<field name="Client2_Address_Employer" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].additionalInformation.employmentModel.employerAddress.value]]></fieldDescription>
+	</field>
+	<field name="Client2_EmployeeStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].additionalInformation.employmentModel.employmentStatusCode.value]]></fieldDescription>
+	</field>
+	<field name="Client2_NatureOfBusinessModel" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].additionalInformation.natureOfBusinessModel.natureOfBusinessList[0].value]]></fieldDescription>
+	</field>
+	<field name="Client2_Employer_AnnualIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].additionalInformation.employmentModel.annualIncome.value]]></fieldDescription>
+	</field>
+	<field name="Client2_EducationLevel" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].additionalInformation.individualAssessment.educationLevelCode.value]]></fieldDescription>
+	</field>
+	<field name="Client2_Languages_Written" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].additionalInformation.individualAssessment.languageProficiencyList[1].value.value]]></fieldDescription>
+	</field>
+	<field name="Client2_Languages_Spoken" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].additionalInformation.individualAssessment.languageProficiencyList[0].value.value]]></fieldDescription>
+	</field>
+	<field name="Client1_AddNote_NatureOfBusinessModel" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].additionalInformation.natureOfBusinessModel.additionalNote.value]]></fieldDescription>
+	</field>
+	<field name="Client2_AddNote_NatureOfBusinessModel" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].additionalInformation.natureOfBusinessModel.additionalNote.value]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="824">
+			<frame>
+				<reportElement style="Box_Aviva_Blue" x="0" y="32" width="596" height="773" uuid="fc0a3311-d528-4293-93c7-f7e6569306e4">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#004FB6"/>
+					<leftPen lineWidth="0.5" lineColor="#004FB6"/>
+					<bottomPen lineWidth="0.5" lineColor="#004FB6"/>
+					<rightPen lineWidth="0.5" lineColor="#004FB6"/>
+				</box>
+				<textField>
+					<reportElement style="Text_blue_Aviva" mode="Opaque" x="0" y="0" width="596" height="17" backcolor="#EEF2FC" uuid="14aa40c8-992b-41e0-ae97-93c3cb77bc69">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["RISK PROFILE"]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="167" y="17" width="1" height="756" uuid="e7209439-677d-4577-82ca-c0369aeba672">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="17" width="596" height="1" uuid="b52323d5-15bd-4dd4-9346-a4a040a171e1">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="381" y="17" width="1" height="756" uuid="146f418a-8bce-400d-8894-92b4f1624624">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<frame>
+					<reportElement x="0" y="17" width="596" height="756" uuid="abe92988-1680-4982-a5ce-e8d5bb040344"/>
+					<frame>
+						<reportElement x="0" y="0" width="167" height="756" uuid="735520ac-dbb8-424a-a3ea-54f52caf8a38">
+							<property name="local_mesure_unitx" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="local_mesure_unitheight" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<frame>
+							<reportElement x="0" y="0" width="167" height="21" uuid="2c545b69-5b42-4ae4-b24b-928d2c4e72bc"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="5032f314-7c3e-4249-946a-e40e2bfd6ea5">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Salutation]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="20" width="167" height="21" uuid="608df3e4-74cb-4fd7-92b4-71eea88a37b5"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="2931bdd1-5e82-4def-b5fb-2cc17a051da2">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Family Name*]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="40" width="167" height="21" uuid="736e45fe-2d1c-42fc-80a0-b5de229efef7"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="3d679d7e-9e0b-42a6-b0b8-4042d0485711">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Given Name*]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="60" width="167" height="21" uuid="55048e31-f361-4b4c-9617-45e4bb029dd7"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="75ffcd0b-45b2-4a7e-ab63-85303ff1c9ff">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Gender]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="80" width="167" height="21" uuid="e32b3fd0-0ef5-42b3-a885-866af51cad6a"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="c26f5b60-254e-447a-80bc-9d10afd55995">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Smoker]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="100" width="167" height="35" uuid="dc1f8011-08e3-4b90-bf84-34db9d816cac"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="0342c5cc-2769-4714-a95a-dd0b291b8976">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Marital Status]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="134" width="167" height="21" uuid="50b40e01-d63a-4677-b58d-5928a442fc3d"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="25cfbea1-e9b2-46cc-9d96-89075847dc9f">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[NRIC / Passport Number*]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="154" width="167" height="21" uuid="95e04252-3543-449e-ad2a-0dea700801eb"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="a9bbb697-ef40-4fbf-905c-d99e982cc4f9">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Date of Birth (DD/MM/YYYY)*]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="174" width="167" height="21" uuid="0e1c67b3-1ac5-4a6b-afca-c7446c3af2d4"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="382c1b37-2e41-423f-ac3f-1befc9d79e35">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Age]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="194" width="167" height="21" uuid="1b61cb56-34fb-43ec-bb53-e7afe78b0f38"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="e7553a8d-53f1-4732-9035-5901df2c1e66">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Email Address]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="214" width="167" height="61" uuid="2db655d8-38e6-4457-ad2c-e648a8c57076"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="c885b45f-3239-4892-b51b-0d8aa7710fe7">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Contact Number*]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="10" width="136" height="21" uuid="c71d1701-6b47-4a73-aa70-18d2bb3f1a4a">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[(At least one)]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="274" width="167" height="52" uuid="c5414e48-e8d0-4d9e-abf4-1b6cd6ff28cd"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="f9da163f-3fa4-4c91-93cb-542a9d95cc6a">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Residential Address*]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="325" width="167" height="21" uuid="35c16b40-92c1-45e9-a389-9f868d6c8f8a"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="6de6a33b-cb05-4c70-a345-ef7f1e57aa09">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Occupation*]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="345" width="167" height="63" uuid="e4ea28a6-1067-4ca9-acee-1f7a75c57438"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="58b85a52-29f4-4988-b2b6-e7180e528920">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Name and Address]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="10" width="136" height="21" uuid="d867ea8a-d23f-4e03-8810-2486fcb07d55">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[of Employee*]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="407" width="167" height="146" uuid="7ab83c99-584b-4a68-8c19-650790d9feb2"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="ceeb0a79-c0e3-4c6d-9ec6-1f315831b8ee">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Nature of Bussiness]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="552" width="167" height="21" uuid="adf3906f-2a60-4d8f-b28c-e6fa15f0b4df"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="a1b2e8df-f027-4810-87b1-1167c76ea5d4">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Annual Income]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="572" width="167" height="63" uuid="d9479889-dcca-4867-9a66-3e3c2adc7b56"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="389275e4-27b5-4f1d-8f72-3910607f52d5">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Employment Status*]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="634" width="167" height="84" uuid="634b4205-38b3-4fdb-b1ad-0b58b9f8006d"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="3786dc49-4bdf-48fe-b1d8-6ebb9ea8f4ea">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Highest Education Level*]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="717" width="167" height="39" uuid="23b68e7a-ba13-45d5-9750-735d9c46de10"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="0" width="136" height="21" uuid="88a05ddf-679d-44ef-807c-8148e79bf5ec">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Language Proficiency*]]></text>
+							</staticText>
+						</frame>
+					</frame>
+					<frame>
+						<reportElement x="167" y="0" width="214" height="756" uuid="516c9280-6c57-43a4-a57b-15294682a599">
+							<property name="local_mesure_unitx" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="local_mesure_unitheight" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<frame>
+							<reportElement x="0" y="0" width="214" height="21" uuid="5ca31ba9-9843-49d7-8654-4866703d9231"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="0" width="12" height="21" uuid="c2375088-b2ed-479a-b897-ec03bd562939">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Mr]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="4" width="14" height="14" uuid="1a8121e8-d896-4aea-bd37-448186c3d359">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_Salutation}.equalsIgnoreCase( "MR" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="47" y="4" width="14" height="14" uuid="e3efccb1-e514-4caa-af52-1eb3dcf6ddf3">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_Salutation}.equalsIgnoreCase( "MRS" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="64" y="0" width="16" height="21" uuid="b911ab0d-4abe-4276-a548-2592006601fd">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Mrs]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="106" y="0" width="23" height="21" uuid="6ed0882b-a6a3-4850-a0fc-bf36e26c57c4">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Mdm]]></text>
+							</staticText>
+							<image>
+								<reportElement x="89" y="4" width="14" height="14" uuid="0b168bc0-3a08-4378-8197-e03e2a924f25">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_Salutation}.equalsIgnoreCase( "MDM" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="148" y="0" width="20" height="21" uuid="387d5da2-8026-415b-8c0a-4bee3e2d0daa">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Miss]]></text>
+							</staticText>
+							<image>
+								<reportElement x="131" y="4" width="14" height="14" uuid="7473841a-e9f5-4853-92a6-03f568e5e557">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_Salutation}.equalsIgnoreCase( "Miss" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="190" y="0" width="16" height="21" uuid="67bf09a6-1711-4cb8-978a-d359494bfefe">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Dr]]></text>
+							</staticText>
+							<image>
+								<reportElement x="173" y="4" width="14" height="14" uuid="c79fa3d7-21e3-47b8-bf47-3b72328d1248">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_Salutation}.equalsIgnoreCase( "DR" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+						</frame>
+						<frame>
+							<reportElement x="0" y="20" width="214" height="21" uuid="2a1bec60-a0a7-488d-aefc-33ff69a1e340"/>
+							<textField>
+								<reportElement x="1" y="1" width="212" height="18" uuid="f436733f-973f-4752-a693-1b0d2f320534"/>
+								<textFieldExpression><![CDATA[$F{Client1_FamilyName} != null ? $F{Client1_FamilyName} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="40" width="214" height="21" uuid="bad5584a-a6ed-4bbf-9b4d-aa388d739aa2"/>
+							<textField>
+								<reportElement x="3" y="2" width="210" height="19" uuid="8cbaccdd-2e52-4500-8fd9-35a20e947665">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{Client1_GivenName} != null ? $F{Client1_GivenName} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="60" width="214" height="21" uuid="a286210c-1fd3-44d6-8ea0-99374ecf794d"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="0" width="20" height="21" uuid="edac8242-3e32-4d6b-8c5d-af0a6f66fc02">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Male]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="4" width="14" height="14" uuid="940d6621-8354-4517-8ee3-53e53f038f4f">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_Gender}.equalsIgnoreCase( "M" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="89" y="4" width="14" height="14" uuid="e6be83eb-1cb7-457d-b981-89beed0837f1">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_Gender}.equalsIgnoreCase( "F" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="106" y="0" width="63" height="21" uuid="8ee06dbf-8cd6-4953-bd20-d4ac2f123b72">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Female]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="80" width="214" height="21" uuid="98d52135-342f-4170-a53f-574032c9ab09"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="0" width="20" height="21" uuid="0225d155-9268-4611-af48-e5b7edc3048c">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[No]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="4" width="14" height="14" uuid="36e039ea-fb08-411a-90b4-ec39612ac89d">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_SmokerStatus}.equalsIgnoreCase( "N" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="89" y="4" width="14" height="14" uuid="43f60957-879c-456f-a2aa-29f98fbc7865">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_SmokerStatus}.equalsIgnoreCase( "S" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="106" y="0" width="20" height="21" uuid="5fd02fd9-4098-4169-b968-112faabe9371">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Yes]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="100" width="214" height="35" uuid="76f33642-51ce-4da5-b350-42a912d0a78c"/>
+							<frame>
+								<reportElement x="0" y="0" width="214" height="21" uuid="bef1e2c4-eeea-47f5-a1f2-6337ca00bfd5"/>
+								<staticText>
+									<reportElement style="Text_black_Aviva" x="22" y="1" width="40" height="19" uuid="6b2b4b12-5330-422d-889c-428ca43be8e2">
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									</reportElement>
+									<textElement verticalAlignment="Middle">
+										<font fontName="Arial" size="8"/>
+									</textElement>
+									<text><![CDATA[Single]]></text>
+								</staticText>
+								<image>
+									<reportElement x="5" y="3" width="14" height="14" uuid="81a4706e-6064-4753-8940-6195a39b1b3d">
+										<property name="local_mesure_unitx" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.x" value="px"/>
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="local_mesure_unitwidth" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<imageExpression><![CDATA[$F{Client1_MaritalStatus}.equalsIgnoreCase( "Si" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+								</image>
+								<image>
+									<reportElement x="89" y="3" width="14" height="14" uuid="e1678f6b-858f-4289-8caa-1d8d561ef0fe">
+										<property name="local_mesure_unitx" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.x" value="px"/>
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="local_mesure_unitwidth" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<imageExpression><![CDATA[$F{Client1_MaritalStatus}.equalsIgnoreCase( "M" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+								</image>
+								<staticText>
+									<reportElement style="Text_black_Aviva" x="106" y="1" width="40" height="19" uuid="7567de17-e521-4f42-8fae-85d6a1227be2">
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									</reportElement>
+									<textElement verticalAlignment="Middle">
+										<font fontName="Arial" size="8"/>
+									</textElement>
+									<text><![CDATA[Married]]></text>
+								</staticText>
+								<staticText>
+									<reportElement style="Text_black_Aviva" x="177" y="1" width="35" height="19" uuid="aded5c56-0a8b-4eee-bd7c-5ddc8d4ee073">
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									</reportElement>
+									<textElement verticalAlignment="Middle">
+										<font fontName="Arial" size="8"/>
+									</textElement>
+									<text><![CDATA[Widowed]]></text>
+								</staticText>
+								<image>
+									<reportElement x="160" y="3" width="14" height="14" uuid="ae2f6987-5817-4f55-a46a-90084be1ab8c">
+										<property name="local_mesure_unitx" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.x" value="px"/>
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="local_mesure_unitwidth" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<imageExpression><![CDATA[$F{Client1_MaritalStatus}.equalsIgnoreCase( "W" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+								</image>
+							</frame>
+							<frame>
+								<reportElement x="0" y="14" width="214" height="21" uuid="f2e59be1-ec41-4ddc-84d2-d4b57d62a7a0"/>
+								<staticText>
+									<reportElement style="Text_black_Aviva" x="22" y="2" width="40" height="19" uuid="92593b47-6566-451c-9d9a-f0c58cd5abe9">
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									</reportElement>
+									<textElement verticalAlignment="Middle">
+										<font fontName="Arial" size="8"/>
+									</textElement>
+									<text><![CDATA[Separated]]></text>
+								</staticText>
+								<image>
+									<reportElement x="5" y="5" width="14" height="14" uuid="c8c4c2d1-6724-4a12-b7dc-c278eb18f50e">
+										<property name="local_mesure_unitx" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.x" value="px"/>
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="local_mesure_unitwidth" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<imageExpression><![CDATA[$F{Client1_MaritalStatus}.equalsIgnoreCase( "Se" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+								</image>
+								<image>
+									<reportElement x="89" y="5" width="14" height="14" uuid="f950596a-d16a-464a-9897-2ff7e769a290">
+										<property name="local_mesure_unitx" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.x" value="px"/>
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="local_mesure_unitwidth" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<imageExpression><![CDATA[$F{Client1_MaritalStatus}.equalsIgnoreCase( "Div" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+								</image>
+								<staticText>
+									<reportElement style="Text_black_Aviva" x="106" y="2" width="40" height="19" uuid="c9e84c6a-cb94-4037-be13-c82c7db2d4d6">
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									</reportElement>
+									<textElement verticalAlignment="Middle">
+										<font fontName="Arial" size="8"/>
+									</textElement>
+									<text><![CDATA[Divorced]]></text>
+								</staticText>
+							</frame>
+						</frame>
+						<frame>
+							<reportElement x="0" y="134" width="214" height="21" uuid="07ecd780-e366-4d4e-8e03-04a6f680fd4c"/>
+							<textField>
+								<reportElement x="1" y="1" width="212" height="18" uuid="e95aaaff-5d7f-4ae4-94af-9b24907706ec"/>
+								<textFieldExpression><![CDATA[$F{Client1_NRIC_PassportNumber} != null ? $F{Client1_NRIC_PassportNumber} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="154" width="214" height="21" uuid="50bfe278-48c2-464d-994b-4c494be49a70"/>
+							<textField>
+								<reportElement x="1" y="1" width="212" height="18" uuid="3cf6a826-9c1f-4464-8104-eea3328d9551"/>
+								<textFieldExpression><![CDATA[$F{Client1_BirthDate} != null ? $F{Client1_BirthDate} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="174" width="214" height="21" uuid="51244852-cac8-411d-9951-a4ccf696cb33"/>
+							<textField>
+								<reportElement x="1" y="0" width="212" height="19" uuid="da51ac6c-a96b-4369-98da-869dee4643ec"/>
+								<textFieldExpression><![CDATA[$F{Client1_Age} != null ? $F{Client1_Age} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="194" width="214" height="21" uuid="64aade5f-e863-4197-898c-bbd6ae322052"/>
+							<textField>
+								<reportElement x="0" y="0" width="214" height="19" uuid="80d02b61-d0b5-489d-9404-7f18a4e20d2d"/>
+								<textFieldExpression><![CDATA[$F{Client1_Email} != null ? $F{Client1_Email} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="214" width="214" height="61" uuid="ad49f889-713d-485a-adbf-5900994cd116"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="3" width="19" height="13" uuid="291a8288-9115-4650-adcc-551e50ef9b5e">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[(HP)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="23" width="19" height="13" uuid="870e9353-bd76-48e1-969c-dd67b83271da">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[(O)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="43" width="19" height="13" uuid="3d26ef90-fb65-4e17-b575-59f6a0cfbb0a">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[(H)]]></text>
+							</staticText>
+							<line>
+								<reportElement mode="Transparent" x="26" y="16" width="180" height="1" uuid="b2aedee9-9f96-498c-bf9d-49f073f94395">
+									<property name="local_mesure_unity" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								</reportElement>
+								<graphicElement>
+									<pen lineWidth="0.5" lineColor="#999999"/>
+								</graphicElement>
+							</line>
+							<line>
+								<reportElement x="26" y="36" width="180" height="1" uuid="f498660a-7fec-49af-a5a2-34e5d0b45b48">
+									<property name="local_mesure_unity" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								</reportElement>
+								<graphicElement>
+									<pen lineWidth="0.5" lineColor="#999999"/>
+								</graphicElement>
+							</line>
+							<line>
+								<reportElement x="26" y="56" width="180" height="1" uuid="124fc324-9904-4755-99b9-a3b5c7fac743">
+									<property name="local_mesure_unity" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								</reportElement>
+								<graphicElement>
+									<pen lineWidth="0.5" lineColor="#999999"/>
+								</graphicElement>
+							</line>
+							<textField>
+								<reportElement x="38" y="5" width="108" height="10" uuid="adbb0545-a5a0-46db-98db-eb8368b828e1"/>
+								<textFieldExpression><![CDATA[$F{Client1_Contact_HomePhone} != null ? $F{Client1_Contact_HomePhone}  : "N.A"]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="38" y="25" width="108" height="10" uuid="1ba851ca-7ad2-4630-a07e-cf854d714594"/>
+								<textFieldExpression><![CDATA[$F{Client1_Contact_OfficePhone} != null ? $F{Client1_Contact_OfficePhone} : "N.A"]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="38" y="44" width="108" height="10" uuid="ba8dc837-5db2-40c0-947c-9cf87947c807"/>
+								<textFieldExpression><![CDATA[$F{Client1_Contact_HandPhone} != null ? $F{Client1_Contact_HandPhone} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="274" width="214" height="52" uuid="c640742e-b671-414c-b24e-336e8872130d"/>
+							<textField>
+								<reportElement x="1" y="1" width="208" height="30" uuid="a4ae410f-9403-4946-9a6e-e210ce4bcf04"/>
+								<textFieldExpression><![CDATA[$F{Client1_Address_Residential} != null ? $F{Client1_Address_Residential} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="325" width="214" height="21" uuid="b9d83ddd-bf59-4230-9509-14646e84d19c"/>
+							<textField>
+								<reportElement x="1" y="1" width="208" height="18" uuid="8c1234b5-2355-4f00-a06d-f624b975c732"/>
+								<textFieldExpression><![CDATA[$F{Client1_Address_Occupation} != null ? $F{Client1_Address_Occupation} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="345" width="214" height="63" uuid="0aef756b-d717-464f-bc2e-2d1b69fd5fe2"/>
+							<textField>
+								<reportElement x="1" y="2" width="211" height="19" uuid="a9116c95-5aa7-49cc-95d5-3ee36f891b45"/>
+								<textFieldExpression><![CDATA[$F{Client1_Name_Employer} != null ? $F{Client1_Name_Employer} : "N.A"]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="3" y="24" width="211" height="19" uuid="be5c0cb5-b471-4018-a3d9-c48e2b5c5a9c"/>
+								<textFieldExpression><![CDATA[$F{Client1_Address_Employer} != null ? $F{Client1_Address_Employer}  : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="407" width="214" height="146" uuid="13fbf1f4-d874-4098-a7d9-659b2fdd075c"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="3" width="75" height="10" uuid="60641f1a-c34b-42de-9df3-13cff47cabc9">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Accounting /Finance]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="1" width="14" height="14" uuid="373609c0-41d6-41b1-87ec-b23148c37b9d">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_NatureOfBusinessModel}.equalsIgnoreCase( "AF" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="104" y="2" width="14" height="14" uuid="4ca0bece-9348-48da-afd1-8290bf88ba78">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="121" y="2" width="89" height="32" uuid="a5522c40-d037-4ca0-ae48-1de3f2deed79">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Involved in production/ distribution of military products]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="15" width="77" height="30" uuid="1b57ca2a-8f38-497f-b0fb-b4a466a3d814">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Casino/Other types of gaming/ gambling operations]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="17" width="14" height="14" uuid="c972bb28-5fec-483a-82c0-c2c8ee304a6f">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="121" y="31" width="89" height="10" uuid="45962b4e-2a38-4c34-b11a-9fb14bc9d7d6">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Money Service Business]]></text>
+							</staticText>
+							<image>
+								<reportElement x="104" y="29" width="14" height="14" uuid="f8ce5373-5175-4956-a0f0-56c2f5773899">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="5" y="45" width="14" height="14" uuid="1840570a-f0b2-4145-910e-3a38a19c1efd">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="47" width="80" height="10" uuid="04a8cdbd-0be7-46ac-80e9-81220846cf51">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Consulting]]></text>
+							</staticText>
+							<image>
+								<reportElement x="104" y="44" width="14" height="14" uuid="0998a735-7e46-49f6-a937-4376d7c7fa15">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="121" y="46" width="89" height="10" uuid="df4a2946-06d4-4073-9421-bc7ffaa7b505">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Professional Services]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="121" y="59" width="89" height="20" uuid="6996d83f-13c7-42d2-a828-1ff0f7585b2e">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Research & Development]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="60" width="14" height="14" uuid="1d202ebd-3aeb-48c6-ab37-830affbd41cc">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="104" y="61" width="14" height="14" uuid="e6cc0690-df7e-430c-9a2b-b374d01a2203">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="62" width="80" height="10" uuid="028b7a77-e033-47b7-9fa4-abb1c31bbb0d">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Engineering]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="75" width="14" height="14" uuid="314fcaee-52d3-4ece-b51d-9c48b601fc96">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="77" width="80" height="20" uuid="05d61459-81ef-419b-8164-04bd1d4bd474">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Executive/ Management]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="121" y="81" width="80" height="20" uuid="1fd86322-5123-4f12-bd83-903fd68e3368">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Sales/Marketing/ Advertising]]></text>
+							</staticText>
+							<image>
+								<reportElement x="105" y="82" width="14" height="14" uuid="bff7867b-7ba1-4fa2-9f47-dc5e5eb707c5">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="5" y="95" width="15" height="14" uuid="8bef9192-414e-4298-a8c2-11ada8d6195f">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="97" width="80" height="10" uuid="fc6e7713-2349-4c63-8b7d-49cd2f507358">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Government/Military]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="110" width="15" height="14" uuid="7dc09c4a-61ff-482d-99d0-6ef0ed2a5b9a">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="112" width="80" height="10" uuid="be631e2d-2a6b-40c4-9cfe-f3b84e63a5ad">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Other, please specify:]]></text>
+							</staticText>
+							<line>
+								<reportElement x="26" y="139" width="180" height="1" uuid="fd1b8468-847d-4778-a770-143edad3a7e5">
+									<property name="local_mesure_unity" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								</reportElement>
+								<graphicElement>
+									<pen lineWidth="0.5" lineColor="#999999"/>
+								</graphicElement>
+							</line>
+							<textField>
+								<reportElement x="31" y="125" width="175" height="12" uuid="052f35cf-2c4d-4f92-9836-059afa72673c"/>
+								<textFieldExpression><![CDATA[$F{Client1_AddNote_NatureOfBusinessModel} != null ? $F{Client1_AddNote_NatureOfBusinessModel} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="552" width="214" height="21" uuid="48804248-d2d7-4ba1-8c01-102868960147"/>
+							<textField>
+								<reportElement x="-1" y="0" width="212" height="18" uuid="caf6fad3-357a-40ff-af62-2e154ed08f52"/>
+								<textFieldExpression><![CDATA[$F{Client1_Employer_AnnualIncome} != null ? $F{Client1_Employer_AnnualIncome} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="572" width="214" height="63" uuid="63d7d6db-2bdb-4a3c-890d-1b0adad309ff"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="3" width="44" height="10" uuid="b9668f0c-4b0f-4889-8bb1-061b24f09cf0">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Full time]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="1" width="14" height="14" uuid="27f7e481-d924-4dda-b375-79310816fcea">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_EmployeeStatus}.equalsIgnoreCase( "FT" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="18" width="55" height="10" uuid="634dc602-e584-4513-9ab8-9f7db89e2c0b">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Not Employed]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="16" width="14" height="14" uuid="c9301703-9822-4e89-b9ad-db043b1bcb5e">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_EmployeeStatus}.equalsIgnoreCase( "NE" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="33" width="44" height="10" uuid="ff7a434c-e440-4fa0-b346-f5c29b1cc5ef">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Others:]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="31" width="14" height="14" uuid="86883a70-6587-4d27-99b3-5acec61d2e16">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_EmployeeStatus}.equalsIgnoreCase( "O" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="96" y="3" width="44" height="10" uuid="f2451481-1077-42be-8c24-c8f8b1cbfd4f">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Part time]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="96" y="18" width="44" height="10" uuid="c55994b1-0515-4216-902d-2e9758158564">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Retired]]></text>
+							</staticText>
+							<image>
+								<reportElement x="79" y="16" width="14" height="14" uuid="1f844340-2d74-4450-ac58-524bf3fd0aed">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_EmployeeStatus}.equalsIgnoreCase( "Re" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="79" y="1" width="14" height="14" uuid="d69352bb-a951-4f14-8821-38af3a908b9f">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_EmployeeStatus}.equalsIgnoreCase( "PT" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="140" y="1" width="14" height="14" uuid="b3dbd6e4-0e78-406f-8d76-8063abe15311">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_EmployeeStatus}.equalsIgnoreCase( "SE" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="156" y="3" width="54" height="10" uuid="1b5b8fea-2662-44b8-8bba-3735eb64fdf6">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Self Employed]]></text>
+							</staticText>
+							<line>
+								<reportElement x="26" y="56" width="180" height="1" uuid="273e3b5e-e9aa-475b-b7a3-c122b99c0821">
+									<property name="local_mesure_unity" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								</reportElement>
+								<graphicElement>
+									<pen lineWidth="0.5" lineColor="#999999"/>
+								</graphicElement>
+							</line>
+						</frame>
+						<frame>
+							<reportElement x="0" y="717" width="214" height="39" uuid="8ed8c066-8574-4d03-960f-29ee7af9ab87"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="5" width="103" height="10" uuid="88843c48-dbe1-45a6-91aa-730c5f1dfb78">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Proficient in spoken English]]></text>
+							</staticText>
+							<image>
+								<reportElement x="115" y="3" width="14" height="14" uuid="5499e5f4-be3d-4654-8582-df8fc9940d30">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_Languages_Spoken}.equalsIgnoreCase( "true" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="135" y="5" width="20" height="10" uuid="c0b9d4af-9643-4b77-b12c-9cfbc28394b3">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Yes]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="189" y="5" width="20" height="10" uuid="2d4cbbd4-67cf-4c45-a0cb-75c990a261eb">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[No]]></text>
+							</staticText>
+							<image>
+								<reportElement x="169" y="3" width="14" height="14" uuid="51f92ab9-06a3-44a4-9c2b-126656259426">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_Languages_Spoken}.equalsIgnoreCase( "false" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="189" y="22" width="20" height="10" uuid="29b216e4-4792-4cea-839c-d9cc28b8e9c6">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[No]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="22" width="103" height="10" uuid="1870aed0-443d-4e46-99c4-e95de76b3771">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Proficient in written English]]></text>
+							</staticText>
+							<image>
+								<reportElement x="169" y="20" width="14" height="14" uuid="3efeb9d3-980b-4e1d-8fa6-bf630ad131e2">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_Languages_Written}.equalsIgnoreCase( "false" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="135" y="22" width="20" height="10" uuid="9eb1e198-d9b1-475f-a29f-34fc44df43aa">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Yes]]></text>
+							</staticText>
+							<image>
+								<reportElement x="115" y="20" width="14" height="14" uuid="1315a947-5f37-4f7a-b1b0-aab9058b2f71">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_Languages_Written}.equalsIgnoreCase( "true" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+						</frame>
+						<frame>
+							<reportElement x="0" y="634" width="214" height="84" uuid="1e833534-72a0-4765-8609-6befc3dd034e"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="3" width="44" height="10" uuid="f6c9470a-edee-4818-9723-1659324a4356">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Primary]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="1" width="14" height="14" uuid="c3211a8b-818c-43e9-afb1-444672f7a53c">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_EducationLevel}.equalsIgnoreCase( "Pr" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="18" width="44" height="10" uuid="32f14da2-f7f7-4969-a870-02b63e0012b0">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Secondary]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="16" width="14" height="14" uuid="1d38ee28-b67c-4760-95d6-c9a2a3a598e3">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_EducationLevel}.equalsIgnoreCase( "Sec" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="32" width="127" height="20" uuid="a63e53ea-55d5-4fcc-a507-bd2dc19a177a">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[GCE 'N' or 'O' Level Certificate or Equivalent Academic Qualification]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="32" width="14" height="14" uuid="38a61b91-c67c-4124-93af-e82a513d1d85">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_EducationLevel}.equalsIgnoreCase( "GCEQ" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="54" width="44" height="10" uuid="83c1795a-9e9b-439c-bace-362f6b1cb388">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Pre-Tertiary]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="52" width="14" height="14" uuid="b9d49720-518b-44ea-bcc4-0c4448273601">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_EducationLevel}.equalsIgnoreCase( "PreT" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="70" width="82" height="10" uuid="f41c3689-a5f8-4a43-bffd-c4b4a7eaabb1">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Tertiary and above]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="68" width="14" height="14" uuid="eed6e899-6f67-4cf9-aaae-d8c4ea2172f5">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client1_EducationLevel}.equalsIgnoreCase( "TnA" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+						</frame>
+					</frame>
+					<frame>
+						<reportElement x="381" y="0" width="214" height="756" uuid="08598608-5f15-4d40-af94-3fbf60b835aa">
+							<property name="local_mesure_unitx" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="local_mesure_unitheight" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<frame>
+							<reportElement x="0" y="0" width="214" height="21" uuid="11750c1d-df9a-4c68-9c7d-ec4edd48a38f"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="0" width="12" height="21" uuid="84ba047b-a46e-4d0c-bd20-0a453703de19">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Mr]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="4" width="14" height="14" uuid="ee71efbc-c6e6-4395-824d-3439d8575cfc">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_Salutation}.equalsIgnoreCase( "MR" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="47" y="4" width="14" height="14" uuid="23a88393-aa9d-4ab6-82e3-78333f17d143">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_Salutation}.equalsIgnoreCase( "MRS" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="64" y="0" width="16" height="21" uuid="71560ef5-e38f-4a3e-9595-e7add3defae8">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Mrs]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="106" y="0" width="24" height="21" uuid="8a0480a5-b80d-4234-9c26-2c6d9702f47c">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Mdm]]></text>
+							</staticText>
+							<image>
+								<reportElement x="89" y="4" width="14" height="14" uuid="fa5e342f-96ec-4787-b167-860152c3ef6d">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_Salutation}.equalsIgnoreCase( "MDM" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="148" y="0" width="20" height="21" uuid="55397f13-8840-4e6d-9840-80fd6c759ef0">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Miss]]></text>
+							</staticText>
+							<image>
+								<reportElement x="131" y="4" width="14" height="14" uuid="152ff3cc-48a7-4cd6-9f5e-6059c4c9c566">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_Salutation}.equalsIgnoreCase( "Miss" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="190" y="0" width="16" height="21" uuid="19d6abbd-a085-4fdd-871b-9680b36f1dc9">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Dr]]></text>
+							</staticText>
+							<image>
+								<reportElement x="173" y="4" width="14" height="14" uuid="3de6ba72-eff7-4e77-80fc-d7dab905a386">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_Salutation}.equalsIgnoreCase( "DR" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+						</frame>
+						<frame>
+							<reportElement x="0" y="20" width="214" height="21" uuid="4dc66c94-b273-4009-b9ac-3bf7eef5aca1"/>
+							<textField>
+								<reportElement x="2" y="2" width="206" height="18" uuid="813ba4d3-fcb7-4189-b599-45e9bfb3a7fd"/>
+								<textFieldExpression><![CDATA[$F{Client2_FamilyName} != null ? $F{Client2_FamilyName} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="40" width="214" height="21" uuid="07140bc9-8f8e-4b60-b641-92e97d134158"/>
+							<textField>
+								<reportElement x="1" y="1" width="212" height="19" uuid="1c172698-1d77-4c30-a595-23a204434339"/>
+								<textFieldExpression><![CDATA[$F{Client2_GivenName} != null ? $F{Client2_GivenName} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="60" width="214" height="21" uuid="2081edd1-3b44-437d-a261-1665e79c13bc"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="0" width="20" height="21" uuid="f08e4849-54d7-48ba-be50-46d551b6dea0">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Male]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="4" width="14" height="14" uuid="56d6bb20-4423-4876-a3c4-ee5da7020cd7">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_Gender}.equalsIgnoreCase( "M" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="89" y="4" width="14" height="14" uuid="d453a84e-cc31-436e-bfc2-7733f0dd6ca4">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_Gender}.equalsIgnoreCase( "F" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="106" y="0" width="63" height="21" uuid="df23f48d-ca60-4968-b37d-ea6729367bcc">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Female]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="80" width="214" height="21" uuid="aa86cdba-77a4-4f30-b272-7ef65cebb695"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="0" width="20" height="21" uuid="4636dddf-5834-4286-b47a-dd7f79e38af0">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[No]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="4" width="14" height="14" uuid="a5b75710-c0f2-443a-9672-b0bef447e07e">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_SmokerStatus}.equalsIgnoreCase( "N" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="89" y="4" width="14" height="14" uuid="322488cc-5a93-4b4d-88f4-1b4116ea265a">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_SmokerStatus}.equalsIgnoreCase( "S" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="106" y="0" width="20" height="21" uuid="c8527bfc-1fea-4952-8e88-a2044d6bbeb6">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Yes]]></text>
+							</staticText>
+						</frame>
+						<frame>
+							<reportElement x="0" y="100" width="214" height="35" uuid="e3d7b912-0ad0-469a-84ca-82a259548bf8"/>
+							<frame>
+								<reportElement x="0" y="0" width="214" height="21" uuid="7a3bfa1d-974f-4d69-9f96-7e7747b89817"/>
+								<staticText>
+									<reportElement style="Text_black_Aviva" x="22" y="1" width="40" height="19" uuid="da76c348-f685-4d65-989f-918e80b64fe0">
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									</reportElement>
+									<textElement verticalAlignment="Middle">
+										<font fontName="Arial" size="8"/>
+									</textElement>
+									<text><![CDATA[Single]]></text>
+								</staticText>
+								<image>
+									<reportElement x="5" y="3" width="14" height="14" uuid="d93dddbc-9096-4e0c-a22c-56fed9207a58">
+										<property name="local_mesure_unitx" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.x" value="px"/>
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="local_mesure_unitwidth" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<imageExpression><![CDATA[$F{Client2_MaritalStatus}.equalsIgnoreCase( "Si" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+								</image>
+								<image>
+									<reportElement x="89" y="3" width="14" height="14" uuid="512f2b30-5b95-4ebe-a06b-00f6f7e4fa54">
+										<property name="local_mesure_unitx" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.x" value="px"/>
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="local_mesure_unitwidth" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<imageExpression><![CDATA[$F{Client2_MaritalStatus}.equalsIgnoreCase( "M" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+								</image>
+								<staticText>
+									<reportElement style="Text_black_Aviva" x="106" y="1" width="40" height="19" uuid="4712c84a-2d30-4e37-9b2f-82bebc3d7d7f">
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									</reportElement>
+									<textElement verticalAlignment="Middle">
+										<font fontName="Arial" size="8"/>
+									</textElement>
+									<text><![CDATA[Married]]></text>
+								</staticText>
+								<staticText>
+									<reportElement style="Text_black_Aviva" x="177" y="1" width="35" height="19" uuid="77d852c2-8496-4a59-acf8-ad79135b7722">
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									</reportElement>
+									<textElement verticalAlignment="Middle">
+										<font fontName="Arial" size="8"/>
+									</textElement>
+									<text><![CDATA[Widowed]]></text>
+								</staticText>
+								<image>
+									<reportElement x="160" y="3" width="14" height="14" uuid="13a10704-3336-40ec-834b-d4e64dd14754">
+										<property name="local_mesure_unitx" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.x" value="px"/>
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="local_mesure_unitwidth" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<imageExpression><![CDATA[$F{Client2_MaritalStatus}.equalsIgnoreCase( "W" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+								</image>
+							</frame>
+							<frame>
+								<reportElement x="0" y="14" width="214" height="21" uuid="ce8fdf4f-fcc4-44ab-b14f-5f3bd7950cbc"/>
+								<staticText>
+									<reportElement style="Text_black_Aviva" x="22" y="2" width="40" height="19" uuid="2d8ca943-8c9e-49d8-aba3-476f5f3a4b65">
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									</reportElement>
+									<textElement verticalAlignment="Middle">
+										<font fontName="Arial" size="8"/>
+									</textElement>
+									<text><![CDATA[Separated]]></text>
+								</staticText>
+								<image>
+									<reportElement x="5" y="5" width="14" height="14" uuid="3d8e92ce-af19-450c-a4ff-28d160fcaf56">
+										<property name="local_mesure_unitx" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.x" value="px"/>
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="local_mesure_unitwidth" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<imageExpression><![CDATA[$F{Client2_MaritalStatus}.equalsIgnoreCase( "Se" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+								</image>
+								<image>
+									<reportElement x="89" y="5" width="14" height="14" uuid="c299bb1e-c529-4887-b526-ffc2edd7aed9">
+										<property name="local_mesure_unitx" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.x" value="px"/>
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="local_mesure_unitwidth" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<imageExpression><![CDATA[$F{Client2_MaritalStatus}.equalsIgnoreCase( "Div" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+								</image>
+								<staticText>
+									<reportElement style="Text_black_Aviva" x="106" y="2" width="40" height="19" uuid="a6062fa0-42ef-44d0-9338-06e540970479">
+										<property name="local_mesure_unitheight" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									</reportElement>
+									<textElement verticalAlignment="Middle">
+										<font fontName="Arial" size="8"/>
+									</textElement>
+									<text><![CDATA[Divorced]]></text>
+								</staticText>
+							</frame>
+						</frame>
+						<frame>
+							<reportElement x="0" y="134" width="214" height="21" uuid="e2393e0b-3e95-45ad-8f99-e3c37ae527f1"/>
+							<textField>
+								<reportElement x="1" y="1" width="211" height="18" uuid="17e666df-e968-40e3-864d-2e64f50c168f"/>
+								<textFieldExpression><![CDATA[$F{Client2_NRIC_PassportNumber} != null ? $F{Client2_NRIC_PassportNumber} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="154" width="214" height="21" uuid="7454d9d5-7303-4be3-a96f-4a2a26b4f161"/>
+							<textField>
+								<reportElement x="1" y="2" width="208" height="19" uuid="c83b7ee2-eff6-49ac-8fa2-bc1d5194fb52"/>
+								<textFieldExpression><![CDATA[$F{Client2_BirthDate} != null ? $F{Client2_BirthDate} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="174" width="214" height="21" uuid="9191d2ce-5afb-45ce-b917-38f8a26209b0"/>
+							<textField>
+								<reportElement x="1" y="2" width="208" height="18" uuid="17b72fac-8607-4feb-b958-39f8cad6903b"/>
+								<textFieldExpression><![CDATA[$F{Client2_Age} != null ? $F{Client2_Age} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="194" width="214" height="21" uuid="65f12623-8bac-42f3-bdcd-96a54c36ad87"/>
+							<textField>
+								<reportElement x="1" y="1" width="208" height="18" uuid="cd40b762-ac41-415b-9fa4-3f4a3c8bb719"/>
+								<textFieldExpression><![CDATA[$F{Client2_Email} != null ? $F{Client2_Email} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="214" width="214" height="61" uuid="b420d498-75e5-447b-9bcf-71222785251d"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="3" width="19" height="13" uuid="0645bbd2-ded4-4c43-91ae-fb8c094d8372">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[(HP)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="23" width="19" height="13" uuid="9b40e98e-5a93-4d4f-af24-d0e4948118db">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[(O)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="43" width="19" height="13" uuid="825cded1-a3f0-474f-9506-691f36781849">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[(H)]]></text>
+							</staticText>
+							<line>
+								<reportElement mode="Transparent" x="26" y="16" width="180" height="1" uuid="6d57362d-f22c-426d-a30c-dfa0020b084f">
+									<property name="local_mesure_unity" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								</reportElement>
+								<graphicElement>
+									<pen lineWidth="0.5" lineColor="#999999"/>
+								</graphicElement>
+							</line>
+							<line>
+								<reportElement x="26" y="36" width="180" height="1" uuid="51b835ee-50f3-4084-898c-b7b9e53c5612">
+									<property name="local_mesure_unity" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								</reportElement>
+								<graphicElement>
+									<pen lineWidth="0.5" lineColor="#999999"/>
+								</graphicElement>
+							</line>
+							<line>
+								<reportElement x="26" y="56" width="180" height="1" uuid="0adff8b0-71b5-4dc2-ba73-16d4d7f61748">
+									<property name="local_mesure_unity" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								</reportElement>
+								<graphicElement>
+									<pen lineWidth="0.5" lineColor="#999999"/>
+								</graphicElement>
+							</line>
+							<textField>
+								<reportElement x="41" y="4" width="100" height="10" uuid="8e3b9243-0c97-4690-bb78-a8c518acddef"/>
+								<textFieldExpression><![CDATA[$F{Client2_Contact_HomePhone} != null ? $F{Client2_Contact_HomePhone}  : "N.A"]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="41" y="24" width="100" height="10" uuid="7059e278-4a07-4ffd-89e4-8f890545f43a"/>
+								<textFieldExpression><![CDATA[$F{Client2_Contact_OfficePhone} != null ? $F{Client2_Contact_OfficePhone} : "N.A"]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="42" y="44" width="100" height="10" uuid="331bb0f4-96b5-4ae6-a3e2-1f0c1523c79c"/>
+								<textFieldExpression><![CDATA[$F{Client2_Contact_HandPhone} != null ? $F{Client2_Contact_HandPhone} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="274" width="214" height="52" uuid="df3bf150-4094-4ca4-808d-08b8f2b9702e"/>
+							<textField>
+								<reportElement x="4" y="1" width="196" height="30" uuid="8b2def5d-938a-4972-969f-1f8289f6e66c"/>
+								<textFieldExpression><![CDATA[$F{Client2_Address_Residential} != null ? $F{Client2_Address_Residential} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="325" width="214" height="21" uuid="78c1f763-666d-4b77-95a4-db49c13c3422"/>
+							<textField>
+								<reportElement x="1" y="1" width="212" height="18" uuid="a13a2855-5d40-413f-a643-0f3ec9265d1c"/>
+								<textFieldExpression><![CDATA[$F{Client2_Address_Occupation} != null ? $F{Client2_Address_Occupation} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="345" width="214" height="63" uuid="c0cef2af-2c49-4bf7-a51c-866fd417a23a"/>
+							<textField>
+								<reportElement x="1" y="2" width="210" height="18" uuid="d35f7b80-f3f7-4e8a-b312-a5be978ab2bc"/>
+								<textFieldExpression><![CDATA[$F{Client2_Name_Employer} != null ? $F{Client2_Name_Employer} : "N.A"]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="1" y="24" width="210" height="18" uuid="752fc6d1-4cef-412e-9e86-efd2e6c7889d"/>
+								<textFieldExpression><![CDATA[$F{Client2_Address_Employer} != null ? $F{Client2_Address_Employer} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="407" width="214" height="146" uuid="68558510-c7af-44ea-a52b-2a0c5d90ebfa"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="3" width="75" height="10" uuid="7a2b3218-5438-4ee0-8862-a78e087891c9">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Accounting /Finance]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="1" width="14" height="14" uuid="0028c9f3-bd03-4d4f-bf79-a29f6b42f0d6">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_NatureOfBusinessModel}.equalsIgnoreCase( "AF" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="104" y="2" width="14" height="14" uuid="f423f570-9cbf-42d2-a2b7-edb31ce87049">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="121" y="2" width="89" height="32" uuid="157239df-82cb-41ce-8027-65587adc4208">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Involved in production/ distribution of military products]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="15" width="77" height="30" uuid="a09bf360-543b-45c8-a0df-debe91465d28">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Casino/Other types of gaming/ gambling operations]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="17" width="14" height="14" uuid="8a1deeef-6f1d-4409-8eab-87fe6b309566">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="121" y="31" width="89" height="10" uuid="33cf4b3d-cb57-40d4-ab7a-e60bf029d4be">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Money Service Business]]></text>
+							</staticText>
+							<image>
+								<reportElement x="104" y="29" width="14" height="14" uuid="a2f80e2a-d22c-45b3-8698-cbf5a05d738c">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="5" y="45" width="14" height="14" uuid="63510642-4bce-4727-bfd8-4f070733fdf3">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="47" width="80" height="10" uuid="3c18c614-5813-4c7c-90a7-b105f575181f">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Consulting]]></text>
+							</staticText>
+							<image>
+								<reportElement x="104" y="44" width="14" height="14" uuid="7b3b0fae-8a55-48da-bc2c-257a13333870">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="121" y="46" width="89" height="10" uuid="97bab0c7-bc2e-4cfc-88bd-1c2fb2e89649">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Professional Services]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="121" y="59" width="89" height="20" uuid="b9cfe932-8236-4cb2-b84a-ea3fb258f3ea">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Research & Development]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="60" width="14" height="14" uuid="02bfea63-aabd-4c9c-a58a-090cc7bf8fb9">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="104" y="61" width="14" height="14" uuid="57a1b258-2e06-465e-a441-3abb54d4598d">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="62" width="80" height="10" uuid="945e06c9-ea3a-41c8-89ab-21be9cff2a64">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Engineering]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="75" width="14" height="14" uuid="3cc4a38c-01a1-4fb8-841b-4ef8272d3e16">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="77" width="80" height="20" uuid="2e356200-3c56-4d1c-aeec-a41d7084b727">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Executive/ Management]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="121" y="81" width="80" height="20" uuid="90061eb9-273f-4302-b682-b904ae267a66">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Sales/Marketing/ Advertising]]></text>
+							</staticText>
+							<image>
+								<reportElement x="105" y="82" width="14" height="14" uuid="77559cbe-78e1-4b3c-a975-a11b42ca4e13">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="5" y="95" width="15" height="14" uuid="56aa7454-2255-41e3-a1af-b981ac32c610">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="97" width="80" height="10" uuid="66dd0a1a-c78f-41a2-943a-03aae1527e9d">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Government/Military]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="110" width="15" height="14" uuid="d26765bf-3347-428c-9c8b-da4d82bb5e8f">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="112" width="80" height="10" uuid="1c315ee1-bf35-4cd4-9a78-cc983141012a">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Other, please specify:]]></text>
+							</staticText>
+							<line>
+								<reportElement x="26" y="139" width="180" height="1" uuid="bb2a55b7-b746-4838-8a13-22b5b28e5f2f">
+									<property name="local_mesure_unity" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								</reportElement>
+								<graphicElement>
+									<pen lineWidth="0.5" lineColor="#999999"/>
+								</graphicElement>
+							</line>
+							<textField>
+								<reportElement x="32" y="126" width="172" height="12" uuid="4006f7fc-4b09-4c64-a16b-27f36f92fccc"/>
+								<textFieldExpression><![CDATA[$F{Client2_AddNote_NatureOfBusinessModel} != null ? $F{Client2_AddNote_NatureOfBusinessModel} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="552" width="214" height="21" uuid="700b2a42-eeee-4372-b739-2d56a31685bf"/>
+							<textField>
+								<reportElement x="1" y="1" width="211" height="16" uuid="d6977c48-49b6-4408-8101-fb2b3bba4fd1"/>
+								<textFieldExpression><![CDATA[$F{Client2_Employer_AnnualIncome} != null ? $F{Client2_Employer_AnnualIncome} : "N.A"]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="572" width="214" height="63" uuid="d062d5a7-1abf-4c2c-90b6-f2727c76f6ed"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="3" width="44" height="10" uuid="bd0e9710-d906-4823-817d-7f0042f086a6">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Full time]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="1" width="14" height="14" uuid="a5ad933f-51b6-42a5-8f03-c57feaf5157f">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_EmployeeStatus}.equalsIgnoreCase( "FT" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="18" width="55" height="10" uuid="0169e318-2708-4bd5-bd15-ebda779c35a8">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Not Employed]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="16" width="14" height="14" uuid="4be15b54-3edf-42b1-a114-d45ef7885a8c">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_EmployeeStatus}.equalsIgnoreCase( "NE" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="33" width="44" height="10" uuid="ae85837f-0503-490c-8c06-4d9e7dd37107">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Others:]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="31" width="14" height="14" uuid="1ae36049-21f4-4804-8863-da0e6a59f121">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_EmployeeStatus}.equalsIgnoreCase( "O" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="96" y="3" width="44" height="10" uuid="b2ef442a-d140-4ea6-8897-60a2a09d1776">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Part time]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="96" y="18" width="44" height="10" uuid="0bf11389-7eea-4072-b88a-cc332c440024">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Retired]]></text>
+							</staticText>
+							<image>
+								<reportElement x="79" y="16" width="14" height="14" uuid="db1cead4-47bb-4787-ba40-99fb4f93c5bc">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_EmployeeStatus}.equalsIgnoreCase( "Re" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="79" y="1" width="14" height="14" uuid="d65b41f2-626c-474b-8839-56d7985c9871">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_EmployeeStatus}.equalsIgnoreCase( "PT" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<image>
+								<reportElement x="140" y="1" width="14" height="14" uuid="c6cb0008-ceb7-4ad6-9f5c-1d78f9df5dad">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_EmployeeStatus}.equalsIgnoreCase( "SE" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="156" y="3" width="54" height="10" uuid="e278c399-5e1a-462c-86fc-6a59ae3e931f">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Self Employed]]></text>
+							</staticText>
+							<line>
+								<reportElement x="26" y="56" width="180" height="1" uuid="3c3507bb-927a-454f-9873-4c5298039671">
+									<property name="local_mesure_unity" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								</reportElement>
+								<graphicElement>
+									<pen lineWidth="0.5" lineColor="#999999"/>
+								</graphicElement>
+							</line>
+						</frame>
+						<frame>
+							<reportElement x="0" y="717" width="214" height="39" uuid="81edcd79-2ce1-42bf-992e-b17650827ca6"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="5" width="103" height="10" uuid="414bf3fc-e269-4e62-beb8-d0beb651eb6a">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Proficient in spoken English]]></text>
+							</staticText>
+							<image>
+								<reportElement x="115" y="3" width="14" height="14" uuid="97e7036f-a0d4-47d6-87aa-2dbed621dc95">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_Languages_Spoken}.equalsIgnoreCase( "true" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="135" y="5" width="20" height="10" uuid="b423e0ba-394c-41c8-aebc-bf48e81ee2ca">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Yes]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="189" y="5" width="20" height="10" uuid="88383cae-5e69-4cea-9a87-c0306a8093e6">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[No]]></text>
+							</staticText>
+							<image>
+								<reportElement x="169" y="3" width="14" height="14" uuid="5aceb697-07d0-46e4-8be4-2d6cc7641a51">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_Languages_Spoken}.equalsIgnoreCase( "false" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="189" y="22" width="20" height="10" uuid="dd3362b8-32bf-4b74-bbd4-e90e4faff456">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[No]]></text>
+							</staticText>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="5" y="22" width="103" height="10" uuid="fa9c2560-4241-4e9e-8e38-1e5751bbe40d">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Proficient in written English]]></text>
+							</staticText>
+							<image>
+								<reportElement x="169" y="20" width="14" height="14" uuid="d7d59c23-cfbf-4383-b1ae-6e0dc826a2f9">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_Languages_Written}.equalsIgnoreCase( "false" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="135" y="22" width="20" height="10" uuid="626a287a-1c7e-4577-9e0a-8abfec00c390">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Yes]]></text>
+							</staticText>
+							<image>
+								<reportElement x="115" y="20" width="14" height="14" uuid="f4d1457d-04db-4359-beb3-55d0df7b51d5">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_Languages_Written}.equalsIgnoreCase( "true" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+						</frame>
+						<frame>
+							<reportElement x="0" y="634" width="214" height="84" uuid="e6b3831e-1b68-4e90-8f9e-4571ff061bb3"/>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="3" width="44" height="10" uuid="c0016e14-089e-4e9b-a7af-0466165f7e4f">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Primary]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="1" width="14" height="14" uuid="5b256841-cb23-4944-9c26-6956b1209496">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_EducationLevel}.equalsIgnoreCase( "Pr" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="18" width="44" height="10" uuid="d352dc60-c9b8-4252-a83d-7f066b1466db">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Secondary]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="16" width="14" height="14" uuid="2e8081f4-895d-4076-996d-9dee1485af7c">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_EducationLevel}.equalsIgnoreCase( "Sec" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="32" width="127" height="20" uuid="c2b419e5-b636-4ca6-a2da-5b5ff67b5f00">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[GCE 'N' or 'O' Level Certificate or Equivalent Academic Qualification]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="32" width="14" height="14" uuid="5f096f2f-13b8-4665-a88c-dd124ea7fff2">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_EducationLevel}.equalsIgnoreCase( "GCEQ" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="54" width="44" height="10" uuid="0fb4fde8-d12f-4d84-bb50-f03d95845855">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Pre-Tertiary]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="52" width="14" height="14" uuid="92ed3e96-89ed-4f59-b7ca-8cf85280ebd1">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_EducationLevel}.equalsIgnoreCase( "PreT" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+							<staticText>
+								<reportElement style="Text_black_Aviva" x="22" y="70" width="82" height="10" uuid="8ca79ae8-1128-4ae9-b739-92bdae1ebc36">
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Top">
+									<font fontName="Arial" size="8"/>
+								</textElement>
+								<text><![CDATA[Tertiary and above]]></text>
+							</staticText>
+							<image>
+								<reportElement x="5" y="68" width="14" height="14" uuid="3702c2f8-2f12-479c-8d80-01b980ae29c5">
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitheight" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{Client2_EducationLevel}.equalsIgnoreCase( "TnA" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+							</image>
+						</frame>
+					</frame>
+				</frame>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="37" width="596" height="1" uuid="e849af77-fffa-4a21-b01e-5b6c61ebd6a5">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="57" width="596" height="1" uuid="da84a4e8-1dd3-4fdc-9231-eafe55ca7975">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="77" width="596" height="1" uuid="7d6243a7-6266-4048-852d-351389c5ef6a">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="97" width="596" height="1" uuid="2d906d2f-04c5-4699-9b97-c3a63525835b">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="117" width="596" height="1" uuid="8490317c-4ec4-4123-aafb-7101f37956e1">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="151" width="596" height="1" uuid="08812e7e-4e7e-47c9-8997-e4dfa4f90b29">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="171" width="596" height="1" uuid="75613b1f-c18b-45b9-b0be-48b3ef7108ca">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="191" width="596" height="1" uuid="0a2e9929-d6d6-41d1-af3e-bda0c261b91d">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="211" width="596" height="1" uuid="93bd0bb6-b95a-4bd5-a1a2-391230755c66">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="231" width="596" height="1" uuid="e6fd760c-0348-4693-9f4b-6655c88da906">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="291" width="596" height="1" uuid="65aba40a-b9ad-42e0-ae1a-0b138199b735">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="341" width="596" height="1" uuid="1fc346d0-a656-46c6-a7ee-76b91404d80b">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="361" width="596" height="1" uuid="4b00ff91-888a-4a1f-bf7d-1c18cb8bde87">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="421" width="596" height="1" uuid="14132320-1440-4198-9213-5b0cf8618534">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="567" width="596" height="1" uuid="2f9907e9-47b2-438f-97e1-db29760985ff">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="587" width="596" height="1" uuid="b8efe22b-8626-4396-bd59-ceaa45e36544">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="649" width="596" height="1" uuid="673990ed-1a36-4292-bbb5-ff1204cee8eb">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="734" width="596" height="1" uuid="d6a1a694-52e0-42f1-9121-20eef9c91413">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+			</frame>
+			<frame>
+				<reportElement x="0" y="0" width="596" height="40" uuid="9c176b90-1614-45a2-aa54-1214abf26357"/>
+				<image>
+					<reportElement x="0" y="0" width="596" height="40" uuid="e11adf27-a4f6-4412-ba6d-d8559565a722">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<imageExpression><![CDATA[$P{IMAGES_DIR} +  "background_2.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="7" y="1" width="346" height="18" uuid="80734258-85c3-4c9c-a38c-cf5714e34a4a">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="true" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[STEP 1: LET’S GET TO KNOW YOU]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="11" width="149" height="18" uuid="dac68d4b-d64d-40a9-bce5-726d516e5e2a">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="false" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[(*These fields are compulsory)]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="426" height="9" forecolor="#025BAF" uuid="fc18a825-0746-4c6b-8cc7-fe0e6ec587fb"/>
+				<textElement markup="html">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<text><![CDATA[<b>Aviva Financial Advisers Pte Ltd<b>  51 Cuppage Road, #03-08/09/10, Singapore 229469 • T: +65 6827 7988 • Website: www.avivafa.com.sg ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="426" height="9" forecolor="#025BAF" uuid="eeab5904-3f4f-48ba-b9c6-20316ffbda00"/>
+				<textElement markup="html">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<text><![CDATA[Company Reg No. 200005578H]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="1" width="40" height="18" uuid="02a84e3d-7e67-417f-ac90-9462b9789aa1"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="470" y="1" width="37" height="18" uuid="e2740f95-f7a9-4e37-9be5-02041b52d750"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

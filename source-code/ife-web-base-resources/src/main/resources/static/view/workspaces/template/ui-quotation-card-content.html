@@ -1,0 +1,271 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+<!-- <div class="{{v3LiveCard}}"> -->
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-right-padding no-left-padding">
+        <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11 no-right-padding no-left-padding">
+            <div class="card white-text card-element box-item v3-live-card-item {{card.cssClass}}" style="width: 100% !important; height: auto; padding-left: 0px;"
+                 ng-class="{'v3-box-invalid': !isValidQuotation(card) && card.permission.openable2, 'v3-box-not-selected': (card.isSelected == false) && !isLeafCard()}"
+                 name="{{card.name}}">
+                <!-- Card Status -->
+                <div class="row v3-margin-right-0" ng-if="card.isShowValidationIcon == true && card.permission.openable2">
+                    <div class="col-xs-1 col-xs-offset-11 v3-padding-0">
+                        <span class="card-status" ng-switch on="card.validStatus">
+                         <i class="fa fa-check" ng-switch-when="VALID"></i>
+                         <i class="fa fa-exclamation" ng-switch-when="INVALID"></i>
+                      </span>
+                    </div>
+                </div>
+                <div class="row v3-margin-right-0" ng-if="!(card.isShowValidationIcon == true && card.permission.openable2)">
+                </div>
+        
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title-background-sumaryQuo" >
+                   <div ng-show="card.refDetail.summary.metaData.productName!=undefined">{{'v4.sidebar.title.' +  card.refDetail.summary.metaData.productName | translate}}</div>
+                   <div ng-if="card.refDetail.summary.metaData.productName !='mar' && card.refDetail.summary.metaData.productName !='can' && card.refDetail.summary.metaData.productName !='mic'">{{card.refDetail.summary.contractCurrency}}  {{ card.refDetail.summary.premiumSummary.totalPremium | v3Currency:2}}</div>
+  				   <div ng-if="card.refDetail.summary.metaData.productName =='mar'" >{{card.refDetail.summary.insuredCargo[0].currency}}  {{ card.refDetail.summary.premiumSummary.totalPayable | v3Currency:2}}</div>
+                	<div ng-if="card.refDetail.summary.metaData.productName =='mic'" >{{card.refDetail.summary.insuredCargo[0].currency}}  {{ card.refDetail.summary.premiumSummary.totalPayable | v3Currency:2}}</div>
+                	<div ng-if="card.refDetail.summary.metaData.productName =='can' && moduleService.detail.quotations.value[0].summary.canTotalPayable > 0">{{moduleService.detail.quotations.value[0].summary.canPremiumCurrency}}&nbsp;<span ng-model="moduleService.detail.quotations.value[0].summary.canTotalPayable" pos-autonumeric  max="999999999999999"></span></div>
+                </div>
+                
+                <!-- According Product -->
+                
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 content-background-sumaryQuo" ng-if="card.refDetail.summary.metaData.productName !='mar' && card.refDetail.summary.metaData.productName !='mic' && card.refDetail.summary.metaData.productName !='can' && card.refDetail.refProductName.value!='can' ">
+                    <div class="row">
+                    	<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.quoteNo" | translate}}</label></div>
+                    	<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding"  >{{card.refDetail.summary.metaData.docName}}</div>
+                    </div>
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.status" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding" ng-show="card.refDetail.summary.metaData.businessStatus!=undefine">{{ (card.refDetail.summary.quotationType === 'UW_QUO' && card.refDetail.summary.metaData.businessStatus === commonService.CONSTANTS.BUSINESS_STATUS.ACCEPTED) ? 'new.v4.mynewworkspace.actionbar.label.ConfirmLoading' : 'v4.sidebar.title.status.' + card.refDetail.summary.metaData.businessStatus | translate}}</div>
+                    </div>
+                     
+                    <div class="row"> 
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.vehicleSumInsured" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding overflowText-summary" tooltips tooltip-title="{{card.refDetail.summary.sumInsured | v3Currency}}"  tooltip-side="top" tooltip-size="medium"><label class="text-body text-bold">{{card.refDetail.summary.contractCurrency}}   {{card.refDetail.summary.sumInsured | v3Currency:2}}</label></div>
+                    </div>
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.basicPremium" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding overflowText-summary"  tooltips tooltip-title="{{card.refDetail.summary.premiumSummary.basicPremium | v3Currency}}"  tooltip-side="top" tooltip-size="medium"><label class="text-body text-bold">{{card.refDetail.summary.contractCurrency}}   {{card.refDetail.summary.premiumSummary.basicPremium | v3Currency:2}}</label></div>
+                    </div>
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.additionalPrenium" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding overflowText-summary" tooltips tooltip-title="{{showAddPre | v3Currency}}"  tooltip-side="top" tooltip-size="medium"><label class="text-body text-bold">{{card.refDetail.summary.contractCurrency}}   {{sumAddPre(card.refDetail.summary.premiumSummary.addPremiumSummaries) | v3Currency:2}}</label></div>
+                    </div>
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.totalPayablePrenium" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding overflowText-summary" tooltips tooltip-title="{{card.refDetail.summary.premiumSummary.totalPremium | v3Currency}}"  tooltip-side="top" tooltip-size="medium"><label class="text-body text-bold">{{card.refDetail.summary.contractCurrency}}   {{card.refDetail.summary.premiumSummary.totalPremium | v3Currency:2}}</label></div>
+                    </div>
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.createdDate" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding" >{{card.refDetail.summary.metaData.createDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+                    </div>
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.lastUpdatedDate" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding" >{{card.refDetail.summary.metaData.modifyDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+                	</div>
+                </div>
+                
+                <!-- MARINE CARGO Product -->
+                
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 content-background-sumaryQuo" ng-if="card.refDetail.summary.metaData.productName =='mar' || card.refDetail.summary.metaData.productName =='mic'">
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.quoteNo" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding"  >{{card.refDetail.summary.metaData.docName}}</div>
+                    </div>
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.status" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding" ng-show="card.refDetail.summary.metaData.businessStatus!=undefine">{{ (card.refDetail.summary.quotationType === 'UW_QUO' && card.refDetail.summary.metaData.businessStatus === commonService.CONSTANTS.BUSINESS_STATUS.ACCEPTED) ? 'new.v4.mynewworkspace.actionbar.label.ConfirmLoading' : 'v4.sidebar.title.status.' + card.refDetail.summary.metaData.businessStatus | translate}}</div>
+                    </div>
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v3.mynewworkspace.quotation.label.totalPremium" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding overflowText-summary" tooltips tooltip-title="{{card.refDetail.summary.premiumSummary.totalPremium | v3Currency}}"  tooltip-side="top" tooltip-size="medium"><label class="text-body text-bold">{{card.refDetail.summary.insuredCargo[0].currency}}   {{card.refDetail.summary.premiumSummary.totalPremium | v3Currency:2}}</label></div>
+                    </div>
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v3.mynewworkspace.quotation.label.stampDuty" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding overflowText-summary"  tooltips tooltip-title="{{card.refDetail.summary.premiumSummary.stampDuty | v3Currency}}"  tooltip-side="top" tooltip-size="medium"><label class="text-body text-bold">{{card.refDetail.summary.insuredCargo[0].currency}}   {{card.refDetail.summary.premiumSummary.stampDuty | v3Currency:2}}</label></div>
+                    </div>
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v3.mynewworkspace.quotation.label.totalPayable" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding overflowText-summary" tooltips tooltip-title="{{card.refDetail.summary.premiumSummary.totalPayable | v3Currency}}"  tooltip-side="top" tooltip-size="medium"><label class="text-body text-bold">{{card.refDetail.summary.insuredCargo[0].currency}}   {{card.refDetail.summary.premiumSummary.totalPayable | v3Currency:2}}</label></div>
+                    </div>
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.createdDate" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding" >{{card.refDetail.summary.metaData.createDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+                    </div>
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.lastUpdatedDate" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding" >{{card.refDetail.summary.metaData.modifyDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+                	</div>
+                </div>
+                
+                <!-- Can Product -->
+                
+                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 content-background-sumaryQuo" ng-if="card.refDetail.summary.metaData.productName =='can' || card.refDetail.refProductName.value=='can'">
+                   <div class="row">
+                    	<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.BusinessCaseNo" | translate}}</label></div>
+                    	<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding"  >{{card.parent.parent.refDetail.metaData.docName.value}}</div>
+                    </div>
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.status" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding" ng-show="card.refDetail.summary.metaData.businessStatus!=undefine">{{ (card.refDetail.summary.quotationType === 'UW_QUO' && card.refDetail.summary.metaData.businessStatus === commonService.CONSTANTS.BUSINESS_STATUS.ACCEPTED) ? 'new.v4.mynewworkspace.actionbar.label.ConfirmLoading' : 'v4.sidebar.title.status.' + card.refDetail.summary.metaData.businessStatus | translate}}</div>
+                    </div>
+                     
+                   
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.insuredPremium" | translate}}</label></div>
+	                    <div ng-if="moduleService.detail.quotations.value[0].summary.insuredPremium" class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding overflowText-summary"  tooltips tooltip-title="Insured Premium"  tooltip-side="top" tooltip-size="medium"><label class="text-body text-bold">{{moduleService.detail.quotations.value[0].summary.canPremiumCurrency}}&nbsp;<span ng-model="moduleService.detail.quotations.value[0].summary.insuredPremium" pos-autonumeric  max="999999999999999"></span></label></div>
+                    </div>
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.adminFee" | translate}}</label></div>
+	                    <div ng-if="moduleService.detail.quotations.value[0].summary.insuredAdminFee >0" class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding overflowText-summary" tooltips tooltip-title="Admin Fee"  tooltip-side="top" tooltip-size="medium"><label class="text-body text-bold">{{moduleService.detail.quotations.value[0].summary.canPremiumCurrency}}&nbsp;<span ng-model="moduleService.detail.quotations.value[0].summary.insuredAdminFee" pos-autonumeric  max="999999999999999"></span> </label></div>
+                    </div>
+                    
+           
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.createdDate" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding" >{{moduleService.detail.quotations.value[0].summary.metaData.createDate | datetimeFilter:"DD/MM/YYYY" }}</div>
+                    </div>
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-left-padding"><label class="text-body">{{"v4.quotation.summary.lastUpdatedDate" | translate}}</label></div>
+	                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 content-sumaryQuo no-right-padding" >{{moduleService.detail.quotations.value[0].summary.metaData.modifyDate | datetimeFilter:"DD/MM/YYYY" }}</div>
+                	</div>
+                </div>
+                
+                
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 background-btn-summary">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-right-padding no-left-padding">
+                        <button class="btn btn-lg btn-summary" ng-disabled="moduleService.detail.quotations.value[0].summary.canTotalPayable == null" ng-if="card.refDetail.summary && card.refDetail.summary.metaData.docId && card.refDetail.summary.metaData.businessStatus != commonService.CONSTANTS.BUSINESS_STATUS.ACCEPTED" ng-click="acceptQuotation(card.refDetail.summary, card)" >
+                        	{{ card.refDetail.summary.quotationType === 'UW_QUO' ? 'new.v4.mynewworkspace.actionbar.label.ConfirmLoading' : 'new.v4.mynewworkspace.actionbar.label.Accept' | translate}}
+                        </button>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-right-padding no-left-padding">
+                         <span ng-if="card.view.icons.length > 0" >
+                           <span ng-repeat="icon in card.view.icons">
+                                <button class="btn btn-lg btn-summary" card-icon="icon" class="v3-card-icon-remove-hover" style="position:static;" ng-if="icon.cssClass == 'v3-card-icon-remove'" ng-click="deleteQuotation()">Delete</button>
+                                </button>
+                           </span>
+                         </span>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-right-padding no-left-padding" ng-if="isValidQuotation(card) && card.refDetail.summary.metaData.businessStatus == commonService.CONSTANTS.BUSINESS_STATUS.ACCEPTED" >
+                        <button class="btn btn-lg btn-summary" ng-click="printPDF(card.refDetail.summary)">{{'new.v4.mynewworkspace.actionbar.label.PDF' | translate}}</button>
+                    </div>
+                </div>
+        <!--         Card Short sumary -->
+        <!--         <div class="row v3-margin-right-0 v3-live-card-short-sumary"> -->
+        <!--             <div class="container-fluid v3-padding-0"> -->
+        <!--                 <div class="row v3-margin-right-0 v3-live-card-details v3-live-card-details-short-sumary"> -->
+        <!--                     <div ng-if="card.previewHtml == undefined" class="col-xs-12 v3-padding-0"> -->
+        <!--                         <span title="{{card.preview[0].uiElement | cardSummary}}"> -->
+        <!--                           aaaaaaaaa{{card.preview[0].uiElement | cardSummary | trimtext:false:35:'..'}} -->
+        <!--                         </span> -->
+        <!--                     </div> -->
+        <!--                     <div ng-if="card.previewHtml != undefined" style="margin-top: 20px;" class="col-xs-11 v3-padding-0" ng-include="resourceServerPath + 'view/workspaces/template/'+card.previewHtml"> -->
+        <!--                     </div> -->
+        <!--                 </div> -->
+        <!--             </div> -->
+        <!--         </div> -->
+                <!-- Card full content -->
+        <!--         <div class="card v3-live-card-info"> -->
+        <!--             <div class="container-fluid v3-padding-0"> -->
+        <!--                 <div class="row col-xs-11 v3-margin-right-0 v3-auto-text-ellipsis-2 v3-live-card-details v3-live-card-details-title"> -->
+        <!--                   <span ng-if="!card.customName" class="card-detail" title="{{'v3.mynewworkspace.portlet.label.'+ card.name | translate}}"> -->
+        <!--                     bbbbbbb<b>{{'v3.mynewworkspace.portlet.label.'+ card.name | translate }}</b> -->
+        <!--                   </span> -->
+        <!--                   <span ng-if="card.customName" class="card-detail" -->
+        <!--                         title="{{(card.customNameTranslate !== undefined ? card.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(card.customName) | translateMessage"> -->
+        <!--                             ccccccc<b>{{(card.customNameTranslate !== undefined ? card.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(card.customName) | translateMessage }}</b> -->
+        <!--                   </span> -->
+        <!--                   <br/> -->
+        <!--                   <span ng-if="customName" class="card-detail" ng-repeat="customName in card.customNameArray" -->
+        <!--                         title="{{(customName.customNameTranslate !== undefined ? customName.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(customName.customName) | translateMessage"> -->
+        <!--                             dddddddddddd<b>{{$eval(customName.customName) == '' ? '' : ((customName.customNameTranslate !== undefined ? customName.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(customName.customName) | translateMessage)}}</b> -->
+        <!--                   </span> -->
+        <!--                 </div> -->
+        <!--                 <div ng-if="card.previewHtml == undefined" class="row v3-margin-right-0 v3-live-card-details" ng-repeat="fullsummary in card.preview"> -->
+        <!--                     <div class="col-xs-12 v3-padding-0 v3-live-card-preview-label"> -->
+        <!--                       <span title="label"> -->
+        <!--                        eeeeeee {{fullsummary.label | translate | trimtext:false:35:'..'}} -->
+        <!--                       </span> -->
+        <!--                     </div> -->
+        <!--                     <div class="col-xs-12 v3-padding-0 v3-live-card-preview-content"> -->
+        <!--                       <span title="{{fullsummary.uiElement | cardSummary}}"> -->
+        <!--                        fffffffffff {{fullsummary.uiElement | cardSummary | trimtext:false:35:'..'}} -->
+        <!--                       </span> -->
+        <!--                     </div> -->
+        <!--                 </div> -->
+        <!--                 <div ng-if="card.previewHtml != undefined" class="row v3-margin-right-0 v3-live-card-details"> -->
+        <!--                     <div class="col-xs-12 v3-padding-0" ng-include="resourceServerPath + 'view/workspaces/template/' + card.previewHtml"> -->
+        <!--                     </div> -->
+        <!--                 </div> -->
+        
+        <!--                 <div class="row v3-margin-right-0 v3-live-card-details" ng-if="card.isShowNoOfEmptyField == true"> -->
+        <!--                   <span>No. of empty field: {{card.view.FieldsInformation.NumEmptyRequiredFields}}</span> -->
+        <!--                 </div> -->
+        
+        <!--                 <h5 class="v3-live-card-details v3-live-card-details-footer" ng-if="card.cardType">                            -->
+        <!--                     <span class="side-icon-left"> -->
+        <!--                         <i class="fa fa-clock-o fa-2x"></i> -->
+        <!--                     </span> -->
+                            <!-- IUICV-1447 The time gets wrong hour for all tiles: Hide this time on card-->
+                            <!-- <span class="side-icon-right"
+                                  ng-hide="commonService.hasValueNotEmpty(card.refDetail.refType) && !commonService.hasValueNotEmpty(card.refDetail.refId)">
+                                {{commonUIService.getTimeAgo(card.root.refDetail.metaData.modifyDate.value)}}
+                            </span> -->
+        <!--                     <span class="side-icon-right" ng-if="card.view.icons.length > 0" > -->
+        <!--                         <span ng-repeat="icon in card.view.icons"> -->
+        <!--                             <span card-icon="icon" class="v3-card-icon-remove-hover" ng-if="icon.cssClass == 'v3-card-icon-remove'"> -->
+        <!--                             </span> -->
+        <!--                         </span> -->
+        <!--                     </span> -->
+        <!--                 </h5> -->
+        <!--             </div> -->
+        <!--         </div> -->
+        <!--         Card Title -->
+        <!--         <h5 class="v3-card-title v3-auto-text-ellipsis-2">   -->
+        <!--           <span ng-if="!card.customName" class="card-detail" title="{{'v3.mynewworkspace.portlet.label.'+ card.name| translate}}"> -->
+        <!--                gggggggggggg {{'v3.mynewworkspace.portlet.label.'+ card.name | translate}} -->
+        <!--           </span> -->
+        <!--           <span ng-if="card.customName" class="card-detail" -->
+        <!--                 title="{{(card.customNameTranslate !== undefined ? card.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(card.customName) | translateMessage}}"> -->
+        <!--                  hhhhhhhhhhhh   <b>{{(card.customNameTranslate !== undefined ? card.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(card.customName) | translateMessage }}</b> -->
+        <!--            </span> -->
+        <!--             <br/> -->
+        <!--            <span ng-if="customName" class="card-detail" ng-repeat="customName in card.customNameArray" -->
+        <!--                  title="{{(customName.customNameTranslate !== undefined ? customName.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(customName.customName) | translateMessage"> -->
+        <!--                     yyyyyyyyyyyyy <b>{{$eval(customName.customName) == '' ? '' : ((customName.customNameTranslate !== undefined ? customName.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(customName.customName) | translateMessage)}}</b> -->
+        <!--            </span> -->
+        <!--         </h5> -->
+            </div>
+        </div>
+    </div>
+        

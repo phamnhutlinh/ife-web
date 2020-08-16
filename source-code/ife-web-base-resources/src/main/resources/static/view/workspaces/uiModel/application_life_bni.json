@@ -1,0 +1,3304 @@
+{
+  "policyOwnerDetails": {
+    "proporserInformation": {
+      "person": {
+        "addresses": {
+          "value": [],
+          "arrayDefault": {
+            "addressType": {
+              "value": "NON-PRIMARY",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "typeCode": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "true",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "street": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "true",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "unitNo": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "true",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "buildingName": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "cityCode": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "stateCode": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "countryCode": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "true",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "postalCode": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "fullAddress": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "provinceCode": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "areaCode": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "houseNumber": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "true",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "prefered": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "underwritingDetailsOfProposer": {
+      "generalQuestion": {
+        "generalQ1b": {
+          "generalQ1bItems": {
+            "arrayDefault": {
+              "generalQ1bIncreaseKG": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ1bDecreaseKG": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "isIncrease": {
+                "value": "Increase",
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ1bReason": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQ1c": {
+          "generalQ1cListItems": {
+            "arrayDefault": {
+              "generalQ1cNameAndAddress": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ1cDateOrReason": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQuestion4": {
+          "generalQ4Items": {
+            "arrayDefault": {
+              "generalQ4KindOfDrugs": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ4SinceDate": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ4LastDate": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQuestion6": {
+          "generalQ6Item": {
+            "arrayDefault": {
+              "generalQ6FrequencyOrPeriod": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ6Location": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQuestion7": {
+          "generalQ7Items": {
+            "arrayDefault": {
+              "generalQ7When": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ7Where": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ7Duration": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQuestion8": {
+          "generalQ8Items": {
+            "arrayDefault": {
+              "generalQ8CompanyName": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ8Date": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ8PolicyNumber": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ8SumInsured": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "false",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ8Death": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ8CriticalIllness": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ8Accident": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQuestion9": {
+          "generalQ9Items": {
+            "arrayDefault": {
+              "generalQ9ProductName": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ9Date": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ9PolicyNumber": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ9SumInsured": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "false",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ9Death": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ9CriticalIllness": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ9Accident": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQuestion10": {
+          "generalQ10Items": {
+            "arrayDefault": {
+              "generalQ10CompanyName": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ10Date": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ10PolicyNumber": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ10SumInsured": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "false",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ10Death": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ10CriticalIllness": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ10Accident": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "reason": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQuestion12": {
+          "generalQ12Items": {
+            "arrayDefault": {
+              "generalQ12InsuredName": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ12Date": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ12InsuranceCompany": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ12Relationship": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "insuredFamilyInformationItem": {
+        "arrayDefault": {
+          "familyQKey": {
+            "value": null,
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "amount": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "aliveAge": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "aliveDiabetes": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "aliveHypertension": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "aliveHeartOrStroke": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "aliveTumorOrCancer": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "aliveHealthCondition": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "deathAge": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "deathCauseOfDeath": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          }
+        }
+      }
+    }
+  },
+  "lifeAssuredDetails": {
+    "proporserInformation": {
+      "person": {
+        "addresses": {
+          "value": [],
+          "arrayDefault": {
+            "addressType": {
+              "value": "NON-PRIMARY",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "typeCode": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "true",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "street": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "true",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "unitNo": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "true",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "buildingName": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "cityCode": {
+              "value": "Singapore",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "stateCode": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "countryCode": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "true",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "postalCode": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "fullAddress": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "provinceCode": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "areaCode": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "houseNumber": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "true",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            },
+            "prefered": {
+              "value": "",
+              "meta": {
+                "encryptAlgo": "",
+                "dataMinValue": "",
+                "visible": "true",
+                "errorDesc": "",
+                "editable": "",
+                "dataFormat": "",
+                "dataType": "",
+                "errorCode": "",
+                "dataMinLength": "",
+                "mandatory": "false",
+                "dataMaxValue": "",
+                "dataSeq": "",
+                "dataGroup": "",
+                "captionDesc": "",
+                "enable": "true",
+                "encrypt": "",
+                "captionCode": "",
+                "dataMaxLength": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "underwritingDetailsOfProposer": {
+      "generalQuestion": {
+        "generalQ1b": {
+          "generalQ1bItems": {
+            "arrayDefault": {
+              "generalQ1bIncreaseKG": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ1bDecreaseKG": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "isIncrease": {
+                "value": "Increase",
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ1bReason": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQ1c": {
+          "generalQ1cListItems": {
+            "arrayDefault": {
+              "generalQ1cNameAndAddress": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ1cDateOrReason": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQuestion4": {
+          "generalQ4Items": {
+            "arrayDefault": {
+              "generalQ4KindOfDrugs": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ4SinceDate": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ4LastDate": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQuestion6": {
+          "generalQ6Item": {
+            "arrayDefault": {
+              "generalQ6FrequencyOrPeriod": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ6Location": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQuestion7": {
+          "generalQ7Items": {
+            "arrayDefault": {
+              "generalQ7When": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ7Where": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ7Duration": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQuestion8": {
+          "generalQ8Items": {
+            "arrayDefault": {
+              "generalQ8CompanyName": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ8Date": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ8PolicyNumber": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ8SumInsured": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "false",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ8Death": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ8CriticalIllness": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ8Accident": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQuestion9": {
+          "generalQ9Items": {
+            "arrayDefault": {
+              "generalQ9ProductName": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ9Date": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ9PolicyNumber": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ9SumInsured": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "false",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ9Death": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ9CriticalIllness": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ9Accident": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQuestion10": {
+          "generalQ10Items": {
+            "arrayDefault": {
+              "generalQ10CompanyName": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ10Date": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ10PolicyNumber": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ10SumInsured": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "false",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ10Death": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ10CriticalIllness": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ10Accident": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "reason": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        },
+        "generalQuestion12": {
+          "generalQ12Items": {
+            "arrayDefault": {
+              "generalQ12InsuredName": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ12Date": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ12InsuranceCompany": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              },
+              "generalQ12Relationship": {
+                "value": null,
+                "meta": {
+                  "encryptAlgo": "",
+                  "dataMinValue": "",
+                  "visible": "false",
+                  "errorDesc": "",
+                  "editable": "",
+                  "dataFormat": "",
+                  "dataType": "",
+                  "errorCode": "",
+                  "dataMinLength": "",
+                  "mandatory": "true",
+                  "dataMaxValue": "",
+                  "dataSeq": "",
+                  "dataGroup": "",
+                  "captionDesc": "",
+                  "enable": "false",
+                  "encrypt": "",
+                  "captionCode": "",
+                  "dataMaxLength": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "insuredFamilyInformationItem": {
+        "arrayDefault": {
+          "familyQKey": {
+            "value": null,
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "amount": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "aliveAge": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "aliveDiabetes": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "aliveHypertension": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "aliveHeartOrStroke": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "aliveTumorOrCancer": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "aliveHealthCondition": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "deathAge": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          },
+          "deathCauseOfDeath": {
+            "value": "",
+            "meta": {
+              "encryptAlgo": "",
+              "dataMinValue": "",
+              "visible": "false",
+              "errorDesc": "",
+              "editable": "",
+              "dataFormat": "",
+              "dataType": "",
+              "errorCode": "",
+              "dataMinLength": "",
+              "mandatory": "false",
+              "dataMaxValue": "",
+              "dataSeq": "",
+              "dataGroup": "",
+              "captionDesc": "",
+              "enable": "false",
+              "encrypt": "",
+              "captionCode": "",
+              "dataMaxLength": ""
+            }
+          }
+        }
+      }
+    }
+  },
+  "beneficiaryItems": {
+    "value": [],
+    "arrayDefault": {
+      "beneficiaryDetailsFirstName": {
+        "value": "",
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "true",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "beneficiaryDetailsLastName": {
+        "value": "",
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "true",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "beneficiaryDetailsGender": {
+        "value": "",
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "true",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "beneficiaryDetailsIdType": {
+        "value": "",
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "true",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "beneficiaryDetailsIdNumber": {
+        "value": "",
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "true",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "beneficiaryDetailsDateOfBirth": {
+        "value": "",
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "true",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "beneficiaryDetailsRelationship": {
+        "value": "",
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "true",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "beneficiaryDetailsShare": {
+        "value": "",
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "true",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "beneficiaryDetailsContactFullName": {
+        "value": "",
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      }
+    }
+  }
+}

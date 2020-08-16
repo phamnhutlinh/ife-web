@@ -1,0 +1,218 @@
+<!--
+ 
+ //*******************************************************************************
+ // * Copyright (c) 2011-2014 CSC.
+ // * Copyright (C) 2010-2016 CSC - All rights reserved.
+ // *
+ // * The information contained in this document is the exclusive property of
+ // * CSC.  This work is protected under USA copyright law
+ // * and the copyright laws of given countries of origin and international
+ // * laws, treaties and/or conventions. No part of this document may be
+ // * reproduced or transmitted in any form or by any means, electronic or
+ // * mechanical including photocopying or by any informational storage or
+ // * retrieval system, unless as expressly permitted by CSC.
+ //
+ // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+ // ******************************************************************************
+ 
+ -->
+ 
+ <!-- Start Recommendations -->
+<div fieldId="case-management-base:ProductRecommendationsLebel" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="row v4-materialize-container">
+	<div class="col-xs-11 col-sm-12 col-md-11 v4-materialize-content-center">
+        <label class="label-section-bigger">{{'v3.mynewworkspace.portlet.label.fna.inside:ProductRecommendation' | translate}}</label>
+   	</div>
+   	</div>
+</div>
+ <div fieldId="case-management-base:ProductNameRider" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+ 	<div class="row v4-materialize-container">
+	 	<div class="col-xs-11 col-sm-12 col-md-11 v4-materialize-content-center">
+		     <label class="text-body">{{'v3.mynewworkspace.portlet.label.fna.inside:ProductName' | translate}}</label>
+			 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 tableIOS padding-left-0">
+		             <div class="input-field col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		             	<input id = "input_case-management-base_ProductNameRider" type="text" ng-disabled="true"
+		             	value="{{moduleService.findElementInDetail(['quotations', 'refBusinessStatus']).value === 'ACCEPTED' ? ('v3.mynewworkspace.portlet.label.ipos-product.' + uiElement.refDetail.value | translate) : ''}}"/>
+		             </div>
+		              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+		             	<div class="v3-margin-right-0 v4-margin-left-20">
+		             		<label class="input-field text-body label-a-detail">
+		            			<a id = "a_case-management-base_ProductNameRider" href="" ng-click="printBI()">{{'v3.mynewworkspace.portlet.label.fna.inside:ViewAcceptedBiDetail' | translate}}</a>
+		            		</label>
+		             	</div>
+		             </div>
+		     </div>
+		</div>	     
+	</div>
+ </div>
+ <div fieldId="case-management-base:Reason" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top:10px">
+	 <div class="row v4-materialize-container">
+	 <div class="col-xs-11 col-sm-12 col-md-12 v4-materialize-content-center">
+	   	 <label class="text-body">{{'v3.mynewworkspace.portlet.label.fna.inside:ReasonRiderRecommended' | translate}}
+	   	 <span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+	     <div class="input-field">
+	     	<textarea id = "case-management-base_Reason" ng-disabled="moduleService.freeze == true || uiElement.refDetail.meta.enable == false" type="text"
+	           maxlength="120" ng-model="uiElement.refDetail.value" class="materialize-textarea text-area-height"></textarea>
+	            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+	     </div>
+	</div> 
+	</div>    
+</div>
+<div fieldId="case-management-base:Benefit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top:10px">
+	<div class="row v4-materialize-container">
+	<div class="col-xs-11 col-sm-12 col-md-12 v4-materialize-content-center">
+	   	 <label class="text-body">{{'v3.mynewworkspace.portlet.label.fna.inside:BenefitsRiderRecommended' | translate}}
+	   	 <span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+	        <div class="input-field">
+	        	<textarea id = "case-management-base_Benefit" ng-disabled="moduleService.freeze == true || uiElement.refDetail.meta.enable == false" type="text"
+	              maxlength="120" ng-model="uiElement.refDetail.value" class="materialize-textarea text-area-height"></textarea>
+	               <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+	        </div>
+    </div>
+    </div>
+</div>
+<div fieldId="case-management-base:Limitation" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top:10px">
+	<div class="row v4-materialize-container">
+	<div class="col-xs-11 col-sm-12 col-md-12 v4-materialize-content-center">
+	   	 <label class="text-body">{{'v3.mynewworkspace.portlet.label.fna.inside:LimitationRiderRecommended' | translate}}
+	   	 <span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+	        <div class="input-field">
+	        	<textarea id = "case-management-base_Limitation" ng-disabled="moduleService.freeze == true || uiElement.refDetail.meta.enable == false" type="text"
+	              maxlength="120" ng-model="uiElement.refDetail.value" class="materialize-textarea text-area-height"></textarea>
+	               <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+	        </div>
+	</div>  
+	</div>      
+</div>  
+<!-- End Recommendations --> 
+
+<!-- Start Declaration -->
+<div fieldId="case-management-base:Label" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<label class="label-section-bigger">{{'v3.mynewworkspace.portlet.label.fna.inside:Declaration.FeatureBenefitsRisks' | translate}}</label>
+		</div>
+		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-sm-offset-8 col-md-offset-8 col-lg-offset-8">
+			<label class="text-body">
+				{{moduleService.findElementInDetail(['fnaInside', 'summary', 'clientName']).value}}
+			</label>
+		</div>
+		<div class="col-xs-6 col-sm-3 col-md-2 col-lg-2 text-center">
+			<label class="label-field">
+				<b>{{moduleService.findElementInDetail(['fnaInside', 'summary', 'jointName']).value}}</b>
+			</label>
+		</div>
+	</div>
+</div>
+	<!-- Q1 -->
+<div fieldId="case-management-base:Q1" class="row v4-materialize-container border-bottom padding-bottom-30">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div ng-repeat="clientQuestion in uiElement.refDetail.client.value track by $index">
+			<div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+				<div class="margin-bottom-10">
+					<label class="text-body">{{'v3.mynewworkspace.fna.question:Declaration1.' + clientQuestion.key.value | translate}}
+					<span ng-show="clientQuestion.value.meta.mandatory == 'true'">*</span></label>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+		   		<v3-switch-new-slide ng-attr-id="{{ 'switch1_case-management-base_Q1_' + $index }}" switch-size="" switch-name="question1" prefix="v4.yesno.enum"
+		   			switch-model="clientQuestion.value.value" 
+		   			switch-default-value="" switch-disabled="false"
+		   			switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList, ['YesNo'])">
+		   		</v3-switch-new-slide>
+		   		<span class="errorMessage" ng-bind="clientQuestion.value.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-3 col-md-2 col-lg-2"  ng-if="hasValueNotEmpty(moduleService.findElementInDetail(['fnaInside', 'summary', 'jointName']).value)">
+			<div ng-repeat="jointQuestion in uiElement.refDetail.joint.value track by $index">
+		   		<v3-switch-new-slide ng-attr-id="{{ 'switch2_case-management-base_Q1_' + $index }}" switch-size="" switch-name="question2" prefix="v4.yesno.enum"
+		   			switch-model="jointQuestion.value.value" 
+		   			switch-default-value="" switch-disabled="false"
+		   			switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList, ['YesNo'])">
+		   		</v3-switch-new-slide>
+		   		<span class="errorMessage" ng-bind="jointQuestion.value.meta.errorCode | translate"></span>
+		   	</div>
+	</div>
+</div>
+
+	<!-- Q2 -->
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 buy-online">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+				<label class="label-section-bigger">{{'v3.mynewworkspace.portlet.label.fna.inside:Declaration.BenefitIllustration' | translate}}</label>
+		</div>
+	</div>
+</div>
+<div fieldId="case-management-base:Q2" class="row v4-materialize-container border-bottom padding-bottom-30"> 
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div ng-repeat="clientQuestion in uiElement.refDetail.client.value track by $index">
+			<div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+				<div class="margin-bottom-10">
+					<label class="text-body">{{'v3.mynewworkspace.fna.question:Declaration2.' + clientQuestion.key.value | translate}}
+					<span ng-show="clientQuestion.value.meta.mandatory == 'true'">*</span></label>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+		   		<v3-switch-new-slide ng-attr-id="{{ 'switch1_case-management-base_Q2_' + $index }}" switch-size="" switch-name="question1" prefix="v4.yesno.enum"
+		   			switch-model="clientQuestion.value.value" 
+		   			switch-default-value="" switch-disabled="false"
+		   			switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList, ['YesNo'])">
+		   		</v3-switch-new-slide>
+		   		<span class="errorMessage" ng-bind="clientQuestion.value.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-3 col-md-2 col-lg-2" ng-if="hasValueNotEmpty(moduleService.findElementInDetail(['fnaInside', 'summary', 'jointName']).value)">
+			<div ng-repeat="jointQuestion in uiElement.refDetail.joint.value track by $index">
+		   		<v3-switch-new-slide ng-attr-id="{{ 'switch2_case-management-base_Q2_' + $index }}" switch-size="" switch-name="question2" prefix="v4.yesno.enum"
+		   			switch-model="jointQuestion.value.value" 
+		   			switch-default-value="" switch-disabled="false"
+		   			switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList, ['YesNo'])">
+		   		</v3-switch-new-slide>
+		   		<span class="errorMessage" ng-bind="jointQuestion.value.meta.errorCode | translate"></span>
+			</div>
+	</div>
+</div>	
+	
+	<!-- Q3 -->
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="row v4-materialize-container">
+			<div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+					<label class="label-section-bigger">{{'v3.mynewworkspace.portlet.label.fna.inside:Declaration.PolicyOwnerRights' | translate}}</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div fieldId="case-management-base:Q3" class="row v4-materialize-container border-bottom padding-bottom-30">		
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div ng-repeat="clientQuestion in uiElement.refDetail.client.value track by $index">
+				<div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+					<div class="margin-bottom-10">
+						<label class="text-body">{{'v3.mynewworkspace.fna.question:Declaration3.' + clientQuestion.key.value | translate}}
+						<span ng-show="clientQuestion.value.meta.mandatory == 'true'">*</span></label>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+			   		<v3-switch-new-slide  ng-attr-id="{{ 'switch1_case-management-base_Q3_' + $index }}" switch-size="" switch-name="question1" prefix="v4.yesno.enum"
+			   			switch-model="clientQuestion.value.value" 
+			   			switch-default-value="" switch-disabled="false"
+			   			switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList, ['YesNo'])">
+			   		</v3-switch-new-slide>
+			   		<span class="errorMessage" ng-bind="clientQuestion.value.meta.errorCode | translate"></span>
+				</div>
+			</div>
+		</div>	
+		<div class="col-xs-6 col-sm-3 col-md-2 col-lg-2" ng-if="hasValueNotEmpty(moduleService.findElementInDetail(['fnaInside', 'summary', 'jointName']).value)">
+	   		<div ng-repeat="jointQuestion in uiElement.refDetail.joint.value track by $index">
+		   		<v3-switch-new-slide ng-attr-id="{{ 'switch2_case-management-base_Q3_' + $index }}" switch-size="" switch-name="question2" prefix="v4.yesno.enum"
+		   			switch-model="jointQuestion.value.value" 
+		   			switch-default-value="" switch-disabled="false"
+		   			switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList, ['YesNo'])">
+		   		</v3-switch-new-slide>
+		   		<span class="errorMessage" ng-bind="jointQuestion.value.meta.errorCode | translate"></span>
+			</div>
+		</div>
+	</div>
+<!-- End Declaration -->
+ 

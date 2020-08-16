@@ -1,0 +1,112 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div class="row" ng-init="selectedDashboard = 'my-new-contact'">
+
+	<!-- <div class="row col-xs-12 col-md-12">
+			<ul class="tabs">
+				<li class="tab">
+					<a id="my-new-quotation" class="active" ng-click="selectTab('my-new-contact')">
+						<div class="col-xs-2 fa fa-suitcase fa-2x"></div>
+						<div class="col-xs-10">
+							<p class="tab-title">{{'v3.dashboardportlet.portlet.label.my-new-contact' | translate}}</p>
+							<p class="tab-summary">{{'v3.dashboardportlet.label.TotalRecords' | translate}}: <total-records
+								class="tab-summary"
+								doc-type="contact"
+								query="{{[{
+								fields: ['metaData.ownerName'],
+								values: [ownerName]
+							}, {
+								fields: ['metaData.businessStatus'],
+								values: [
+									commonService.CONSTANTS.BUSINESS_STATUS.DR									
+								]
+							}]}}" /></p>
+						</div>
+					</a>
+				</li>							
+			</ul>
+		</div> -->
+
+	<div class="col-xs-11 v4-prototype-centerBlock v3-padding-0 card">
+		<div class="row col-xs-11 col-md-11 "
+			style="margin-top: 20px; margin-left: -5px; margin-bottom: 25px">
+			<div class=" row col-xs-4 col-md-4 v3-margin-auto">
+				<div class="col-xs-10 col-md-10 col-sm-10 col-lg-10 label-field-sumary label-dasboard">
+					<div id="my-new-contact"
+						ng-click="selectTab('my-new-contact')">
+						<p class="tab-title" style="margin-top: 14px; margin-bottom: 0px">{{'v3.dashboardportlet.portlet.label.my-new-contact'
+							| translate}}</p>
+						<label class="label-section-bigger"><total-records
+								class="tab-summary" doc-type="contact"
+								query="{{[{
+								fields: ['metaData.ownerName'],
+								values: [ownerName]
+							}, {
+								fields: ['metaData.businessStatus'],
+								values: [
+									commonService.CONSTANTS.BUSINESS_STATUS.DR									
+								]
+								}]}}" /></label>
+					</div>
+				</div>
+				<!-- start to create button to add -->
+				<div class="col-xs-2 col-md-2 col-sm-2 col-lg-2 add-new-button no-left-padding no-right-padding">
+					<i ng-click="showListNewDocumentOptionDlg($event,'contact')"
+						class="pointer fa fa-plus" tooltips
+						tooltip-title="Add New" tooltip-side="top" tooltip-size="medium"></i>
+				</div>
+				<!-- end -->
+			</div>
+		</div>
+	</div>
+	<div class="row col-xs-12 col-md-12">
+		<div class="tab-content"
+			ng-if="selectedDashboard === 'my-new-contact'">
+			<div class="listViewContainer container-fluid v3-padding-0">
+				<div class="row v3-margin-auto">
+					<document-list-view datalist="contactList" doctype="contact"
+						isdashboard ="true"
+						listtitle="my-new-contact" isloadlist="isLoadList"
+						dashboarddoctype="dashboardDoctype"
+						defaultquery="{{[{
+								fields: ['metaData.ownerName'],
+								values: [ownerName]
+							}, {
+								fields: ['metaData.businessStatus'],
+								values: [
+									commonService.CONSTANTS.BUSINESS_STATUS.DR
+								]
+							}]}}"
+						searchcriteria="[
+								'personInformation.person.contacts.handPhone',
+								'personInformation.person.contacts.email',
+								'personInformation.person.basic.name.full',
+								'personInformation.person.basic.name.full.search',
+								'corporateInformation.basicInformation.corporateName',
+								'corporateInformation.basicInformation.corporateName.search',
+								'corporateInformation.contacts.corpEmail',
+								'corporateInformation.contacts.mainLinePhone'
+							]"
+						lazy-choice-list="moduleService.lazyChoiceList" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-11-12T14:20:55 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FFNA_Inside" language="groovy" pageWidth="652" pageHeight="899" columnWidth="596" leftMargin="28" rightMargin="28" topMargin="28" bottomMargin="28" uuid="ff8dab19-8960-4b31-811a-c974f3a1fa6c">
+	<property name="ireport.zoom" value="1.4641000000000974"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="458"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="fna"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Text_blue_Aviva" forecolor="#004FB6" fontName="Arial" fontSize="8"/>
+	<style name="Box_Aviva" forecolor="#333333" fontName="Arial" fontSize="8">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<leftPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<bottomPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<rightPen lineWidth="0.5" lineColor="#D0D6E7"/>
+		</box>
+	</style>
+	<style name="Text_black_Aviva" forecolor="#333333" fontName="Arial" fontSize="6"/>
+	<style name="Background_title" backcolor="#EEF2FC" fontName="Arial"/>
+	<style name="Box_Aviva_Blue" fontName="Arial">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#004FB6"/>
+			<leftPen lineWidth="0.5" lineColor="#004FB6"/>
+			<bottomPen lineWidth="0.5" lineColor="#004FB6"/>
+			<rightPen lineWidth="0.5" lineColor="#004FB6"/>
+		</box>
+	</style>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hTextAlign="Center" hImageAlign="Center"/>
+	<subDataset name="Table Dataset 1" uuid="c9cb49bb-305a-4aff-9138-c023a7866d9e"/>
+	<subDataset name="New Dataset 1" uuid="8245faae-0e27-4068-be56-bfbb265a3051"/>
+	<subDataset name="Table Dataset 2" uuid="80cd41bc-36f3-4b7e-9dbf-5c0a9ce60b62"/>
+	<subDataset name="Table Dataset 3" uuid="b65a9407-6181-40a1-ad7a-508725bbbb7d"/>
+	<subDataset name="Table Dataset 4" uuid="553bb0fa-0400-4e03-91f9-f5f0f04193b9"/>
+	<parameter name="BASE_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NumberFormatter" class="java.text.NumberFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new java.text.DecimalFormat("#,###.##")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_DATETIME_FORMATTER" class="java.text.DateFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy hh:mm")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOB_FORMATTER" class="java.text.DateFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_NUMBER_FORMATTER" class="java.text.NumberFormat">
+		<defaultValueExpression><![CDATA[new java.text.DecimalFormat("#,##0.##")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGES_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/images/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_FORMAT_YEAR" class="java.text.DateFormat">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("yyyy")]]></defaultValueExpression>
+	</parameter>
+	<queryString language="jsonql">
+		<![CDATA[]]>
+	</queryString>
+	<field name="fnaStandardSummaryModel_Client1_fullname" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].personal.basic.name.full.value]]></fieldDescription>
+	</field>
+	<field name="fnaStandardSummaryModel_Client2_fullname" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[1].personal.basic.name.full.value]]></fieldDescription>
+	</field>
+	<field name="fnaStandardSummaryModel_createDate" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.createDate.value]]></fieldDescription>
+	</field>
+	<title>
+		<band height="824" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="596" height="814" uuid="0d89abc5-13d1-4b16-b939-e6e7bc995d8c"/>
+				<imageExpression><![CDATA[$P{IMAGES_DIR} + "background_1.jpg"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement mode="Opaque" x="203" y="584" width="257" height="17" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="cb048622-fa41-4098-b3fd-01712d23afb9">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textField>
+					<reportElement style="Text_blue_Aviva" x="0" y="0" width="257" height="17" uuid="86ff5a7b-11ee-4f0e-b59d-b958648418c9"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fnaStandardSummaryModel_Client2_fullname} != null ? $F{fnaStandardSummaryModel_Client2_fullname} : ""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="203" y="564" width="257" height="17" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="92708797-f57c-4213-9168-8af648285855">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textField>
+					<reportElement style="Text_blue_Aviva" x="0" y="0" width="257" height="17" uuid="95e09b2b-c40f-47c6-bb30-066908fcd239"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fnaStandardSummaryModel_Client1_fullname} != null ? $F{fnaStandardSummaryModel_Client1_fullname} :""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="203" y="618" width="257" height="17" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="25400241-5b33-4997-90a9-7c4bc2e1df79">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textField>
+					<reportElement style="Text_blue_Aviva" x="0" y="0" width="257" height="17" uuid="086c6ceb-cd12-4fbb-a0d9-d67e80ff5db5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fnaStandardSummaryModel_createDate} != null ?$F{fnaStandardSummaryModel_createDate}: ""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="203" y="651" width="257" height="17" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="73c98c66-7467-4879-858c-58c3a16f7080">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textField>
+					<reportElement style="Text_blue_Aviva" x="0" y="0" width="257" height="17" uuid="988f2c18-5fc2-421c-9f4c-266a5bcb28c4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="203" y="672" width="257" height="17" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="a978b1fd-6d68-4aac-831c-351e6e4a2746">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textField>
+					<reportElement style="Text_blue_Aviva" x="0" y="0" width="257" height="17" uuid="2669aa7b-d759-4ad3-b8e3-39d75a623e36"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="203" y="693" width="257" height="17" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="ec1042ac-22f4-4f15-9bc1-699c83864927">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textField>
+					<reportElement style="Text_blue_Aviva" x="0" y="0" width="257" height="17" uuid="8712a9d8-ea65-4a70-b3b2-47f91096ea9c"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="203" y="712" width="257" height="17" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="1d7acd4b-b58a-4cf5-8da9-f808fcad0308">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textField>
+					<reportElement style="Text_blue_Aviva" x="0" y="0" width="257" height="17" uuid="ce7af893-5351-434a-bbbf-44b81bcdc4ca"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="110" y="564" width="80" height="17" uuid="025f13ce-306c-4cf0-82a5-ac53456d337d">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Name of Client 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="110" y="584" width="80" height="17" uuid="b51a1003-4ee0-4f6c-9726-e4fa42b2be9a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Name of Client 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="110" y="618" width="80" height="17" uuid="522546fc-aaf6-425d-988b-bea7c1f1daec"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Date of Review]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="110" y="647" width="90" height="25" uuid="eab469bd-c695-468d-92e9-09620f7bc63b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Name of Aviva Financial
+Adviser Representative]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="110" y="672" width="90" height="17" uuid="c39d7059-b1fe-4816-b679-cfbd4c90bf8a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[MAS Representative No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="110" y="693" width="90" height="17" uuid="7ff214e5-6c72-4edd-97d0-fe4f1fad358a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Agent Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="110" y="712" width="90" height="17" uuid="5ba64c6f-2272-48d7-a9f7-14d00cb70901"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Handphone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="142" y="515" width="312" height="15" uuid="1901e91e-b002-43fa-8340-515cfe1b8bb0">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[All information collected in this financial review will be held in strict confidence]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="114" y="194" width="368" height="78" uuid="fb84bcdd-7fe6-4c09-8648-d3e30f2da068"/>
+				<textElement>
+					<font fontName="Arial" size="66" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SAPPHIRE.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="114" y="277" width="368" height="40" uuid="7b66a22c-ad4a-462e-bf13-7d1cd7f511e2"/>
+				<textElement>
+					<font fontName="Arial" size="15"/>
+				</textElement>
+				<text><![CDATA[Many facets of life.
+One cutting edge solution for all your financial needs.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="189" y="564" width="14" height="17" uuid="9347710b-6c33-4746-8ba1-e618816cff23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="189" y="584" width="14" height="17" uuid="1935ff35-85b2-42ec-8655-2c0b231e2bc6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="189" y="618" width="14" height="17" uuid="ab0915d4-6dad-4360-a1c7-d663d73bca68">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="189" y="651" width="14" height="17" forecolor="#3341FF" uuid="1e7a6b37-5b8d-4290-bb1f-8f3a6f62e731">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="189" y="672" width="14" height="17" forecolor="#3341FF" uuid="75998f05-d89f-4cab-8a53-2adbfe39f340">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="189" y="693" width="14" height="17" forecolor="#3341FF" uuid="6caa8970-b3a1-450c-95c0-13ff3bd04127">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="189" y="712" width="14" height="17" forecolor="#3341FF" uuid="181379ca-07a5-49f8-9e9d-742671b80640">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_blue_Aviva" x="16" y="798" width="72" height="10" uuid="7eae2833-b878-4958-ac50-31f7da5d6bbb"/>
+				<textElement>
+					<font fontName="Arial" size="4"/>
+				</textElement>
+				<text><![CDATA[Personal Finanacial Record_AFA_v1.0]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Text_blue_Aviva" x="88" y="798" width="31" height="10" uuid="88351277-d991-4f46-8279-5461b34ac504"/>
+				<textElement>
+					<font fontName="Arial" size="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="426" y="46" width="131" height="132" uuid="9354a6db-a3b1-4110-a149-36f220a1337f">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{IMAGES_DIR} + "AFA_logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="426" height="9" forecolor="#025BAF" uuid="fc18a825-0746-4c6b-8cc7-fe0e6ec587fb"/>
+				<textElement markup="html">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<text><![CDATA[<b>Aviva Financial Advisers Pte Ltd<b>  51 Cuppage Road, #03-08/09/10, Singapore 229469 • T: +65 6827 7988 • Website: www.avivafa.com.sg ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="426" height="9" forecolor="#025BAF" uuid="eeab5904-3f4f-48ba-b9c6-20316ffbda00"/>
+				<textElement markup="html">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<text><![CDATA[Company Reg No. 200005578H]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="1" width="40" height="18" uuid="02a84e3d-7e67-417f-ac90-9462b9789aa1"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="470" y="1" width="37" height="18" uuid="e2740f95-f7a9-4e37-9be5-02041b52d750"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

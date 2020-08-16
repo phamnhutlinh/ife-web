@@ -1,0 +1,17 @@
+<div class="v3-padding-0">
+   <!-- group section name -->
+	<div class="row v3-margin-top-10 v3-auto-text-ellipsis-2">
+          <span ng-if="!card.customName" class="v4-section-header-title" title="{{'v3.mynewworkspace.portlet.label.'+ card.name | translate}}">
+            <b>{{'v3.mynewworkspace.portlet.label.'+ card.name | translate }}</b>
+          </span>
+          <span ng-if="card.customName" class="v4-section-header-title"
+                title="{{(card.customNameTranslate !== undefined ? card.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(card.customName) | translateMessage">
+                    <b>{{(card.customNameTranslate !== undefined ? card.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(card.customName) | translateMessage }}</b>
+          </span>
+     </div>
+     
+     <!-- section content -->
+     <div class="row v3-margin-top-10" >
+       <ui-section-content class="documentList" ng-repeat="card in card.children track by $index" when-click="chooseGroupSection(card, groupLevel, groupIndex, $index, clickEvent)"/>
+    </div>
+</div>

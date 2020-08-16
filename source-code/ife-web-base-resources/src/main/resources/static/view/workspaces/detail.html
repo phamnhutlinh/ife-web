@@ -1,0 +1,88 @@
+<!--
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<aside click-outside style="width:200px" ng-if="showSummaryIcon(stateParams.current.name)" class="navigation-side navigation-side-left md-whiteframe-z1 v4-prototype-summaryBar-container v4-prototype-summaryBar" ng-class="uiFrameworkService.isSummaryLeft ? 'navigation-side-show':'navigation-side-left-hide'">
+   	<div style="margin-top:50px" ng-if="currenSummaryTemplate">
+   		<ng-include src="resourceServerPath  + 'view/templates/sidebar/' + currenSummaryTemplate"></ng-include>
+   	</div>
+    <div class="v4-prototype-side-summary-button" ng-click="uiFrameworkService.isSummaryLeft==false? getSummary(): ''; hideAllNavigationSide()"><i class="childsidebarSum fa fa-2x fa-list-ol" aria-hidden="true"></i></div>
+	<div class="v4-prototype-summaryBar-footer">{{v4.footer.text | translate}}</div>
+</aside>
+
+<!-- <div ng-show="uiFrameworkService.isSummaryLeft" class="navigation-side-mask" ng-click="hideAllNavigationSide()"> -->
+<!-- </div> -->
+
+
+<div ng-cloak class="container-fluid" id="newWorkspace" ng-if="!commonService.options.isShowLeftSideBar">
+
+	<!-- ACTION BARS -->
+<!-- 	<a class="fa fa-arrow-circle-o-left fa-2x hamberger-button v4-goBack-button" ng-click="goBack()" ng-hide="true"></a> -->
+    <div class="common-menu">    	
+        <action-bar></action-bar>
+    </div>
+    
+    <!-- DETAILS -->
+    <div class="row-fluid">
+        <!-- End breadcrum for desktop -->
+        <div class="col-sm-11 col-md-10" id="containerRight">
+            <div ng-click="toggleAllBar()" class="row v3-container-wrapper">
+            	<div class="v4-detail-title" id="v4-title-bar"></div>
+                <div class="col-xs-12">
+                     <ui-group-section ng-if="viewProp.uiStyle == 'groupsecs' && viewProp.viewObject[0].length > 0"></ui-group-section>
+                     <ui-section ng-if="viewProp.uiStyle == 'section' && viewProp.viewObject[0].length > 0"></ui-section> 
+                     <ui-tab level="0" ng-if="viewProp.uiStyle == 'tab' && viewProp.viewObject[0].length > 0"></ui-tab>
+                     <card ng-if="viewProp.uiStyle == 'card'" class="documentList" ng-repeat="card in viewProp.viewObject[0] track by $index" level="0" when-click="chooseCard(card, 0, $index, clickEvent)"></card> 
+                </div>
+                <div ng-init="selectStep(viewProp)" class="col-xs-12" layout="row" ng-if="viewProp.layoutStyle == 'sec'">
+                    <step-card ng-if="viewProp.initStep != undefined" ng-init="moveToSection(true, card, undefined, viewProp.initStep)" flex class="documentList" ng-repeat="card in viewProp.viewObject[0] track by $index" level="0" when-click="chooseCard(card, 0, $index, clickEvent)"></step-card>
+                </div>
+                <div class="col-xs-12" layout="row" ng-if="viewProp.layoutStyle == 'sec'">
+                    <div class="col-xs-12 col-md-12 col-md-9 col-lg-9 v3-padding-0">
+                        <div class="section-column" id="section-column"></div>
+                        <div class="section-column1" id="section-column1"></div>
+                        <bottom-pannel></bottom-pannel>
+                    </div>
+                    <div class="hidden-xs hidden-sm col-md-3 col-lg-3 information-section" id="sec-side" style="padding-left: 0px; padding-right: 0px">
+                        <side-pannel></side-pannel>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <ui-element ng-repeat="uiElement in viewProp.viewUiEles track by $index" />
+                </div>
+                <div class="col-xs-12 animated zoomIn {{card.name}}" ng-show="showProduct">
+                    <card ng-repeat="card in products track by $index" when-click="createCase(card.name)" class="productList"></card>
+                </div>
+                <div class="col-xs-12 animated zoomIn {{card.name}}" ng-show="showContact">
+                    <card ng-repeat="card in contacts track by $index" when-click="createContact(card.name)"></card>
+                </div>
+                <div ng-if="fileReaderService.isReader && !fileReaderService.isSafariDevice && !fileReaderService.isShowIPOSEsignature" ng-include="resourceServerPath+'view/templates/fileReader/fileReader.html'">
+                </div>
+                <div ng-if="resourceReaderService.isReader && !fileReaderService.isSafariDevice" ng-include="resourceServerPath+'view/templates/fileReader/fileReader_V4.html'">
+                </div>
+                <div ng-if="fileReaderService.isReader && !fileReaderService.isSafariDevice && fileReaderService.isShowIPOSEsignature" ng-include="resourceServerPath+'view/templates/fileReader/fileReader_Signature.html'">
+                </div>
+                <div ng-if="isUploadDS" ng-include src="contextPathTheme + '/view/myNewWorkspace/template/fileUpload.html'" style="width:100%">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button class="v4-fab-scrolltop md-fab md-primary md-button md-fab-bottom-right md-button md-ink-ripple" ng-click="scrollTop(0)">
+	<i class="pointer fa fa-angle-double-up"></i>
+</button>
+ 
+ 

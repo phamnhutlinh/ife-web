@@ -1,0 +1,40 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<md-fab-speed-dial md-direction="down" class="md-scale">
+    <md-fab-trigger class="margin-top-20-sm">
+        <md-button aria-label="menu" class="md-fab md-primary" id="trigger">
+            <i class="fa fa-bars"></i>
+        </md-button>
+    </md-fab-trigger>
+    <md-fab-actions>
+        <md-button class="md-fab md-raised md-mini" 
+        			id="Save"
+                   ng-click="saveDetail(true)">
+            <md-tooltip md-direction="left">{{'new.v4.mynewworkspace.actionbar.label.Save' | translate}}</md-tooltip>
+            <i class="fa fa-database"></i>
+        </md-button>
+        <md-button class="md-fab md-raised md-mini"
+                   ng-click="presubmit()"
+                   ng-disabled="checkEnaleSubmitCaseLife()">
+            <md-tooltip md-direction="left">{{'v4.workspace.button.submit' | translate}}</md-tooltip>
+            <i class="fa fa-paper-plane"></i>
+        </md-button>
+    </md-fab-actions>
+</md-fab-speed-dial>

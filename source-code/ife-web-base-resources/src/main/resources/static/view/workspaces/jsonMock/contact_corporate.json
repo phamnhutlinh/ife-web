@@ -1,0 +1,187 @@
+{
+  "IposDocument": {
+    "Data": {
+      "corporate:Prospect": {
+        "permission": {
+          "openable": [
+            "contact_openable"
+          ],
+          "editable": [
+            "contact_editable"
+          ],
+          "viewable": [
+            "contact_viewable"
+          ]
+        },
+        "key": [
+          ""
+        ],
+        "section": "corporate:Prospect",
+        "icon": "fa fa-user",
+        "cssClass": "v3-box-2",
+        "corporate:BasicInformation": {
+          "key": [
+            "corporateInformation",
+            "basicInformation"
+          ],
+          "section": "corporate:Prospect",
+          "icon": "fa fa-user",
+          "cssClass": "v3-box-1",
+          "corporate:CorporateName": {
+            "key": [
+              "corporateName"
+            ],
+            "group": "1"
+          },
+          "corporate:CompanyRegistrationNumber": {
+            "key": [
+              "companyRegistrationNumber"
+            ],
+            "group": "1"
+          },
+          "corporate:PersonInCharge": {
+            "key": [
+              "personInCharge"
+            ],
+            "group": "2"
+          },
+          "corporate:Subsidiaries": {
+            "key": [
+              "subsidiaries"
+            ],
+            "group": "2"
+          },
+          "corporate:CountryOfOrigin": {
+            "key": [
+              "countryOfOrigin"
+            ],
+            "group": "3"
+          },
+          "corporate:S/TaxApplicable": {
+            "key": [
+              "staxApplicable"
+            ],
+            "group": "3"
+          },
+          "corporate:Industry": {
+            "key": [
+              "corporateInformation",
+              "industry"
+            ],
+            "group": "4"
+          },
+          "corporate:ClientStatus": {
+            "key": [
+              "clientStatus"
+            ],
+            "group": "4"
+          },
+          "corporate:DateOfIncorporate": {
+            "key": [
+              "dateOfIncorporate1"
+            ],
+            "group": "4"
+          }
+        },
+        "corporate:Contact": {
+          "key": [
+            "corporateInformation",
+            "contacts"
+          ],
+          "section": "corporate:Prospect",
+          "icon": "fa fa-phone-square",
+          "cssClass": "v3-box-1",
+          "corporate:CorporateWebURL": {
+            "key": [
+              "webSite"
+            ],
+            "group": "1"
+          },
+          "corporate:Email": {
+            "key": [
+              "corpEmail"
+            ],
+            "group": "2"
+          },
+          "corporate:Telephone": {
+            "key": [
+              "mainLinePhone"
+            ],
+            "group": "2"
+          },
+          "corporate:Mobilephone": {
+            "key": [
+              "mobilePhone"
+            ],
+            "group": "3"
+          },
+          "corporate:FasimileNo": {
+            "key": [
+              "fasimileNo"
+            ],
+            "group": "3"
+          }
+        },
+        "corporate:Address": {
+          "key": [
+            "corporateInformation"
+          ],
+          "section": "corporate:Prospect",
+          "icon": "fa fa-address-card",
+          "cssClass": "v3-box-1",
+          "corporate:Addressgroup": {
+            "key": [
+              "corporateInformation",
+              "addresses"
+            ]
+          }
+        },
+        "corporate:OtherInformation": {
+          "key": [
+            "corporateInformation",
+            "corporateOtherInfo"
+          ],
+          "section": "corporate:Prospect",
+          "icon": "fa fa-info",
+          "cssClass": "v3-box-1",
+          "corporate:GSTRegNumber": {
+            "key": [
+              "gstNumber"
+            ],
+            "group": "1"
+          },
+          "corporate:AuthorizedCapital": {
+            "key": [
+              "authorizedCapital"
+            ],
+            "group": "1"
+          },
+          "corporate:Category": {
+            "key": [
+              "category"
+            ],
+            "group": "2"
+          },
+          "corporate:FreeTradeZone": {
+            "key": [
+              "freeTradeZone"
+            ],
+            "group": "2"
+          },
+          "corporate:ClientNumber": {
+            "key": [
+              "clientNumber"
+            ],
+            "group": "3"
+          },
+          "corporate:SourceNumber": {
+            "key": [
+              "sourceNumber"
+            ],
+            "group": "3"
+          }
+        }
+      }
+    }
+  }
+}

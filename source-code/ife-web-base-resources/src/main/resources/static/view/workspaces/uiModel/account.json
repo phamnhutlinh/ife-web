@@ -1,0 +1,75 @@
+{
+  "profile": {
+    "insurerProfiles": {
+      "meta": {
+        "counter": "1",
+        "defaultOccurs": "",
+        "minOccurs": "1",
+        "maxOccurs": "",
+        "errorCode": null
+      },
+      "value": [],
+      "arrayDefault": {
+        "insurerId": {
+          "value": null,
+          "meta": {}
+        },
+        "insurerName": {
+          "value": null,
+          "meta": {}
+        },
+        "pasType": {
+          "value": null,
+          "meta": {}
+        },
+        "pasId": {
+          "value": null,
+          "meta": {}
+        },
+         "customerId": {
+          "value": null,
+          "meta": {}
+        },
+        "role": {
+          "value": null,
+          "meta": {}
+        },
+        "dobPolicyHolder": {
+          "value": null,
+          "meta": {}
+        },
+        "effectiveDate": {
+          "value": null,
+          "meta": {}
+        },
+        "nric": {
+          "value": null,
+          "meta": {}
+        },
+        "underwritingLevel": {
+          "value": null,
+          "meta": {}
+        },
+        "sumInsured": {
+          "value": null,
+          "meta": {}
+        }
+      }
+    },
+    "roles": {
+      "meta": {
+        "counter": "1",
+        "defaultOccurs": "",
+        "minOccurs": "1",
+        "maxOccurs": "",
+        "errorCode": null
+      },
+      "value": [],
+      "arrayDefault": {}
+    }
+  },
+  "addresses": {
+    "value": [],
+    "arrayDefault": ""
+  }
+}

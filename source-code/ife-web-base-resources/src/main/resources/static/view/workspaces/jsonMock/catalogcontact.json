@@ -1,0 +1,47 @@
+{
+  "IposDocument": {
+    "Data": {
+      "ipos-product:BusinessCatalogModule": {
+        "section": "ipos-product:BusinessCatalogModule",
+        "permission": {
+          "openable": [
+            "catalog_contact_openable"
+          ],
+          "viewable": [
+            "catalog_contact_viewable"
+          ]
+        },
+        "ipos-product:corporate-contact": {
+          "section": "ipos-product:BusinessCatalogModule",
+          "cardType": "action",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-users"
+            },
+            "cardIconPlus": {}
+          },
+          "cssClass": "v3-box-1",
+          "key": [],
+          "isShowValidationIcon": "false",
+          "isShowNoOfEmptyField": "false",
+          "onClick": "createNewDocument('contact', 'corporate', '',[currentRole])"
+        },
+        "ipos-product:personal-contact": {
+          "section": "ipos-product:BusinessCatalogModule",
+          "cardType": "action",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user"
+            },
+            "cardIconPlus": {}
+          },
+          "cssClass": "v3-box-1",
+          "key": [],
+          "isShowValidationIcon": "false",
+          "isShowNoOfEmptyField": "false",
+          "onClick": "createNewDocument('contact', 'personal', '', [currentRole])"
+        }
+      }
+    }
+  }
+}

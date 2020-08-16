@@ -1,0 +1,128 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div class="row" ng-init="selectedDashboard = 'my-new-fna'">
+	<div class="col-xs-11 v4-prototype-centerBlock v3-padding-0 card">
+		<div class="row col-xs-11 col-md-11 "
+			style="margin-top: 20px; margin-left: -5px;margin-bottom: 25px">
+			<div class=" row col-xs-4 col-md-4 v3-margin-auto">
+				<div class="col-xs-10 label-field-sumary label-dasboard">
+					<div id="my-new-fna" class="active"
+						ng-click="selectTab('my-new-fna')">
+						<p class="tab-title" style="margin-top: 14px; margin-bottom: 0px">{{'v3.dashboardportlet.portlet.label.my-new-fna'
+							| translate}}</p>
+						<label class="label-section-bigger"><total-records
+								class="tab-summary" doc-type="fna"
+								query="{{[{
+										fields: ['metaData.ownerName'],
+								values: [ownerName]
+							}, {
+								fields: ['metaData.documentStatus'],
+								values: [
+									commonService.CONSTANTS.DOCUMENT_STATUS.INVALID
+								]
+								}]}}" /></label>
+					</div>
+				</div>
+				<!-- start to create button to add -->
+				<div class="col-xs-2 col-md-2 col-sm-2 col-lg-2 add-new-button no-left-padding no-right-padding">
+					<i
+						ng-click="createNewDocument('fna', '', ['PF'])"
+						class="pointer fa fa-plus" tooltips
+						tooltip-title="Add New" tooltip-side="top" tooltip-size="medium"></i>
+				</div>
+				<!-- end -->
+			</div>
+
+			<div class="col-xs-4 col-md-4 v3-margin-auto">
+				<div class="col-xs-12 label-field-sumary label-dasboard">
+					<div id="my-completed-fna" ng-click="selectTab('my-completed-fna')">
+						<p class="tab-title" style="margin-top: 14px; margin-bottom: 0px">{{'v3.dashboardportlet.portlet.label.my-completed-fna'
+							| translate}}</p>
+						<label class="label-section-bigger"><total-records
+								class="tab-summary"
+								doc-type="fna"
+								query="{{[{
+										fields: ['metaData.ownerName'],
+								values: [ownerName]
+							}, {
+								fields: ['metaData.documentStatus'],
+								values: [
+									commonService.CONSTANTS.DOCUMENT_STATUS.VALID
+								]
+								}]}}" /></label>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="col-xs-12 col-md-12">
+		<div class="tab-content" ng-if="selectedDashboard === 'my-new-fna'">
+			<div class="listViewContainer container-fluid v3-padding-0">
+				<div class="row v3-margin-auto">
+					<document-list-view datalist="fnaList" doctype="fna"
+						listtitle="my-new-fna" isloadlist="isLoadList"
+						isdashboard ="true"
+						dashboarddoctype="dashboardDoctype"
+						defaultquery="{{[{
+								fields: ['metaData.ownerName'],
+								values: [ownerName]
+							}, {
+								fields: ['metaData.documentStatus'],
+								values: [
+									commonService.CONSTANTS.DOCUMENT_STATUS.INVALID
+								]
+							}]}}"
+						searchcriteria="[
+								'metaData.policyOwner',
+								'metaData.docName'
+							]"
+						lazy-choice-list="moduleService.lazyChoiceList" />
+				</div>
+			</div>
+		</div>
+		<div class="tab-content"
+			ng-if="selectedDashboard === 'my-completed-fna'">
+			<div class="listViewContainer container-fluid v3-padding-0">
+				<div class="row v3-margin-auto">
+					<document-list-view datalist="fnaList" doctype="fna"
+						listtitle="my-completed-fna" isloadlist="isLoadList"
+						isdashboard ="true"
+						dashboarddoctype="dashboardDoctype"
+						defaultquery="{{[{
+									fields: ['metaData.ownerName'],
+									values: [ownerName]
+								}, {
+									fields: ['metaData.documentStatus'],
+									values: [
+										commonService.CONSTANTS.DOCUMENT_STATUS.VALID
+									]
+								}]}}"
+						searchcriteria="[
+								'metaData.policyOwner',
+								'metaData.docName'
+							]"
+						lazy-choice-list="moduleService.lazyChoiceList" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

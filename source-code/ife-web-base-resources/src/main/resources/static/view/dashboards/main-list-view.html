@@ -1,0 +1,91 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div class="col-xs-11 v4-prototype-centerBlock v3-padding-0 card" >
+	<div class="row v3-pagination" style="margin-bottom: 0px;padding-top: 30px;border-top: 1px solid" ng-if="!isdedup && isdashboard == 'true'">
+			<div class="col-sm-6" style ="float: left ; margin-left: -13px;">
+				<span class="label-section-bigger">{{('v3.dashboardportlet.portlet.label.'
+					+ listtitle) | translate}}</span>
+			</div>
+			<div class="col-sm-4" style="text-align: center;margin-top: 17px;" ng-if="listtitle == 'my-actionable-quotation' || listtitle == 'my-unconvented-quotation'">
+				<label style="color: red;">{{'v3.dashboardportlet.label.SystemDate' | translate}} : <span>{{currentDate | date:'dd-MMM-yyyy'}}</span></label>
+			</div>
+			<div class="col-xs-12 col-sm-6 ipos-mobile-icon-control-group v3-padding-0" style="z-index: 1;margin-left: -1000px;width:800px;">
+				<div class="ipos-mobile-control" style=" pointer-events: none;">
+					<i ng-click="search()"   class="pointer fa fa-search fa-2x padding-left-7 search-item"></i>
+				</div>
+				<span ng-if="dashboardDoctype=='policy_management'">
+				 	<b>Search By :</b>
+					<select style="display:inline;width:170px;background: #F0F0F0;font-size: 16px;" id="dxc" ng-model="modelSearch" ng-change="chooseSearch()"><option value="Policy Holder">Policy Holder</option><option value="Contract Number">Contract Number</option><option value="Contract Type">Contract Type</option><option value="Master Pol">Master Pol</option></select>
+				</span>
+				<div class="col-xs-6 ipos-mobile-search" >
+					<div class="form-group-lg has-success">
+						   <input id="searchBox" class="form-control"
+							   ng-model="searchText"
+							   style="margin-left:-15px;"
+							   placeholder="{{'v3.dashboardportlet.button.label.Search' | translate}}" ng-change="chooseSearchTextField()"/>
+						<i  class="fa fa-times-circle fa-2x cleanIcon" 
+						   ng-show="searchText != '' && searchText != undefined  "
+						 
+						   ng-click="searchText = ''; searchLine()"></i>
+					</div>
+					
+				</div>				
+			</div>
+	</div>
+	
+	<div class="row v3-pagination" ng-if="!isdedup && isdashboard == 'false'">
+			<div class="col-sm-4" style ="float: left ; margin-left: -13px;">
+				<span class="label-section-bigger">{{('v3.dashboardportlet.portlet.label.'
+					+ listtitle) | translate}}</span>
+			</div>
+			<!-- End System Date -->
+			<div class="col-xs-6 col-sm-6 ipos-mobile-icon-control-group v3-padding-0" >
+				<div class="ipos-mobile-control">
+					<i ng-click="search()" class="pointer fa fa-search fa-2x padding-left-7 search-item"></i>
+					<!-- <i ng-click="searchText = ''; search()" class="pointer fa fa-refresh fa-2x padding-left-7 reload-item" ng-class="isloadlist ? '':'fa-spin'"></i>
+					<i ng-click="isListView = true" class="pointer fa fa-list fa-2x padding-left-7 view-list-item" ng-class="isListView ? 'icon-active':'icon-inactive'"></i>
+					<i ng-click="isListView = true" class="pointer fa fa-th-large fa-2x padding-left-7 view-thumb-item" ng-class="isListView ?'icon-inactive':'icon-active'"></i> -->
+				</div>
+				<div class="col-xs-6 ipos-mobile-search">
+					<div class="form-group-lg has-success">
+						<input id="searchBox" class="form-control"
+							   ng-model="searchText"
+							   v3-on-enter="search()"
+							   placeholder="{{'v3.dashboardportlet.button.label.Search' | translate}}" />
+						<i class="fa fa-times-circle fa-2x cleanIcon"
+						   ng-show="searchText != '' && searchText != undefined"
+						   ng-click="searchText = ''; search()"></i>
+					</div>
+				</div>				
+			</div>
+	</div>
+	
+	<div class="row v3-pagination" style="margin-bottom: 0px;" ng-if="isdedup" ng-include="deduppartial"></div>
+	<div class="row v3-margin-auto" style="margin-bottom: 0px;">
+		<div class="col-xs-12 v3-padding-0" ng-include="templateHtml"></div>
+	</div>
+	<div class="row v3-margin-auto" ng-if="datalist == undefined || datalist.length < 1">
+		<div class="document-list-view-Error-Message" >
+			{{"new.v3.common.message.ThereIsNoData" | translate}}
+		</div>
+	</div>
+</div>
+
+

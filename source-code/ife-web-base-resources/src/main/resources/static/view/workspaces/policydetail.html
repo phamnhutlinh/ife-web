@@ -1,0 +1,149 @@
+<!--
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+-->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<aside click-outside style="width: 200px"
+	ng-if="showSummaryIcon(stateParams.current.name)"
+	class="navigation-side navigation-side-left md-whiteframe-z1 v4-prototype-summaryBar-container v4-prototype-summaryBar"
+	ng-class="uiFrameworkService.isSummaryLeft ? 'navigation-side-show':'navigation-side-left-hide'">
+	<div style="margin-top: 50px" ng-if="currenSummaryTemplate">
+		<ng-include
+			src="resourceServerPath  + 'view/templates/sidebar/' + currenSummaryTemplate"></ng-include>
+	</div>
+	<div class="v4-prototype-side-summary-button"
+		ng-click="uiFrameworkService.isSummaryLeft==false? getSummary(): ''; hideAllNavigationSide()">
+		<i class="childsidebarSum fa fa-2x fa-list-ol" aria-hidden="true"></i>
+	</div>
+	<div class="v4-prototype-summaryBar-footer">{{v4.footer.text |
+		translate}}</div>
+</aside>
+
+<!-- <div ng-show="uiFrameworkService.isSummaryLeft" class="navigation-side-mask" ng-click="hideAllNavigationSide()"> -->
+<!-- </div> -->
+
+
+<div ng-cloak class="container-fluid" id="newWorkspace"
+	ng-if="!commonService.options.isShowLeftSideBar">
+
+	<!-- ACTION BARS -->
+	<!-- 	<a class="fa fa-arrow-circle-o-left fa-2x hamberger-button v4-goBack-button" ng-click="goBack()" ng-hide="true"></a> -->
+	<div class="common-menu">
+		<action-bar></action-bar>
+	</div>
+	<div>
+
+		<div class="col-sm-6"
+			style="float: left; margin-left: 10px; margin-top: 50px; border: 5px;width:100%;">
+			<span class="label-section-bigger ng-binding">Marine Covearge
+				Details</span><br />
+			<div style="margin-left: 100px; margin-right: 100px;">
+
+
+				<table style="border: 5px;width:100%;">
+
+
+
+					<tr>
+						<td>Policy No:</td>
+						<td>{{item.data.id}}</td>
+						<td>Policy Description:</td>
+						<td>{{item.data.voyageDescription}}</td>
+					</tr>
+					<tr>
+						<td>Policy Status: </td>
+						<td>{{item.data.status}}</td>
+						<td>Policy Holder Name:</td>
+						<td>{{item.data.policyHolder.name}}</td>
+					</tr>
+					<tr>
+						<td>Cover Start Date: </td>
+						<td>{{item.data.expiry}}</td>
+						<td>Cover End Date:</td>
+						<td>{{item.data.inception}}</td>
+					</tr>
+					
+					<tr>
+					  <td>Cover:</td>
+					  <td>{{item.data.coverageType}}</td>
+					  <td>Shipment Type:</td>
+					  <td>{{item.data.shipmentType}}</td>
+					</tr>
+					
+					<tr>
+						<td>Conveyance:</td>
+						<td>{{item.data.conveyaneDetail}}</td>
+						<td>Packing Description:</td>
+						<td>{{item.data.packingType}}</td>
+					</tr>
+					<tr>
+					 <td>Voyage From:</td>
+					 <td>{{item.data.countryFrom}}</td>
+					 <td>Voyage To:</td>
+					 <td>{{item.data.countryTo}}</td>
+					</tr>
+					<tr>
+					<td>Cargo Description:</td>
+					<td>Animal Feeds</td>
+					<td>Liability Limit </td>
+					<td>10,0000000</td>
+					</tr>
+					<tr>
+					 <td>Marine Rate:</td>
+					 <td>10.0000000</td>
+					</tr>
+
+				</table>
+			</div>
+
+
+		</div>
+	</div>
+	
+	<!-- DETAILS -->
+
+</div>
+<hr/ style="margin-left:50px;margin-right:50px;height:1px;color:black;background:black;" size="30">
+<div style="margin-left:100px;">
+<table>
+   <tr>
+     <th>Email<i class="fa fa-envelope" aria-hidden="true">Document Type</i></th>
+   
+   </tr>
+   <tr>
+    
+    <th>                             Cover Letter</th>
+   
+   </tr>
+   <tr>
+    
+    <th>          Policy Schedule</th>
+    
+   </tr>
+   <tr>
+    
+    <th>     Tax Invoice</th>
+    
+   </tr>
+</table>
+ 
+</div>
+<button
+	class="v4-fab-scrolltop md-fab md-primary md-button md-fab-bottom-right md-button md-ink-ripple"
+	ng-click="scrollTop(0)">
+	<i class="pointer fa fa-angle-double-up"></i>
+</button>
+

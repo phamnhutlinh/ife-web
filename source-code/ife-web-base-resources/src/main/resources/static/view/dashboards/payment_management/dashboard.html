@@ -1,0 +1,133 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+<div ng-controller="PaymentListViewCtrl">
+<div class="row" style="width:80%; margin: 0 auto;">
+	<div layout-align="center center" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input-table"></div> 
+	</div>
+	<div layout-align="center center" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div fieldId="payment:businessNo" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		    <div class="row v4-materialize-container">
+		        <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+		            <label class="text-body">{{"new.v4.payment_history.label.BusinessCaseNo" | translate}}</label>
+		               <div class="input-field">
+		                 <input clear-error-code placeholder="" ng-disabled="" type="text" maxlength="120" ng-model="queryBusinessCaseNo.value"/>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<div fieldId="transaction:Currency" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		    <div class="row v4-materialize-container">
+		        <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+		            <label class="text-body">{{"new.v4.payment_history.label.PaymentNo" | translate}}</label>
+		            <div class="input-field">
+		                <input clear-error-code placeholder="" ng-disabled="" type="text" maxlength="120" ng-model="queryPaymentNo.value"/>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<div fieldId="transaction:DueDateFrom" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		    <div class="row v4-materialize-container">
+		        <div class="ol-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+		            <label class="text-body">{{"new.v4.payment_history.label.dateFrom" | translate}}</label>
+		            <div class="input-field">
+		                <i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+		                <input clear-error-code type="text" class="datepicker" materiallize-datetime ng-model="queryDateFrom.value" formatdisplay='DD/MM/YYYY' formatsubmit='YYYY-MM-DD' />
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<div fieldId="transaction:DueDateTo" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		    <div class="row v4-materialize-container">
+		        <div class="col-xs-11 col-sm-11 col-md-10 v4-materialize-content-center">
+		            <label class="text-body">{{"new.v4.payment_history.label.dateTo" | translate}}</label>
+		            <div class="input-field">
+		                <i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+		                <input clear-error-code type="text" class="datepicker" materiallize-datetime ng-model="queryDateTo.value" formatdisplay='DD/MM/YYYY' formatsubmit='YYYY-MM-DD'/>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<div fieldId="transaction:Search" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ng-scope">
+		    <div class="col-xs-offset-5 col-xs-10" style="margin-bottom: 20px;">
+		        <button ng-click="resetSearch(undefined, 0, pageSizes[0])" class="btn btn-lg-new-ui ng-binding">{{'new.v4.payment_history.label.search' | translate}}</button>
+		    </div>
+		</div>
+	</div>
+<div fieldId="transaction:Table1" class="col-xs-11 ipos_medium_mobile_table ipos_table_v4" ng-cloak>
+	<div class="hidden-xs ipos_medium_mobile_table_table_listRow ipos_table_v4_header md-whiteframe-z1 v3-margin-right-0" ng-if="isListView">
+		<div class="v3-auto-text-ellipsis ipos-box-opacity">
+			{{'new.v4.payment_history.label.BusinessCase' | translate}}
+		</div>
+		<div class="v3-auto-text-ellipsis ipos-box-opacity">
+			{{'new.v4.payment_history.label.Client' | translate}}
+		</div>
+		<div class="v3-auto-text-ellipsis ipos-box-opacity">
+			{{'new.v4.payment_history.label.ProductType' | translate}}
+		</div>
+		<div class="v3-auto-text-ellipsis ipos-box-opacity">
+			{{'new.v4.payment_history.label.PaidDate' | translate}}
+		</div>
+		<div class="v3-auto-text-ellipsis ipos-box-opacity">
+			{{'new.v4.payment_history.label.AmountPaid' | translate}}
+		</div>						
+	</div>
+	<md-virtual-repeat-container
+				class="scrollStyle height-315 level-1-style-section" md-top-index="topIndex" ng-hide="!paymentList.length">
+			<div id="table-row-{{$index}}" name="dashboard-item"  class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer repeated-item" md-virtual-repeat="item in infiniteItems" md-on-demand flex>
+				<md-card class="col-xs-12 v3-padding-0 ipos-box-opacity"
+					style="margin: 0px;">
+					<div style="display: flex; padding-left: 0px; padding-right: 0px; text-align: left;">
+						<div class="v3-auto-text-ellipsis"><a href="" ng-middle-click ng-click="goToDocumentDetails(commonService.CONSTANTS.MODULE_NAME.SALECASE, item.referenceInfo.caseId, item.referenceInfo.businessType, item.referenceInfo.productCode, $event)" tooltips tooltip-title="{{item.referenceInfo.businessCaseNo}}" tooltip-side="top" tooltip-size="medium">{{item.referenceInfo.businessCaseNo}}</a></div>
+						<div class="v3-auto-text-ellipsis">{{item.payer.person.basic.name.full==null ? item.payer.corporate.coporateName : item.payer.person.basic.name.full}}</div>
+						<div class="v3-auto-text-ellipsis">{{'v3.mynewworkspace.portlet.label.ipos-product.' + item.referenceInfo.productCode | translate}}</div>
+						<div class="v3-auto-text-ellipsis">{{item.paymentinfo.paymentAmount.payments[0].paymentDate | datetimeFilter:'DD/MM/YYYY' | datetimeFilter:'DD/MM/YYYY'}}</div>
+						<div class="v3-auto-text-ellipsis">{{item.paymentinfo.paymentAmount.paidAmount.paidValue | number:2}}</div>
+					</div>
+				</md-card>
+			</div>
+		</md-virtual-repeat-container>
+	<!-- loading -->		
+		<div id="table-row-{{$index}}" name="dashboard-item" ng-show = "isLoad"  ng-cloak 
+				class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer row">
+				<!-- <md-progress-circular class= "md-hue-2" md-diameter="20px"></md-progress-circular> -->
+				<p><i class = "fa fa-spinner fa-spin" style="margin-right: 5px;">  </i>  Loading...</p>
+		</div>	
+		<md-divider ></md-divider>
+		<div class="text-body" ng-if="!paymentList.length" style="text-align: center; height: 100px; line-height: 100px;">
+		No item is displayed
+	</div>
+</div>
+<!-- 	<div class="col-xs-12 no-padding-left no-padding-right row" ng-if="paymentList.length">
+ 		<div class="hide-xs col-md-5"></div>	
+		<div class="col-xs-12 text-center col-sm-6 col-md-3 no-padding-left no-padding-right" style="margin-top: 41px;">							
+                <span class="col-xs-6 col-sm-7 no-padding-right" style="text-align: end !important;padding-top: 7px !important;">{{'v3.dashboardportlet.label.Itemsperpage' | translate}}</span>
+                <select class="col-xs-6 col-xs-5 no-padding-left no-padding-right form-control ipos_paging_dropdown_70" ng-model="pageSize" ng-options="size as size for size in pageSizes">
+				</select>
+		</div>
+		<dir-pagination-controls 
+			class="text-center col-xs-12 col-sm-6 col-md-4 no-padding-left no-padding-right ng-isolate-scope" 
+			boundary-links="true" 
+			max-size="100"
+			pagination-id="listtitle"
+			on-page-change="searchListPayment(searchText, newPageNumber - 1, pageSize, undefined, manualSort)">
+		</dir-pagination-controls>
+	</div>
+</div> -->
+</div>

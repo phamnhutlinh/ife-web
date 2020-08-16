@@ -1,0 +1,101 @@
+{
+  "IposDocument": {
+    "Data": {
+      "case-management:CaseManagement": {
+        "section": "case-management:CaseManagement",
+        "uiStyle": "tab",
+        "icons": {
+          "cardIcon": {
+            "content": "fa fa-pie-chart"
+          }
+        },
+        "permission": {
+          "openable": [
+            "case_openable"
+          ],
+          "editable": [
+            "case_editable"
+          ],
+          "viewable": [
+            "case_viewable"
+          ]
+        },
+        "case-management-base:Quotation": {
+          "section": "case-management:CaseManagement",
+          "uiStyle": "quoCard",
+          "key": [
+            "quotations"
+          ],
+          "mandatoryCard": "true",
+          "onOpen": "reSetupConcreteUiStructure(moduleService.detail, undefined, true);checkProspect()",
+          "cssClass": "v3-box-6",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-bar-chart"
+            }
+          },
+          "case-management-base:AddQuotation": {
+            "cardType": "action",
+            "section": "case-management-base:Quotation",
+            "isShowValidationIcon": "false",
+            "isVisible": "checkVisible()",
+            "key": [],
+            "onClick": "addNewQuotationCard(card)",
+            "cssClass": "v3-box-6",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-bar-chart"
+              },
+              "cardIconPlus": {}
+            }
+          },
+          "case-management-base:NewQuotation": {
+            "key": [],
+            "uiStyle": "tab",
+            "customName": "card.refDetail.documentType.value || 'QUO'",
+            "cardType": "template",
+            "section": "case-management-base:Quotation",
+            "icon": "fa fa-plus",
+            "cssClass": "v3-box-6",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-bar-chart"
+              },
+              "removeCardInList": {
+                "onClick": "removeQuotation(card)",
+                "isVisible": "card.refDetail.refBusinessStatus.value != 'ACCEPTED' && card.refDetail.documentType.value != 'UW_QUO'"
+              }
+            }
+          }
+        },
+        "case-management-base:Application": {
+          "section": "case-management:CaseManagement",
+          "onOpen": "checkOnOpenApplicationCard(card)",
+          "key": [
+            "application"
+          ],
+          "cssClass": "v3-box-6",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-cubes"
+            }
+          }
+        },
+        "case-management-base:DocumentCenter": {
+          "section": "case-management:CaseManagement",
+          "key": [
+            "attachments"
+          ],
+          "cssClass": "v3-box-6",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-folder-o"
+            }
+          },
+          "staticHtml": "v4-file-center-documents-upload.html",
+          "onOpen": "getListLazyOptionalDocument()"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+<div class="v4-prototype-container div-centerBlock">
+	<div class="col-xs-10 col-lg-5 v4-prototype-centerBlock">
+		<div class="card">
+			<div class="card-content">
+				<div class="row-fluid" style="text-align: center;font-size: 20px;color:green;">
+					<span class="login-title">{{'v3.login.label.Registration' |translate}}</span>
+				</div>
+				<hr style ="margin: 10px !important;">
+				<div style="font-size: 15px;text-align:center;"">
+				<span>{{'v4.workspace.text.registrationSuccessful'| translate}}</span>
+					<p>{{'v4.workspace.text.registrationSuccess' | translate}}</p>
+					<span> <a class="pointer" ui-sref="root.list.home"
+						id="homeAchor">{{'v3.login.label.Clickhere' | translate}}</a>
+						{{'v3.login.label.toreturntoLoginpage' | translate}}
+						{{'v3.login.label.orsystemwillautomaticallyredirectto' |
+						translate}} {{'v3.login.label.Loginpageinnext' | translate}} <b style="color: red"
+						id="timeRegister"></b> {{'v3.login.label.seconds' | translate}}!
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var time = 30;
+	var temp = setInterval(function() {
+		time = time - 1;
+		document.getElementById("timeRegister").innerHTML = time;
+		if (time == 0) {
+			clearInterval(temp);
+			document.getElementById('homeAchor').click();
+		}
+	}, 1000);
+</script>

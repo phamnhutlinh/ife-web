@@ -1,0 +1,87 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div class="row v3-margin-auto" ng-if="isListView" style="margin-bottom: 0px;" ng-cloak>
+	<div class="col-xs-11 ipos_medium_mobile_table ipos_table_v4">
+		<div class="ipos_medium_mobile_table_table_listRow ipos_table_v4_header md-whiteframe-z1">
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.quotation.label.QuotationNumber' | translate}}</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.quotation.label.RequestDate' | translate}}</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.quotation.label.RequestType' | translate}}</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.quotation.label.Agent' | translate}}</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+			{{'v4.dashboard.quotation.label.SourceType' | translate}}
+			<header-filter 
+						list-choices ="lazyChoiceList.SourceType" 
+						search-fields="[
+							'businessInformation.sourceTypeCode'
+						]" 
+						translate-prefix="v4.sourceTypecode."
+						is-filter-show="filter.isfilterShow"
+						>
+				</header-filter>
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+			{{'v4.dashboard.quotation.label.Location' | translate}}
+			<header-filter 
+						list-choices ="lazyChoiceList.Location" 
+						search-fields="[
+							'interestedParty.agentProducer.location'
+						]" 
+						translate-prefix="v4.case.Location."
+						is-filter-show="filter.isfilterShow"
+						>
+				</header-filter>
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.quotation.label.ApprovalDate' | translate}}</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+			{{'v4.dashboard.quotation.label.Status' | translate}}
+			<header-filter 
+						list-choices ="lazyChoiceList.OperationStatus" 
+						search-fields="[
+							'metaData.operationStatus'
+						]" 
+						translate-prefix="v4.case.OperationStatus."
+						is-filter-show="filter.isfilterShow"
+						>
+				</header-filter>
+			</div>
+		</div>
+		<div id="table-row-{{$index}}" name="dashboard-item" 
+			class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer"
+			dir-paginate="item in datalist | itemsPerPage: pageSize.size"
+			current-page="currentPage"
+			pagination-id="listtitle"
+			total-items="totalItems"
+			ng-click="goToDocumentDetails(commonService.CONSTANTS.MODULE_NAME.SALECASE, item.docId)">
+			<md-card class="col-xs-12 v3-padding-0 ipos-box-opacity" style="margin: 0px;">
+				<div style="display: flex;padding-left: 0px;padding-right: 0px;">
+					<div class="v3-auto-text-ellipsis">{{item.quotationNumber}}</div>
+					<div class="v3-auto-text-ellipsis" tooltips tooltip-title="{{item.quotationRequestDate | datetimeFilter:'DD-MM-YYYY h:mm:ss a'}}">
+						{{item.quotationRequestDate | datetimeFilter:'DD-MM-YYYY h:mm:ss a'}}</div>
+					<div class="v3-auto-text-ellipsis">{{'v4.quotation.label.RequestTypeCode.'+ item.requestTypeCode | translate}}</div>
+					<div class="v3-auto-text-ellipsis">{{item.agentProducerName}}</div>
+					<div class="v3-auto-text-ellipsis">{{'v4.sourceTypecode.'+ item.sourceTypeCode | translate}}</div>
+					<div class="v3-auto-text-ellipsis">{{'v4.case.Location.' + item.location | translate}}</div>
+					<div class="v3-auto-text-ellipsis">{{item.quotationApproveDate | datetimeFilter:'DD-MMM-YYYY'}}</div>
+					<div class="v3-auto-text-ellipsis">{{'v4.case.OperationStatus.' + item.operationStatus | translate}}</div>
+				</div>
+			</md-card>
+		</div>
+	</div>
+</div>

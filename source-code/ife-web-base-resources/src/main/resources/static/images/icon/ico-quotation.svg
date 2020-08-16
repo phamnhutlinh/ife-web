@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="23px" viewBox="0 0 19 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-quotation</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Agent-Sales-Channel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.1.1-Business-Cases---Prospect-Client" transform="translate(-502.000000, -172.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="steps" transform="translate(40.000000, 140.000000)">
+                <g id="s3" transform="translate(400.000000, 0.000000)">
+                    <g id="ico-quotation" transform="translate(62.000000, 32.789954)">
+                        <path d="M16.3972603,0 L2.60273973,0 C1.16758904,0 0,1.16758904 0,2.60273973 L0,19.6073059 C0,21.0424566 1.16758904,22.2100457 2.60273973,22.2100457 L16.3972603,22.2100457 C17.832411,22.2100457 19,21.0424566 19,19.6073059 L19,2.60273973 C19,1.16758904 17.832411,0 16.3972603,0 Z M17.2648402,19.6073059 C17.2648402,20.0856895 16.8756438,20.4748858 16.3972603,20.4748858 L2.60273973,20.4748858 C2.12435616,20.4748858 1.73515982,20.0856895 1.73515982,19.6073059 L1.73515982,7.46118721 L17.2648402,7.46118721 L17.2648402,19.6073059 Z M17.2648402,5.7260274 L1.73515982,5.7260274 L1.73515982,2.60273973 C1.73515982,2.12435616 2.12435616,1.73515982 2.60273973,1.73515982 L16.3972603,1.73515982 C16.8756438,1.73515982 17.2648402,2.12435616 17.2648402,2.60273973 L17.2648402,5.7260274 Z" id="Shape"></path>
+                        <rect id="Rectangle-path" x="13.5776256" y="13.1039269" width="1.73515982" height="5.02849315"></rect>
+                        <rect id="Rectangle-path" x="3.73059361" y="9.80365297" width="1.73515982" height="1.73515982"></rect>
+                        <rect id="Rectangle-path" x="7.02739726" y="9.80365297" width="1.73515982" height="1.73515982"></rect>
+                        <rect id="Rectangle-path" x="10.2808219" y="9.80365297" width="1.73515982" height="1.73515982"></rect>
+                        <rect id="Rectangle-path" x="3.73059361" y="13.1004566" width="1.73515982" height="1.73515982"></rect>
+                        <rect id="Rectangle-path" x="7.02739726" y="13.1004566" width="1.73515982" height="1.73515982"></rect>
+                        <rect id="Rectangle-path" x="10.2808219" y="13.1004566" width="1.73515982" height="1.73515982"></rect>
+                        <rect id="Rectangle-path" x="13.5776256" y="9.80365297" width="1.73515982" height="1.73515982"></rect>
+                        <rect id="Rectangle-path" x="3.73059361" y="16.3972603" width="1.73515982" height="1.73515982"></rect>
+                        <rect id="Rectangle-path" x="7.02739726" y="16.3972603" width="1.73515982" height="1.73515982"></rect>
+                        <rect id="Rectangle-path" x="10.2808219" y="16.3972603" width="1.73515982" height="1.73515982"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

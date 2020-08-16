@@ -1,0 +1,180 @@
+<!--
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+-->
+<!-- Start Basic Quote -->
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: 20px;" >
+    <div class="col-xs-11 col-sm-12 col-md-12 v4-materialize-container" style="margin-top: 30px;">
+        <div class="row col-xs-11 col-sm-6 col-md-6 v4-materialize-content-center">
+            <label class="text-body content-title-product">{{"v4.quotation.basicQuotation.Product" | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+            <div class="input-field margin-right-0">
+                <!-- <select ui-select2 ng-disabled="moduleService.freeze == true" ng-model="basicQuoteProductName" ng-change="displayErrorSelectProduct(basicQuoteProductName)" ng-click="selectProduct(basicQuoteProductName)">
+                    <option value="rul">{{"v3.mynewworkspace.portlet.label.ipos-product:regular-premium-unitLinked" | translate}}</option>
+                    <option ng-repeat="productCode in moduleService.findElementInElement(moduleService.lazyChoiceList,['product_Code'])" value="{{productCode.key}}">
+                </select> -->
+                <!-- <label class="text-body" ng-show = "basicQuoteProductName">{{'v3.mynewworkspace.portlet.label.ipos-product.rul'| translate}}</label> -->
+                <select ui-select2 ng-model="basicQuoteProductName" ng-change="selectProduct(basicQuoteProductName)">
+                    <option ng-repeat="productCode in moduleService.lazyChoiceList.Product_Code" value="{{productCode.key}}">{{"v3.mynewworkspace.portlet.label.ipos-product." + productCode.key
+					| translate}}</option>
+                </select>
+                <div class="errorMessage" ng-if="checkErrorSelectProduct === true">{{"v4.quotation.basicquote." + errorSelectProduct | translate }} </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="col-xs-11 col-sm-12 col-md-12 v4-materialize-container">
+        <div class="row col-xs-11 col-sm-6 col-md-6 v4-materialize-content-center">
+            <div class="margin-right-0">
+                <button class="btn" ng-click="selectProduct(basicQuoteProductName)">{{"v4.quotation.basic_quote_selectProduct " | translate }}</button>
+                <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+            </div>
+        </div>
+    </div> -->
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: 20px;" ng-if="basicQuoteProductName == 'rul'||basicQuoteProductName == 'bni'||basicQuoteProductName == null"> <!-- ng-if="displayProductSection == false" -->
+	<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" >
+		
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"  style="margin-bottom: 40px;">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style = "border-top: 1.5px solid #D9D7D5;" ></div>
+		</div>
+		
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		    <div class="row v4-materialize-container">
+	            <label class="text-body">{{"v4.quotation.basicQuotation.AgeNearestBirthday"| translate}}<span ng-show="moduleService.findElementInDetail(['ageInput']).meta.mandatory == 'true'">*</span></label>
+	            <div class="input-field margin-right-0">
+	                <input numbers-only clear-error-code ng-disabled="moduleService.freeze == true" type="text" maxlength="120" ng-model="moduleService.detail.policyOwner.person.ageInput.value"/>
+	                <span class="errorMessage" ng-bind="moduleService.findElementInDetail(['ageInput']).meta.errorCode | translate"></span>
+	            </div>
+		    </div>
+		</div>
+		
+		<!-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		    <div class="row v4-materialize-container">
+	            <label class="text-body">{{"v4.quotation.basicQuotation.DateOfBirth" | translate}}</label>
+	            <div class="input-field">
+	                <i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+	                <input clear-error-code ng-disabled="moduleService.freeze == true" type="text" class="datepicker" materiallize-datetime maxdate="today" dateName="new.v4.mynewworkspace.prospect.label.DateofBirth" includemaxdate = "true" formatdisplay='DD/MM/YYYY' ng-model="moduleService.detail.policyOwner.person.birthDate.value" ng-change="uiElement.refDetail.value = configTimeZoneForSingapore(uiElement.refDetail.value); checkBirthDayPolicyOwner()"/>
+	                <span class="errorMessage" ng-bind="moduleService.findElementInDetail(['birthDate']).meta.errorCode | translate"></span>
+	            </div>
+		    </div>
+		</div> -->
+	
+		<div class="row col-xs-12 col-sm-6 col-md-6 col-lg-6 swtich-summaryPre">
+		    <div class="v4-materialize-container">
+	            <label class="text-body">{{"v4.quotation.basicQuotation.Gender"| translate}}<span ng-show="moduleService.findElementInDetail(['genderCode']).meta.mandatory == 'true'">*</span></label>
+	            <v3-switch-new-slide prefix="v4.gender.enum"
+	            	switch-model="moduleService.detail.policyOwner.person.genderCode.value"
+	                switch-default-value="" switch-disabled="moduleService.freeze == true"
+	                switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['Gender'])">
+	            </v3-switch-new-slide>
+	            <span class="errorMessage" ng-bind="moduleService.findElementInDetail(['genderCode']).meta.errorCode | translate"></span>
+		    </div>
+		</div>
+		
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 swtich-summaryPre">
+		    <div class="row v4-materialize-container">
+	            <label class="text-body">{{"v4.quotation.basicQuotation.SmokingStatus"| translate}}<span ng-show="moduleService.findElementInDetail(['smokerStatus']).meta.mandatory == 'true'">*</span></label>
+	            <v3-switch-new-slide prefix="v4.smoker.enum"
+	                switch-model="moduleService.detail.policyOwner.person.smokerStatus.value"
+	                switch-default-value="" switch-disabled="moduleService.freeze == true"
+	                switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['SmokerStatus'])">
+	            </v3-switch-new-slide>
+	            <span class="errorMessage" ng-bind="moduleService.findElementInDetail(['smokerStatus']).meta.errorCode | translate"></span>
+	        </div>
+		</div>
+		
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 swtich-summaryPre">
+		    <div class="row v4-materialize-container">
+		    	<label class="text-body">{{"v4.quotation.basicQuotation.PremiumFrequency"| translate}}<span ng-show="moduleService.findElementInDetail(['premiumFrequency']).meta.mandatory == 'true'">*</span></label>
+				<div class="input-field">
+					<select ui-select2 ng-disabled="moduleService.freeze == true" ng-model="moduleService.detail.basicPlan.information.premiumFrequency.value">
+					    <option ng-repeat="premiumfrequency in moduleService.findElementInElement(moduleService.lazyChoiceList,['PremiumFrequency'])" value="{{premiumfrequency.key}}" ng-if="premiumfrequency.key != '00'">
+					    {{'v4.premiumFrequency.enum.' + premiumfrequency.key | translate}}</option>
+					</select>
+					<span class="errorMessage" ng-bind="moduleService.findElementInDetail(['premiumFrequency']).meta.errorCode | translate"></span>
+				</div>
+			</div>
+		</div>
+		
+<!-- 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> -->
+<!-- 		    <div class="row v4-materialize-container"> -->
+<!-- 		    	<label class="text-body">{{"v4.quotation.basicQuotation.RegularPremium" | translate}} ({{moduleService.findElementInDetail(['contractCurrency']).value}}) <span ng-show="moduleService.findElementInDetail(['regularPremium']).meta.mandatory == 'true'">*</span></label> -->
+<!-- 				<div class="input-field"> -->
+<!-- 					<input pos-autonumeric ng-disabled="moduleService.freeze == true" placeholder="" type="text" maxlength="120" decimal="0" ng-model="moduleService.detail.basicPlan.information.regularPremium.value" ng-change="uiElement.parent.refDetail.regularPremiumCal.value=uiElement.refDetail.value"/>				 -->
+<!-- 					<span class="errorMessage" ng-if="uiElement.refDetail.meta.errorCode.indexOf(';') > 0" ng-bind="(uiElement.refDetail.meta.errorCode.substring(0,uiElement.refDetail.meta.errorCode.indexOf(';')) | translate) + (uiElement.refDetail.meta.errorCode.substring(uiElement.refDetail.meta.errorCode.lastIndexOf(';') + 1) | translate)"></span>  -->
+<!-- 					<span class="errorMessage" ng-if="moduleService.findElementInDetail(['regularPremium']).meta.errorCode.indexOf(';') < 0" ng-bind="moduleService.findElementInDetail(['regularPremium']).meta.errorCode | translate"></span> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 swtich-summaryPre">
+		    <div class="row v4-materialize-container">
+		    	<label class="text-body">{{"v4.quotation.basicQuotation.RegularPremium" | translate}} ({{moduleService.findElementInDetail(['contractCurrency']).value}}) <span ng-show="moduleService.findElementInDetail(['regularPremium']).meta.mandatory == 'true'">*</span></label>
+				<div class="input-field">
+					<input pos-autonumeric min = 0 max = 999999999999 ng-disabled="moduleService.freeze == true" placeholder="" type="text" maxlength="120" decimal="0" ng-model="moduleService.detail.basicPlan.information.regularPremium.value" ng-change="moduleService.detail.basicPlan.information.regularPremiumCal.value=moduleService.detail.basicPlan.information.regularPremium.value"/>				
+					<span class="errorMessage" ng-if="moduleService.findElementInDetail(['regularPremium']).meta.errorCode.indexOf(';') > 0" ng-bind="(moduleService.findElementInDetail(['regularPremium']).meta.errorCode.substring(0,moduleService.findElementInDetail(['regularPremium']).meta.errorCode.indexOf(';')) | translate) + (moduleService.findElementInDetail(['regularPremium']).meta.errorCode.substring(moduleService.findElementInDetail(['regularPremium']).meta.errorCode.lastIndexOf(';') + 1) | translate)"></span> 
+					<span class="errorMessage" ng-if="moduleService.findElementInDetail(['regularPremium']).meta.errorCode.indexOf(';') < 0" ng-bind="moduleService.findElementInDetail(['regularPremium']).meta.errorCode | translate"></span>
+				</div>
+			</div>
+		</div>
+		
+		<div>
+	    	 <div class="col-xs-6 col-sm-3 col-md-3">
+	    	 	<button class="btn" ng-click="getBasicQuote()">{{"v4.quotation.basicQuotation.btn.GetQuote" | translate}}</button>
+	    	 </div>
+	    	 <div class="col-xs-6 col-sm-3 col-md-3">
+	    	 	<button class="btn" ng-click="cancelBasicQuote()">{{"v4.quotation.basicQuotation.btn.Cancel" | translate}}</button>
+	    	 </div>
+	    </div>
+
+	</div>	
+	
+	<div class=" col-xs-12 col-sm-3 col-md-3 col-lg-3 v3-padding-0" style=" margin-top:37px;">
+    	<div class="row v4-materialize-container">
+         	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 content-background-sumaryPre">
+         		<label class="text-body content-title-sumaryPre" style=" margin-top:15px; margin-bottom:20px;" >{{"v4.quotation.basicQuotation.PremiumSummary" | translate}}</label>	
+	         	
+	         	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-left-padding">
+	         		<label class="text-body ng-binding">{{"new.v4.mynewworkspace.illustration.label.SumAssured" | translate}}</label>
+	         	</div>
+	         	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-left-padding content-sumaryQuo">
+		         	<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 no-left-padding" ng-show="moduleService.detail.basicPlan.information.billingCurrency.value !== null" aria-hidden="false">
+		         		{{moduleService.detail.basicPlan.information.billingCurrency.value}}
+		         	</div>
+		         	
+		         	<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" tooltips="" tooltip-title="{{moduleService.detail.basicPlan.information.regularPremium.value*1 + moduleService.detail.contractFee.value + moduleService.detail.tax.value | v3Currency}}" tooltip-side="top" tooltip-size="medium">
+		         		{{moduleService.detail.basicPlan.information.sumAssured.value | v3Currency}}
+		         	</div>
+	         	</div>   	
+	         	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-left-padding" style = "margin-top: 18px;">
+	         		<label class="text-body ng-binding">{{"v4.quotation.basicQuotation.PayableAmount" | translate}}</label>
+	         	</div>
+	         	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-left-padding content-sumaryQuo">
+		         	<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 no-left-padding" ng-show="moduleService.detail.basicPlan.information.billingCurrency.value !== null" aria-hidden="false">
+		         		{{moduleService.detail.basicPlan.information.billingCurrency.value}}
+		         	</div>
+		         	
+		         	<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" tooltips="" tooltip-title="{{moduleService.detail.basicPlan.information.regularPremium.value*1 + moduleService.detail.contractFee.value + moduleService.detail.tax.value | v3Currency}}" tooltip-side="top" tooltip-size="medium">
+		         		{{moduleService.detail.basicPlan.information.regularPremium.value*1 + moduleService.detail.contractFee.value + moduleService.detail.tax.value | v3Currency}}
+		         	</div>
+	         	</div>
+	        </div>
+	    </div>
+	    <div class="row v4-materialize-container">
+			<button class="btn btn-summaryPre" ng-click="proceedToQuickQuote()">{{"v4.quotation.basicQuotation.btn.ProceedQuotation" | translate}}</button>
+	    </div>
+	</div> 
+</div>
+

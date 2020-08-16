@@ -1,0 +1,266 @@
+<!-- <!--
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+-->
+<!-- Vessel Information -->
+<div fieldId="vesselInformation:vehicleName" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'pnc.mar.quotation.vesselInformation.vehicleName'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <select id = "vesselInformation:vehicleName" ng-if="commonService.hasValueNotEmpty(moduleService.lazyChoiceList.VessleName)" ng-change="filtervoyNumBasedOnvesselName(uiElement.refDetail.value)" ng-init="filtervoyNumInit(uiElement.refDetail.value)" ui-select2 ng-disabled="uiElement.refDetail.meta.editable == 'false' || moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED'" ng-model="uiElement.refDetail.value">
+                <option ng-repeat="title in moduleService.lazyChoiceList.VessleName track by $index" value="{{title.key}}">{{title.group[0]}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="vesselInformation:vehicleNumber" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'pnc.mar.quotation.vesselInformation.vehicleNumber'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <select id = "vesselInformation:vehicleNumber" ng-if="commonService.hasValueNotEmpty(moduleService.lazyChoiceList.VoyageNum)" ng-change="filterVoyageFromTo(uiElement.refDetail.value)" ui-select2 ng-disabled="uiElement.refDetail.meta.editable == 'false' || moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED'" ng-model="uiElement.refDetail.value">
+                <option ng-repeat="voyageNumber in filteredVesselName track by $index" value="{{voyageNumber.group[0]}}">{{voyageNumber.group[0]}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="vesselInformation:voyageFrom" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'pnc.mar.quotation.vesselInformation.voyageFrom'|
+			translate}}<span
+			ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field margin-right-0">
+			<select ui-select2 id = "vehicleInfo:voyageFrom" ng-change="displayVoyFromDes(uiElement.refDetail.value)" ng-if="commonService.hasValueNotEmpty(moduleService.lazyChoiceList.VoyageFromTo)"  ng-disabled="uiElement.refDetail.meta.editable == 'false' || moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED'" ng-model="uiElement.refDetail.value">
+               	<option ng-repeat="voyageFrom in moduleService.lazyChoiceList.VoyageFromTo track by $index" value="{{voyageFrom.key}}">{{voyageFrom.group[0]}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="vesselInformation:voyageTo" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'pnc.mar.quotation.vesselInformation.voyageTo'|
+			translate}}<span
+			ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field margin-right-0">
+			<select ui-select2 id = "vehicleInfo:voyageTo" ng-change="displayVoyToDes(uiElement.refDetail.value)" ng-if="commonService.hasValueNotEmpty(moduleService.lazyChoiceList.VoyageFromTo)"  ng-disabled="uiElement.refDetail.meta.editable == 'false' || moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED'" ng-model="uiElement.refDetail.value">
+               	<option ng-repeat="voyageTo in moduleService.lazyChoiceList.VoyageFromTo track by $index" value="{{voyageTo.key}}">{{voyageTo.group[0]}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="vesselInformation:cargoRoute" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'pnc.mar.quotation.vesselInformation.cargoRoute'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <select id = "vesselInformation:cargoRoute" ng-if="commonService.hasValueNotEmpty(moduleService.detail)&&commonService.hasValueNotEmpty(moduleService.lazyChoiceList.CargoRoute)" ui-select2 ng-disabled="uiElement.refDetail.meta.editable == 'false' || moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED'" ng-model="uiElement.refDetail.value">
+                <option ng-repeat="cargoRoute in moduleService.lazyChoiceList.CargoRoute track by $index" value="{{cargoRoute.key}}">{{cargoRoute.group[0]}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+
+<!-- End Vessel Information -->
+
+<!-- Coverage -->
+<div fieldId="coverage:coverFrom" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">
+			{{::'v3.mynewworkspace.quotation.label.coverFrom'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field">
+			<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+			<input id = "quotation_coverFrom" type="text" autocomplete="off" clear-error-code class="datepicker" materiallize-datetime mindate="today"
+			 formatdisplay='DD/MM/YYYY' ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true || uiElement.refDetail.meta.enable == 'false' || uiElement.refDetail.meta.editable == 'false'" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<div fieldId="coverage:coverTo" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">
+			{{::'v3.mynewworkspace.quotation.label.coverTo'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field">
+			<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+			<input id = "quotation_coverTo" type="text" autocomplete="off" clear-error-code class="datepicker" materiallize-datetime mindate="today"
+			 formatdisplay='DD/MM/YYYY' ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true || uiElement.refDetail.meta.enable == 'false' || uiElement.refDetail.meta.editable == 'false'" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+
+<div fieldId="coverage:estimatedDeparture" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">
+			{{::'v3.mynewworkspace.quotation.label.estimatedDeparture'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field">
+			<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+			<input id = "quotation_estimatedDeparture" type="text" autocomplete="off" clear-error-code class="datepicker" materiallize-datetime mindate="today"
+			 formatdisplay='DD/MM/YYYY' ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true || uiElement.refDetail.meta.enable == 'false' || uiElement.refDetail.meta.editable == 'false'" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<!-- End Coverage -->
+
+
+<!-- Insured Cargo -->
+<div fieldId="insuredCargo:cargo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-container padding-left-0 padding-right-0"  ng-repeat="item in uiElement.refDetail.value track by $index" ng-init="dipsplayAddOnInsuredCargo($index)" ng-if="commonService.hasValueNotEmpty(moduleService.lazyChoiceList.AddonInsuredCargo)" >
+		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 padding-left-0 padding-right-0">
+			<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+				<div>
+					<label class="text-body">{{::'pnc.mar.quotation.insuredCargo.cargoCode'| translate}}<span ng-show="item.insuredCargoCode.meta.mandatory == 'true'">*</span></label>		
+		        </div>
+		        <div class="input-field">
+		            <select id = "insuredCargo:cargoCode" ng-change="displayInsuredDescription($index,item.insuredCargoCode.value);bindToComputePre($index)" ng-init="" ui-select2 ng-disabled="item.insuredCargoCode.meta.editable == 'false' || moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED'" ng-model="item.insuredCargoCode.value">
+		                <option ng-repeat="title in moduleService.lazyChoiceList.InsuredCargoCode" value="{{title.key}}">{{title.key}} - {{title.group[0]}}</option>
+		            </select>
+		            <span class="errorMessage" ng-bind="item.insuredCargoCode.meta.errorCode | translate"></span>
+		        </div>
+	    	</div>
+		    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 padding-left-0 padding-right-0">
+				<div>
+					<label class="text-body">{{::'pnc.mar.quotation.insuredCargo.sumInsured'| translate}} ({{moduleService.detail.insuredCargo.value[0].currency.value}})<span ng-show="item.sumInsured.meta.mandatory == 'true'">*</span></label>		
+				</div>
+				<div class="input-field">
+					<input pos-autonumeric max="999999999999999" id="insuredCargo:SumInsured" clear-error-code 
+						ng-disabled="item.sumInsured.meta.editable == 'false' || moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED'" placeholder=""
+						type="text" ng-model="item.sumInsured.value" /> <span
+						class="errorMessage"
+						ng-bind="item.sumInsured.meta.errorCode | translate"></span>
+				</div>
+			</div>
+			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 margin-left-xs" style="margin-top: 1.8rem">
+				<button ng-attr-id="{{ 'deleteInsuredCargo' + $index }}" ng-disabled="moduleService.freeze == true || moduleService.detail.insuredCargo.meta.counter < 2"
+				 class="button-delete-address btn" ng-click="removeInsuredCargo($index)">
+				 <i class="fa fa-times"></i></button>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-7 col-lg-7" style = "margin-top: 10px">
+				<div class="input-field margin-right-0">
+					<input id="insuredCargo:Description" clear-error-code ng-change="bindToComputePre($index)"
+						ng-disabled="item.insuredCargoDescription.meta.editable == 'false' || moduleService.freeze == true || moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED'" placeholder=""
+						type="text" ng-model="item.insuredCargoDescription.value" /> <span
+						class="errorMessage"
+						ng-bind="item.insuredCargoDescription.meta.errorCode | translate"></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-body padding-right-0" style="margin-top: 1rem">
+				<md-checkbox ng-attr-id="{{'quotation_insuredCargo' + item.key.value}}"  style="position: sticky; opacity: 100;" class="insuredCargo-checkbox padding-top-0" ng-disabled="moduleService.freeze == true || uiElement.refDetail.meta.enable == 'false'"
+				 ng-model="addon.value.value" ng-if="commonService.hasValueNotEmpty(moduleService.lazyChoiceList.AddonInsuredCargo) && commonService.hasValueNotEmpty(moduleService.detail) && commonService.hasValueNotEmpty(moduleService.detail.insuredCargo.value[$index].addonInsuredCargo.value.description.value)" ng-repeat="addon in moduleService.detail.insuredCargo.value[$index].addonInsuredCargo.value" ng-true-value="'TRUE'" ng-false-value="'FALSE'" >
+					<span ng-bind-html="addon.description.value"></span>
+				</md-checkbox>
+		</div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0">
+		<button ng-attr-id="{{ 'addInsuredCargo' + $index }}" ng-disabled="moduleService.freeze == true"
+		 class="btn" style="float: right" ng-click="addInsuredCargo()">
+		 <i class="fa fa-plus"></i></button>
+	</div>
+</div>
+
+
+<!-- End Insured Cargo -->
+
+<div fieldId="premiumSumary:marinePremiumSummary" class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+	<div class="row">
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 v4-materialize-container">
+	    	<label ng-if="commonService.hasValueNotEmpty(moduleService.detail.insuredCargo.value[0].insuredCargoCode.value)" class="text-body text-bold text-20">{{::'pnc.mar.quotation.insuredCargo.cargoCode'| translate}}</label>
+	    </div>
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 v4-materialize-container right-align">
+	    	<label class="text-body text-bold text-20">{{moduleService.detail.insuredCargo.value[0].currency.value}}</label>
+	    </div>
+    </div>
+    <div ng-repeat="item in card.refDetail.insuredCargoSummary.value track by $index">
+	    <div class="row">
+		    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-6 v4-materialize-container" ng-if="commonService.hasValueNotEmpty(item.insuredCargoDescription.value)">
+		    	<label class="text-body " style="word-break: break-all">{{$index + 1}}. {{item.insuredCargoDescription.value}}</label>
+		    </div>
+		    <div class="col-xs-4 col-sm-6 col-md-6 col-lg-4 v4-materialize-container right-align" ng-if="commonService.hasValueNotEmpty(item.insuredCargoDescription.value)">
+		    	<label class="text-body text-bold ">{{item.premiumAmount.value | v3Currency:2}}</label>
+		    </div>
+	    </div>
+    </div>
+    <div class="row" style="padding-top: 1.5rem">
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 v4-materialize-container">
+	    	<label class="text-body ">{{::'v3.mynewworkspace.quotation.label.totalPremium'| translate}}</label>
+	    </div>
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 v4-materialize-container right-align">
+	    	<label class="text-body text-bold ">{{card.refDetail.totalPremium.value | v3Currency:2}}</label>
+	    </div>
+    </div>
+    <div class="row mb-4">
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 v4-materialize-container">
+	    	<label class="text-body">{{::'v3.mynewworkspace.quotation.label.stampDuty'| translate}}</label>
+	    </div>
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 v4-materialize-container text-16 mb-4 right-align">
+	    	<label class="text-body text-bold">{{card.refDetail.stampDuty.value | v3Currency:2}}</label>
+	    </div>
+    </div>
+    <div class="row">
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 v4-materialize-container">
+	    	<label class="text-body  text-bold">{{::'v3.mynewworkspace.quotation.label.totalPayable'| translate}}</label>
+	    </div>
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 v4-materialize-container right-align">
+	    	<label class="text-body text-bold">{{card.refDetail.totalPayable.value | v3Currency:2}}</label>
+   		 </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,190 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div id="productListID">
+    <div class="col-xs-3" style="width:25%; float:left">
+        <ul id="custom-tab" class="nav nav-tabs tabs-left">
+            <li ng-class='{active:$first}' ng-click="selectProduct(product)" ng-repeat="product in ::products"><a data-toggle="tab" href="#{{product.title}}" class="about-menu-item">{{product.text}}</a></li>
+        </ul>
+    </div>
+    <div class="col-xs-9 about-us-detail-md-theme-stylefont-size custom-tab-content" style="width:75%; float:right">
+        <div class="tab-content">
+            <div class="tab-pane active" id="MotorInsurance">
+                <div ng-show="isEnquiryProduct==false">
+                    <div layout="row" layout-align="begin center">
+                        <div flex="50">
+                            <h3 class="about-us-title-big">General Insurance</h3>
+                        </div>
+                        <div flex="50" layout="row" layout-align="end center" layout-padding="">
+                            <button class="btn btn-lg v3-btn-primary" ng-click="enquiryProduct(selectedProduct)" type="submit">Enquire Now</button>&nbsp;
+                            <button class="btn btn-lg v3-btn-primary" ng-click="getAnInstantQuote('motor')" type="button">Get Quotation</button>
+                        </div>
+                    </div>
+                    <div flex="">
+                        <h5 class="about-us-title">Motor Insurance</h5>
+                    </div>
+                    <div flex="" style="color: purple;font-weight: bold;">Drive with confidence and peace of mind.</div>
+                    <div flex="">Motor Insurance is a compulsory class of insurance for all vehicles licensed to be used on public roads. We offer you peace of mind with our 24-hour referral services for road and medical assistance.</div>
+                    <div flex="">Now, we can certainly feel more at ease and drive with greater confidence in Singapore and Malaysia.</div>
+                    <div flex="">We offer you 3 different covers to suite your motoring needs:
+                        <ul class="list-li-items">
+                            <li>Comprehensive Cover</li>
+                            <li>Third Party Fire And Theft Cover</li>
+                            <li>Third Party Cover</li>
+                        </ul>
+                    </div>
+                    <div flex="">
+                        <h5 class="about-us-title-big">Benefits</h5>
+                        <ul class="list-li-items">
+                            <li>A 24-hour motor assistance service for breakdowns and accidents available to every motor policyholder where most of the services provide are free of charge</li>
+                            <li>No Claim Discount (NCD) protection</li>
+                            <li>Medical expenses and personal accident benefits</li>
+                            <li>Windscreen Cover</li>
+                            <li>Legal liability of passenger (LLP)</li>
+                            <li>Additional Named Driver</li>
+                            <li>Strike Riot and Civil Commotion (SRCC)</li>
+                        </ul>
+                    </div>
+                    <div flex="" layout="row" layout-align="center center" layout-padding=""><a class="pointer" download="" href="{{contextPathTheme}}/my-static-pages/forms/MotorApplicationForm.pdf">Application Form</a> &nbsp; &nbsp; <a class="pointer" download="" href="{{contextPathTheme}}/my-static-pages/forms/FactSheetMotor.pdf" offset="5">Fact Sheet</a> &nbsp; &nbsp; <a class="pointer" download="" href="{{contextPathTheme}}/my-static-pages/forms/DisclosureSheetMotor.pdf" offset="5">Disclosure Sheet</a> &nbsp; &nbsp; <a class="pointer" download="" href="{{contextPathTheme}}/my-static-pages/forms/WordingMotor.pdf" offset="5">Policy Wordings</a></div>
+                </div>
+            </div>
+            <div class="tab-pane" id="HouseHolderAndHouseOwnerInsurance">
+                <div ng-show="isEnquiryProduct==false">
+                    <div layout="row" layout-align="begin center">
+                        <div flex="50">
+                            <h3 class="about-us-title-big">Fire Insurance</h3>
+                        </div>
+                        <div flex="50" layout="row" layout-align="end center" layout-padding="">
+                            <button class="btn btn-lg v3-btn-primary" ng-click="enquiryProduct(selectedProduct)" type="submit">Enquire Now</button>&nbsp;
+                            <button class="btn btn-lg v3-btn-primary" ng-click="getAnInstantQuote('motor')" type="button">Get Quotation</button>
+                        </div>
+                    </div>
+                    <div flex="">
+                        <h5 class="about-us-title">Householder's Insurance</h5>
+                    </div>
+                    <div flex="" style="color: purple;font-weight: bold;">Your roof is as important as your health</div>
+                    <div flex="">Your home is your greatest asset. It deserves the best protection. This home insurance protect you, your family and your home against unforeseen events.</div>
+                    <div flex="">
+                        <h5 class="about-us-title-big">Benefits</h5>
+                        <ul class="list-li-items">
+                            <li>Protects your home and contents as well as any renovation work you have done</li>
+                            <li>14 days money back guaranteed</li>
+                            <li>24hr Emergency Home Assistance Helpline</li>
+                        </ul>
+                    </div>
+                    <div flex="" layout="row" layout-align="center center" layout-padding=""><a class="pointer">Application Form</a> &nbsp; &nbsp; <a class="pointer" offset="5">Fact Sheet</a> &nbsp; &nbsp; <a class="pointer" offset="5">Disclosure Sheet</a> &nbsp; &nbsp; <a class="pointer" offset="5">Policy Wordings</a></div>
+                </div>
+            </div>
+            <div class="tab-pane" id="Limited10PayRewardsSaver">
+                <div ng-show="isEnquiryProduct==false">
+                    <div layout="row" layout-align="begin center">
+                        <div flex="50">
+                            <h3 class="about-us-title-big">Life Insurance</h3>
+                        </div>
+                        <div flex="50" layout="row" layout-align="end center" layout-padding="">
+                            <button class="btn btn-lg v3-btn-primary" ng-click="enquiryProduct(selectedProduct)" type="submit">Enquire Now</button>&nbsp;
+                            <button class="btn btn-lg v3-btn-primary" ng-click="getAnInstantQuote('motor')" type="button">Get Quotation</button>
+                        </div>
+                    </div>
+                    <div flex="">
+                        <h5 class="about-us-title">Limited 10pay Rewards Saver</h5>
+                    </div>
+                    <div flex="" style="color: purple;font-weight: bold;">Be rewarded with guaranteed yearly cash payout and enjoy short premium term.</div>
+                    <div flex="">This is a limited regular premium participating product that focus more on saving elements with minimal protection against death during the term of the policy.At maturity, the maturity benefit will be payable in one lump-sum.</div>
+                    <div flex="">A range of savings terms to facilitate accumulation of wealth towards achieving your savings goal . this plan provides for non-guaranteed Reversionary Bonus and Performance Bonus upon death, surrender and maturity.</div>
+                    <div flex="">
+                        <h5 class="about-us-title-big">Benefits</h5>
+                        <ul class="list-li-items">
+                            <li>Automatic premium loan facility and policy loan are available</li>
+                            <li>Guaranteed Cash Payout</li>
+                            <li>Option to increase protection coverage</li>
+                        </ul>
+                    </div>
+                    <div flex="" layout="row" layout-align="center center" layout-padding=""><a class="pointer" download="" href="{{contextPathTheme}}/my-static-pages/forms/ProductSummaryLimited10PayRewardSaver.pdf">Product Summary PDF</a> &nbsp; &nbsp; <a class="pointer" download="" href="{{contextPathTheme}}/my-static-pages/forms/LifeApplicationForm.pdf" offset="5">Application Form</a></div>
+                </div>
+            </div>
+            <div class="tab-pane" id="TermLifeProtect">
+                <div ng-show="selectedProduct.title=='TermLifeProtect' &amp;&amp; isEnquiryProduct==false">
+                    <div layout="row" layout-align="begin center">
+                        <div flex="50">
+                            <h3 class="about-us-title-big">Life Insurance</h3>
+                        </div>
+                        <div flex="50" layout="row" layout-align="end center" layout-padding="">
+                            <button class="btn btn-lg v3-btn-primary" ng-click="enquiryProduct(selectedProduct)" type="submit">Enquire Now</button>&nbsp;
+                            <button class="btn btn-lg v3-btn-primary" ng-click="getAnInstantQuote('motor')" type="button">Get Quotation</button>
+                        </div>
+                    </div>
+                    <div flex="">
+                        <h5 class="about-us-title-big">TermLife Protect</h5>
+                    </div>
+                    <div flex="" style="color: purple;font-weight: bold;">Protect yourself and your family at a guaranteed premium throughout your policy term.</div>
+                    <div flex="">This is a regular premium non-participating policy that provides financial protection against death and terminal illness during the term with option to buy another term policy without evidence of good health.</div>
+                    <div flex="">Covers Death, and Terminal Illness (TI) and there is a range of attachable riders to choose from .Policy term to choose from 10 to 58 years subject to expiry age of 75 next birthday</div>
+                    <div flex="">
+                        <h5 class="about-us-title-big">Benefits</h5>
+                        <ul class="list-li-items">
+                            <li>Offers Funeral Expense Financial Aids (FEFA), wich is to provice early financial assistance to claimant in the event of death of the life assured. Financial assistance granted shall be up to $3,000.</li>
+                            <li>Accelerated Terminal illness benefit will be payable in one lump sum as an advancement of the death benefit</li>
+                            <li>Premium remains unchanged throughout the premium term for as long as the required premium is paid before the end of the grace period for renewal premium</li>
+                        </ul>
+                    </div>
+                    <div flex="" layout="row" layout-align="center center" layout-padding=""><a class="pointer" download="" href="{{contextPathTheme}}/my-static-pages/forms/ProductSummaryTermLifeProtect.pdf">Product Summary PDF</a> &nbsp; &nbsp; <a class="pointer" download="" href="{{contextPathTheme}}/my-static-pages/forms/LifeApplicationForm.pdf" offset="5">Application Form</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-9 about-us-detail-font-size custom-tab-content" ng-show="isEnquiryProduct==true">
+        <div flex="">
+            <h3 class="about-us-title-big">Product Enquiry Form</h3>
+        </div>
+        <div flex="">We will reply your enquiries within 3 working days. Give us a call if you require urgent response.</div>
+        <form>
+            <div class="chat-withus-container-parent" style="margin-top: 5%;">
+                <div class="chat-withus-container">
+                    <div class="form-group form-group-lg has-success">
+                        <label>*Name:</label>
+                        <input class="form-control" style="padding:0px; background-color: #fff;" id="name" ng-model="enquiryInfo.name" />
+                        <div style="color: red; max-width:100%"  ng-show="(enquiryInfo.name=='' || enquiryInfo.name==null) && firstLoad==false">Required field, cannot be blank</div>
+                    </div>
+                    <div class="form-group form-group-lg has-success">
+                        <label>*Email:</label>
+                        <input class="form-control" style="padding:0px; background-color:#fff;" id="email" ng-model="enquiryInfo.email" />
+                        <div style="color: red; max-width:100%" ng-show="!checkValidEmail(enquiryInfo.email) && firstLoad==false">Invalid email format</div>
+                    </div>
+                    <div class="form-group form-group-lg has-success">
+                        <label>*Contact No:</label>
+                        <input ng-model="enquiryInfo.cNo" style="padding:0px; background-color:#fff;" class="form-control" id="yourMobile" maxlength="20" />
+                        <div style="color: red;margin-top: 10px"  ng-show="(enquiryInfo.cNo=='' || enquiryInfo.cNo==null) && firstLoad==false">Invalid contact number format</div>
+                    </div>
+                    <div class="form-group form-group-lg has-success">
+                        <label>Products for enquiry:</label>
+                        {{selectedProduct.text}}
+                    </div>
+                    <div class="form-group form-group-lg has-success">
+                        <label>*Detail:</label>
+                        <textarea ng-model="enquiryInfo.detail" class="form-control" name="detail" style="width: 400px; height: 70px !important;"></textarea>
+                        <div style="color: red;margin-top: 10px" ng-show="(enquiryInfo.detail=='' || enquiryInfo.detail==null) && firstLoad==false">Required field, cannot be blank</div>
+                    </div>
+                    <button class="btn btn-lg v3-btn-primary" ng-click="submit()" type="submit">Submit</button>&nbsp;
+                    <button class="btn btn-lg v3-btn-primary" ng-click="reset()" type="button">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

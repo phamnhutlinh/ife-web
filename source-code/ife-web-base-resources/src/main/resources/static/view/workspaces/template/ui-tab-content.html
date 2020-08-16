@@ -1,0 +1,36 @@
+<div class="tab-element {{v4LiveTabItem}} v4-tab-item">
+	<div ng-if="card.isSelected">
+		<button ng-if="!card.customName" 
+		   ng-class="{'v3-tab-invalid' : card.validStatus == 'INVALID'}"
+		   class="v4-tab-item-button v4-tab-item-selected-color v4-button-remove-focus-color">
+		   {{'v3.mynewworkspace.portlet.label.'+ card.name | translate}}
+		</button>
+		
+		<button ng-if="card.customName" 
+		   ng-class="{'v3-tab-invalid' : card.validStatus == 'INVALID'}"
+		   class="v4-tab-item-button v4-tab-item-selected-color v4-button-remove-focus-color">
+		   {{(card.customNameTranslate !== undefined ? card.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(card.customName) | translateMessage}}
+		</button>
+	</div>
+	<div ng-if="!card.isSelected">
+		<button ng-if="!card.customName" 
+		   ng-class="{'v3-tab-invalid' : card.validStatus == 'INVALID'}"
+		   class="v4-tab-item-button v4-tab-item-unselected-color v4-button-remove-focus-color">
+		   {{'v3.mynewworkspace.portlet.label.'+ card.name | translate}}
+		</button>
+		
+		<button ng-if="card.customName" 
+			ng-class="{'v3-tab-invalid' : card.validStatus == 'INVALID'}"
+		   class="v4-tab-item-button v4-tab-item-unselected-color v4-button-remove-focus-color">
+		   {{(card.customNameTranslate !== undefined ? card.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(card.customName) | translateMessage}}
+		</button>
+	</div>
+	
+		<!-- icon remove -->
+		<span class="side-icon-right" ng-if="card.view.icons.length > 0" >
+            <span ng-repeat="icon in card.view.icons">
+                <span tab-icon="icon" class="v3-tab-icon-remove-hover" ng-if="icon.cssClass == 'v3-card-icon-remove'">
+                </span>
+            </span>
+        </span>
+</div>

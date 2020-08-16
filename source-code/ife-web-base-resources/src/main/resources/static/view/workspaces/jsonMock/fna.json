@@ -1,0 +1,3724 @@
+{
+  "IposDocument": {
+    "Data": {
+      "fna:Fna": {
+        "permission": {
+          "openable": [
+            "fna_openable"
+          ],
+          "editable": [
+            "fna_editable"
+          ],
+          "viewable": [
+            "fna_viewable"
+          ]
+        },
+        "cssClass": "v3-box-1",
+        "section": "fna:Fna",
+        "uiStyle": "tab",
+        "fna:ImportClient": {
+          "isVisible": "!hasValueNotEmpty(moduleService.findElementInDetail(['client', 'refContact', 'refDocName']).value)",
+          "onOpen": "getContactList()",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user"
+            },
+            "cardIconPlus": {}
+          },
+          "@staticHtml": "list_import_contact_for_fna.html",
+          "@section": "fna:Fna",
+          "priority": "10"
+        },
+        "fna:Client": {
+          "key": [
+            "client"
+          ],
+          "section": "fna:Fna",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user"
+            },
+            "uiStyle": "tab",
+            "removeCard": {
+              "onClick": "removeCard('MSG-20-004', 'client')"
+            }
+          },
+          "cssClass": "v3-box-1",
+          "isVisible": "hasValueNotEmpty(moduleService.findElementInDetail(['client', 'refContact', 'refDocName']).value)",
+          "previewHtml": "v4-preview-static-client-card.html",
+          "fna:CurrentFinancialPosition": {
+            "key": [
+              "client",
+              "baseContact",
+              "currentPosition"
+            ],
+            "section": "fna:Client",
+            "icon": "fa fa-file-text-o",
+            "uiStyle": "section",
+            "cssClass": "v3-box-1",
+            "fna:CurrentAssetsLiabilities": {
+              "key": [
+                "client",
+                "baseContact",
+                "currentPosition",
+                "assertsLiabilities"
+              ],
+              "section": "fna:CurrentFinancialPosition",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "onOpen": "setSlider()",
+              "fna:CurrentAssets": {
+                "key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:ResidentialProperty": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "residentialProperty"
+                ],
+                "group": "1"
+              },
+              "fna:OtherSavingFunds": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "otherSavingFunds"
+                ],
+                "group": "2"
+              },
+              "fna:InvestmentAndSavings": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "investmentAndSavings"
+                ],
+                "group": "2"
+              },
+              "fna:TotalAsset": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "totalAssets"
+                ],
+                "group": "3"
+              },
+              "fna:CurrentLiabilities": {
+                "key": [
+                  ""
+                ],
+                "group": "3"
+              },
+              "fna:MortageLoan": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "mortageLoan"
+                ],
+                "group": "4"
+              },
+              "fna:OtherOutstandingDebtsCurrentAssetsLiabilities": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "otherOutstandingDebts"
+                ],
+                "group": "4"
+              },
+              "fna:totalLiabilitiesValue": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "totalLiabilities"
+                ],
+                "group": "5"
+              },
+              "fna:totalNetWorth": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "totalNetWorth"
+                ],
+                "group": "5"
+              },
+              "fna:SignificantChange": {
+                "key": [],
+                "group": "6"
+              },
+              "fna:needsAnalysis": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "significantChange"
+                ],
+                "group": "6"
+              },
+              "fna:stateReason": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "specify"
+                ],
+                "group": "6"
+              },
+              "fna:computeTagAssetLiabilitiesFake": {
+                "key": [],
+                "group": "7"
+              },
+              "fna:computeTagAssetLiabilities": {
+                "key": [],
+                "group": "7"
+              }
+            },
+            "fna:AnnualCashFlowBudgetedFunds": {
+              "key": [
+                "client",
+                "baseContact",
+                "currentPosition",
+                "annualFunds"
+              ],
+              "section": "fna:CurrentFinancialPosition",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "onOpen": "setSlider()",
+              "fna:AnnualIncome": {
+                "key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:AnnualCashFlowTemp1": {
+                "key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:AnnualEmployeeIncomes": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "annualIncome"
+                ],
+                "@defaultValue": "0",
+                "group": "2"
+              },
+              "fna:LessCPF": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "lessCPF"
+                ],
+                "@defaultValue": "0",
+                "group": "2"
+              },
+              "fna:NetAnnualIncome": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "netAnnualIncome"
+                ],
+                "group": "3"
+              },
+              "fna:OtherIncome": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "otherIncome"
+                ],
+                "@defaultValue": "0",
+                "group": "3"
+              },
+              "fna:TotalAnnualIncome": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "totalIncomeValue"
+                ],
+                "@format": "currency:0",
+                "group": "4"
+              },
+              "fna:AnnualCashFlowTemp2": {
+                "key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:AnnualExpense": {
+                "key": [
+                  ""
+                ],
+                "group": "5"
+              },
+              "fna:AnnualCashFlowTemp3": {
+                "key": [
+                  ""
+                ],
+                "group": "5"
+              },
+              "fna:LivingExpenses": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "livingExpenses"
+                ],
+                "@defaultValue": "0",
+                "group": "6"
+              },
+              "fna:TuitionAndSchoolExpenses": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "tuitionSchoolExpenses"
+                ],
+                "@defaultValue": "0",
+                "group": "6"
+              },
+              "fna:LoanRepayment": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "loanRepayment"
+                ],
+                "@defaultValue": "0",
+                "group": "7"
+              },
+              "fna:Others": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "otherExpenses"
+                ],
+                "group": "7"
+              },
+              "fna:TotalAnnualExpenses": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "totalExpenses"
+                ],
+                "group": "8"
+              },
+              "fna:NetCashFlowOrSurplus": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "netCashFlowShortfall"
+                ],
+                "group": "8",
+                "defaultValue": "0"
+              },
+              "fna:BudgetedFunds": {
+                "key": [
+                  ""
+                ],
+                "group": "9"
+              },
+              "fna:AnnualCashFlowTemp4": {
+                "key": [
+                  ""
+                ],
+                "group": "9"
+              },
+              "fna:RegularAmount": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "regularAmount"
+                ],
+                "@defaultValue": "0",
+                "group": "10"
+              },
+              "fna:LumpSum": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "lumpSum"
+                ],
+                "@defaultValue": "0",
+                "group": "10"
+              },
+              "fna:AnnualCashSignificants": {
+                "key": [
+                  ""
+                ],
+                "group": "11"
+              },
+              "fna:AnnualCashFlowTemp6": {
+                "key": [
+                  ""
+                ],
+                "group": "11"
+              },
+              "fna:AnnualCashSignificant": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "significantChange"
+                ],
+                "group": "12"
+              },
+              "fna:AnnualCashSpecify": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "specify"
+                ],
+                "group": "12"
+              },
+              "fna:computeTagAnnualFundFake": {
+                "key": [],
+                "group": "13"
+              },
+              "fna:computeTagAnnualFund": {
+                "key": [],
+                "group": "13"
+              }
+            },
+            "fna:ExistingFinancialPlans": {
+              "key": [
+                "client",
+                "baseContact",
+                "currentPosition",
+                "existingPlans",
+                "existingPlans"
+              ],
+              "section": "fna:CurrentFinancialPosition",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "fna:ExistingFinancialDeclaration": {
+	              "section": "fna:ExistingFinancialPlans",
+	              "cssLabelFont": "section-label-1",
+            	  "cssIconFont": "section-icon-1",
+	                "key": [
+	                  "client",
+	                  "baseContact",
+	                  "currentPosition",
+	                  "existingPlans",
+	                  "planDeclaration"
+	                ]
+	              ,
+	              "fna:HaveExistingPlan": {
+	                "key": [
+	                  "client",
+	                  "baseContact",
+	                  "currentPosition",
+	                  "existingPlans",
+	                  "planDeclaration",
+	                  "hasExistingPlan"
+	                ]
+                }
+              },
+              "fna:NewExistingPlan": {
+                "key": [""],
+                "section": "fna:ExistingFinancialPlans",
+                "isVisible": "findElementInDetail(['client', 'baseContact', 'currentPosition', 'existingPlans','hasExistingPlan']).value === 'Y'",
+                "icon": {
+                  "main": "fa fa-user",
+                  "mainAction": "addIcon"
+                },
+                "cardType": "action",
+                "onClick": "addCard(card)"
+              },
+              "fna:ExistingFinancialPlan": {
+               "cardType": "template",
+                "cssClass": "v3-box-1",
+                "section": "fna:ExistingFinancialPlans",
+                "key": [
+                  ""
+                ],
+                "icons": {
+                  "cardIcon": {
+                    "content": "fa fa-user"
+                  },
+                  "removeCardInList": {}
+                },
+                "@onOpen": "setSlider(); populateOwnerInExistingPlanTile('client')",
+                "fna:InsuranceDetailsAndValue": {
+                  "key": [
+                    ""
+                  ]
+                },
+                "fna:ExistingFinancialPlanTemp1": {
+                  "key": [
+                    ""
+                  ]
+                },
+                "fna:OwnerName": {
+                  "key": [
+                    "owner"
+                  ]
+                },
+                "fna:Company": {
+                  "key": [
+                    "company"
+                  ]
+                },
+                "fna:PolicyType": {
+                  "key": [
+                    "policyType"
+                  ]
+                },
+                "fna:YearOfIssue": {
+                  "key": [
+                    "yearOfIssue"
+                  ]
+                },
+                "fna:PremiumType": {
+                  "key": [
+                    "premiumType"
+                  ]
+                },
+                "fna:PremiumValue": {
+                  "key": [
+                    "premiumValue"
+                  ],
+                  "@defaultValue": "0"
+                },
+                "fna:DeathOfBenefit": {
+                  "key": [
+                    "deathBenefit"
+                  ],
+                  "@defaultValue": "0"
+                },
+                "fna:TBD": {
+                  "key": [
+                    "tpd"
+                  ],
+                  "@defaultValue": "0"
+                },
+                "fna:CriticalIllnessExistingPlan": {
+                  "key": [
+                    "criticalIllness"
+                  ],
+                  "@defaultValue": "0"
+                },
+                "fna:HSBenefit": {
+                  "key": [
+                    "hsBenefit"
+                  ],
+                  "@defaultValue": "0"
+                }
+              }
+            }
+          },
+          "fna:FinancialKnowledgeInvestmentSavvy": {
+            "key": [
+              "client",
+              "baseContact",
+              "knowledgeInvestment"
+            ],
+            "section": "fna:Client",
+            "icon": "fa fa-file-text-o",
+            "cssClass": "v3-box-1",
+            "fna:KnowledgeEducation": {
+              "key": [
+                ""
+              ]
+            },
+            "fna:KnowledgeQ01": {
+              "key": [
+                "client",
+                "baseContact",
+                "knowledgeInvestment",
+                "isDiplomaOrHigher"
+              ]
+            },
+            "fna:KnowledgeQ01TypeOfInstitution": {
+              "key": [
+                "client",
+                "baseContact",
+                "knowledgeInvestment",
+                "typeOfInstitution"
+              ]
+            },
+            "fna:KnowledgeQ01NameOfInstitution": {
+              "key": [
+                "client",
+                "baseContact",
+                "knowledgeInvestment",
+                "nameOfInstitution1"
+              ]
+            },
+            "fna:KnowledgeQ01YearOfGraduation": {
+              "key": [
+                "client",
+                "baseContact",
+                "knowledgeInvestment",
+                "yearOfGraduation1"
+              ]
+            },
+            "fna:KnowledgeQ02": {
+              "key": [
+                "client",
+                "baseContact",
+                "knowledgeInvestment",
+                "professionalQualification"
+              ],
+              "@defaultValue": "N"
+            },
+            "fna:KnowledgeQ02NameOfInstitution": {
+              "key": [
+                "client",
+                "baseContact",
+                "knowledgeInvestment",
+                "nameOfInstitution2"
+              ]
+            },
+            "fna:KnowledgeQ02YearOfGraduation": {
+              "key": [
+                "client",
+                "baseContact",
+                "knowledgeInvestment",
+                "yearOfGraduation2"
+              ]
+            },
+            "fna:KnowledgeInvestmentExp": {
+              "key": [
+                ""
+              ]
+            },
+            "fna:KnowledgeQ03": {
+              "key": [
+                "client",
+                "baseContact",
+                "knowledgeInvestment",
+                "isInvestCIS"
+              ],
+              "@defaultValue": "N"
+            },
+            "fna:KnowledgeQ03NoOfTransaction": {
+              "key": [
+                "client",
+                "baseContact",
+                "knowledgeInvestment",
+                "transactionNo"
+              ]
+            },
+            "fna:KnowledgeQ03TypeOfTransaction": {
+              "key": [
+                "client",
+                "baseContact",
+                "knowledgeInvestment",
+                "typeOfTransaction"
+              ]
+            },
+            "fna:KnowledgeWorkExp": {
+              "key": [
+                ""
+              ]
+            },
+            "fna:KnowledgeQ04": {
+              "key": [
+                "client",
+                "baseContact",
+                "knowledgeInvestment",
+                "isWorkExperience"
+              ],
+              "@defaultValue": "N"
+            },
+            "fna:KnowledgeQ04NatureOfWork": {
+              "key": [
+                "client",
+                "baseContact",
+                "knowledgeInvestment",
+                "natureOfWork"
+              ]
+            },
+            "fna:KnowledgeTemp2": {
+              "key": [
+                ""
+              ]
+            },
+            "fna:KnowledgeOutcome": {
+              "key": [
+                ""
+              ]
+            },
+            "fna:KnowledgeOutcome1": {
+              "key": [
+                "client",
+                "baseContact",
+                "knowledgeInvestment",
+                "isExperienceCIS"
+              ],
+              "@defaultValue": "N"
+            },
+            "fna:KnowledgeOutcome2": {
+              "key": [
+                "client",
+                "baseContact",
+                "knowledgeInvestment",
+                "isExperienceCIS"
+              ],
+              "@defaultValue": "N"
+            }
+          },
+          "fna:InvestmentRiskProfile": {
+            "key": [
+              "client",
+              "baseContact",
+              "investmentRiskProfile"
+            ],
+            "section": "fna:Client",
+            "icon": "fa fa-file-text-o",
+            "cssClass": "v3-box-1",
+            "fna:InvestmentRiskChoose": {
+              "key": [
+                ""
+              ]
+            },
+            "fna:InvestmentPreference": {
+              "key": [
+                "client",
+                "baseContact",
+                "investmentRiskProfile",
+                "investPreference"
+              ]
+            },
+            "fna:ExpectedReturn": {
+              "key": [
+                "client",
+                "baseContact",
+                "investmentRiskProfile",
+                "expectedReturn"
+              ]
+            },
+            "fna:InvestmentTimePeriod": {
+              "key": [
+                "client",
+                "baseContact",
+                "investmentRiskProfile",
+                "investTimePeriod"
+              ]
+            },
+            "fna:DuringSortTermDrop": {
+              "key": [
+                "client",
+                "baseContact",
+                "investmentRiskProfile",
+                "investShortTermDrop"
+              ]
+            },
+            "fna:InvestmentGoal": {
+              "key": [
+                "client",
+                "baseContact",
+                "investmentRiskProfile",
+                "investGoal"
+              ]
+            },
+            "fna:InvestmentPortfolio": {
+              "key": [
+                "client",
+                "baseContact",
+                "investmentRiskProfile",
+                "investPortfolio"
+              ]
+            },
+            "fna:TotalScore": {
+              "key": [
+                "client",
+                "baseContact",
+                "investmentRiskProfile",
+                "totalScore"
+              ]
+            },
+            "fna:RiskProfile": {
+              "key": [
+                "client",
+                "baseContact",
+                "investmentRiskProfile",
+                "riskProfile"
+              ]
+            },
+            "fna:ComputeTagInvestmentFake": {
+              "key": []
+            },
+            "fna:ComputeTagInvestment": {
+              "key": []
+            }
+          },
+          "fna:Dependants": {
+            "key": [
+              "dependants"
+            ],
+            "section": "fna:Client",
+            "icon": "fa fa-file-text-o",
+            "uiStyle": "section",
+            "cssClass": "v3-box-1",
+            "fna:Children": {
+              "key": [
+                "childrenObject"
+              ],
+              "section": "fna:Dependants",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "onOpen": "getListContactForDependant()",
+              "fna:ChildrenDepedant": {
+                "key": [
+                  "dependants",
+                  "childrenObject",
+                  "children"
+                ]
+              }
+            },
+            "fna:ElderlyDependants": {
+              "key": [
+                "elderlyObject"
+              ],
+              "section": "fna:Dependants",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "onOpen": "getListContactForDependant()",
+              "fna:ElderlyDependant": {
+                "key": [
+                  "dependants",
+                  "elderlyObject",
+                  "elderlyDependants"
+                ]
+              }
+            }
+          },
+          "fna:FinancialGoalsSelection": {
+            "key": [
+              "client",
+              "baseContact",
+              "selectionGoal"
+            ],
+            "section": "fna:Client",
+            "icon": "fa fa-file-text-o",
+            "cssClass": "v3-box-1",
+            "onClose": "computeTag(commonService.CONSTANTS.VPMS_MAPPING_FIELD.NUMBER_OF_GOAL, true, 'Client', [])",
+            "fna:TitleLabelGoals1": {
+              "key": [
+                ""
+              ]
+            },
+            "fna:ProtectionUponDeath": {
+              "key": [
+                "client",
+                "baseContact",
+                "selectionGoal",
+                "protectionUponDeath"
+              ],
+              "group": "1"
+            },
+            "fna:CriticalIllness": {
+              "key": [
+                "client",
+                "baseContact",
+                "selectionGoal",
+                "criticalIllness"
+              ],
+              "group": "1"
+            },
+            "fna:MortgageProtection": {
+              "key": [
+                "client",
+                "baseContact",
+                "selectionGoal",
+                "mortgage"
+              ],
+              "group": "1"
+            },
+            "fna:TitleLabelGoals2": {
+              "key": [
+                ""
+              ],
+              "group": "2"
+            },
+            "fna:EducationFund": {
+              "key": [
+                "client",
+                "baseContact",
+                "selectionGoal",
+                "educationFund"
+              ],
+              "group": "2"
+            },
+            
+            "fna:RetirementFund": {
+              "key": [
+                "client",
+                "baseContact",
+                "selectionGoal",
+                "retirementFund"
+              ],
+              "group": "2"
+            },
+            "fna:TermSaving": {
+              "key": [
+                "client",
+                "baseContact",
+                "selectionGoal",
+                "mediumLongTermSaving"
+              ],
+              "group": "3"
+            }
+          },
+          "fna:FinancialGoalsAnalysis": {
+            "key": [
+              "client",
+              "baseContact",
+              "analysisGoal"
+            ],
+            "section": "fna:Client",
+            "icon": "fa fa-file-text-o",
+            "uiStyle": "section",
+            "cssClass": "v3-box-1",
+            "fna:Assumptions": {
+              "key": [
+                "client",
+                "baseContact",
+                "analysisGoal",
+                "assumptions"
+              ],
+              "section": "fna:FinancialGoalsAnalysis",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "@onOpen": "setSlider()",
+              
+              "fna:ExpectedReturnAss": {
+              "key": [],
+                "group": "0"
+              },
+              
+              "fna:ExpectedReturnOnInvestment": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "assumptions",
+                  "expectedReturn"
+                ],
+                "group": "1"
+              },
+              "fna:InflationRate": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "assumptions",
+                  "inflationRate"
+                ],
+                "@defaultValue": "1",
+                "group": "1"
+              },
+              "fna:AssumptionsTemp1": {
+                "key": [
+                  ""
+                ],
+                "group": "2"
+              },
+              "fna:ReplacementIncomePercentage": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "assumptions",
+                  "currentAnnualIncome"
+                ],
+                "@defaultValue": "30",
+                "group": "2"
+              },
+              "fna:NetRateOfReturn": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "assumptions",
+                  "netRateOfReturn"
+                ],
+                "group": "3"
+              },
+              "fna:AssumptionsAge": {
+                "key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:AssumptionsTemp2": {
+                "key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:DependencyPeriodForChildren": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "assumptions",
+                  "depencencyPeriodForChildren"
+                ],
+                "@defaultValue": "5",
+                "group": "5"
+              },
+              "fna:DependencyPeriodForElderlyDepandants": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "assumptions",
+                  "depencencyPeriodForElderlyDependants"
+                ],
+                "@defaultValue": "5",
+                "group": "5"
+              },
+              "fna:MaleStartsUniversity": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "assumptions",
+                  "maleUniversity"
+                ],
+                "@defaultValue": "15",
+                "group": "6"
+              },
+              "fna:FemaleStartsUniversity": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "assumptions",
+                  "femaleUniversity"
+                ],
+                "@defaultValue": "15",
+                "group": "6"
+              },
+              "fna:RetirementAge": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "assumptions",
+                  "retirementAge"
+                ],
+                "@defaultValue": "55",
+                "group": "7"
+              },
+              "fna:LifeExpectancyAge": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "assumptions",
+                  "lifeExpectancyAge"
+                ],
+                "@defaultValue": "55",
+                "group": "7"
+              },
+              "fna:UniversityEducation": {
+                "key": [
+                  ""
+                ],
+                "group": "8"
+              },
+              "fna:AssumptionsTemp3": {
+                "key": [
+                  ""
+                ],
+                "group": "8"
+              },
+              "fna:UniversityStudyDuration": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "assumptions",
+                  "universityDuration"
+                ],
+                "@defaultValue": "1",
+                "group": "9"
+              },
+              "fna:CostPerYear": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "assumptions",
+                  "costPerYear"
+                ],
+                "@defaultValue": "35000",
+                "group": "9"
+              },
+              "fna:AssumptionsTemp4": {
+                "key": [
+                  ""
+                ],
+                "group": "10"
+              },
+              "fna:ComputeTagAssumption": {
+                "key": [
+                  ""
+                ],
+                "group": "10"
+              }
+            },
+            "fna:ProtectionUponDeath": {
+              "key": [
+                "client",
+                "baseContact",
+                "analysisGoal",
+                "protectionDeath"
+              ],
+              "section": "fna:FinancialGoalsAnalysis",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "isVisible": "isVisibleGoal(moduleService.findElementInDetail(['client', 'baseContact', 'protectionUponDeath', 'clientPriority']).value)",
+              "@onOpen": "setSlider()",
+              "fna:CapitalSumRequirement": {
+                "key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:ProtectionUponDeathTemp1": {
+                "key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:ReplacementIncomeneeded": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "replacementIncomeNeeded"
+                ],
+                "@defaultValue": "4000000",
+                "group": "2"
+              },
+              "fna:Numberofyearincomerequired": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "numberOfYearIncomeRequired"
+                ],
+                "group": "2"
+              },
+              "fna:NetRateofReturn": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "netRateOfReturn"
+                ],
+                "group": "3"
+              },
+              "fna:LumpSumRequired": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "lumpSumRequired"
+                ],
+                "group": "3",
+                "defaultValue": "0"
+              },
+              "fna:TotalCashRequirement": {
+                "key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:ProtectionUponDeathTemp2": {
+                "key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:MortgareLoan": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "motgageLoan"
+                ],
+                "group": "5"
+              },
+              "fna:OtherOutstandingDebtsProtectionUponDeath": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "otherOutstandingDebt"
+                ],
+                "group": "5"
+              },
+              "fna:TotalCashRequirementSGD": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "totalCashRequired"
+                ],
+                "group": "6"
+              },
+              "fna:TotalRequiredForIncomeProtection": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "totalRequiredForIncomeProtection"
+                ],
+                "group": "6",
+                "defaultValue": "0"
+              },
+              "fna:ExistingFundssetaside": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "exitingFundSetAside"
+                ],
+                "group": "7"
+              },
+              "fna:TotalShortfallorSurplus": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "totalShortFallForSurplus"
+                ],
+                "group": "7",
+                "defaultValue": "0"
+              },
+              "fna:ProtectionUponDeathTemp3": {
+                "key": [
+                  ""
+                ],
+                "group": "8"
+              },
+              "fna:ComputeTagProtectionUponDeath": {
+                "key": [
+                  ""
+                ],
+                "group": "8"
+              }
+            },
+            "fna:RetirementFund": {
+              "key": [
+                "client",
+                "baseContact",
+                "analysisGoal",
+                "retirementFund"
+              ],
+              "section": "fna:FinancialGoalsAnalysis",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "isVisible": "isVisibleGoal(moduleService.findElementInDetail(['client', 'baseContact', 'retirementFund', 'clientPriority']).value)",
+              "@onOpen": "setSlider();computeTag(commonService.CONSTANTS.VPMS_MAPPING_FIELD.RETIRE_FUND_TILE, false, 'Client')",
+              "fna:CurrentAge": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "currentAge"
+                ],
+                "group": "1"
+              },
+              "fna:CurrentAnnualIncomeRF": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "currentAnnualIncome"
+                ],
+                "group": "1"
+              },
+              "fna:ExpectedRetirementAge": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "expectedRetirementAge"
+                ],
+                "@defaultValue": "62",
+                "group": "2"
+              },
+              "fna:IncomeDuringRetirement": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "incomeDuringRetirement"
+                ],
+                "@defaultValue": "75",
+                "group": "2"
+              },
+              "fna:AssumedRateOfSalaryIncrease": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "assumedRateOfSalaryIncrease"
+                ],
+                "@defaultValue": "6",
+                "group": "3"
+              },
+              "fna:RetirementFundTemp1": {
+                "key": [
+                  ""
+                ],
+                "group": "3"
+              },
+              "fna:AnnualIncomeRequired": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "annualIncomeRequired"
+                ],
+                "group": "4"
+              },
+              "fna:RetirementFundTemp4": {
+                "key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:YearsRetirementIncome": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "yearsRetirementIncome"
+                ],
+                "group": "5"
+              },
+              "fna:NetRateOfReturnRF": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "netRateOfReturn"
+                ],
+                "group": "5"
+              },
+              "fna:TotalRequireForRetirement": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "totalRequireForRetirement"
+                ],
+                "group": "6"
+              },
+              "fna:ExistingFundSetAside": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "existingFundSetAside"
+                ],
+                "@defaultValue": "3395000",
+                "group": "6"
+              },
+              "fna:TotalShortFall": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "totalShortFall"
+                ],
+                "group": "7"
+              },
+              "fna:ReturnOnInvestment": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "returnOnInvestment"
+                ],
+                "group": "7"
+              },
+              "fna:ExpectedInterestEarn": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "expectedInterestEarn"
+                ],
+                "group": "8"
+              },
+              "fna:RetirementFundTemp9": {
+                "key": [
+                  ""
+                ],
+                "group": "8"
+              },
+              "fna:PossibleOption": {
+                "key": [
+                  ""
+                ],
+                "group": "9"
+              },
+              "fna:RetirementFundTemp13": {
+                "key": [
+                  ""
+                ],
+                "group": "9"
+              },
+              "fna:SingleCapitalSumRF": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "singleCapitalSum"
+                ],
+                "group": "10"
+              },
+              "fna:AnnualSumRequired": {
+                "key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "annualSumRequired"
+                ],
+                "group": "10"
+              },
+              "fna:RetirementFundTemp14": {
+                "key": [
+                  ""
+                ],
+                "group": "11"
+              },
+              "fna:ComputeTagRetirementFund": {
+                "key": [
+                  ""
+                ],
+                "group": "11"
+              }
+            },
+            "fna:EducationFund": {
+              "key": [
+                "client",
+                "baseContact",
+                "analysisGoal",
+                "educationFund",
+                "children"
+              ],
+              "section": "fna:FinancialGoalsAnalysis",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "isVisible": "isVisibleGoal(moduleService.findElementInDetail(['client', 'baseContact', 'educationFund', 'clientPriority']).value)",
+              "fna:AddChild": {
+                "section": "fna:EducationFund",
+                "cardType": "action",
+                "staticHtml": "list_import_children_education_fund_fna.html",
+                "key": [],
+                "cssClass": "v3-box-1",
+                "onOpen": "getListContactForEducationTile()",
+                "icons": {
+                  "cardIcon": {
+                    "content": "fa fa-address-card"
+                  },
+                  "cardIconPlus": {}
+                }
+              },
+              "fna:Child": {
+                "cssClass": "v3-box-1",
+                "section": "fna:EducationFund",
+                "cardType": "template",
+                "onOpen": "computeTag(commonService.CONSTANTS.VPMS_MAPPING_FIELD.EDUCATION_FUND_TILE, false, 'Client', [], card.scope.$index)",
+                "icons": {
+                  "cardIcon": {
+                    "content": "fa fa-address-card"
+                  },
+                  "removeCardInList": {}
+                },
+                "key": [],
+                "fna:ChildName": {
+                  "key": [
+                    "refContact",
+                    "full"
+                  ],
+                  "group": "1"
+                },
+                "fna:ChildCurrentAge": {
+                  "key": [
+                    "currentAge"
+                  ],
+                  "group": "1"
+                },
+                "fna:ChildPlanEducationStart": {
+                  "key": [
+                    "planEducationStart"
+                  ],
+                  "group": "2"
+                },
+                "fna:ChildEducationInflationRate": {
+                  "key": [
+                    "educationInflationRate"
+                  ],
+                  "group": "2"
+                },
+                "fna:ChildTotalEducationFundRequiredToday": {
+                  "key": [
+                    "totalEducationFundRequiredToday"
+                  ],
+                  "group": "3"
+                },
+                "fna:ChildTotalEducationFundRequiredToStart": {
+                  "key": [
+                    "totalEducationFundRequiredToStart"
+                  ],
+                  "group": "3"
+                },
+                "fna:ChildExistingFundSetAside": {
+                  "key": [
+                    "existingFundSetAside"
+                  ],
+                  "group": "4"
+                },
+                "fna:ChildExpectedRateOfReturn": {
+                  "key": [
+                    "expectedRateOfReturn"
+                  ],
+                  "group": "4"
+                },
+                "fna:ChildExpectedFundValue": {
+                  "key": [
+                    "expectedFundValue"
+                  ],
+                  "group": "5"
+                },
+                "fna:ChildTotalShortfall": {
+                  "key": [
+                    "totalShortfall"
+                  ],
+                  "group": "5"
+                },
+                "fna:ChildReturnOnInvestment": {
+                  "key": [
+                    "returnOnInvestment"
+                  ],
+                  "group": "6"
+                },
+                "fna:ChildExpectedInterestEarn": {
+                  "key": [
+                    "expectedInterestEarn"
+                  ],
+                  "group": "6"
+                },
+                "fna:ChildPossibleOptionLabel": {
+                  "key": [],
+                  "group": "7"
+                },
+                "fna:ChildSingalCapitalSum": {
+                  "key": [
+                    "singalCapitalSum"
+                  ],
+                  "group": "8"
+                },
+                "fna:ChildAnnualSumRequired": {
+                  "key": [
+                    "annualSumRequired"
+                  ],
+                  "group": "8"
+                },
+                "fna:ButtonComputeFake": {
+                  "key": [],
+                  "group": "9"
+                },
+                "fna:ComputeTagEducationFund": {
+                  "key": [],
+                  "group": "9"
+                }
+              }
+            },
+            "fna:MediumLongTermSaving": {
+              "key": [
+                "client",
+                "baseContact",
+                "analysisGoal",
+                "termSaving"
+              ],
+              "section": "fna:FinancialGoalsAnalysis",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "isVisible": "isVisibleGoal(moduleService.findElementInDetail(['client', 'baseContact', 'mediumLongTermSaving', 'clientPriority']).value)",
+              "@onOpen": "setSlider()",
+              "fna:PurposeOfSaving": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "purpose"
+                ],
+                "group": "1"
+              },
+              "fna:AmountRequired": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "amountRequired"
+                ],
+                "@format": "currency:0",
+                "@defaultValue": "0",
+                "group": "1"
+              },
+              "fna:YearsOfSavings": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "yearsOfSaving"
+                ],
+                "@defaultValue": "1",
+                "group": "2"
+              },
+              "fna:MLTSExistingFundsSetAside": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "existingFundSetAside"
+                ],
+                "@format": "currency:0",
+                "@defaultValue": "0",
+                "group": "2"
+              },
+              "fna:MLTSTotalShortfallOrSurplus": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "totalShortfall"
+                ],
+                "group": "3"
+              },
+              "fna:MLTSReturnOnInvestment": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "returnOnInvestment"
+                ],
+                "group": "3"
+              },
+              "fna:MLTSExpectedInterestEarned": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "expectedInterestEarn"
+                ],
+                "group": "4"
+              },
+              "fna:MediumLongTermSavingsTemp1": {
+                "@key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:MLTSPossibleOptions": {
+                "@key": [
+                  ""
+                ],
+                "group": "5"
+              },
+              "fna:MediumLongTermSavingsTemp2": {
+                "@key": [
+                  ""
+                ],
+                "group": "5"
+              },
+              "fna:SingleCapitalSum": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "singleCapitalSum"
+                ],
+                "group": "6"
+              },
+              "fna:AnnualSumRequiredForSaving": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "annualSumRequired"
+                ],
+                "group": "6"
+              },
+              "fna:MediumLongTermSavingsTemp3": {
+                "@key": [
+                  ""
+                ],
+                "group": "7"
+              },
+              "fna:ClientMLTSComputeTag": {
+                "@key": [
+                  ""
+                ],
+                "group": "7"
+              }
+            },
+            "fna:CriticalIllness": {
+              "key": [
+                "client",
+                "baseContact",
+                "analysisGoal",
+                "criticalIllness"
+              ],
+              "section": "fna:FinancialGoalsAnalysis",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "isVisible": "isVisibleGoal(moduleService.findElementInDetail(['client', 'baseContact', 'criticalIllness', 'clientPriority']).value)",
+              "@onOpen": "setSlider()",
+              "fna:CICapitalSumRequirement": {
+                "@key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:CriticalIllnessTemp1": {
+                "@key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:CIReplacementIncomeNeeded": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "replacementIncome"
+                ],
+                "@defaultValue": "0",
+                "group": "2"
+              },
+              "fna:CINumberOfYearsIncomeRequired": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "numberOfYears"
+                ],
+                "group": "2"
+              },
+              "fna:CINetRateOfReturn": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "netRateOfReturn"
+                ],
+                "group": "3"
+              },
+              "fna:CILumpSumRequired": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "lumpSumRequired"
+                ],
+                "group": "3",
+                "defaultValue": "0"
+              },
+              "fna:CITotalCashRequirement": {
+                "@key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:CriticalIllnessTemp2": {
+                "@key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:CITreatmentCost": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "treatmentCost"
+                ],
+                "@defaultValue": "0",
+                "group": "5"
+              },
+              "fna:CIOthers": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "others"
+                ],
+                "@defaultValue": "0",
+                "group": "5"
+              },
+              "fna:CITotalCashRequired": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "totalCashRequired"
+                ],
+                "group": "6"
+              },
+              "fna:CITotalRequiredForCriticalIllness": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "totalRequired"
+                ],
+                "group": "6",
+                "defaultValue": "0"
+              },
+              "fna:CriticalIllnessTemp3": {
+                "@key": [
+                  ""
+                ],
+                "group": "7"
+              },
+              "fna:ClientCIComputeTag": {
+                "@key": [
+                  ""
+                ],
+                "group": "7"
+              }
+            },
+            "fna:MortgageProtection": {
+              "key": [
+                "client",
+                "baseContact",
+                "analysisGoal",
+                "mortgageProtection"
+              ],
+              "section": "fna:FinancialGoalsAnalysis",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "isVisible": "isVisibleGoal(moduleService.findElementInDetail(['client', 'baseContact', 'mortgage', 'clientPriority']).value)",
+              "@onOpen": "setSlider()",
+              "fna:MPMortgageCalculator": {
+                "@key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:MortgageProtectionTemp1": {
+                "@key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:MPMortgageValue": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "mortgageProtection",
+                  "mortgageValue"
+                ],
+                "@defaultValue": "0",
+                "group": "2"
+              },
+              "fna:MPLoanAmount": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "mortgageProtection",
+                  "loanAmount"
+                ],
+                "@defaultValue": "0",
+                "group": "2"
+              },
+              "fna:MPLoanInterestRate": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "mortgageProtection",
+                  "loanInterestRate"
+                ],
+                "@defaultValue": "0",
+                "group": "3"
+              },
+              "fna:MPLoanTerm": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "mortgageProtection",
+                  "loanTerm"
+                ],
+                "@defaultValue": "1",
+                "group": "3"
+              },
+              "fna:MPTotalPaid": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "mortgageProtection",
+                  "totalPaid"
+                ],
+                "group": "4"
+              },
+              "fna:MPMonthlyPayment": {
+                "@key": [
+                  "client",
+                  "baseContact",
+                  "analysisGoal",
+                  "mortgageProtection",
+                  "monthlyPayment"
+                ],
+                "group": "4"
+              },
+              "fna:JAMortgageProtectionTemp2": {
+                "@key": [
+                  ""
+                ],
+                "group": "5"
+              },
+              "fna:ClientMPComputeTag": {
+                "@key": [
+                  ""
+                ],
+                "group": "5"
+              }
+            }
+          }
+        },
+        "fna:ImportJointApplicant": {
+          "isVisible": "!hasValueNotEmpty(moduleService.findElementInDetail(['jointApplicant', 'refContact', 'refDocName']).value)",
+          "onOpen": "hasValueNotEmpty(moduleService.findElementInDetail(['client', 'refContact', 'refDocName']).value) ? getContactList() || true : commonUIService.showNotifyMessage('v4.fna.message.doNotAllowToAddJointApplicantIfClientHasNotBeenAdded', 'failed') || false",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-users"
+            },
+            "cardIconPlus": {}
+          },
+          "@staticHtml": "list_import_contact_for_fna.html",
+          "@section": "fna:Fna",
+          "priority": "20"
+        },
+        "fna:JointApplicant": {
+          "key": [
+            "jointApplicant"
+          ],
+          "section": "fna:Fna",
+          "uistyle": "tab",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-users"
+            },
+            "removeCard": {
+              "onClick": "removeCard('MSG-20-003', 'jointApplicant')"
+            }
+          },
+          "cssClass": "v3-box-1",
+          "isVisible": "hasValueNotEmpty(moduleService.findElementInDetail(['jointApplicant', 'refContact', 'refDocName']).value)",
+          "previewHtml": "v4-preview-static-client-card.html",
+          "fna:CurrentFinancialPosition": {
+            "key": [
+              ""
+            ],
+            "section": "fna:JointApplicant",
+            "icon": "fa fa-file-text-o",
+            "uiStyle": "section",
+            "cssClass": "v3-box-1",
+            "fna:CurrentAssetsLiabilities": {
+              "key": [
+                "client",
+                "baseContact",
+                "currentPosition",
+                "assertsLiabilities"
+              ],
+              "section": "fna:CurrentFinancialPosition",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "onOpen": "setSlider()",
+              "fna:CurrentAssets": {
+                "key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:ResidentialProperty": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "residentialProperty"
+                ],
+                "group": "1"
+              },
+              "fna:OtherSavingFunds": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "otherSavingFunds"
+                ],
+                "group": "2"
+              },
+              "fna:InvestmentAndSavings": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "investmentAndSavings"
+                ],
+                "group": "2"
+              },
+              "fna:TotalAsset": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "totalAssets"
+                ],
+                "group": "3"
+              },
+              "fna:CurrentLiabilities": {
+                "key": [
+                  ""
+                ],
+                "group": "3"
+              },
+              "fna:MortageLoan": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "mortageLoan"
+                ],
+                "group": "4"
+              },
+              "fna:OtherOutstandingDebtsCurrentAssetsLiabilities": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "otherOutstandingDebts"
+                ],
+                "group": "4"
+              },
+              "fna:totalLiabilitiesValue": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "totalLiabilities"
+                ],
+                "group": "5"
+              },
+               "fna:totalNetWorth": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "totalNetWorth"
+                ],
+                "group": "5"
+              },
+              "fna:SignificantChange": {
+                "key": [],
+                "group": "6"
+              },
+              "fna:needsAnalysis": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "significantChange"
+                ],
+                "group": "6"
+              },
+              "fna:stateReason": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "assertsLiabilities",
+                  "specify"
+                ],
+                "group": "6"
+              },
+              "fna:computeTagAssetLiabilitiesFake": {
+                "key": [],
+                "group": "7"
+              },
+              "fna:computeTagAssetLiabilities": {
+                "key": [],
+                "group": "7"
+              }
+            },
+            "fna:AnnualCashFlowBudgetedFunds": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "currentPosition",
+                "annualFunds"
+              ],
+              "section": "fna:CurrentFinancialPosition",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "@onOpen": "setSlider()",
+              "fna:AnnualIncome": {
+                "key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:AnnualCashFlowTemp1": {
+                "key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:AnnualEmployeeIncomesJA": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "annualIncome"
+                ],
+                "@defaultValue": "0",
+                "group": "2"
+              },
+              "fna:LessCPF": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "lessCPF"
+                ],
+                "@defaultValue": "0",
+                "group": "2"
+              },
+              "fna:NetAnnualIncome": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "netAnnualIncome"
+                ],
+                "group": "3"
+              },
+              "fna:OtherIncome": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "otherIncome"
+                ],
+                "@defaultValue": "0",
+                "group": "3"
+              },
+              "fna:TotalAnnualIncome": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "totalIncomeValue"
+                ],
+                "@format": "currency:0",
+                "group": "4"
+              },
+              "fna:AnnualCashFlowTemp2": {
+                "key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:AnnualExpense": {
+                "key": [
+                  ""
+                ],
+                "group": "5"
+              },
+              "fna:AnnualCashFlowTemp3": {
+                "key": [
+                  ""
+                ],
+                "group": "5"
+              },
+              "fna:LivingExpenses": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "livingExpenses"
+                ],
+                "@defaultValue": "0",
+                "group": "6"
+              },
+              "fna:TuitionAndSchoolExpenses": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "tuitionSchoolExpenses"
+                ],
+                "@defaultValue": "0",
+                "group": "6"
+              },
+              "fna:LoanRepayment": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "loanRepayment"
+                ],
+                "@defaultValue": "0",
+                "group": "7"
+              },
+              "fna:Others": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "otherExpenses"
+                ],
+                "@defaultValue": "0",
+                "group": "7"
+              },
+              "fna:TotalAnnualExpenses": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "totalExpenses"
+                ],
+                "group": "8"
+              },
+              "fna:NetCashFlowOrSurplus": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "netCashFlowShortfall"
+                ],
+                "defaultValue": "0",
+                "group": "8"
+              },
+              "fna:BudgetedFunds": {
+                "key": [
+                  ""
+                ],
+                "group": "9"
+              },
+              "fna:AnnualCashFlowTemp4": {
+                "key": [
+                  ""
+                ],
+                "group": "9"
+              },
+              "fna:RegularAmount": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "regularAmount"
+                ],
+                "@defaultValue": "0",
+                "group": "10"
+              },
+              "fna:LumpSum": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "lumpSum"
+                ],
+                "@defaultValue": "0",
+                "group": "10"
+              },
+              "fna:AnnualCashSignificants": {
+                "key": [
+                  ""
+                ],
+                "group": "11"
+              },
+              "fna:AnnualCashFlowTemp6": {
+                "key": [
+                  ""
+                ],
+                "group": "11"
+              },
+              "fna:AnnualCashSignificant": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "significantChange"
+                ],
+                "group": "12"
+              },
+              "fna:AnnualCashSpecify": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "annualFunds",
+                  "specify"
+                ],
+                "group": "12"
+              },
+              "fna:computeTagAnnualFundFake": {
+                "key": [],
+                "group": "13"
+              },
+              "fna:computeTagAnnualFund": {
+                "key": [],
+                "group": "13"
+              }
+            },
+            "fna:ExistingFinancialPlans": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "currentPosition",
+                "existingPlans",
+                "existingPlans"
+              ],
+              "section": "fna:CurrentFinancialPosition",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "fna:ExistingFinancialDeclaration": {
+                "section": "fna:ExistingFinancialPlans",
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "currentPosition",
+                  "existingPlans",
+                  "planDeclaration"
+                ],
+                "fna:HaveExistingPlanJA": {
+                  "key": [
+                    "jointApplicant",
+                    "baseContact",
+                    "currentPosition",
+                    "existingPlans",
+                    "planDeclaration",
+                    "hasExistingPlan"
+                  ]
+                }
+              },
+              "fna:NewExistingPlan": {
+                "key": [
+                  ""
+                ],
+                "section": "fna:ExistingFinancialPlans",
+                "isVisible": "findElementInDetail(['jointApplicant', 'baseContact', 'currentPosition', 'existingPlans', 'planDeclaration', 'hasExistingPlan']).value === 'Y'",
+                "icon": {
+                  "main": "fa fa-user",
+                  "mainAction": "addIcon"
+                },
+                "cardType": "action",
+                "onClick": "addCard(card)"
+              },
+              "fna:ExistingFinancialPlan": {
+                "cardType": "template",
+                "cssClass": "v3-box-1",
+                "section": "fna:ExistingFinancialPlans",
+                "key": [
+                  ""
+                ],
+                "icons": {
+                  "cardIcon": {
+                    "content": "fa fa-user"
+                  },
+                  "removeCardInList": {}
+                },
+                "@onOpen": "setSlider(); populateOwnerInExistingPlanTile('jointApplicant')",
+                "fna:InsuranceDetailsAndValue": {
+                  "key": [
+                    ""
+                  ]
+                },
+                "fna:ExistingFinancialPlanTemp1": {
+                  "key": [
+                    ""
+                  ]
+                },
+                "fna:OwnerName": {
+                  "key": [
+                    "owner"
+                  ]
+                },
+                "fna:Company": {
+                  "key": [
+                    "company"
+                  ]
+                },
+                "fna:PolicyType": {
+                  "key": [
+                    "policyType"
+                  ]
+                },
+                "fna:YearOfIssue": {
+                  "key": [
+                    "yearOfIssue"
+                  ]
+                },
+                "fna:PremiumType": {
+                  "key": [
+                    "premiumType"
+                  ]
+                },
+                "fna:PremiumValue": {
+                  "key": [
+                    "premiumValue"
+                  ],
+                  "@defaultValue": "0"
+                },
+                "fna:DeathOfBenefit": {
+                  "key": [
+                    "deathBenefit"
+                  ],
+                  "@defaultValue": "0"
+                },
+                "fna:TBD": {
+                  "key": [
+                    "tpd"
+                  ],
+                  "@defaultValue": "0"
+                },
+                "fna:CriticalIllnessExistingPlan": {
+                  "key": [
+                    "criticalIllness"
+                  ],
+                  "@defaultValue": "0"
+                },
+                "fna:HSBenefit": {
+                  "key": [
+                    "hsBenefit"
+                  ],
+                  "@defaultValue": "0"
+                }
+              }
+            }
+          },
+          "fna:FinancialKnowledgeInvestmentSavvy": {
+            "key": [
+              "jointApplicant",
+              "baseContact",
+              "knowledgeInvestment"
+            ],
+            "section": "fna:JointApplicant",
+            "icon": "fa fa-file-text-o",
+            "cssClass": "v3-box-1",
+            "fna:KnowledgeEducation": {
+              "key": [
+                ""
+              ]
+            },
+            "fna:KnowledgeQ01": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "knowledgeInvestment",
+                "isDiplomaOrHigher"
+              ],
+              "@defaultValue": "N"
+            },
+            "fna:KnowledgeQ01TypeOfInstitution": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "knowledgeInvestment",
+                "typeOfInstitution"
+              ]
+            },
+            "fna:KnowledgeQ01NameOfInstitution": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "knowledgeInvestment",
+                "nameOfInstitution1"
+              ]
+            },
+            "fna:KnowledgeQ01YearOfGraduation": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "knowledgeInvestment",
+                "yearOfGraduation1"
+              ]
+            },
+            "fna:KnowledgeQ02": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "knowledgeInvestment",
+                "professionalQualification"
+              ],
+              "@defaultValue": "N"
+            },
+            "fna:KnowledgeQ02NameOfInstitution": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "knowledgeInvestment",
+                "nameOfInstitution2"
+              ]
+            },
+            "fna:KnowledgeQ02YearOfGraduation": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "knowledgeInvestment",
+                "yearOfGraduation2"
+              ]
+            },
+            "fna:KnowledgeInvestmentExp": {
+              "key": [
+                ""
+              ]
+            },
+            "fna:KnowledgeQ03": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "knowledgeInvestment",
+                "isInvestCIS"
+              ],
+              "@defaultValue": "N"
+            },
+            "fna:KnowledgeQ03NoOfTransaction": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "knowledgeInvestment",
+                "transactionNo"
+              ]
+            },
+            "fna:KnowledgeQ03TypeOfTransaction": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "knowledgeInvestment",
+                "typeOfTransaction"
+              ]
+            },
+            "fna:KnowledgeWorkExp": {
+              "key": [
+                ""
+              ]
+            },
+            "fna:KnowledgeQ04": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "knowledgeInvestment",
+                "isWorkExperience"
+              ],
+              "@defaultValue": "N"
+            },
+            "fna:KnowledgeQ04NatureOfWork": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "knowledgeInvestment",
+                "natureOfWork"
+              ]
+            },
+            "fna:KnowledgeTemp2": {
+              "key": [
+                ""
+              ]
+            },
+            "fna:KnowledgeOutcome": {
+              "key": [
+                ""
+              ]
+            },
+            "fna:KnowledgeOutcome1": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "knowledgeInvestment",
+                "isExperienceCIS"
+              ],
+              "@defaultValue": "N"
+            },
+            "fna:KnowledgeOutcome2": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "knowledgeInvestment",
+                "isExperienceCIS"
+              ],
+              "@defaultValue": "N"
+            }
+          },
+          "fna:InvestmentRiskProfile": {
+            "key": [
+              "jointApplicant",
+              "baseContact",
+              "investmentRiskProfile"
+            ],
+            "section": "fna:JointApplicant",
+            "icon": "fa fa-file-text-o",
+            "cssClass": "v3-box-1",
+            "fna:InvestmentRiskChoose": {
+              "key": [
+                ""
+              ]
+            },
+            "fna:InvestmentPreference": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "investmentRiskProfile",
+                "investPreference"
+              ]
+            },
+            "fna:ExpectedReturn": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "investmentRiskProfile",
+                "expectedReturn"
+              ]
+            },
+            "fna:InvestmentTimePeriod": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "investmentRiskProfile",
+                "investTimePeriod"
+              ]
+            },
+            "fna:DuringSortTermDrop": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "investmentRiskProfile",
+                "investShortTermDrop"
+              ]
+            },
+            "fna:InvestmentGoal": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "investmentRiskProfile",
+                "investGoal"
+              ]
+            },
+            "fna:InvestmentPortfolio": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "investmentRiskProfile",
+                "investPortfolio"
+              ]
+            },
+            "fna:TotalScore": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "investmentRiskProfile",
+                "totalScore"
+              ]
+            },
+            "fna:RiskProfile": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "investmentRiskProfile",
+                "riskProfile"
+              ]
+            },
+            "fna:ComputeTagInvestmentFake": {
+              "key": []
+            },
+            "fna:ComputeTagInvestment": {
+              "key": []
+            }
+          },
+          "fna:FinancialGoalsSelection": {
+            "key": [
+              "jointApplicant",
+              "baseContact",
+              "selectionGoal"
+            ],
+            "section": "fna:JointApplicant",
+            "icon": "fa fa-file-text-o",
+            "cssClass": "v3-box-1",
+            "onClose": "computeTag(commonService.CONSTANTS.VPMS_MAPPING_FIELD.NUMBER_OF_GOAL, true, 'Joint', [])",
+            "fna:TitleLabelGoals1": {
+              "key": [
+                ""
+              ]
+            },
+            "fna:TitleLabelGoals2": {
+              "key": [
+                ""
+              ],
+              "group": "2"
+            },
+            "fna:ProtectionUponDeath": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "selectionGoal",
+                "protectionUponDeath"
+              ],
+              "group": "1"
+            },
+            "fna:EducationFund": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "selectionGoal",
+                "educationFund"
+              ],
+              "group": "2"
+            },
+            "fna:CriticalIllness": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "selectionGoal",
+                "criticalIllness"
+              ],
+              "group": "1"
+            },
+            "fna:MortgageProtection": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "selectionGoal",
+                "mortgage"
+              ],
+              "group": "1"
+            },
+            "fna:RetirementFund": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "selectionGoal",
+                "retirementFund"
+              ],
+              "group": "2"
+            },
+            "fna:TermSaving": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "selectionGoal",
+                "mediumLongTermSaving"
+              ],
+              "group": "3"
+            }
+          },
+          "fna:FinancialGoalsAnalysis": {
+            "key": [
+              ""
+            ],
+            "section": "fna:JointApplicant",
+            "icon": "fa fa-file-text-o",
+            "uiStyle": "section",
+            "cssClass": "v3-box-1",
+            "fna:ProtectionUponDeath": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "analysisGoal",
+                "protectionDeath"
+              ],
+              "section": "fna:FinancialGoalsAnalysis",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "isVisible": "isVisibleGoal(moduleService.findElementInDetail(['jointApplicant', 'baseContact', 'protectionUponDeath', 'clientPriority']).value)",
+              "@onOpen": "setSlider()",
+              "fna:CapitalSumRequirement": {
+                "key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:ProtectionUponDeathTemp1": {
+                "key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:ReplacementIncomeneeded": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "replacementIncomeNeeded"
+                ],
+                "@defaultValue": "4000000",
+                "group": "2"
+              },
+              "fna:Numberofyearincomerequired": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "numberOfYearIncomeRequired"
+                ],
+                "group": "2"
+              },
+              "fna:NetRateofReturn": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "netRateOfReturn"
+                ],
+                "group": "3"
+              },
+              "fna:LumpSumRequired": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "lumpSumRequired"
+                ],
+                "group": "3",
+                "defaultValue": "0"
+              },
+              "fna:TotalCashRequirement": {
+                "key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:ProtectionUponDeathTemp2": {
+                "key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:MortgareLoan": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "motgageLoan"
+                ],
+                "group": "5"
+              },
+              "fna:OtherOutstandingDebtsProtectionUponDeath": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "otherOutstandingDebt"
+                ],
+                "group": "5"
+              },
+              "fna:TotalCashRequirementSGD": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "totalCashRequired"
+                ],
+                "group": "6"
+              },
+              "fna:TotalRequiredForIncomeProtection": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "totalRequiredForIncomeProtection"
+                ],
+                "group": "6",
+                "defaultValue": "0"
+              },
+              "fna:ExistingFundssetaside": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "exitingFundSetAside"
+                ],
+                "group": "7"
+              },
+              "fna:TotalShortfallorSurplus": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "protectionDeath",
+                  "totalShortFallForSurplus"
+                ],
+                "group": "7",
+                "defaultValue": "0"
+              },
+              "fna:ProtectionUponDeathTemp3": {
+                "key": [
+                  ""
+                ],
+                "group": "8"
+              },
+              "fna:ComputeTagProtectionUponDeath": {
+                "key": [
+                  ""
+                ],
+                "group": "8"
+              }
+            },
+            "fna:RetirementFund": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "analysisGoal",
+                "retirementFund"
+              ],
+              "section": "fna:FinancialGoalsAnalysis",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "isVisible": "isVisibleGoal(moduleService.findElementInDetail(['jointApplicant', 'baseContact', 'retirementFund', 'clientPriority']).value)",
+              "@onOpen": "setSlider();computeTag(commonService.CONSTANTS.VPMS_MAPPING_FIELD.RETIRE_FUND_TILE, false, 'Joint')",
+              "fna:CurrentAge": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "currentAge"
+                ],
+                "group": "1"
+              },
+              "fna:CurrentAnnualIncomeRF": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "currentAnnualIncome"
+                ],
+                "group": "1"
+              },
+              "fna:ExpectedRetirementAge": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "expectedRetirementAge"
+                ],
+                "@defaultValue": "62",
+                "group": "2"
+              },
+              "fna:IncomeDuringRetirement": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "incomeDuringRetirement"
+                ],
+                "@defaultValue": "75",
+                "group": "2"
+              },
+              "fna:AssumedRateOfSalaryIncrease": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "assumedRateOfSalaryIncrease"
+                ],
+                "@defaultValue": "6",
+                "group": "3"
+              },
+              "fna:RetirementFundTemp1": {
+                "key": [
+                  ""
+                ],
+                "group": "3"
+              },
+              "fna:AnnualIncomeRequired": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "annualIncomeRequired"
+                ],
+                "group": "4"
+              },
+              "fna:RetirementFundTemp4": {
+                "key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:YearsRetirementIncome": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "yearsRetirementIncome"
+                ],
+                "group": "5"
+              },
+              "fna:NetRateOfReturnRF": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "netRateOfReturn"
+                ],
+                "group": "5"
+              },
+              "fna:TotalRequireForRetirement": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "totalRequireForRetirement"
+                ],
+                "group": "6"
+              },
+              "fna:ExistingFundSetAside": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "existingFundSetAside"
+                ],
+                "@defaultValue": "3395000",
+                "group": "6"
+              },
+              "fna:TotalShortFall": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "totalShortFall"
+                ],
+                "group": "7"
+              },
+              "fna:ReturnOnInvestment": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "returnOnInvestment"
+                ],
+                "group": "7"
+              },
+              "fna:ExpectedInterestEarn": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "expectedInterestEarn"
+                ],
+                "group": "8"
+              },
+              "fna:RetirementFundTemp9": {
+                "key": [
+                  ""
+                ],
+                "group": "8"
+              },
+              "fna:PossibleOption": {
+                "key": [
+                  ""
+                ],
+                "group": "9"
+              },
+              "fna:RetirementFundTemp13": {
+                "key": [
+                  ""
+                ],
+                "group": "9"
+              },
+              "fna:SingleCapitalSumRF": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "singleCapitalSum"
+                ],
+                "group": "10"
+              },
+              "fna:AnnualSumRequired": {
+                "key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "retirementFund",
+                  "annualSumRequired"
+                ],
+                "group": "10"
+              },
+              "fna:RetirementFundTemp14": {
+                "key": [
+                  ""
+                ],
+                "group": "11"
+              },
+              "fna:ComputeTagRetirementFund": {
+                "key": [
+                  ""
+                ],
+                "group": "11"
+              }
+            },
+            "fna:EducationFund": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "analysisGoal",
+                "educationFund",
+                "children"
+              ],
+              "section": "fna:FinancialGoalsAnalysis",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "isVisible": "isVisibleGoal(moduleService.findElementInDetail(['jointApplicant', 'baseContact', 'educationFund', 'clientPriority']).value)",
+              "fna:AddChild": {
+                "section": "fna:EducationFund",
+                "cardType": "action",
+                "staticHtml": "list_import_children_education_fund_fna.html",
+                "onOpen": "getListContactForEducationTile()",
+                "key": [],
+                "cssClass": "v3-box-1",
+                "icons": {
+                  "cardIcon": {
+                    "content": "fa fa-address-card"
+                  },
+                  "cardIconPlus": {}
+                }
+              },
+              "fna:Child": {
+                "cssClass": "v3-box-1",
+                "section": "fna:EducationFund",
+                "cardType": "template",
+                "onOpen": "computeTag(commonService.CONSTANTS.VPMS_MAPPING_FIELD.EDUCATION_FUND_TILE, false, 'Joint', [], card.scope.$index)",
+                "icons": {
+                  "cardIcon": {
+                    "content": "fa fa-address-card"
+                  },
+                  "removeCardInList": {}
+                },
+                "key": [],
+                "fna:EducationFundLabel": {
+                  "key": []
+                },
+                "fna:EducationFundLabelFake": {
+                  "key": []
+                },
+                "fna:ChildName": {
+                  "key": [
+                    "refContact",
+                    "full"
+                  ],
+                  "group": "1"
+                },
+                "fna:ChildCurrentAge": {
+                  "key": [
+                    "currentAge"
+                  ],
+                  "group": "1"
+                },
+                "fna:ChildPlanEducationStart": {
+                  "key": [
+                    "planEducationStart"
+                  ],
+                  "group": "2"
+                },
+                "fna:ChildEducationInflationRate": {
+                  "key": [
+                    "educationInflationRate"
+                  ],
+                  "group": "2"
+                },
+                "fna:ChildTotalEducationFundRequiredToday": {
+                  "key": [
+                    "totalEducationFundRequiredToday"
+                  ],
+                  "group": "3"
+                },
+                "fna:ChildTotalEducationFundRequiredToStart": {
+                  "key": [
+                    "totalEducationFundRequiredToStart"
+                  ],
+                  "group": "3"
+                },
+                "fna:ChildExistingFundSetAside": {
+                  "key": [
+                    "existingFundSetAside"
+                  ],
+                  "group": "4"
+                },
+                "fna:ChildExpectedRateOfReturn": {
+                  "key": [
+                    "expectedRateOfReturn"
+                  ],
+                  "group": "4"
+                },
+                "fna:ChildExpectedFundValue": {
+                  "key": [
+                    "expectedFundValue"
+                  ],
+                  "group": "5"
+                },
+                "fna:ChildTotalShortfall": {
+                  "key": [
+                    "totalShortfall"
+                  ],
+                  "group": "5"
+                },
+                "fna:ChildReturnOnInvestment": {
+                  "key": [
+                    "returnOnInvestment"
+                  ],
+                  "group": "6"
+                },
+                "fna:ChildExpectedInterestEarn": {
+                  "key": [
+                    "expectedInterestEarn"
+                  ],
+                  "group": "6"
+                },
+                "fna:ChildPossibleOptionLabel": {
+                  "key": [],
+                  "group": "7"
+                },
+                "fna:ChildSingalCapitalSum": {
+                  "key": [
+                    "singalCapitalSum"
+                  ],
+                  "group": "8"
+                },
+                "fna:ChildAnnualSumRequired": {
+                  "key": [
+                    "annualSumRequired"
+                  ],
+                  "group": "8"
+                },
+                "fna:ButtonComputeFake": {
+                  "key": [],
+                  "group": "9"
+                },
+                "fna:ComputeTagEducationFund": {
+                  "key": [],
+                  "group": "9"
+                }
+              }
+            },
+            "fna:MediumLongTermSaving": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "analysisGoal",
+                "termSaving"
+              ],
+              "section": "fna:FinancialGoalsAnalysis",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "@onOpen": "setSlider()",
+              "isVisible": "isVisibleGoal(moduleService.findElementInDetail(['jointApplicant', 'baseContact', 'mediumLongTermSaving', 'clientPriority']).value)",
+              "fna:PurposeOfSaving": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "purpose"
+                ],
+                "group": "1"
+              },
+              "fna:AmountRequired": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "amountRequired"
+                ],
+                "@format": "currency:0",
+                "group": "1"
+              },
+              "fna:YearsOfSavings": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "yearsOfSaving"
+                ],
+                "@defaultValue": "0",
+                "group": "2"
+              },
+              "fna:MLTSExistingFundsSetAside": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "existingFundSetAside"
+                ],
+                "@format": "currency:0",
+                "group": "2"
+              },
+              "fna:MLTSTotalShortfallOrSurplus": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "totalShortfall"
+                ],
+                "group": "3"
+              },
+              "fna:MLTSReturnOnInvestment": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "returnOnInvestment"
+                ],
+                "group": "3"
+              },
+              "fna:MLTSExpectedInterestEarned": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "expectedInterestEarn"
+                ],
+                "group": "4"
+              },
+              "fna:MediumLongTermSavingsTemp1": {
+                "@key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:MLTSPossibleOptions": {
+                "@key": [
+                  ""
+                ],
+                "group": "5"
+              },
+              "fna:MediumLongTermSavingsTemp2": {
+                "@key": [
+                  ""
+                ],
+                "group": "5"
+              },
+              "fna:SingleCapitalSum": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "singleCapitalSum"
+                ],
+                "group": "6"
+              },
+              "fna:AnnualSumRequiredForSaving": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "termSaving",
+                  "annualSumRequired"
+                ],
+                "group": "6"
+              },
+              "fna:MediumLongTermSavingsTemp3": {
+                "@key": [
+                  ""
+                ],
+                "group": "7"
+              },
+              "fna:ClientMLTSComputeTag": {
+                "@key": [
+                  ""
+                ],
+                "group": "7"
+              }
+            },
+            "fna:CriticalIllness": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "analysisGoal",
+                "criticalIllness"
+              ],
+              "section": "fna:FinancialGoalsAnalysis",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "@onOpen": "setSlider()",
+              "isVisible": "isVisibleGoal(moduleService.findElementInDetail(['jointApplicant', 'baseContact', 'criticalIllness', 'clientPriority']).value)",
+              "fna:CICapitalSumRequirement": {
+                "@key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:CriticalIllnessTemp1": {
+                "@key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:CIReplacementIncomeNeeded": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "replacementIncome"
+                ],
+                "@defaultValue": "0",
+                "group": "2"
+              },
+              "fna:CINumberOfYearsIncomeRequired": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "numberOfYears"
+                ],
+                "group": "2"
+              },
+              "fna:CINetRateOfReturn": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "netRateOfReturn"
+                ],
+                "group": "3"
+              },
+              "fna:CILumpSumRequired": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "lumpSumRequired"
+                ],
+                "group": "3",
+                "defaultValue": "0"
+              },
+              "fna:CITotalCashRequirement": {
+                "@key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:CriticalIllnessTemp2": {
+                "@key": [
+                  ""
+                ],
+                "group": "4"
+              },
+              "fna:CITreatmentCost": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "treatmentCost"
+                ],
+                "@defaultValue": "0",
+                "group": "5"
+              },
+              "fna:CIOthers": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "others"
+                ],
+                "@defaultValue": "0",
+                "group": "5"
+              },
+              "fna:CITotalCashRequired": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "totalCashRequired"
+                ],
+                "group": "6"
+              },
+              "fna:CITotalRequiredForCriticalIllness": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "criticalIllness",
+                  "totalRequired"
+                ],
+                "group": "6",
+                "defaultValue": "0"
+              },
+              "fna:CriticalIllnessTemp3": {
+                "@key": [
+                  ""
+                ],
+                "group": "7"
+              },
+              "fna:ClientCIComputeTag": {
+                "@key": [
+                  ""
+                ],
+                "group": "7"
+              }
+            },
+            "fna:MortgageProtection": {
+              "key": [
+                "jointApplicant",
+                "baseContact",
+                "analysisGoal",
+                "mortgageProtection"
+              ],
+              "section": "fna:FinancialGoalsAnalysis",
+              "icon": "fa fa-file-text-o",
+              "cssClass": "v3-box-1",
+              "@onOpen": "setSlider()",
+              "isVisible": "isVisibleGoal(moduleService.findElementInDetail(['jointApplicant', 'baseContact', 'mortgage', 'clientPriority']).value)",
+              "fna:MPMortgageCalculator": {
+                "@key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:MortgageProtectionTemp1": {
+                "@key": [
+                  ""
+                ],
+                "group": "1"
+              },
+              "fna:MPMortgageValue": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "mortgageProtection",
+                  "mortgageValue"
+                ],
+                "@defaultValue": "0",
+                "group": "2"
+              },
+              "fna:MPLoanAmount": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "mortgageProtection",
+                  "loanAmount"
+                ],
+                "@defaultValue": "0",
+                "group": "2"
+              },
+              "fna:MPLoanInterestRate": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "mortgageProtection",
+                  "loanInterestRate"
+                ],
+                "@defaultValue": "0",
+                "group": "3"
+              },
+              "fna:MPLoanTerm": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "mortgageProtection",
+                  "loanTerm"
+                ],
+                "@defaultValue": "1",
+                "group": "3"
+              },
+              "fna:MPTotalPaid": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "mortgageProtection",
+                  "totalPaid"
+                ],
+                "group": "4"
+              },
+              "fna:MPMonthlyPayment": {
+                "@key": [
+                  "jointApplicant",
+                  "baseContact",
+                  "analysisGoal",
+                  "mortgageProtection",
+                  "monthlyPayment"
+                ],
+                "group": "4"
+              },
+              "fna:JAMortgageProtectionTemp2": {
+                "@key": [
+                  ""
+                ],
+                "group": "5"
+              },
+              "fna:ClientMPComputeTag": {
+                "@key": [
+                  ""
+                ],
+                "group": "5"
+              }
+            }
+          },
+          "priority": "20"
+        }
+      }
+    }
+  }
+}

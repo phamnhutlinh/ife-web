@@ -1,0 +1,182 @@
+<!--
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+-->
+<!-- Use by materiallizeDatetime directive - hle56 -->
+<div id="materiallizeDatetime"></div>
+<div class="v4-prototype-container div-centerBlock">
+	<div class="card col-xs-10 col-sm-10 col-md-10 col-lg-5 v4-prototype-centerBlock">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-prototype-registration-title">{{'v4.workspace.text.registrationTitle'| translate}}</div>
+			<form name="registrationForm" novalidate>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-content-center no-left-padding">
+						<label class="text-body">{{'new.v3.userProfile.user.label.Email'| translate}} *</label>
+						<div class="input-field">
+							<input required placeholder="Email" type="email" ng-model="userModel.userName" name="userName" email-pattern/>
+							<span ng-show="registrationForm.userName.$dirty && registrationForm.userName.$invalid">
+								<span class="error" ng-show="registrationForm.userName.$error.required">{{'MSG-C01' | translate}}</span>
+								<span class="error" ng-show="registrationForm.userName.$error.pattern">{{'MSG-C06' | translate}}</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-content-center no-left-padding">
+						<label class="text-body">{{'new.v3.userProfile.user.label.Password'| translate}} *</label>
+						<div class="input-field">
+							<input id='password' placeholder="Password" required type="password" maxlength="20" ng-model="userModel.userPassword" name="password" pattern="{{checkPasswordPattern}}" style="margin-bottom: 0px;"/>
+							<span ng-show="registrationForm.password.$dirty && registrationForm.password.$invalid">
+								<span class="error" ng-show="registrationForm.password.$error.required">{{'MSG-C01' | translate}}</span>
+								<span class="error" ng-show="registrationForm.password.$error.pattern">{{'v3.user.error.message.MSG-002' | translate}}</span>	
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-content-center no-left-padding">
+						<label class="text-body">{{'new.v3.userProfile.user.label.ConfirmPassword'| translate}} *</label>
+						<div class="input-field">
+							<input id='confirmpassword' placeholder="Confirm Password" required type="password" maxlength="20" ng-model="userModel.confirmPassword" name="confirmpassword" pw-check="password" style="margin-bottom: 0px;" />
+							<span ng-show="registrationForm.confirmpassword.$dirty && registrationForm.confirmpassword.$invalid">
+								<span class="error" ng-show="registrationForm.confirmpassword.$error.required">{{'MSG-C01' | translate}}</span>
+								<div ng-show="registrationForm.$error"> <span class="error" ng-show="registrationForm.confirmpassword.$error.pwmatch">{{'MSG-C14' | translate}}</span> 
+           						</div>
+           					</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-content-center no-left-padding">
+						<label class="text-body">{{'new.v3.userProfile.user.label.FirstName'| translate}} *</label>
+						<div class="input-field">
+							<input placeholder="Firstname" required type="text" maxlength="120" ng-model="userModel.firstName" name="firstName"/>
+							<span ng-show="registrationForm.firstName.$dirty && registrationForm.firstName.$invalid">
+								<span class="error" ng-show="registrationForm.firstName.$error.required">{{'MSG-C01' | translate}}</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-content-center no-left-padding">
+						<label class="text-body">{{'new.v3.userProfile.user.label.LastName'| translate}} *</label>
+						<div class="input-field">
+							<input placeholder="Lastname" required type="text" maxlength="120" ng-model="userModel.lastName" name="lastName"/>
+							<span ng-show="registrationForm.lastName.$dirty && registrationForm.lastName.$invalid">
+								<span class="error" ng-show="registrationForm.lastName.$error.required">{{'MSG-C01' | translate}}</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-content-center no-left-padding ">
+						<label class="text-body">{{'new.v3.userProfile.user.label.Gender'| translate}}<span ng-show="uiElement.refDetail.meta['mandatory'] == '1'">*</span></label>
+						<div class="input-field no-right-padding" id="slider" ng-if="refreshSlider()">
+							<v3-switch-new-slide
+								prefix="v4.gender.enum"
+								switch-model="userModel.gender"
+								switch-default-value=""
+								switch-disabled="false"
+								switch-options="moduleService.lazyChoiceList.Gender">
+							</v3-switch-new-slide>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="userModel_dateOfBirth">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-content-center no-left-padding">
+						<label class="text-body">{{'new.v3.userProfile.user.label.Birthday'| translate}} </span></label>
+						<div class="input-field">
+							<input class="datepicker v4-date-picker-inside" required materiallize-datetime maxdate="today" formatdisplay='DD/MM/YYYY' ng-model="userModel.dateOfBirth" name="dateOfBirth" style="margin-bottom: 0px;"/>
+							<span ng-show="registrationForm.dateOfBirth.$dirty && registrationForm.dateOfBirth.$invalid">
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-content-center no-left-padding">
+						<label class="text-body">{{'new.v3.userProfile.user.label.PhoneNumber'| translate}} </span></label>
+						<div class="input-field">
+							<input placeholder="Number" required type="text" maxlength="120" ng-model="userModel.phoneNumbers[0]" name="phoneNumbers" pos-phonenumber preferred-countries="['MM']" select-country='MM' />
+							<span ng-show="registrationForm.phoneNumbers.$dirty && registrationForm.phoneNumbers.$invalid">
+							</span>	
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-content-center no-left-padding">
+						<label class="text-body">{{'new.v3.userProfile.user.label.Nationality' | translate}}<span ng-show="uiElement.refDetail.meta['mandatory'] == '1'">*</span></label>
+						<div class="input-field">
+							<select ui-select2 ng-model="userModel.nationality">
+								<option ng-repeat="option in moduleService.lazyChoiceList.Country" value="{{option.key}}">{{'v4.country.enum.' + option.key | translate}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-content-center no-left-padding">
+						<label class="text-body">{{'new.v3.userProfile.user.label.MaritalStatus'| translate}}<span ng-show="uiElement.refDetail.meta['mandatory'] == '1'">*</span></label>
+						<div class="input-field">
+							<select ui-select2 ng-model="userModel.maritalStatus">
+								<option ng-repeat="option in moduleService.lazyChoiceList.MaritalStatus" value="{{option.key}}">{{'v4.pnc.maritalStatus.enum.' + option.key | translate}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-content-center no-left-padding">
+						<label class="text-body">{{'new.v3.userProfile.user.label.Occupation' | translate}}</label>
+						<div class="input-field">
+							<select ui-select2 ng-model="userModel.occupation">
+								<option ng-repeat="option in moduleService.lazyChoiceList.Occupation" value="{{option.key}}">{{'v4.prospect.Occupation.enum.' + option.key | translate}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 row">
+					<button ng-click="goToState('root.list.home')" class="btn waves-effect waves-light">{{'v4.workspace.button.cancel' | translate}}</button>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<button type="submit" ng-disabled="registrationForm.userName.$pristine || registrationForm.userName.$dirty && registrationForm.userName.$invalid ||  registrationForm.userEmail.$pristine || registrationForm.userEmail.$dirty && registrationForm.userEmail.$invalid || registrationForm.password.$pristine || registrationForm.password.$dirty && registrationForm.password.$invalid || registrationForm.confirmpassword.$pristine ||  registrationForm.confirmpassword.$dirty && registrationForm.confirmpassword.$invalid 
+					|| registrationForm.firstName.$pristine ||  registrationForm.firstName.$dirty && registrationForm.firstName.$invalid || registrationForm.lastName.$pristine || registrationForm.lastName.$dirty && registrationForm.lastName.$invalid" 
+					ng-click="submitRegistration(registrationForm)" class="btn waves-effect waves-light">{{'v4.workspace.button.submit' | translate}}</button>
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>

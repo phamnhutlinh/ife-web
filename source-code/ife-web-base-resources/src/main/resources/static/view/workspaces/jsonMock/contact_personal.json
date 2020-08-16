@@ -1,0 +1,324 @@
+{
+  "IposDocument": {
+    "Data": {
+      "prospect:Prospect": {
+        "permission": {
+          "openable": [
+            "contact_openable",
+            "managerreview_openable",
+			 "underwriting_openable"
+          ],
+          "editable": [
+            "contact_editable"
+          ],
+          "viewable": [
+            "contact_viewable",
+            "managerreview_viewable",
+			 "underwriting_viewable"
+          ]
+        },
+        
+        "uiStyle": "section",
+        "cssClass": "v3-box-1",
+        "section": "prospect:Prospect",
+        "prospect:BasicInformation": {
+          "key": [
+            "personInformation"
+          ],
+          "onOpen": "checkAcceptQuotation()",
+          "section": "prospect:Prospect",
+          "icon": "fa fa-user",
+          "cssClass": "v3-box-1",
+          "cssLabelFont": "section-label-demo",
+          "prospect:Salutation": {
+            "key": [
+              "person",
+              "basic",
+              "name",
+              "titleCode"
+            ],
+            "group": "1"
+          },
+          "prospect:FirstName": {
+            "key": [
+              "person",
+              "basic",
+              "name",
+              "first"
+            ],
+            "group": "2"
+          },
+          "prospect:LastName": {
+            "key": [
+              "person",
+              "basic",
+              "name",
+              "last"
+            ],
+            "group": "2"
+          },
+          "prospect:DOB": {
+            "key": [
+              "person",
+              "basic",
+              "birthDate"
+            ],
+            "group": "3"
+          },
+          "prospect:Gender": {
+            "key": [
+              "person",
+              "basic",
+              "genderCode"
+            ],
+            "group": "3"
+          },
+          "prospect:MaritalStatus": {
+            "key": [
+              "person",
+              "basic",
+              "maritalStatusCode"
+            ],
+            "group": "4"
+          },
+          "prospect:Race": {
+            "key": [
+              "person",
+              "basic",
+              "raceInfor"
+            ],
+            "group": "4"
+          },
+          "prospect:SmokerStatus": {
+            "key": [
+              "person",
+              "basic",
+              "smokerStatus"
+            ],
+            "group": "5"
+          },
+          "prospect:Nationality": {
+            "key": [
+              "person",
+              "basic",
+              "nationalityCode"
+            ],
+            "group": "5"
+          },
+          "prospect:IDType": {
+            "key": [
+              "person",
+              "basic",
+              "idType"
+            ],
+            "group": "6"
+          },
+          "prospect:IDNumber": {
+            "key": [
+              "person",
+              "basic",
+              "idNumber"
+            ],
+            "group": "6"
+          },
+          "prospect:township": {
+            "key": [
+              "person",
+              "basic",
+              "township"
+            ],
+            "group": "7"
+          },
+          "prospect:segNo": {
+            "key": [
+              "person",
+              "basic",
+              "seqno"
+            ],
+            "group": "7"
+          },
+          "prospect:Industry": {
+            "key": [
+              "person",
+              "basic",
+              "industry"
+            ],
+            "group": "7"
+          },
+          "prospect:Occupation": {
+            "key": [
+              "occupationModel",
+              "occupationCode"
+            ],
+            "group": "7"
+          },
+          "prospect:ClientStatus": {
+            "key": [
+              "person",
+              "basic",
+              "clientStatus"
+            ],
+            "group": "8"
+          }
+        },
+        "prospect:Contact": {
+          "onOpen": true,
+          "key": [
+            "personInformation"
+          ],
+          "section": "prospect:Prospect",
+          "icon": "fa fa-phone-square",
+          "cssClass": "v3-box-1",
+          "prospect:EmailAddress": {
+            "key": [
+              "person",
+              "contacts",
+              "email"
+            ],
+            "group": "1"
+          },
+          "prospect:HandPhone": {
+            "key": [
+              "person",
+              "contacts",
+              "handPhone"
+            ],
+            "group": "1"
+          },
+          "prospect:HomePhone": {
+            "key": [
+              "person",
+              "contacts",
+              "homePhone"
+            ],
+            "group": "2"
+          },
+          "prospect:OfficePhone": {
+            "key": [
+              "person",
+              "contacts",
+              "officePhone"
+            ],
+            "group": "2"
+          }
+        },
+        "prospect:Address": {
+          "section": "prospect:Prospect",
+          "icon": "fa fa-address-card",
+          "key": [
+             "personInformation"
+          ],
+          "cssClass": "v3-box-1",
+          "prospect:PrimaryAddress": {
+          	"key": [
+          	"person",
+          	 "addresses"
+          	  ]
+    		
+          }
+        },
+        "prospect:OtherInformation": {
+          "key": [
+            "otherInformation"
+          ],
+          "section": "prospect:Prospect",
+          "icon": "fa fa-info",
+          "cssClass": "v3-box-1",
+          "prospect:CountryOfBirth": {
+            "key": [
+              "countryOfBirth"
+            ],
+            "group": "1"
+          },
+          "prospect:Education": {
+            "key": [
+              "education"
+            ],
+            "group": "1"
+          },
+          "prospect:Staff": {
+            "key": [
+              "staff"
+            ],
+            "group": "2"
+          },
+          "prospect:VIP": {
+            "key": [
+              "vip"
+            ],
+            "group": "2"
+          },
+          "prospect:EmployerName": {
+            "key": [
+              "employerName"
+            ],
+            "group": "3"
+          },
+          "prospect:EmploymentStatus": {
+            "key": [
+              "employmentStatus"
+            ],
+            "group": "3"
+          },
+          "prospect:AnnualEmployeeIncome": {
+            "key": [
+              "annualEmployeeIncome"
+            ],
+            "group": "4"
+          },
+          "prospect:SourceOfFund": {
+            "key": [
+              "sourceOfFund"
+            ],
+            "group": "4"
+          },
+          "prospect:ClientNumber": {
+            "key": [
+              "clientNumber"
+            ],
+            "group": "5"
+          },
+          "prospect:SourceOfName": {
+            "key": [
+              "sourceOfName"
+            ],
+            "group": "5"
+          }
+        },
+        "prospect:PdpaInformation": {
+          "cssClass": "v3-box-1",
+          "icon": "fa fa-shield",
+          "key": [
+            "personInformation",
+            "pdpaModel"
+          ],
+          "onOpen": "isOpenCard()",
+          "onClose": "isCloseCard()",
+          "section": "prospect:Prospect",
+          "pdpa:PersonalDataProtectionConsent": {
+            "key": []
+          },
+          "pdpa:CSCInsurancePrivacyPolicy": {
+            "key": []
+          },
+          "pdpa:Consent": {
+            "key": [
+              "consent"
+            ]
+          },
+          "pdpa:CommunicationChannels": {
+            "key": [
+              "communicationChannel"
+            ]
+          },
+          "pdpa:TextMessage": {
+            "key": []
+          },
+          "pdpa:ImportantNotes": {
+            "key": []
+          }
+        }
+      }
+    }
+  }
+}

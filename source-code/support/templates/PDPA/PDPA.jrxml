@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PDPA" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b6565044-d397-41d5-acd7-4a0a9138d407">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Arial 12 B" isBlankWhenNull="true" fontName="Arial" fontSize="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="Arial 10 B" isBlankWhenNull="true" fontName="Arial" fontSize="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="Arial 10" isBlankWhenNull="true" fontName="Arial" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="Arial 10 B U" isBlankWhenNull="true" fontName="Arial" fontSize="10" isBold="true" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGES_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/images/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_DATETIME_FORMATTER" class="java.text.DateFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy")]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[//PrintData]]>
+	</queryString>
+	<field name="Prospect_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[//PersonContactData//FullName/text()]]></fieldDescription>
+	</field>
+	<field name="NRIC_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[//PersonContactData//IDs/ID/IDType/Value[text()='IC']/../../IDNumber/text()]]></fieldDescription>
+	</field>
+	<field name="Passport_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[//PersonContactData//IDs/ID/IDType/Value[text()='PP']/../../IDNumber/text()]]></fieldDescription>
+	</field>
+	<field name="Contact_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[//PersonContactData//Contacts/MobilePhone/text()]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<fieldDescription><![CDATA[//PersonContactData//Contacts/EmailAddress/text()]]></fieldDescription>
+	</field>
+	<field name="Com_Channel_1" class="java.lang.String">
+		<fieldDescription><![CDATA[//Doctype[@name='pdpa']//CommunicationChannel[1]/CommunicationChannelValue/Value/text()]]></fieldDescription>
+	</field>
+	<field name="Com_Channel_2" class="java.lang.String">
+		<fieldDescription><![CDATA[//Doctype[@name='pdpa']//CommunicationChannel[2]/CommunicationChannelValue/Value/text()]]></fieldDescription>
+	</field>
+	<field name="Com_Channel_3" class="java.lang.String">
+		<fieldDescription><![CDATA[//Doctype[@name='pdpa']//CommunicationChannel[3]/CommunicationChannelValue/Value/text()]]></fieldDescription>
+	</field>
+	<field name="Com_Channel_4" class="java.lang.String">
+		<fieldDescription><![CDATA[//Doctype[@name='pdpa']//CommunicationChannel[4]/CommunicationChannelValue/Value/text()]]></fieldDescription>
+	</field>
+	<field name="Com_Channel_5" class="java.lang.String">
+		<fieldDescription><![CDATA[//Doctype[@name='pdpa']//CommunicationChannel[5]/CommunicationChannelValue/Value/text()]]></fieldDescription>
+	</field>
+	<field name="Com_Channel_6" class="java.lang.String">
+		<fieldDescription><![CDATA[//Doctype[@name='pdpa']//CommunicationChannel[6]/CommunicationChannelValue/Value/text()]]></fieldDescription>
+	</field>
+	<field name="Date" class="java.lang.String">
+		<fieldDescription><![CDATA[//UpdatedDate]]></fieldDescription>
+	</field>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement uuid="3d619714-19a4-4ec7-a7cf-a2420882126f" x="0" y="0" width="75" height="41"/>
+				<imageExpression><![CDATA[$P{IMAGES_DIR} + "csc-logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="024771d7-f107-4765-ab59-0bf9cddc4dfd" style="Arial 12 B" x="224" y="0" width="331" height="17"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[MARKETING CAMPAIGN - CONSENT FORM]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="731" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="096e0062-eefc-4ecf-8ead-22eea89b01df" style="Arial 10" x="0" y="15" width="555" height="46"/>
+				<textElement textAlignment="Justified" markup="styled"/>
+				<text><![CDATA[CSC Insurance aims to comply with the requirements of the Personal Data Protection Act (PDPA) and respects your choices.
+You can forward your <b>consent</b> to us in sending you marketing related information on our products, benefits, promotions and rewards via any of the following mode(s).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ab420050-0192-4ca7-bc3e-a1db8514a849" style="Arial 12 B" mode="Opaque" x="0" y="73" width="555" height="23" backcolor="#E7E7E7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[YOUR PARTICULARS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="76a8b6f2-0a8d-4017-81bc-e495c87e3f7e" style="Arial 12 B" mode="Opaque" x="0" y="166" width="555" height="23" backcolor="#E7E7E7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[YOUR CONSENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="264908c5-4e29-42a0-a573-01c44a63dcad" style="Arial 10" x="23" y="107" width="120" height="20"/>
+				<textElement/>
+				<text><![CDATA[Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4e52f3ca-6dee-47f0-ba9b-8256d8aacb69" style="Arial 10" x="23" y="127" width="120" height="20"/>
+				<textElement/>
+				<text><![CDATA[NRIC/Passport Number:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f32cbb0c-f4ff-4f51-b754-5d04f7b54f36" style="Arial 10" x="297" y="107" width="120" height="20"/>
+				<textElement/>
+				<text><![CDATA[Contact Number:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="af72fd70-9d87-4f34-9359-c16176eeee04" style="Arial 10" x="297" y="127" width="120" height="20"/>
+				<textElement/>
+				<text><![CDATA[Email Address:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="1f6062be-7ac2-433f-a522-4f2bc1fdd7a1" style="Arial 10" x="143" y="107" width="120" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Prospect_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="85f6944d-4945-4eac-ac1c-0f6e811ff1a3" style="Arial 10" x="143" y="127" width="120" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{NRIC_Number}!=null&&$F{Passport_Number}!=null?$F{NRIC_Number}+'/'+$F{Passport_Number}:($F{NRIC_Number}!=null?$F{NRIC_Number}:($F{Passport_Number}!=null?$F{Passport_Number}:""))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1325f6c8-a177-46f8-9bda-d0eccbb81dc9" style="Arial 10" x="417" y="107" width="120" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Contact_Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b59d8d23-718f-4d31-8a2f-09296f973d07" style="Arial 10" x="417" y="127" width="120" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="63e7b8cb-35a2-45e2-885b-0137d1dd146c" style="Arial 10" x="0" y="199" width="555" height="21"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[I/We wish to receive information, including marketing materials from CSCI from the following communication channels]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cf25dfd7-e330-4b46-a278-a2e7a9ae8957" style="Arial 10" x="0" y="294" width="555" height="28"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[* “Text messages” means any messages, whether in sound, text, visual or other form, sent to telephone number, these include SMS, MMS and data applications which use a Singapore telephone number such as “Whatsapp”, “iMessage”]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0c552939-e0b2-453e-a546-035373024fb1" style="Arial 10" x="0" y="342" width="555" height="106"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[By signing and submitting this form:
+(a) I consent to CSC Insurance and its related corporations (collectively, the “CSC Group”), its agents, authorised service providers and marketing partners collecting, using, disclosing and/or processing my personal data, in order to contact me about products and services marketed by CSC Insurance or its partners as well as benefits, promotions and rewards, via the modes selected above and using my contact particulars which CSC Insurance may have in its records from time to time (including where applicable my Singapore telephone number(s));
+(b) I confirm and agree that my consents granted herein do not supersede or replace any other consents which I may have previously provided to CSC Insurance in respect of my personal data, and are additional to any rights which CSC Insurance may have at law to collect, use or disclose my personal data.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a20497fb-dc21-4f90-a8bd-ec647e0d0b8b" style="Arial 10 B" x="0" y="465" width="555" height="21"/>
+				<textElement textAlignment="Justified" markup="none"/>
+				<text><![CDATA[Please mail the completed form to us or send via email to: customer.service@csci.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2d4dd2ed-774e-4a6b-adda-8787780b8ced" style="Arial 10 B" mode="Transparent" x="0" y="670" width="555" height="61"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Please note:
+1) The information provided above is solely for the purpose of providing the consent for marketing and does not serve as a notification of updates to personal particulars.
+2) Please allow 30 working days for your request to be processed by CSC Insurance and your records updated accordingly.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f09aa37d-6a62-41fe-baf5-e449b4ae89fc" style="Arial 10" x="41" y="245" width="120" height="20"/>
+				<textElement verticalAlignment="Top"/>
+				<text><![CDATA[Voice Calls]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8f89f8d8-b2f6-4a10-9deb-533a638defb8" style="Arial 10" x="224" y="245" width="120" height="20"/>
+				<textElement verticalAlignment="Top"/>
+				<text><![CDATA[Text Messages *]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7140e664-74c0-4693-9124-e1d31f1ff3d3" style="Arial 10" x="407" y="245" width="120" height="20"/>
+				<textElement verticalAlignment="Top"/>
+				<text><![CDATA[Fax Messages]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0426024d-f672-4a9e-a953-89531d400002" style="Arial 10" x="407" y="265" width="120" height="20"/>
+				<textElement verticalAlignment="Top"/>
+				<text><![CDATA[All]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d0e5d922-f07e-4b52-994f-f0761f11caa0" style="Arial 10" x="224" y="265" width="120" height="20"/>
+				<textElement verticalAlignment="Top"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="98626431-cc65-45b3-b297-ebca7ae30eec" style="Arial 10" x="41" y="265" width="120" height="20"/>
+				<textElement verticalAlignment="Top"/>
+				<text><![CDATA[Direct Mail]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="9789055c-2482-46a6-825b-be604d849dfc" x="23" y="244" width="15" height="15"/>
+				<imageExpression><![CDATA[$F{Com_Channel_1} == "Y" ? $P{IMAGES_DIR} + "checked.png" : $P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="0f490182-67ab-462c-9aac-56b9f9deffbc" x="23" y="264" width="15" height="15"/>
+				<imageExpression><![CDATA[$F{Com_Channel_4} == "Y" ? $P{IMAGES_DIR} + "checked.png" : $P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="5a75dc0d-7070-4124-b893-0907a19a92e0" x="206" y="264" width="15" height="15"/>
+				<imageExpression><![CDATA[$F{Com_Channel_5} == "Y" ? $P{IMAGES_DIR} + "checked.png" : $P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="d1185931-027d-4c49-a03a-b8fcbc2cc11b" x="206" y="244" width="15" height="15"/>
+				<imageExpression><![CDATA[$F{Com_Channel_2} == "Y" ? $P{IMAGES_DIR} + "checked.png" : $P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="eadc1e23-48a9-4de3-9ecd-d9980cb70306" x="389" y="244" width="15" height="15"/>
+				<imageExpression><![CDATA[$F{Com_Channel_3} == "Y" ? $P{IMAGES_DIR} + "checked.png" : $P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="c8183468-8727-4b97-8398-1a742761ada5" x="389" y="264" width="15" height="15"/>
+				<imageExpression><![CDATA[$F{Com_Channel_6} == "Y" ? $P{IMAGES_DIR} + "checked.png" : $P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="fbfe80af-0978-4d52-93ab-86333cd50f3e" style="Arial 10" x="0" y="514" width="75" height="20"/>
+				<textElement/>
+				<text><![CDATA[Signature Date:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c2fe93d3-54a6-4fb8-81f6-4ce6990525b1" style="Arial 10" x="75" y="514" width="112" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Date}!=null?$P{IPOS_DATETIME_FORMATTER}.format(new SimpleDateFormat("yyyy-MM-dd").parse($F{Date})):""]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="9a49b19f-5638-4dc0-9ea0-24923311811b" x="0" y="539" width="212" height="60"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="452a81d0-a5f9-470b-b933-c73ac9d98e2b" style="Arial 10 B" x="51" y="599" width="92" height="20"/>
+				<textElement/>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b2d465f8-2354-4cd6-b3b0-851d48f16cb3" style="Arial 10" x="0" y="225" width="120" height="20"/>
+				<textElement verticalAlignment="Top">
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(Please tick)]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="86b522c8-5473-4c0a-937f-343416967139" style="Arial 10" x="0" y="0" width="555" height="26"/>
+				<textElement textAlignment="Justified" markup="styled"/>
+				<text><![CDATA[10A Jalan Bersatu, 46200 Petaling Jaya, Selangor, Malaysia
+<b>T</b>: +603-76637878 <b>F</b>: +603-79691016 <b>W</b>: www.csci.com]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

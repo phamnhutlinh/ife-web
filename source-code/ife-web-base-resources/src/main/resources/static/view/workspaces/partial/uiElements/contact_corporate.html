@@ -1,0 +1,416 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+<!-- Basic Information -->
+<div fieldId="corporate:CorporateName" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.CorporateName'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<input rows="5" ng-disabled="moduleService.freeze == true" type="text" maxlength="120" ng-model="uiElement.refDetail.value" alphabeticals-only
+			/>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="corporate:CompanyRegistrationNumber" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.CompanyRegistrationNumber'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<input placeholder="" ng-disabled="moduleService.freeze == true" type="text" maxlength="120" ng-model="uiElement.refDetail.value" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="corporate:PersonInCharge" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.PersonInCharge' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<input placeholder="" ng-disabled="moduleService.freeze == true" type="text" maxlength="120" ng-model="uiElement.refDetail.value" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="corporate:Subsidiaries" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.Subsidiaries'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<v3-switch-new-slide prefix="v4.yesno.enum" switch-model="uiElement.refDetail.value" switch-default-value="" switch-disabled="moduleService.freeze == true"
+		 switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['YesNo'])">
+		</v3-switch-new-slide>
+		<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+	</div>
+</div>
+<div fieldId="corporate:CountryOfOrigin" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.CountryOfOrigin'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<select ui-select2 ng-model="uiElement.refDetail.value" ng-disabled="moduleService.freeze == true">
+				<option ng-repeat="country in moduleService.findElementInElement(moduleService.lazyChoiceList,['CorporateCountry'])" value="{{country.key}}">
+					{{country.group[0]}}</option>
+			</select>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="corporate:S/TaxApplicable" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.S/TaxApplicable'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<v3-switch-new-slide prefix="v4.yesno.enum" switch-model="uiElement.refDetail.value" switch-default-value="" switch-disabled="moduleService.freeze == true"
+		 switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['YesNo'])">
+		</v3-switch-new-slide>
+		<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+	</div>
+</div>
+<div fieldId="corporate:Industry" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.Industry'| translate}}<span ng-show="item.code.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<select ui-select2 ng-model="uiElement.refDetail.value" ng-disabled="moduleService.freeze == true">
+				<option ng-repeat="industry in moduleService.findElementInElement(moduleService.lazyChoiceList,['CorporateIndustry'])" value="{{industry.key}}">
+					{{industry.group[0]}}</option>
+			</select>
+			<span class="errorMessage" ng-bind="item.code.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="corporate:ClientStatus" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-show="false">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.ClientStatus'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<input placeholder="" type="text" maxlength="120" ng-model="uiElement.refDetail.value" ng-disabled="moduleService.freeze == true" disabled/>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="corporate:DateOfIncorporate" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.DateOfIncorporate'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+			<input clear-error-code type="text" ng-disabled="moduleService.freeze == true" dateName="new.v4.mynewworkspace.corporate.label.DateOfIncorporate" includemaxdate="true"
+			 class="datepicker" maxdate="today" materiallize-datetime formatdisplay='DD/MM/YYYY' ng-model="uiElement.refDetail.value"
+			/>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<!-- End Basic Information -->
+<!-- Contact -->
+<div fieldId="corporate:CorporateWebURL" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.CorporateWebURL'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<input placeholder="" ng-disabled="moduleService.freeze == true" type="text" maxlength="120" ng-model="uiElement.refDetail.value" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="corporate:Email" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.Email'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<input placeholder="" ng-disabled="moduleService.freeze == true" type="text" maxlength="120" ng-model="uiElement.refDetail.value" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="corporate:Telephone" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.Telephone' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<input type="text" class="v3-posPhonenumber-input padding-phone" maxlength="16" pos-phonenumber preferred-countries="['MM']"
+			 select-country="MM" phone-Numbers-Only ng-disabled="moduleService.freeze == true || uiElement.refDetail.meta.enable == 'false'"
+			 ng-model="uiElement.refDetail.value" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span> </div>
+	</div>
+</div>
+<div fieldId="corporate:Mobilephone" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.Mobilephone' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<input type="text" class="v3-posPhonenumber-input padding-phone" maxlength="16" pos-phonenumber preferred-countries="['MM']"
+			 select-country="MM" phone-Numbers-Only ng-disabled="moduleService.freeze == true || uiElement.refDetail.meta.enable == 'false'"
+			 ng-model="uiElement.refDetail.value" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span> </div>
+	</div>
+</div>
+<div fieldId="corporate:FasimileNo" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.FasimileNo' | translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<input type="text" class="v3-posPhonenumber-input padding-phone" maxlength="16" pos-phonenumber preferred-countries="['MM']"
+			 select-country="MM" phone-Numbers-Only ng-disabled="moduleService.freeze == true || uiElement.refDetail.meta.enable == 'false'"
+			 ng-model="uiElement.refDetail.value" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span> </div>
+	</div>
+</div>
+<!-- End Contact -->
+
+<!-- End Contact -->
+<div id="address_Addressgroup" fieldId="corporate:Addressgroup">
+	<div class="row v4-materialize-container"
+		ng-repeat="item in uiElement.refDetail.value track by $index">
+		<div
+			class="margin-bottom-15 col-xs-12 col-sm-12 col-md-12 margin-title-left-15">
+			<label class="label-field">{{::'v3.mynewworkspace.portlet.label.'
+				+ item.addressType.value | translate}}</label> <br>
+		</div>
+		<div class="col-xs-12 col-sm-11 col-md-11 col-lg-11">
+			<div class="row">
+				<!-- address -->
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+					<div class="v4-materialize-container">
+						<div class="padding-left-0 v4-materialize-content-center">
+							<div class="input-field">
+								<select
+									id="{{ 'proposer_application_PrimaryAddress_AddressType_' + $index }}"
+									ui-select2 ng-model="item.typeCode.value"
+									data-placeholder="{{::'new.v4.mynewworkspace.prospect.label.AddressType'|
+								translate}}"
+									ng-disabled="moduleService.freeze == true || item.typeCode.meta.enable == 'false'">
+									<option></option>
+									<option
+										ng-repeat="addressType in moduleService.lazyChoiceList.AddressType"
+										value="{{addressType.key}}">{{addressType.group[0]}}
+									</option>
+								</select> <span class="errorMessage"
+									ng-bind="item.typeCode.meta.errorCode | translate"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- street -->
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="v4-materialize-container">
+						<div class="v4-materialize-content-center">
+							<div class="input-field">
+								<input
+									ng-attr-id="{{ 'proposer_application_PrimaryAddress_Street_' + $index }}"
+									clear-error-code
+									placeholder="{{'new.v4.mynewworkspace.prospect.label.Street'| translate}}"
+									type="text" maxlength="50" class=""
+									ng-disabled="moduleService.freeze == true || item.street.meta.enable == 'false'"
+									ng-model="item.street.value" /> <span class="errorMessage"
+									ng-if="item.street.meta.errorCode"
+									ng-bind="item.street.meta.errorCode | translate"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- line 1 -->
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="v4-materialize-container">
+						<div class="v4-materialize-content-center">
+							<div class=" input-field">
+								<input
+									ng-attr-id="{{ 'proposer_application_PrimaryAddress_line1_' + $index }}"
+									clear-error-code
+									placeholder="{{'new.v4.mynewworkspace.prospect.label.line1'| translate}}"
+									type="text" maxlength="50" class=""
+									ng-disabled="moduleService.freeze == true || item.line1.meta.enable == 'false'"
+									ng-model="item.line1.value" /> <span
+									class="errorMessage" ng-if="item.line1.meta.errorCode"
+									ng-bind="item.line1.meta.errorCode | translate"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- line 2 -->
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+					<div class="v4-materialize-container">
+						<div class="v4-materialize-content-center">
+							<div class=" input-field">
+								<input
+									ng-attr-id="{{ 'proposer_application_PrimaryAddress_line2_' + $index }}"
+									clear-error-code
+									placeholder="{{'new.v4.mynewworkspace.prospect.label.line2'| translate}}"
+									type="text" maxlength="50" class=""
+									ng-disabled="moduleService.freeze == true || item.line2.meta.enable == 'false'"
+									ng-model="item.line2.value" /> <span
+									class="errorMessage" ng-if="item.line2.meta.errorCode"
+									ng-bind="item.line2.meta.errorCode | translate"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- state -->
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-lg-offset-2">
+					<div class="v4-materialize-container">
+						<div class="v4-materialize-content-center">
+							<div class="input-field">
+								<select
+									id="{{ 'proposer_application_PrimaryAddress_district_' + $index }}" ng-if="commonService.hasValueNotEmpty(moduleService.lazyChoiceList.State) && commonService.hasValueNotEmpty(moduleService.lazyChoiceList.District)"
+									ui-select2 ng-model="item.district.value" ng-init="filterStateBasedOnDistrict(item.district.value,$index)" ng-change="resetState(item,$index);filterStateBasedOnDistrict(item.district.value,$index)"
+									data-placeholder="{{::'new.v4.mynewworkspace.prospect.label.state'|
+								translate}}"
+									ng-disabled="moduleService.freeze == true || item.district.meta.enable == 'false'">
+									<option></option>
+									<option
+										ng-repeat="district in moduleService.lazyChoiceList.District"
+										value="{{district.key}}">{{district.group[0]}}</option>
+								</select> <span class="errorMessage"
+									ng-bind="item.district.meta.errorCode | translate"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- postal code -->
+				<div
+					class="col-xs-12 col-sm-6 col-md-6 col-lg-3 v4-materialize-container">
+					<div class="col-xs-9 col-sm-9 col-md-9 no-left-padding">
+						<div class="input-field">
+							<input
+								ng-attr-id="{{ 'proposer_application_PrimaryAddress_PostalCode_' + $index }}"
+								clear-error-code
+								placeholder="{{'new.v4.mynewworkspace.prospect.label.PostalCode'| translate}}"
+								type="text" maxlength="10" class=""
+								ng-model="item.postalCode.value"
+								ng-disabled="moduleService.freeze == true || item.postalCode.meta.enable == 'false'" />
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-lg-3 no-left-padding">
+						<div class="postal-code-search-button"
+							ng-if="item.countryCode.value=='SGP'||item.countryCode.value=='USA'"
+							ng-disabled="true">
+							<button
+								ng-attr-id="{{ 'proposer_application_PrimaryAddress_PostalCodeBtn_' + $index }}"
+								class=" btn btn-default"
+								ng-click="entrySingaporePostalCode(null, item)"
+								ng-disabled="moduleService.freeze == true">
+								<i
+									class="pointer fa fa-search fa-2x padding-left-7 search-item isShowTransform"></i>
+							</button>
+						</div>
+					</div>
+					<div class="no-left-padding no-right-padding">
+						<span class="errorMessage"
+							ng-bind="item.postalCode.meta.errorCode | translate"></span>
+					</div>
+				</div>
+				<!-- district -->
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+					<div class="v4-materialize-container">
+						<div class="v4-materialize-content-center">
+							<div class="input-field">
+								<select
+									id="{{ 'proposer_application_PrimaryAddress_state_' + $index }}" ng-if="commonService.hasValueNotEmpty(moduleService.lazyChoiceList.State)"
+									ui-select2 clear-error-code ng-model="item.state.value"
+									data-placeholder="{{::'new.v4.mynewworkspace.prospect.label.district'|
+								translate}}"
+									ng-disabled="moduleService.freeze == true || item.state.meta.enable == 'false'">
+									<option></option>
+									<option ng-repeat="filteredState in filteredStates[$index] track by $index" value="{{filteredState.key}}" >{{filteredState.group[0]}}
+									</option>
+								</select> <span class="errorMessage"
+									ng-bind="item.state.meta.errorCode | translate"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- country -->
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+					<div class="v4-materialize-container">
+						<div class="padding-left-0 v4-materialize-content-center">
+							<div class="input-field">
+								<select
+									id="{{ 'proposer_application_PrimaryAddress_Country_' + $index }}"
+									clear-error-code
+									data-placeholder="{{'new.v4.mynewworkspace.prospect.label.Country'|	translate}}"
+									ui-select2 ng-model="item.countryCode.value"
+									ng-disabled="moduleService.freeze == true || item.countryCode.meta.enable == 'false'">
+									<option></option>
+									<option
+										ng-repeat="country in moduleService.lazyChoiceList.Country"
+										value={{country.key}}>{{country.group[0]}}</option>
+								</select>
+							</div>
+							<span class="errorMessage"
+								ng-bind="item.countryCode.meta.errorCode | translate"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Address-->
+
+<!-- Start Other Information -->
+<div fieldId="corporate:GSTRegNumber" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.GSTRegNumber'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<input placeholder="" ng-disabled="moduleService.freeze == true" type="text" maxlength="120" ng-model="uiElement.refDetail.value" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="corporate:AuthorizedCapital" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.AuthorizedCapital'| translate}} ({{::moduleService.findElementInDetail(['homeCurrency']).value}})<span
+			 ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<input placeholder="" ng-disabled="moduleService.freeze == true" pos-autonumeric decimal="0" min="0" max="999999999999999" type="text" maxlength="120"
+			 ng-model="uiElement.refDetail.value" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="corporate:Category" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.Category'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<select ui-select2 ng-model="uiElement.refDetail.value" ng-click="clearDataEIGroup()" ng-disabled="moduleService.freeze == true">
+				<option ng-repeat="status in moduleService.findElementInElement(moduleService.lazyChoiceList,['CorporateCategory'])" value="{{status.key}}">
+					{{status.group[0]}}</option>
+			</select>
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="corporate:FreeTradeZone" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'new.v4.mynewworkspace.corporate.label.FreeTradeZone'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<v3-switch-new-slide prefix="v4.smoker.enum" switch-model="uiElement.refDetail.value" switch-default-value="" switch-disabled="moduleService.freeze == true"
+		 switch-options="moduleService.findElementInElement(moduleService.lazyChoiceList,['SmokerStatus'])">
+		</v3-switch-new-slide>
+		<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+	</div>
+</div>
+<div fieldId="corporate:ClientNumber" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-show="false">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">{{::'new.v4.mynewworkspace.corporate.label.ClientNumber'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<input placeholder="" ng-disabled="true" type="text" maxlength="120" ng-model="uiElement.refDetail.value" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="corporate:SourceNumber" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-show="false">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="label-field">{{::'new.v4.mynewworkspace.corporate.label.SourceNumber'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+		<div class="input-field">
+			<input placeholder="" ng-disabled="true" type="text" maxlength="120" ng-model="uiElement.refDetail.value" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<!-- End Other Information -->

@@ -1,0 +1,79 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div class="row v3-margin-auto" ng-if="isListView" style="margin-bottom: 0px;" ng-cloak>
+	<div class="col-xs-11 ipos_medium_mobile_table ipos_table_v4">
+		<div class="hidden-xs ipos_medium_mobile_table_table_listRow ipos_table_v4_header md-whiteframe-z1 col-xs-11" style="width: 100%">
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.policy.label.policyHolder' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.policy.label.contractNumber' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.policy.label.inceptionDate' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.policy.label.expiryDate' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.policy.label.contractType' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.policy.label.masterPol' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.policy.label.status' | translate}}
+			</div>	
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.policy.label.action' | translate}}
+			</div>					
+		</div>
+		<!-- {{infiniteItems}} -->
+		<md-virtual-repeat-container class="scrollStyle" md-top-index="topIndex" ng-if="datalist.length >= 1">
+			<div id="table-row-{{$index}}" name="dashboard-item" 
+					class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer repeated-item"
+					md-virtual-repeat="item in infiniteItems" md-on-demand flex>
+				<md-card class="col-xs-12" style="margin: 0px;padding:0px">
+					<div style="display: flex; padding-right: 0px;margin:0px;text-align: left;" class="col-xs-12">
+						<div class="v3-auto-text-ellipsis">{{item.contractOwnerName}}</div>	
+						<div class="v3-auto-text-ellipsis" ng-if="item.contractType=='OCP'"><a ng-click="choosePolicyDetail(item.contractNumber,commonService.CONSTANTS.MODULE_NAME.POLICY, item.id,'',item.contractType,'',item.inceptionDate,item.agentType | lowercase,false)">{{item.contractNumber}}</a></div>	
+						<div class="v3-auto-text-ellipsis" ng-if="item.contractType=='CAN'"><a ng-click="choosePolicyDetail(item.contractNumber,commonService.CONSTANTS.MODULE_NAME.POLICY, item.id,'',item.contractType,'',item.inceptionDate,item.agentType | lowercase,true)">{{item.contractNumber}}</a></div>
+						<div class="v3-auto-text-ellipsis">{{item.inceptionDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+						<div class="v3-auto-text-ellipsis">{{item.expiryDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+						<div class="v3-auto-text-ellipsis" ng-if="item.contractType=='CAN'">{{ item.contractType | translate}}</div>
+						<div class="v3-auto-text-ellipsis" ng-if="item.contractType=='OCP'"><span ng-click="choosePolicyDetail(item.id,commonService.CONSTANTS.MODULE_NAME.POLICY, item.id,'',item.contractType,'',item.inceptionDate,item.agentType | lowercase,false)">{{ item.contractType | translate}}</span></div>
+						<div class="v3-auto-text-ellipsis"><a ng-click="choosePolicyDetail(item.masterPolicyNo,commonService.CONSTANTS.MODULE_NAME.POLICY, item.id,'',item.contractType,'',item.inceptionDate,item.agentType | lowercase,false)">{{item.masterPolicyNo}}</a></div>
+						<div class="v3-auto-text-ellipsis" ng-if="item.polStatCode =='CA'">Cancelled</div>
+						<div class="v3-auto-text-ellipsis" ng-if="item.polStatCode !='CA'">{{item.polStatCodeDesc}}</div>
+						<div class="v3-auto-text-ellipsis" ng-if="userID!=true && item.contractType=='CAN'  "><a ng-click="cloneShipmentDeclaration(item.contractNumber ,commonService.CONSTANTS.MODULE_NAME.SALECASE,item.contractType,customerId,item.inceptionDate,item.expiryDate,item.masterPolicyNo)">Clone</a></div>
+						<div class="v3-auto-text-ellipsis" ng-if="userID==true || item.contractType!='CAN' "></div>	
+					</div>
+				</md-card>	
+			</div>
+		</md-virtual-repeat-container>
+		<!-- loading -->
+		<div id="table-row-{{$index}}" name="dashboard-item" ng-show = "isLoad"  ng-cloak 
+				class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer row">
+				<!-- <md-progress-circular class= "md-hue-2" md-diameter="20px"></md-progress-circular> -->
+				<p><i class = "fa fa-spinner fa-spin" style="margin-right: 5px;">  </i>  Loading...</p>
+		</div>
+		
+	</div>
+</div>

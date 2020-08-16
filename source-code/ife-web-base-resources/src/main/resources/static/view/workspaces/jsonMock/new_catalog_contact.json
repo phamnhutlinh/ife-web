@@ -1,0 +1,12 @@
+{
+ "content" :[
+      {
+        "title": "Personal",
+         "onClick":"createNewDocument('contact', 'personal', '',[currentRole])"
+      }, 
+      {
+      	"title": "Corporate", 
+      	"onClick": "createNewDocument('contact', 'corporate', '',[currentRole])"
+      	}
+   ]
+}

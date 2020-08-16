@@ -1,0 +1,209 @@
+<style>
+.popup_overlay{
+  position:fixed; top:0; left:0;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 10000000; 
+  width:100%; 
+  height:100%; 
+}
+
+.file-reader-content iframe {
+	width: 100%;
+	height: 94vh;
+}
+
+.file-reader-header{
+	background-color: rgba(0, 0, 0, .6);
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 3px;
+}
+
+.file-reader-header .content-icon{
+	color: #4CAF50;
+	cursor: pointer;
+}
+
+.disabled {
+	color: gray;
+}
+
+.file-reader-header .content-icon:HOVER {
+	color: #ffd900;
+}
+
+.file-reader-header .center-icon {
+    width: 80px;
+    display: inline-block;
+}
+
+.file-reader-content {
+	font-size: 15px;
+}
+
+.file-reader-content img{
+	width: 100%;
+	height: 94vh;
+}
+
+.file-reader-content md-divider {
+	border-top-color: rgb(255, 255, 255);
+}
+
+.file-reader-content .file_detail_header{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.file-reader-content .file_image_content{
+	transition: all .2s linear;
+}
+/* @media screen and (min-width: 768px) { */
+.file-reader-content .file_detail_content{
+	color: white;
+	overflow: scroll;
+	text-align: center;
+	height: 1280px;
+	border: solid;
+    background: darkgray;
+}
+/* } */
+
+.file-reader-content .file_detail_content .file-reader-detail-margin{
+	text-align: left;
+}
+
+*{box-sizing: border-box;}
+.wrapper {margin: 0 auto; width: 960px; }
+.pdf-controls { width: 100%; display: block; background: #eee; padding: 1em;}
+.rotate0 {-webkit-transform: rotate(0deg); transform: rotate(0deg); }
+.rotate90 {-webkit-transform: rotate(90deg); transform: rotate(90deg); }
+.rotate180 {-webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.rotate270 {-webkit-transform: rotate(270deg); transform: rotate(270deg); }
+.fixed { position: fixed; top: 0; left: calc(50% - 480px); z-index: 100; width: 100%; padding: 1em; background: rgba(238, 238, 238,.9); width: 960px; }
+.safari-container {
+	position: absolute;
+    bottom: 0;
+    top: 4rem;
+    overflow: auto;
+    right: 0;
+    left: 0;
+}
+</style>
+
+
+<div class="popup_overlay">
+	<!-- Header -->
+	<div class="row file-reader-header">
+		<div class="col-md-offset-3 col-md-6 col-xs-9">
+			<span class="content-icon center-icon"
+				  ng-if="resourceReaderService.listFile"
+				  ng-click="resourceReaderService.changeFile('previous')">
+				<i class="fa fa-angle-double-left fa-3x"></i>
+			</span>
+			<span class="content-icon center-icon"
+				  ng-click="resourceReaderService.download(resourceReaderService.detailFile.fileName)">
+				<i class="fa fa-download fa-3x"></i>
+			</span>
+			<span class="content-icon center-icon"
+				  ng-click="resourceReaderService.showFileDetail()">
+				<i class="fa fa-info-circle fa-3x"></i>
+			</span>
+			
+<!-- 			<span class="content-icon center-icon" -->
+<!-- 				  ng-click="signDocumentPdf()" ng-if="isEsignVisible(resourceReaderService)">    -->
+<!-- 				<i class="fa fa-pencil-square-o fa-3x"></i> -->
+<!-- 			</span> -->
+			<!-- <span class="content-icon center-icon"
+				  ng-click="signDocument()" ng-if="isEsignVisible(resourceReaderService)">
+				<i class="fa fa-pencil-square-o fa-3x"></i>
+			</span> -->
+			<!--<span class="disabled center-icon"
+				  ng-if="!isSignRequired">
+				<i class="fa fa-pencil-square-o fa-3x"></i>
+			</span>-->
+			<span class="content-icon center-icon"
+				  ng-if="resourceReaderService.listFile"
+				  ng-click="resourceReaderService.changeFile('next')">
+				<i class="fa fa-angle-double-right fa-3x"></i>
+			</span>
+		</div>
+		<div class="col-xs-3 right-align">
+			<span class="content-icon"
+				  ng-click="resourceReaderService.closeFileReader()">
+				<i class="fa fa-times-circle fa-3x"></i>
+			</span>
+		</div>
+	</div>
+	<!-- body -->
+	<div class="row file-reader-content">
+		<!-- Show file base on file type -->
+		<div id="holder"
+			 ng-class="[resourceReaderService.isDetail ? 'col-xs-7 col-sm-8 col-md-9':'v3-element-container col-xs-12', {'safari-container': resourceReaderService.isSafari }]"
+			 ng-if="resourceReaderService.content!=''" class="text-center">
+			 <iframe ng-if="!resourceReaderService.isSafari" align="middle" ng-src="{{resourceReaderService.content}}" type="application/pdf"></iframe>
+			 <div id="pageContainer" ng-if="resourceReaderService.isSafari">
+			 	<div id="viewer" class="pdfViewer"></div>
+			 </div>
+		</div>
+		<div class="file_image_content"
+			 ng-class="resourceReaderService.isDetail ? 'col-xs-7 col-sm-8 col-md-9':'v3-element-container col-xs-12'"
+			 ng-if="resourceReaderService.source!=''">
+ 			<img ng-src="{{resourceReaderService.source}}" type="image/jpeg"></img>
+		</div>
+		
+		<!-- Show detail of files -->
+		<div class="col-xs-5 col-sm-4 col-md-3" ng-if="resourceReaderService.isDetail">
+			<!-- Show file in Attached list -->
+			<div class="container-fluid file_detail_content" ng-show="resourceReaderService.detailFile">
+				<div class="row file_detail_header">
+		 			<span> {{"new.v3.filereader.detail.label.Details" | translate}}</span>
+					<md-divider></md-divider>
+				</div>
+				<div class="row file-reader-detail-margin">
+				    <div class="bold">{{"new.v3.filereader.detail.label.Type" | translate}} :</div>
+				    <div>{{resourceReaderService.findElementInElement(resourceReaderService.detailFile, ['fileName'])}}</div>
+				</div>
+				<div class="row file-reader-detail-margin">
+				  	<div class="bold">{{"new.v3.filereader.detail.label.Size" | translate}} (bytes):</div>
+				  	<div>{{resourceReaderService.findElementInElement(resourceReaderService.detailFile, ['fileSize'])}}</div>
+				</div>
+				<div class="row file-reader-detail-margin">
+				  	<div class="bold">{{"new.v3.filereader.detail.label.DateCreated" | translate}} :</div>
+				  	<div>{{resourceReaderService.findElementInElement(resourceReaderService.detailFile, ['createdDate']) | datetimeFilter:"DD/MM/YYYY"}}</div>
+				</div>
+				<!--<div class="row file-reader-detail-margin">
+				  	<div class="bold">{{"new.v3.filereader.detail.label.CreatedBy" | translate}} :</div>
+				  	<div>{{resourceReaderService.findElementInElement(resourceReaderService.detailFile, ['ownerName'])}}</div>
+				</div>-->
+			</div>
+			
+			<!-- Show file in for print PDF -->
+			<div class="container-fluid file_detail_content" ng-show="!resourceReaderService.detailFile">
+				<div class="row file_detail_header">
+		 			<span> {{"new.v3.filereader.detail.label.Details" | translate}}</span>
+					<md-divider></md-divider>
+				</div>
+				<div class="row file-reader-detail-margin">
+				    <div class="bold">{{"new.v3.filereader.detail.label.Type" | translate}} :</div>
+				    <div>{{resourceReaderService.templateFile.fileName}}</div>
+				</div>
+				<div class="row file-reader-detail-margin">
+				  	<div class="bold">{{"new.v3.filereader.detail.label.Size" | translate}} (bytes):</div>
+				  	<div>{{resourceReaderService.templateFile.fileSize}}</div>
+				</div>
+				<div class="row file-reader-detail-margin">
+				  	<div class="bold">{{"new.v3.filereader.detail.label.DateCreated" | translate}} :</div>
+				  	<div>{{resourceReaderService.templateFile.dateCreated | datetimeFilter:"DD/MM/YYYY"}}</div>
+				</div>
+				<!--<div class="row file-reader-detail-margin">
+				  	<div class="bold">{{"new.v3.filereader.detail.label.CreatedBy" | translate}} :</div>
+				  	<div>{{resourceReaderService.templateFile.createdBy}}</div>
+				</div>-->
+			</div>
+		</div>
+	</div>
+</div>
+
+

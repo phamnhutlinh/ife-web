@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row v3-margin-auto app-Login-Container">
+        <div class="container">
+            <h2>	<i class="fa fa-check-circle-o" aria-hidden="true"></i>
+	   		Last sync: {{'v3.mobileApp.sync.' + lastSyncTime | translate}}</h2>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-success active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:{{syncBarProgress}}">
+                    {{'v3.mobileApp.sync.syncing' | translate}}...
+                </div>
+            </div>
+            <button type="button" class="btn-lg v3-btn-primary button-size-level2 button-login-border-none" ng-click="syncDocument()">
+                {{'v3.mobileApp.sync.syncNow' | translate}}
+            </button>
+        </div>
+    </div>
+</div>

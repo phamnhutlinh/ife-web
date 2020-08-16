@@ -1,0 +1,68 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+-->
+<style>
+	.ipos-v4 .zizap {
+	margin-top: 20px;
+    border: 3px dashed #4B7E37;
+    border-radius: 3px;
+    padding: 15px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+</style>
+<div class="ipos-v4 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 zizap">
+			<div ng-repeat="output in moduleService.lazyChoiceList.OutputOptionalType | filterByGroup : 'M'">
+				<input value="{{'v4.case.AttachmentType.' + output.key | translate}}" type="text" ng-disabled="true" style="color: black;"/>
+			</div>
+		</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xs-offset-1">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-12 col-sm-12 col-md-12 v4-materialize-content-center">
+			<label style="margin-left: 10px" class="label-field">{{'v4.documentcenter.label.AdditionalDocumentsForClient'| translate}}</label>
+			<div>
+				<div class="input-field col-xs-8">
+					<select ui-select2 ng-model="outputOptional"
+							ng-disabled="uiElement.refDetail.meta.editable === 'false'">
+						<option ng-repeat="option in outputDocument.listLazyOutputDocument | filterByGroup : 'O'" value="{{option.key}}">
+							{{'v4.case.AttachmentType.' + option.key | translate}}
+						</option>	
+					</select>
+				</div>
+				<div class="col-xs-4" style="margin-top: 15px;">
+				<span style="color: rgb(64, 197, 75)" ><i class="fa fa-plus-square fa-2x"
+						ng-click="addNewOptionalOutputDocument(card.refDetail, outputOptional)"></i></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ipos-v4 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 zizap">
+			<div ng-repeat="output in card.refDetail.value">
+				<div class="input-field col-xs-8">
+					<input value="{{'v4.case.AttachmentType.' + output.key.value | translate}}" type="text" ng-disabled="true" style="color: black; width: 300px;"/>
+				</div>
+				<div class="col-xs-4" style="margin-top: 15px;">
+					<span style="color: rgb(255, 88, 88); margin-top: 15px;" ><i class="fa fa-minus-square fa-2x"
+					ng-click="removeOptionalOutputDocument(card.refDetail, output)"></i></span>
+				</div>
+			</div>
+	</div>
+</div>

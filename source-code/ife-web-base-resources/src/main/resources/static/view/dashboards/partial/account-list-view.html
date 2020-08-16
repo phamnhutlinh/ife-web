@@ -1,0 +1,95 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div ng-controller="AccountListViewCtrl" ng-if="dashboardstatus === 'my_accounts'" ng-cloak>
+	<div class="row v3-margin-auto" ng-if="isListView" style="margin-bottom: 0px;">
+		<div class="col-xs-11 ipos_medium_mobile_table ipos_table_v4">
+			<div class="hidden-xs ipos_medium_mobile_table_table_listRow ipos_table_v4_header md-whiteframe-z1 col-xs-11" style="width: 100%">
+				<div class="v3-auto-text-ellipsis ipos-box-opacity" list-view-sort="fullName">{{'v4.dashboard.user.label.FullName' | translate}}</div>
+				<div class="v3-auto-text-ellipsis ipos-box-opacity" list-view-sort="email">{{'v4.dashboard.user.label.Email' | translate}}</div>
+				<div ng-hide="true" class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.Username' | translate}}</div>
+				<div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.Gender' | translate}}</div>
+				<div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.DateOfBirth' | translate}}</div>
+				<div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.Status' | translate}}</div>
+			</div>
+			<md-virtual-repeat-container class="scrollStyle" md-top-index="topIndex" ng-if="datalist.length >= 1">
+				<div id="table-row-{{$index}}" name="dashboard-item"  class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer repeated-item"
+						md-virtual-repeat="item in infiniteItems" md-on-demand flex>
+					<md-card class="col-xs-12" style="margin: 0px;padding:0px" ng-init="setupStuffs($index, item.userName)">
+					<div style="display: flex; padding-right: 0px;margin:0px;text-align: left;" class="col-xs-12">
+						<div class="v3-auto-text-ellipsis" ng-click = "goToDocumentDetails(commonService.CONSTANTS.MODULE_NAME.ACCOUNT, item.userName)">{{item.fullName}}</div>
+						<div class="v3-auto-text-ellipsis" ng-click = "goToDocumentDetails(commonService.CONSTANTS.MODULE_NAME.ACCOUNT, item.userName)">{{item.email}}</div>
+						<div class="v3-auto-text-ellipsis" ng-click = "goToDocumentDetails(commonService.CONSTANTS.MODULE_NAME.ACCOUNT, item.userName)">{{ "v4.gender.enum." + item.gender   | translate}}</div>
+						<div class="v3-auto-text-ellipsis" ng-click = "goToDocumentDetails(commonService.CONSTANTS.MODULE_NAME.ACCOUNT, item.userName)">{{item.dateOfBirth | datetimeFilter:'DD/MM/YYYY'}}</div>
+						<div class="v3-auto-text-ellipsis">
+							<md-switch aria-label="active-switch" ng-model="item.isActive" ng-true-value="'true'" ng-false-value="'false'" ng-change="triggerActiveSwitch($event, item)">
+								<span ng-if="item.isActive === 'true'">{{'v4.dashboard.user.label.Active' | translate}}</span>
+								<span ng-if="item.isActive !== 'true'">{{'v4.dashboard.user.label.Inactive' | translate}}</span>
+							</md-switch>
+						</div>
+					</div>
+					</md-card>
+				</div>
+			</md-virtual-repeat-container>
+		<div id="table-row-{{$index}}" name="dashboard-item" ng-show = "isLoad"  ng-cloak 
+				class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer row">
+				<p><i class = "fa fa-spinner fa-spin" style="margin-right: 5px;">  </i>  Loading...</p>
+		</div>			
+		</div>
+	</div>
+</div>
+
+
+<div ng-controller="AccountListViewCtrl" ng-if="dashboardstatus === 'wait_for_approval'" ng-cloak>
+	<div class="row v3-margin-auto" ng-if="isListView" style="margin-bottom: 0px;">
+		<div class="col-xs-11 ipos_medium_mobile_table ipos_table_v4">
+			<div class="hidden-xs ipos_medium_mobile_table_table_listRow ipos_table_v4_header md-whiteframe-z1 col-xs-11" style="width: 100%">
+				<div class="v3-auto-text-ellipsis ipos-box-opacity" list-view-sort="fullName">{{'v4.dashboard.user.label.FullName' | translate}}</div>
+				<div class="v3-auto-text-ellipsis ipos-box-opacity" list-view-sort="email">{{'v4.dashboard.user.label.Email' | translate}}</div>
+				<div ng-hide="true" class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.Username' | translate}}</div>
+				<div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.Gender' | translate}}</div>
+				<div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.DateOfBirth' | translate}}</div>
+				<div class="v3-auto-text-ellipsis ipos-box-opacity">{{'v4.dashboard.user.label.Status' | translate}}</div>
+			</div>
+			<md-virtual-repeat-container class="scrollStyle" md-top-index="topIndex" ng-if="datalist.length >= 1">
+				<div id="table-row-{{$index}}" name="dashboard-item"  class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer repeated-item"
+						md-virtual-repeat="item in infiniteItems" md-on-demand flex>
+					<md-card class="col-xs-12" style="margin: 0px;padding:0px" ng-init="setupStuffs($index, item.userName)">
+					<div style="display: flex; padding-right: 0px;margin:0px;text-align: left;" class="col-xs-12">
+						<div class="v3-auto-text-ellipsis" ng-click = "goToDocumentDetails(commonService.CONSTANTS.MODULE_NAME.ACCOUNT, item.userName)">{{item.fullName}}</div>
+						<div class="v3-auto-text-ellipsis" ng-click = "goToDocumentDetails(commonService.CONSTANTS.MODULE_NAME.ACCOUNT, item.userName)">{{item.email}}</div>
+						<div class="v3-auto-text-ellipsis" ng-click = "goToDocumentDetails(commonService.CONSTANTS.MODULE_NAME.ACCOUNT, item.userName)">{{ "v4.gender.enum." + item.gender   | translate}}</div>
+						<div class="v3-auto-text-ellipsis" ng-click = "goToDocumentDetails(commonService.CONSTANTS.MODULE_NAME.ACCOUNT, item.userName)">{{item.dateOfBirth | datetimeFilter:'DD/MM/YYYY'}}</div>
+						<div class="v3-auto-text-ellipsis">
+							<md-switch aria-label="active-switch" ng-model="item.isBlockAccount" ng-true-value="'true'" ng-false-value="'false'" ng-change="triggerActiveSwitchBlock($event, item)">
+								<span ng-if="item.isBlockAccount === 'true'">{{'v4.dashboard.user.label.Block' | translate}}</span>
+								<span ng-if="item.isBlockAccount !== 'true'">{{'v4.dashboard.user.label.Unblock' | translate}}</span>
+							</md-switch>
+						</div>
+					</div>
+					</md-card>
+				</div>
+			</md-virtual-repeat-container>
+		<div id="table-row-{{$index}}" name="dashboard-item" ng-show = "isLoad"  ng-cloak 
+				class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer row">
+				<p><i class = "fa fa-spinner fa-spin" style="margin-right: 5px;">  </i>  Loading...</p>
+		</div>			
+		</div>
+	</div>
+</div>

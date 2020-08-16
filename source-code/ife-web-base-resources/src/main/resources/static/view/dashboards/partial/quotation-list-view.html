@@ -1,0 +1,85 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div class="row v3-margin-auto" ng-if="isListView" style="margin-bottom: 0px;" ng-cloak>
+	<div class="col-xs-11 ipos_medium_mobile_table ipos_table_v4">
+		<div class="hidden-xs ipos_medium_mobile_table_table_listRow ipos_table_v4_header md-whiteframe-z1">
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.quatation.label.quoId' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.quatation.label.proposer' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.quatation.label.product' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.quatation.label.createDate' | translate}}
+			</div>	
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.quatation.label.modifyDate' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity" ng-if="dashboarddoctype">
+				<span></span>
+			</div>			
+		</div>
+		<md-virtual-repeat-container
+				class="scrollStyle" md-top-index="topIndex" ng-if="datalist.length >= 1">
+			<div id="table-row-{{$index}}" name="dashboard-item"
+				class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer repeated-item"
+				md-virtual-repeat="item in infiniteItems" md-on-demand flex ng-show="isRowVisibleForQuotationImport(infiniteItems.getItemAtIndex($index))" >
+				<md-card class="col-xs-12 v3-padding-0 ipos-box-opacity"
+					style="margin: 0px;">
+				<div 
+					ng-click=" handleStandaloneQuotationSelection(card, item.docId, item.docName, $event)"
+					style="display: flex; padding-left: 0px; padding-right: 0px; text-align: left;">
+					<div class="v3-auto-text-ellipsis">{{item.docName}}</div>
+					<div class="v3-auto-text-ellipsis">{{item.full}}</div>
+					<div class="v3-auto-text-ellipsis">{{'v3.mynewworkspace.portlet.label.ipos-product.'
+						+ item.productName | translate}}
+					</div>
+					<!-- <div class="v3-auto-text-ellipsis">{{'v4.sidebar.title.status.' + item.businessStatus | translate}}</div> -->
+					<div class="v3-auto-text-ellipsis">{{item.modifyDate |
+						datetimeFilter:'DD/MM/YYYY'}}
+					</div>
+					<div class="v3-auto-text-ellipsis">{{item.modifyDate |
+						datetimeFilter:'DD/MM/YYYY'}}
+					</div>
+					<div class="v3-auto-text-ellipsis" ng-if="dashboarddoctype">
+						<div>
+							<a style="color: #26a69a;" class="pointer"
+								ng-if="item.documentStatus === commonService.CONSTANTS.DOCUMENT_STATUS.VALID" 
+								ng-click="generateBusinessCaseFromQuickQuotationDashboard(item); $event.stopPropagation();">
+								<md-tooltip md-direction="left">{{'new.v4.mynewworkspace.actionbar.label.ProceedBusinessCase' | translate}}</md-tooltip>
+								<i class="fa fa-plus fa-2x" style="font-size: 20px;"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				</md-card>
+			</div>
+		</md-virtual-repeat-container>	
+		<!-- loading -->
+		<div id="table-row-{{$index}}" name="dashboard-item" ng-show = "isLoad"  ng-cloak 
+				class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer row">
+				<!-- <md-progress-circular class= "md-hue-2" md-diameter="20px"></md-progress-circular> -->
+				<p><i class = "fa fa-spinner fa-spin" style="margin-right: 5px;">  </i>  Loading...</p>
+		</div>
+	</div>
+</div>

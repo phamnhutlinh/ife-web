@@ -1,0 +1,46 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div class="v4-dropdown-container-element">
+
+<div id="mask-{{::name}}" class="v4-dropdown-mask" ng-click="hideDowpdown()"></div>
+<div class="v4-multi-dropdown">
+	<button id="button-{{::name}}"  ng-click="toggleDowpdown()" class="v4-multi-button">
+	 <div style="display: flex; text-overflow: ellipsis; overflow: hidden; margin-right: 30px;">
+		<span class="v4-multi-v4-display-inline"><b>{{title}}:&nbsp;</b></span>
+		 <span class="v4-multi-v4-display-inline">{{prefix + "." + model.Value | translate}}</span>
+		 </div>
+		 <div>
+            <i style="color: gray; top: 5px; right: 10px;" class="fa fa-sort-desc v4-multi-v4-caret" aria-hidden="true"></i>
+        </div>
+</button>
+ <div id="{{::name}}" class="v4-dropdown-item">
+	<div id="search-text-{{::name}}" class="v4-dropdown-search-container">
+            <input id="input-{{::name}}" ng-model="searchText" class="v4-multi-v4-input-search" /> <i ng-if="searchText == ''" class="fa fa-search v4-multi-v4-caret v4-dropdown-search-box" aria-hidden="true"></i> <i ng-click="clearSearchText()" ng-if="searchText != ''" class="fa fa-times-circle v4-multi-v4-caret v4-dropdown-search-box" aria-hidden="true"></i>
+        </div>
+	<ul>
+		 
+		<li ng-repeat="item in list | filter:searchText"><a ng-click="setValue(item.value)">{{item.translate}}</a></li>
+	</ul>
+	</div>
+</div>
+
+
+</div>
+

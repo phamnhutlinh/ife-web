@@ -1,0 +1,80 @@
+{
+  "IposDocument": {
+    "policy:Policy": {
+      "section": "policy:Policy",
+      "key": [],
+      "permission": {
+        "openable": [
+          "account_openable"
+        ],
+        "editable": [
+          "account_editable"
+        ],
+        "viewable": [
+          "account_viewable"
+        ]
+      },
+      "policy:policyInformation": {
+        "key": [
+            "policyInformation"
+          ],
+          "group": "1"
+      },
+      "policy:planAppliedDetails": {
+        "key": [
+            "planAppliedDetails"
+          ],
+          "group": "2"
+      },
+      "policy:paymentInformation": {
+        "key": [
+            "paymentInformation"
+          ],
+          "group": "3"
+      },
+      "policy:policyBenefitsAndValues": {
+        "key": [
+            "policyBenefitsAndValues"
+          ],
+          "group": "4"
+      },
+      "policy:unitHoldingsAndFundsValue": {
+        "key": [
+            "unitHoldingsAndFundsValue"
+          ],
+          "group": "5"
+      },
+      "policy:mailingAddress": {
+        "key": [
+            "mailingAddress"
+          ],
+          "group": "6"
+      },
+      "policy:policyHolder": {
+        "key": [
+            "policyHolder"
+          ],
+          "group": "7",
+         "isVisible":"moduleService.findElementInDetail(['policyHolder']) != undefined"
+      },
+      "policy:lifeInsured": {
+        "key": [
+            "lifeInsured"
+          ],
+          "group": "8"
+      },
+      "policy:servicingAgent": {
+        "key": [
+            "servicingAgent"
+          ],
+          "group": "9"
+      },
+      "policy:beneficiaryInformation": {
+        "key": [
+            "beneficiaryInformation"
+          ],
+          "group": "10"
+      }
+    }
+  }
+}

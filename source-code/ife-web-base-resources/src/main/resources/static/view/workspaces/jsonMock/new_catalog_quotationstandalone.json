@@ -1,0 +1,9 @@
+{
+ "content" :[
+      {
+        "title": "RegularPreUnitLinked",
+         "onClick":"goToProductIntroducionPageFromQuotation('LIFE_RUL', 'quotation_management')",
+         "isVisible": "currentRole === commonService.CONSTANTS.USER_ROLES.AG.name"
+      }
+   ]
+}

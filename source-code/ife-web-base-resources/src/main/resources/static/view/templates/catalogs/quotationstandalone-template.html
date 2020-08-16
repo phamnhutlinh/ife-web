@@ -1,0 +1,24 @@
+<md-dialog style="position: relative">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2><b>{{"v4.catalogDlg.agentSale.quickQuotation.title"  | translate }}</b></h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" style="color: black; background: none" class="fa fa-close"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content style="margin-left: auto; margin-right: auto">
+		<div class="dlg-catalog-content-container">
+			<!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 profile-title">{{'v4.workspace.text.selectWorkspaceProfile'| translate}}</div> -->
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="btn-group-vertical btn-group-profile">
+				  <button ng-repeat="item in content track by $index" type="button" ng-if="item.isVisible === true" ng-click="clickItemHandler(item.onClick)" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				 	  <span><b>{{ "v4.catalogDlg.agentSale.content.title." + item.title | translate}}</b></span>
+				  </button>
+				</div>
+		    </div>
+		</div>
+    </md-dialog-content>
+</md-dialog>

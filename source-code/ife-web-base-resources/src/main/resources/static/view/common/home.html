@@ -1,0 +1,27 @@
+<!--
+
+	//*******************************************************************************
+	// * Copyright (c) 2011-2014 CSC.
+	// * Copyright (C) 2010-2016 CSC - All rights reserved.
+	// *
+	// * The information contained in this document is the exclusive property of
+	// * CSC.  This work is protected under USA copyright law
+	// * and the copyright laws of given countries of origin and international
+	// * laws, treaties and/or conventions. No part of this document may be
+	// * reproduced or transmitted in any form or by any means, electronic or
+	// * mechanical including photocopying or by any informational storage or
+	// * retrieval system, unless as expressly permitted by CSC.
+	//
+	// * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+	// ******************************************************************************
+
+-->
+
+<div class="col-xs-9 col-md-10 v4-home-page">
+	<div class="col-xs-3 col-md-2 app" ng-repeat="app in appList">
+		<div  class="app-icon card {{::app.cssClass}}" id="{{app.siteName}}" ng-click="gotoSite(app)">
+		<i><div class="icons-new-ui" style="background-image: url('{{resourceServerPath + 'images/icon/' + app.icon + '.svg'}}');background-size:auto;background-repeat: no-repeat;background-position: center;"></div></i>
+		<i><div style="margin-top: 50px; font-style: normal" class="app-title">{{'v4.siteName.' + app.siteName | translate}}</div></i>
+		</div>
+	</div>
+</div>

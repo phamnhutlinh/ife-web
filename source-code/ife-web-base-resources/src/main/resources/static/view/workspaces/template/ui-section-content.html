@@ -1,0 +1,64 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+    <!-- card type isn't equal to action -->
+    <div ng-if="card.cardType !== 'action'" ng-class="{'v3-section-invalid' : card.validStatus == 'INVALID'}" class="section-element label-section step-card-item v3-step-box v3-padding-0" name="{{card.name}}" ng-mouseenter="card.show = true" ng-mouseleave="card.show = false">
+        <h4 class="v3-step-card-title v3-auto-text-ellipsis-2">  
+          <span ng-if="!card.customName" class="step-card-detail" title="{{'v3.mynewworkspace.portlet.label.'+ card.name| translate}}">
+             <!--   <div class="col-xs-12"> -->
+                     <i ng-if="!card.isSelected" class="v4-left fa fa-plus {{card.cssIconFont !== undefined ? card.cssIconFont : 'section-icon-default'}}" ></i>
+                     <i ng-if="card.isSelected" class="v4-left fa fa-minus {{card.cssIconFont !== undefined ? card.cssIconFont : 'section-icon-default'}}" ></i>
+              		 <b class="{{card.cssLabelFont}}" style="margin-left:1em">{{'v3.mynewworkspace.portlet.label.'+ card.name | translate }}<span ng-if="card.name === 'illustration:Fund'">: {{card.refDetail.value.length}}</span></b>
+               <!-- </div> -->
+          </span>
+         
+          <span ng-if="card.customName" class="card-detail" title="{{(card.customNameTranslate !== undefined ? card.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(card.customName) | translateMessage}}">
+               <!--   <div class="col-xs-12"> -->
+                    <i ng-if="!card.isSelected" class="v4-left fa fa-plus {{card.cssIconFont !== undefined ? card.cssIconFont : section-icon-default}}"></i>
+                    <i ng-if="card.isSelected" class="v4-left fa fa-minus {{card.cssIconFont !== undefined ? card.cssIconFont : section-icon-default}}"></i>
+	                <b class="{{card.cssLabelFont}}" style="margin-left:1em">{{(card.customNameTranslate !== undefined ? card.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(card.customName) | translateMessage }}</b>
+	                  
+            <!-- 	 </div> -->
+                <!-- <b>{{(card.customNameTranslate !== undefined ? card.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(card.customName) | translateMessage }}</b> -->
+          </span>
+          
+	         
+             <!-- icon Remove -->
+	          <span  style="margin-left:1em" ng-if="card.view.icons.length > 0" >
+	            <span ng-repeat="icon in card.view.icons">
+	                 <span section-icon="icon" ng-if="icon.cssClass == 'v3-card-icon-remove'"></span>
+	             </span>
+	          </span>
+               
+	          <!-- Old style of card icons-->
+	        <!--<span ng-if="card.view.icons.length === 0" >
+	        	<span ng-if="card.icon.subAction" class="v4-card-icon-remove">
+		            <i class="{{card.icon.subAction}}" ng-if="card.cardType == 'template'" ng-click="removeCard(card, $index); $event.stopPropagation()"/></i>
+		         </span>
+	        </span>
+	          -->
+        </h4>
+    </div>
+    
+    <!-- card type is action -->
+	<div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 v3-padding-0" ng-if="card.cardType === 'action'" style="background-color: #F0F0F0; margin:16px 0px 0px 50px; font-size: 20px" name="{{card.name}}">
+	  <div style="padding: 10px 0 10px 0">
+	  <i class="v4-left fa fa-2x fa-plus card-add-more"></i>
+	  <b class="margin-left-35-lg matgin-left-15">{{'v3.mynewworkspace.portlet.label.'+ card.name | translate }}</b>
+	  </div>
+	</div>

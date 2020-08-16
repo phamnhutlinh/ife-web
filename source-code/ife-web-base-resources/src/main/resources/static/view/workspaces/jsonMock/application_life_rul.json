@@ -1,0 +1,1582 @@
+{
+  "IposDocument": {
+    "Data": {
+      "application:Application": {
+        "section": "application:Application",
+        "icons": {
+          "cardIcon": {
+            "content": "fa fa-pie-chart"
+          }
+        },
+        "permission": {
+          "openable": [
+            "case_openable"
+          ],
+          "editable": [
+            "case_editable"
+          ],
+          "viewable": [
+            "case_viewable"
+          ]
+        },
+        "application:PolicyOwner": {
+          "key": [
+            "policyOwnerDetails"
+          ],
+          "uiStyle": "section",
+          "section": "application:Application",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+          "application:PolicyOwnerInfor": {
+            "key": [
+              "policyOwnerDetails",
+              "proporserInformation"
+            ],
+            "uiStyle": "section",
+            "section": "application:PolicyOwner",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-user"
+              }
+            },
+            "prospect:BasicInformation": {
+              "key": [
+                "policyOwnerDetails",
+                "proporserInformation",
+                "person",
+                "basic"
+              ],
+              "section": "application:PolicyOwnerInfor",
+              "icon": "fa fa-user",
+              "prospect:Salutation": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "name",
+                  "titleCode"
+                ],
+                "group": "1"
+              },
+              "prospect:FirstName": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "name",
+                  "first"
+                ],
+                "group": "2"
+              },
+              "prospect:LastName": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "name",
+                  "last"
+                ],
+                "group": "2"
+              },
+              "prospect:DOB": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "birthDate"
+                ],
+                "group": "3"
+              },
+              "prospect:Gender": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "genderCode"
+                ],
+                "group": "3"
+              },
+              "prospect:MaritalStatus": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "maritalStatusCode"
+                ],
+                "group": "4"
+              },
+              "prospect:Race": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "raceInfor"
+                ],
+                "group": "4"
+              },
+              "prospect:SmokerStatus": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "smokerStatus"
+                ],
+                "group": "5"
+              },
+              "prospect:Religion": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "religionCode"
+                ],
+                "group": "5"
+              },
+              "prospect:IDType": {
+                "key": [
+                  "person",
+                  "basic",
+                  "idType"
+                ],
+                "group": "6"
+              },
+              "prospect:IDNumber": {
+                "key": [
+                  "person",
+                  "basic",
+                  "idNumber"
+                ],
+                "group": "6"
+              },
+              "prospect:Industry": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "industry"
+                ],
+                "group": "7"
+              },
+              "prospect:Nationality": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "nationalityCode"
+                ],
+                "group": "7"
+              },
+              "prospect:ClientStatus": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "clientStatus"
+                ],
+                "group": "8"
+              },
+              "prospect:Occupation": {
+                "key": [
+                  "policyOwnerDetails",
+                  "occupationModel",
+                  "occupationCode"
+                ],
+                "group": "8"
+              }
+            },
+            "prospect:Contact": {
+              "onOpen": true,
+              "key": [
+                "policyOwnerDetails",
+                "proporserInformation",
+                "person",
+                "contacts"
+              ],
+              "section": "application:PolicyOwnerInfor",
+              "icon": "fa fa-phone-square",
+              "prospect:EmailAddress": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "contacts",
+                  "email"
+                ],
+                "group": "1"
+              },
+              "prospect:HandPhone": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "contacts",
+                  "handPhone"
+                ],
+                "group": "1"
+              },
+              "prospect:HomePhone": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "contacts",
+                  "homePhone"
+                ],
+                "group": "2"
+              },
+              "prospect:OfficePhone": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "contacts",
+                  "officePhone"
+                ],
+                "group": "2"
+              }
+            },
+            "application:Address": {
+            	"key": [
+              		"policyOwnerDetails",
+              		"proporserInformation"
+              	],
+              	"section": "application:PolicyOwnerInfor",
+              	"icon": "fa fa-address-card",
+              	"cssClass": "v3-box-1",
+              	"address:PrimaryAddress": {
+			  	"key": [
+			  		"policyOwnerDetails",
+              		"proporserInformation",
+			  		"person",
+			  		"addresses"
+                ]
+              }
+            },
+            "application:OtherInformation": {
+              "key": [
+                "otherInformation"
+              ],
+              "section": "application:PolicyOwnerInfor",
+              "icon": "fa fa-user",
+              "otherInfor:CountryOfBirth": {
+                "key": [
+                  "countryOfBirth"
+                ],
+                "group": "1"
+              },
+              "otherInfor:Education": {
+                "key": [
+                  "education"
+                ],
+                "group": "1"
+              },
+              "otherInfor:Staff": {
+                "key": [
+                  "staff"
+                ],
+                "group": "2"
+              },
+              "otherInfor:VIP": {
+                "key": [
+                  "vip"
+                ],
+                "group": "2"
+              },
+              "otherInfor:EmployerName": {
+                "key": [
+                  "employerName"
+                ],
+                "group": "3"
+              },
+              "otherInfor:EmploymentStatus": {
+                "key": [
+                  "employmentStatus"
+                ],
+                "group": "3"
+              },
+              "otherInfor:AnnualEmployeeIncome": {
+                "key": [
+                  "annualEmployeeIncome"
+                ],
+                "group": "4"
+              },
+              "otherInfor:SourceOfFund": {
+                "key": [
+                  "sourceOfFund"
+                ],
+                "group": "4"
+              },
+              "otherInfor:ClientNumber": {
+                "key": [
+                  "clientNumber"
+                ],
+                "group": "5"
+              },
+              "otherInfor:SourceOfName": {
+                "key": [
+                  "sourceOfName"
+                ],
+                "group": "5"
+              }
+            }
+          },
+          "application:UnderwritingDetailsofProposer": {
+            "key": [
+              "policyOwnerDetails",
+              "underwritingDetailsOfProposer"
+            ],
+            "section": "application:PolicyOwner",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-question-circle-o"
+              }
+            },
+            "application:GeneralQuestion": {
+              "key": [
+                "policyOwnerDetails",
+                "generalQuestion"
+              ],
+              "section": "application:UnderwritingDetailsofProposer",
+              "icons": {
+                "cardIcon": {
+                  "content": "fa fa-info"
+                }
+              },
+              "generalQuestion:question_1a_Height": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQ1a",
+                  "generalQ1aHeight"
+                ]
+              },
+              "generalQuestion:question_1a_Weight": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQ1a",
+                  "generalQ1aWeight"
+                ]
+              },
+              "generalQuestion:question_1b": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQ1b",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_1b_detail": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQ1b",
+                  "generalQ1bItems"
+                ]
+              },
+              "generalQuestion:question_1c": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQ1c",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_1c_detail": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQ1cListItems"
+                ]
+              },
+              "generalQuestion:question_2": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion2",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_2_detail": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion2",
+                  "generalQDetails"
+                ]
+              },
+              "generalQuestion:question_3": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion3",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_3_Amount": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion3",
+                  "generalQ3Amount"
+                ]
+              },
+              "generalQuestion:question_3_BeverageType": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion3",
+                  "generalQ3BeverageType"
+                ]
+              },
+              "generalQuestion:question_3_Howlong": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion3",
+                  "generalQ3Howlong"
+                ]
+              },
+              "generalQuestion:question_4": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion4",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_4_detail": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQ4Items"
+                ]
+              },
+              "generalQuestion:question_5": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion5",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_5_Cigaretes": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion5",
+                  "generalQ5CigaretesDay"
+                ]
+              },
+              "generalQuestion:question_5_Since": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion5",
+                  "generalQ5Since"
+                ]
+              },
+              "generalQuestion:question_5_Explain": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion5",
+                  "generalQ5Explain"
+                ]
+              },
+              "generalQuestion:question_6": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion6",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_6_detail": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQ6Item"
+                ]
+              },
+              "generalQuestion:question_7": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion7",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_7_detail": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQ7Items"
+                ]
+              },
+              "generalQuestion:question_8": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion8",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_8_detail": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQ8Items"
+                ]
+              },
+              "generalQuestion:question_9": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion9",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_9_detail": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQ9Items"
+                ]
+              },
+              "generalQuestion:question_10": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion10",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_10_detail": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQ10Items"
+                ]
+              },
+              "generalQuestion:question_11": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion11",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_11_detail": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion11",
+                  "generalQDetails"
+                ]
+              },
+              "generalQuestion:question_12": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion12",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_12_detail": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQ12Items"
+                ]
+              },
+              "generalQuestion:question_13": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion13",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_13_a": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion13",
+                  "generalQ13a",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_13_b": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQuestion13",
+                  "generalQ13b",
+                  "questionValue"
+                ]
+              },
+              "generalQuestion:question_14_detail": {
+                "key": [
+                  "policyOwnerDetails",
+                  "generalQ12Items"
+                ]
+              }
+            },
+            "application:HealthQuestion": {
+              "key": [
+                "policyOwnerDetails",
+                "underwritingDetailsOfProposer",
+                "healthQuestion"
+              ],
+              "@isVisible": "moduleService.findElementInDetail(['laisTheSameWithPO']).value != commonService.CONSTANTS.PO_LI_RELATION.NOT_SAME",
+              "section": "application:UnderwritingDetailsofProposer",
+              "icons": {
+                "cardIcon": {
+                  "content": "fa fa-heart-o"
+                }
+              },
+              "healthQuestion:listQuestion": {
+                "key": [
+                  "policyOwnerDetails",
+                  "underwritingDetailsOfProposer",
+                  "healthQuestion",
+                  "healthQ1s"
+                ]
+              }
+            },
+            "application:InsuredFamilyInformation": {
+              "key": [],
+              "section": "application:UnderwritingDetailsofProposer",
+              "icons": {
+                "cardIcon": {
+                  "content": "fa fa-thermometer-half"
+                }
+              },
+              "application:InsuredFamilyInformationTable": {
+                "key": [
+                  "policyOwnerDetails",
+                  "insuredFamilyInformationItem"
+                ]
+              },
+              "application:InsuredFamilyInformationDetail": {
+                "key": [
+                  "policyOwnerDetails",
+                  "insuredFamilyInformationDetail"
+                ]
+              }
+            }
+          }
+        },
+        "application:LifeAssured": {
+          "key": [
+            "lifeAssuredDetails"
+          ],
+          "isVisible": "moduleService.detail.lifeAssuredDetails.laisTheSameWithPO.value == commonService.CONSTANTS.PO_LI_RELATION.NOT_SAME",
+          "section": "application:Application",
+          "uiStyle": "section",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-circle-o"
+            }
+          },
+          "application:LifeAssuredInfor": {
+            "key": [
+              "lifeAssuredDetails",
+              "proporserInformation"
+            ],
+            "section": "application:LifeAssured",
+            "uiStyle": "section",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-user"
+              }
+            },
+            "prospect:BasicInformation": {
+              "key": [
+                "lifeAssuredDetails",
+                "proporserInformation",
+                "person",
+                "basic"
+              ],
+              "section": "application:LifeAssuredInfor",
+              "icon": "fa fa-user",
+              "prospect:Salutation": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "basic",
+                  "name",
+                  "titleCode"
+                ],
+                "group": "1"
+              },
+              "prospect:FirstName": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "basic",
+                  "name",
+                  "first"
+                ],
+                "group": "2"
+              },
+              "prospect:LastName": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "basic",
+                  "name",
+                  "last"
+                ],
+                "group": "2"
+              },
+              "prospect:DOB": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "basic",
+                  "birthDate"
+                ],
+                "group": "3"
+              },
+              "prospect:Gender": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "basic",
+                  "genderCode"
+                ],
+                "group": "3"
+              },
+              "prospect:MaritalStatus": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "basic",
+                  "maritalStatusCode"
+                ],
+                "group": "4"
+              },
+              "prospect:Race": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "basic",
+                  "raceInfor"
+                ],
+                "group": "4"
+              },
+              "prospect:SmokerStatus": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "basic",
+                  "smokerStatus"
+                ],
+                "group": "5"
+              },
+              "prospect:Religion": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "basic",
+                  "religionCode"
+                ],
+                "group": "5"
+              },
+              "prospect:IDType": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "basic",
+                  "idType"
+                ],
+                "group": "6"
+              },
+              "prospect:IDNumber": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "basic",
+                  "idNumber"
+                ],
+                "group": "6"
+              },
+              "prospect:Industry": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "basic",
+                  "industry"
+                ],
+                "group": "7"
+              },
+              "prospect:Nationality": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "basic",
+                  "nationalityCode"
+                ],
+                "group": "7"
+              },
+              "prospect:ClientStatus": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "basic",
+                  "clientStatus"
+                ],
+                "group": "8"
+              },
+              "prospect:Occupation": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "occupationModel",
+                  "occupationCode"
+                ],
+                "group": "8"
+              }
+            },
+            "prospect:Contact": {
+              "onOpen": true,
+              "key": [
+                "lifeAssuredDetails",
+                "proporserInformation",
+                "person",
+                "contacts"
+              ],
+              "section": "application:LifeAssuredInfor",
+              "icon": "fa fa-phone-square",
+              "prospect:EmailAddress": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "contacts",
+                  "email"
+                ],
+                "group": "1"
+              },
+              "prospect:HandPhone": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "contacts",
+                  "handPhone"
+                ],
+                "group": "1"
+              },
+              "prospect:HomePhone": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "contacts",
+                  "homePhone"
+                ],
+                "group": "2"
+              },
+              "prospect:OfficePhone": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "person",
+                  "contacts",
+                  "officePhone"
+                ],
+                "group": "2"
+              }
+            },
+            "application:Address": {
+             "key": [
+              		"lifeAssuredDetails",
+              		"proporserInformation"
+              	],
+              	"section": "application:LifeAssuredInfor",
+              	"icon": "fa fa-address-card",
+              	"cssClass": "v3-box-1",
+              	"lifeInsuredAddress:PrimaryAddress": {
+			  	"key": [
+			  		"lifeAssuredDetails",
+              		"proporserInformation",
+              		"person",
+			  		"addresses"
+                ]
+               }
+             },
+            "application:OtherInformation": {
+              "key": [
+                "lifeAssuredDetails",
+                "otherInformation"
+              ],
+              "section": "application:LifeAssuredInfor",
+              "icon": "fa fa-user",
+              "otherInfor:CountryOfBirth": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "countryOfBirth"
+                ],
+                "group": "1"
+              },
+              "otherInfor:Education": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "education"
+                ],
+                "group": "1"
+              },
+              "otherInfor:Staff": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "staff"
+                ],
+                "group": "2"
+              },
+              "otherInfor:VIP": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "vip"
+                ],
+                "group": "2"
+              },
+              "otherInfor:EmployerName": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "employerName"
+                ],
+                "group": "3"
+              },
+              "otherInfor:EmploymentStatus": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "employmentStatus"
+                ],
+                "group": "3"
+              },
+              "otherInfor:AnnualEmployeeIncome": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "annualEmployeeIncome"
+                ],
+                "group": "4"
+              },
+              "otherInfor:SourceOfFund": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "sourceOfFund"
+                ],
+                "group": "4"
+              },
+              "otherInfor:ClientNumber": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "clientNumber"
+                ],
+                "group": "5"
+              },
+              "otherInfor:SourceOfName": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "sourceOfName"
+                ],
+                "group": "5"
+              }
+            }
+          },
+          "application:UnderwritingDetailsofLifeAssured": {
+            "key": [
+              "lifeAssuredDetails",
+              "underwritingDetailsOfProposer"
+            ],
+            "section": "application:LifeAssured",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-question-circle-o"
+              }
+            },
+            "application:GeneralQuestionofLifeAssured": {
+              "key": [
+                "lifeAssuredDetails",
+                "generalQuestion"
+              ],
+              "section": "application:UnderwritingDetailsofLifeAssured",
+              "icons": {
+                "cardIcon": {
+                  "content": "fa fa-info"
+                }
+              },
+              "generalQuestionofLifeAssured:question_1a_Height": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQ1a",
+                  "generalQ1aHeight"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_1a_Weight": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQ1a",
+                  "generalQ1aWeight"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_1b": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQ1b",
+                  "questionValue"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_1b_detail": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQ1b",
+                  "generalQ1bItems"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_1c": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQ1c",
+                  "questionValue"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_1c_detail": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQ1cListItems"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_2": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion2",
+                  "questionValue"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_2_detail": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion2",
+                  "generalQDetails"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_3": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion3",
+                  "questionValue"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_3_Amount": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion3",
+                  "generalQ3Amount"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_3_BeverageType": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion3",
+                  "generalQ3BeverageType"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_3_Howlong": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion3",
+                  "generalQ3Howlong"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_4": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion4",
+                  "questionValue"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_4_detail": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQ4Items"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_5": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion5",
+                  "questionValue"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_5_CigaretesDay": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion5",
+                  "generalQ5CigaretesDay"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_5_Since": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion5",
+                  "generalQ5Since"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_5_Explain": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion5",
+                  "generalQ5Explain"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_6": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion6",
+                  "questionValue"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_6_detail": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQ6Item"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_7": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion7",
+                  "questionValue"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_7_detail": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQ7Items"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_8": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion8",
+                  "questionValue"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_8_detail": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQ8Items"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_9": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion9",
+                  "questionValue"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_9_detail": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQ9Items"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_10": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion10",
+                  "questionValue"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_10_detail": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQ10Items"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_11": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion11",
+                  "questionValue"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_11_detail": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion11",
+                  "generalQDetails"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_12": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQuestion12",
+                  "questionValue"
+                ]
+              },
+              "generalQuestionofLifeAssured:question_12_detail": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "generalQ12Items"
+                ]
+              }
+            },
+            "application:HealthQuestion": {
+              "key": [
+                "lifeAssuredDetails",
+                "underwritingDetailsOfProposer",
+                "healthQuestion"
+              ],
+              "section": "application:UnderwritingDetailsofLifeAssured",
+              "icons": {
+                "cardIcon": {
+                  "content": "fa fa-heart-o"
+                }
+              },
+              "healthQuestion:listQuestion": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "underwritingDetailsOfProposer",
+                  "healthQuestion",
+                  "healthQ1s"
+                ]
+              }
+            },
+            "application:InsuredFamilyInformationofLifeAssured": {
+              "key": [],
+              "section": "application:UnderwritingDetailsofLifeAssured",
+              "icons": {
+                "cardIcon": {
+                  "content": "fa fa-thermometer-half"
+                }
+              },
+              "application:InsuredFamilyInformationTableofLifeAssured": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "insuredFamilyInformationItem"
+                ]
+              },
+              "application:InsuredFamilyInformationDetailofLifeAssured": {
+                "key": [
+                  "lifeAssuredDetails",
+                  "insuredFamilyInformationDetail"
+                ]
+              }
+            }
+          }
+        },
+        "application:BeneficiaryDetails": {
+          "key": [
+            "beneficiaryItems"
+          ],
+          "section": "application:Application",
+          "icon": "fa fa-bold",
+          "onOpen": "searchContact()",
+          "beneficiaryDetails:titleBD": {
+            "key": [],
+            "validStatus": "commonService.CONSTANTS.DOCUMENT_STATUS.VALID"
+          },
+          "beneficiaryDetails:beneficiaryDetailsList": {
+            "key": [
+              "beneficiaryItems"
+            ]
+          }
+        },
+        "application:MailingAddress": {
+          "key": [
+            "mailingAddress"
+          ],
+          "section": "application:Application",
+          "icon": "fa fa-envelope-square",
+          "onOpen": "getAddressList()",
+          "mailingAddress:isDifferent": {
+            "key": [
+              ""
+            ],
+            "group": "0"
+          },
+          "mailingAddress:listAddress": {
+            "key": [
+              "mailingAddress",
+              "addressType"
+            ],
+            "group": "1"
+          },
+          "mailingAddress:addressType": {
+            "key": [
+              "mailingAddress",
+              "typeCode"
+            ],
+            "group": "1"
+          },
+          "mailingAddress:blkHouseNoAndStreet": {
+            "key": [
+              ""
+            ],
+            "group": "2"
+          },
+          "mailingAddress:unitNo": {
+            "key": [
+              "mailingAddress",
+              "unitNo"
+            ],
+            "group": "2"
+          },
+          "mailingAddress:building": {
+            "key": [
+              "mailingAddress",
+              "buildingName"
+            ],
+            "group": "3"
+          },
+          "mailingAddress:city": {
+            "key": [
+              "mailingAddress",
+              "cityCode"
+            ],
+            "group": "3"
+          },
+          "mailingAddress:country": {
+            "key": [
+              "mailingAddress",
+              "countryCode"
+            ],
+            "group": "4"
+          },
+          "mailingAddress:postalCode": {
+            "key": [
+              "mailingAddress",
+              "postalCode"
+            ],
+            "group": "4"
+          }
+        },
+        "application:PaymentDetails": {
+          "key": [
+            "paymentDetails"
+          ],
+          "section": "application:Application",
+          "icon": "fa fa-money",
+          "paymentDetails:bankAccOwnerName": {
+            "key": [
+              "bankAccOwnerName"
+            ],
+            "group": "0"
+          },
+          "paymentDetails:accountNo": {
+            "key": [
+              "savingCurrentAccountNumber"
+            ],
+            "group": "0"
+          },
+          "paymentDetails:bankNameBranchCity": {
+            "key": [
+              "bankNameBranchCity"
+            ],
+            "group": "1"
+          },
+          "paymentDetails:premiumFrequency": {
+            "key": [
+              "premiumFrequency"
+            ],
+            "group": "1"
+          },
+          "paymentDetails:methodPayFirstPremium": {
+            "key": [
+              "firstPaymentMethod"
+            ],
+            "group": "2"
+          },
+          "paymentDetails:methodPayRenewalPremium": {
+            "key": [
+              "renewalPaymentMethod"
+            ],
+            "group": "2"
+          },
+          "paymentDetails:payorLIOrProposer": {
+            "key": [
+              "optionSelection"
+            ],
+            "group": "3"
+          },
+          "paymentDetails:payorName": {
+            "key": [
+              "payorName"
+            ],
+            "group": "4"
+          },
+          "paymentDetails:payorRelationship": {
+            "key": [
+              "payorRelationship"
+            ],
+            "group": "4"
+          },
+          "paymentDetails:payorNRICPassport": {
+            "key": [
+              "payorNRICPassport"
+            ],
+            "group": "5"
+          }
+        },
+       "application:USTaxDeclaration": {
+          "key": [
+            "ustaxDeclaration"
+          ],
+          "section": "application:Application",
+          "icon": "fa fa-calculator",
+          "USTaxDeclaration:declaration": {
+            "key": [
+              "taxDeclaration"
+            ],
+            "group": "0"
+          }
+        },
+        "application:PrivacyPolicyDeclaration": {
+          "key": [],
+          "uiStyle": "section",
+          "section": "application:Application",
+          "icon": "fa fa-newspaper-o",
+          "privacyPolicyDec:CustomerDataProtection": {
+            "icon": "fa fa-shield",
+            "key": [
+              "privacyPolicyAndDeclaration"
+            ],
+            "section": "application:PrivacyPolicyDeclaration",
+            "pdpa:PersonalDataProtectionConsent": {
+              "key": []
+            },
+            "pdpa:CSCInsurancePrivacyPolicy": {
+              "key": []
+            },
+            "pdpa:Consent": {
+              "key": [
+                "privacyPolicyAndDeclaration",
+                "consent"
+              ]
+            },
+            "pdpa:CommunicationChannels": {
+              "key": [
+                "privacyPolicyAndDeclaration",
+                "communicationChannel"
+              ]
+            },
+            "pdpa:TextMessage": {
+              "key": []
+            }
+          },
+          "privacyPolicyDec:CustomerDeclaration": {
+            "key": [],
+            "section": "application:PrivacyPolicyDeclaration",
+            "icon": "fa fa-asterisk",
+            "CustomerDeclaration:Information": {
+              "key": []
+            }
+          }
+        },
+        "application:ChannelPolicyDelivery": {
+          "key": [
+            "channelAndPolicyDelivery"
+          ],
+          "section": "application:Application",
+          "icon": "fa fa-signal",
+          "channelPolicyDelivery:referralCode": {
+            "key": [
+              "channelAndPolicyDelivery",
+              "referralCode"
+            ]
+          },
+          "channelPolicyDelivery:policyDelivery": {
+            "key": [
+              "channelAndPolicyDelivery",
+              "policyDelivery"
+            ]
+          },
+          "channelPolicyDelivery:email": {
+            "key": [
+              "channelAndPolicyDelivery",
+              "email"
+            ]
+          }
+        },
+        "application:AgentDisclaimer": {
+          "key": [
+            "agentDisclaimer"
+          ],
+          "section": "application:Application",
+          "icon": "fa fa-adn",
+          "agentDisclaimer:Question1": {
+            "key": [
+              "agentDisclaimerQ1"
+            ],
+            "group": "0"
+          },
+          "agentDisclaimer:Question2a": {
+            "key": [
+              "agentDisclaimerQ2",
+              "questionValueA"
+            ],
+            "group": "1"
+          },
+          "agentDisclaimer:Question2b": {
+            "key": [
+              "agentDisclaimerQ2",
+              "questionValueB"
+            ],
+            "group": "1"
+          },
+          "agentDisclaimer:Question3": {
+            "key": [
+              "agentDisclaimerQ3"
+            ],
+            "group": "2"
+          },
+          "agentDisclaimer:Question4": {
+            "key": [
+              "agentDisclaimerQ4",
+              "questionValue"
+            ],
+            "group": "3"
+          },
+          "agentDisclaimer:Question5": {
+            "key": [
+              "agentDisclaimerQ5",
+              "questionValue"
+            ],
+            "group": "4"
+          },
+          "agentDisclaimer:Question5_detail": {
+            "key": [
+              "agentDisclaimerQ5",
+              "txtQuestion"
+            ],
+            "group": "4"
+          },
+          "agentDisclaimer:Question6": {
+            "key": [
+              "agentDisclaimerQ6"
+            ],
+            "group": "5"
+          },
+          "agentDisclaimer:Question7": {
+            "key": [
+              "agentDisclaimerQ7"
+            ],
+            "group": "6"
+          },
+          "agentDisclaimer:Question8": {
+            "key": [
+              "agentDisclaimerQ8",
+              "questionValue"
+            ],
+            "group": "7"
+          },
+          "agentDisclaimer:Question8_detail": {
+            "key": [
+              "agentDisclaimerQ8",
+              "txtQuestion"
+            ],
+            "group": "7"
+          },
+          "agentDisclaimer:Question9": {
+            "key": [
+              "agentDisclaimerQ9",
+              "questionValue"
+            ],
+            "group": "8"
+          },
+          "agentDisclaimer:Question10": {
+            "key": [
+              "agentDisclaimerQ10",
+              "questionValue"
+            ],
+            "group": "9"
+          },
+          "agentDisclaimer:Question11": {
+            "key": [
+              "agentDisclaimerQ11",
+              "questionValue"
+            ],
+            "group": "10"
+          },
+          "agentDisclaimer:Question12": {
+            "key": [
+              "agentDisclaimerQ12",
+              "questionValue"
+            ],
+            "group": "11"
+          },
+          "agentDisclaimer:Question13": {
+            "key": [
+              "agentDisclaimerQ13"
+            ],
+            "group": "12"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<style>
+	#attachmentSection md-progress-linear .md-container.md-ready{
+	  	background-color: #e8f5e9 !important;
+ 		border-radius: 10px !important;
+	}
+	#attachmentSection md-progress-linear .md-container {
+		  height: 8px !important;
+	}
+	#attachmentSection md-progress-linear.md-default-theme .md-bar {
+		background-color: #4caf50 !important;
+		height: 8px !important;
+	}
+	#attachmentSection .dot-border-blue{
+		border-style: dotted;
+		margin-right: 20px;
+		margin-right: 0px !important;
+	}
+	#attachmentSection .zizap{
+		margin-top: 15px; 
+		border: 3px dashed #4B7E37; 
+		border-radius: 3px;
+	}
+	#attachmentSection .my-drop-zone {
+		border: dotted 3px;
+		height: 150px;
+		overflow: auto;
+		border-color: #4caf50 !important;
+	}
+	#attachmentSection .drop-box {
+	    background: #F8F8F8;
+	    border: 5px dashed #DDD;
+	    width: 400px;
+	    line-height:40px;
+	    text-align: center;
+	 
+	    margin: 10px;
+	}
+	#attachmentSection .dragover {
+	    border: 5px dashed blue;
+	}
+	#attachmentSection .noFileDrop{
+		color: red;
+		font-size: 15px;
+		margin-top: 10px;
+	}
+	.border-table{
+		border-left: 1px solid gainsboro;
+    	border-right: 1px solid gainsboro;
+	}
+	.upload-mobile-border{
+		text-align: center;
+    	margin-top: 20px;
+    	margin-bottom: 20px;
+    	border: 2px dashed #4caf50;
+	}
+	.padding-right-table-0{
+		padding-right:0;
+	}
+	.upload-description *{
+		display:inline-block;
+		height: 100%;
+	}
+	#table-upload-file table td{
+		text-align: center;
+		vertical-align: middle;
+		padding-bottom: 0px;
+	}
+	#table-upload-file table th{
+		text-align: center;
+		vertical-align: middle;
+		padding-top: 8px;
+	}
+	.ipos-table-xs > div{
+		display: -webkit-box;
+	}
+	.col-centered{
+		float: none !important;
+		margin: 0 auto !important;
+	}
+	.make-md-column-check{
+		position: relative;
+		min-height: 1px;
+		@media (min-width: 20px) {
+			float: left;
+			width: 30px !important;
+		}
+	}
+</style>
+
+<div layout-margin layout="column" id="attachmentSection">
+	<div class="attachment col-md-12 col-sm-12">
+		<div class="col-centered col-md-10 col-sm-10">
+			<div class="dot-border-blue zizap"
+				ng-file-drop="multiUploadService.onFileSelect($files, true)" drag-over-class="dragover"
+				ng-multiple="true" allow-dir="true" accept="multiUploadService.acceptType"  name="file">
+				<div class="col-centered center-align">
+					<h3 style="color: #5858FA">
+						<a class="pointer" ng-multiple="true"
+							ng-file-select="multiUploadService.onFileSelect($files)" name="file">
+							{{"new.v3.mynewworkspace.uploadFile.label.Clicktoselectyourfiles"| translate}}</a>
+					</h3>
+				</div>
+				<div class="col-centered center-align" >
+					<h4>{{"new.v3.mynewworkspace.uploadFile.label.Ordragdropyourfileshere"| translate}}</h4>
+				</div>
+			</div>
+		</div>
+		<div ng-no-file-drop class="noFileDrop col-centered col-md-10 col-sm-10">
+			<div>
+				<i>{{"new.v3.mynewworkspace.uploadFile.label.FileNotSupported"| translate}}</i>
+			</div>
+		</div>
+		<br/>
+		<div id="table-upload-file"  class="hidden-xs col-md-11 col-sm-11 col-md-offset-1 col-sm-offset-1 padding-right-table-0" ng-if="multiUploadService.files.length > 0">
+			<table class="table table-bordered">
+			  <thead>
+				<tr>
+					<th class="center-align">{{"v3.documentcenter.label.FileType"| translate}}</th>
+					<th class="center-align">{{"v3.documentcenter.label.FileName"| translate}}</th>
+					<th class="center-align">{{"v3.documentcenter.label.Description"| translate}}</th>
+					<th class="center-align">{{"v3.documentcenter.label.AttachmentType"| translate}}</th>
+					<th class="center-align">{{"v3.documentcenter.label.Action"| translate}}</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr ng-repeat="file in multiUploadService.files" ng-if="multiUploadService.files.length > 0">
+					<td class="col-xs-2">
+						<img ng-if="file.type=='image/jpeg' || file.type=='image/png'" data-ng-src="{{file.data}}" style="height:30px;"/>
+						<i ng-if="file.type=='application/pdf'" style="font-size: 2.3vw" class="fa fa-file-pdf-o fa-lg"></i>
+						<i ng-if="file.type!='application/pdf' && file.type!='image/jpeg' && file.type!='image/png'" style="font-size: 2.3vw" class="fa fa-file-excel-o fa-lg"></i>
+					</td>
+					<td class="col-xs-2">
+						<label>{{file.name}}</label>
+					</td>
+					<td class="col-xs-3">
+						<input class="center-align" id="desc" ng-model="file.desc" type="text"/>
+					</td>
+					<td class="col-xs-3">
+						<select ng-disabled="moduleService.freeze == true" ng-model="file.documentType" class="form-control"
+							ng-options="item.key as ('v4.case.AttachmentType.' + item.key | translate)
+								for item in moduleService.lazyChoiceList.AttachmentType">
+						</select>
+						
+<!-- 						<select ui-select2 ng-disabled="moduleService.freeze == true" ng-model="file.documentType" class="form-control"> -->
+<!-- 						</select> -->
+<!-- 						<option ng-repeat="item in moduleService.lazyChoiceList.AttachmentType	| filter: { key: '!DOC_IC' }| filter: { key: '!DOC_DC' }" -->
+<!-- 							value="{{item.key}}"> -->
+<!-- 							{{'v4.case.AttachmentType.' + item.key | translate}} -->
+<!-- 						</option> -->
+						
+					</td>
+					<td class="col-xs-1">
+						<i ng-click="multiUploadService.files.splice($index,1)" class="fa fa-trash-o pointer fa-lg fa-2x" tooltips  tooltip-title="{{'v3.mynewworkspace.message.delete' | translate}}" tooltip-side="top" tooltip-size="medium" />
+					</td>
+					<td class="col-xs-1">
+						<i ng-if="file.validate==''" style="color: #4CAF50	;" class="fa fa-check-circle pointer fa-2x" tooltips  tooltip-title="Good" tooltip-side="top" tooltip-size="medium"></i>
+						<i ng-if="file.validate!=''" style="color: red;" class="fa fa-exclamation-circle pointer fa-2x" tooltips  tooltip-title="{{file.validate | translate}}" tooltip-side="top" tooltip-size="medium"></i>
+					</td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+		<div class="col-xs-12" align="center">
+			<button loading class="v4-materialize-btn btn btn-lg v3-btn-primary" ng-disabled="!(multiUploadService.files.length > 0) || !multiUploadService.isFileListValid(multiUploadService.files)"
+					loading-action="uploadFiles(card, multiUploadService.files, $event)">{{"new.v3.mynewworkspace.uploadFile.label.AddDocument" | translate}}</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,363 @@
+{
+  "IposDocument": {
+    "Data": {
+      "illustration:Illustration": {
+        "section": "illustration:Illustration",
+        "uiStyle": "tab",
+        "icons": {
+          "cardIcon": {
+            "content": "fa fa-pie-chart"
+          }
+        },
+        "permission": {
+          "openable": [
+            "case_openable"
+          ],
+          "editable": [
+            "case_editable"
+          ],
+          "viewable": [
+            "case_viewable"
+          ]
+        },
+        "illustration:declarationPeriod": {
+          "key": [
+            ""
+          ],
+          "section": "illustration:Illustration",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+          "declarationPeriod:shipmentStarts": {
+            "key": [
+              "declarationStarts"
+            ],
+            "group": "2"
+          },
+          "declarationPeriod:shipmentEnds": {
+            "key": [
+              "declarationEnds"
+            ],
+            "group": "2"
+          },
+          "declarationPeriod:etd": {
+            "key": [
+              "etd"
+            ],
+            "group": "3"
+          },
+          "declarationPeriod:eta": {
+            "key": [
+              "eta"
+            ],
+            "group": "3"
+          },
+          "declarationPeriod:marineOpenCoverNumber": {
+            "key": [
+              "marineOpenCoverNumber"
+            ],
+            "group": "1"
+          },
+          "declarationPeriod:marineOpenCover": {
+            "key": [
+              "marineOpenCoverDescription"
+            ],
+            "group": "1"
+          }
+        },
+        "illustration:insuredCommodity": {
+          "key": [
+            ""
+          ],
+          "section": "illustration:Illustration",
+          "onOpen": "checkOpenCardWhenFinishDeclaration(card)",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+          "insuredCommodity:invoiceCurrency": {
+            "key": [
+              "invoiceCurrency"
+            ],
+            "group": "1"
+          },
+          "insuredCommodity:invoiceAmount": {
+            "key": [
+              "invoiceAmount"
+            ],
+            "group": "1"
+          },
+          "insuredCommodity:commodity": {
+            "key": [
+              "commodity"
+            ],
+            "group": "2"
+          },
+          "insuredCommodity:packing": {
+            "key": [
+              "packing"
+            ],
+            "group": "2"
+          },
+          "insuredCommodity:interestInsured": {
+            "key": [
+              "interestInsured"
+            ],
+            "group": "3"
+          }
+        },
+        "illustration:conveyance": {
+          "key": [
+            ""
+          ],
+          "section": "illustration:Illustration",
+           "onOpen": "checkOpenCardWhenFinishDeclaration(card)",
+          "conveyance:ShipmentType": {
+            "key": [
+              "shipmentType"
+            ],
+            "group": "1"
+          },
+          "conveyance:Coverage": {
+            "key": [
+              "coverageMoc"
+            ],
+            "group": "1"
+          },
+          "conveyance:Conveyance": {
+            "key": [
+              "conveyance"
+            ],
+            "group": "2"
+          },
+          "conveyance:VehicleType": {
+            "key": [
+              "vehicleType"
+            ],
+            "group": "2"
+          },
+           "conveyance:Carrier": {
+            "key": [
+              "conveyanceTugBar"
+            ],
+            "group": "2"
+          },
+          "conveyance:ConveyanceDetail": {
+            "key": [
+              "conveyanceDetail"
+            ],
+            "group": "3"
+          },
+          "conveyance:RegistrationNo": {
+            "key": [
+              "registrationNoConveyance"
+            ],
+            "group": "3"
+          },
+          "conveyance:CountryFrom": {
+            "key": [
+              "countryFrom"
+            ],
+            "group": "5"
+          },
+          "conveyance:CountryTo": {
+            "key": [
+              "countryTo"
+            ],
+            "group": "5"
+          },
+          "conveyance:PortFrom": {
+            "key": [
+              "portFrom"
+            ],
+            "group": "6"
+          },
+          "conveyance:PortTo": {
+            "key": [
+              "portTo"
+            ],
+            "group": "6"
+          },
+          "conveyance:VoyageDescription": {
+            "key": [
+              "voyageDescription"
+            ],
+            "group": "7"
+          },
+          "conveyance:AWBNo": {
+            "key": [
+              "awbNo"
+            ],
+            "group": "2"
+          },
+          "conveyance:FlightNo": {
+            "key": [
+              "flightNo"
+            ],
+            "group": "3"
+          },
+          "conveyance:VeselName": {
+            "key": [
+              "vesselNameConveyance"
+            ],
+            "group": "2"
+          },
+            "conveyance:BillOfLandingNo": {
+            "key": [
+              "billOfLadingNo"
+            ],
+            "group": "3"
+          },
+          "conveyance:VoyageNo": {
+            "key": [
+              "voyageNo"
+            ],
+            "group": "4"
+          }
+        
+        },
+        "illustration:policyHolder": {
+          "key": [
+            "policyHolder"
+          ],
+          "section": "illustration:Illustration",
+           "onOpen": "checkOpenCardWhenFinishDeclaration(card);",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+          "policyHolder:holder": {
+            "key": [
+              "policyHolderId"
+            ],
+            "group": "1"
+          },
+          "policyHolder:assured": {
+            "key": [
+              "assuredPolicyHolder"
+            ],
+            "group": "1"
+          }
+        },
+         "illustration:Others": {
+          "key": [
+            ""
+          ],
+          "section": "illustration:Illustration",
+           "onOpen": "checkOpenCardWhenFinishDeclaration(card)",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+          "Others:lcNo": {
+            "key": [
+              "lcno"
+            ],
+            "group": "1"
+          },
+          "Others:premium": {
+            "key": [
+              "premiumAsAgreed"
+            ],
+            "group": "1"
+          },
+          "Others:consignee": {
+            "key": [
+              "consigneeShipper"
+            ],
+            "group": "2"
+          },
+          "Others:generalPrinted": {
+            "key": [
+              ""
+            ],
+            "group": "2"
+          },
+          "Others:generalInfoRef": {
+            "key": [
+              ""
+            ],
+            "group": "3"
+          }
+        },
+        "illustration:premiumSummary": {
+          "key": [
+            ""
+          ],
+          "section": "illustration:Illustration",
+          "onOpen": "checkOpenCardWhenFinishDeclaration(card)",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+            "premiumSummary:premium": { 
+            "key": [
+              ""
+            ],
+            "group": "1"
+          },
+          "premiumSummary:premiumCurrencyValue": {
+            "key": [
+              "canPremiumCurrency"
+            ],
+            "group": "1"
+          },
+            "premiumSummary:exchangeRate1": {
+            "key": [
+              "exchangeRate"
+            ],
+            "group": "2"
+          },
+           "premiumSummary:exchangeRateValue": {
+            "key": [
+              "exchangeRate"
+            ],
+            "group": "2"
+          },
+            "premiumSummary:insuredPremium1": {
+            "key": [
+              "insuredPremium"
+            ],
+            "group": "3"
+          },
+          "premiumSummary:insuredPremiumValue": {
+            "key": [
+              "insuredPremium"
+            ],
+            "group": "3"
+          },
+            "premiumSummary:admin": {
+            "key": [
+              ""
+            ],
+            "group": "4"
+          },
+          "premiumSummary:adminFeeeValue": {
+            "key": [
+              "insuredAdminFee"
+            ],
+            "group": "4"
+          },
+            "premiumSummary:total": {
+            "key": [
+              ""
+            ],
+            "group": "5"
+          },
+           "premiumSummary:totalAmountValue": {
+            "key": [
+              "canTotalPayable"
+            ],
+            "group": "5"
+          }
+        }
+      }
+    }
+  }
+}

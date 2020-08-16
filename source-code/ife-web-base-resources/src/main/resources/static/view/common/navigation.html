@@ -1,0 +1,178 @@
+<!--
+
+	//*******************************************************************************
+	// * Copyright (c) 2011-2014 CSC.
+	// * Copyright (C) 2010-2016 CSC - All rights reserved.
+	// *
+	// * The information contained in this document is the exclusive property of
+	// * CSC.  This work is protected under USA copyright law
+	// * and the copyright laws of given countries of origin and international
+	// * laws, treaties and/or conventions. No part of this document may be
+	// * reproduced or transmitted in any form or by any means, electronic or
+	// * mechanical including photocopying or by any informational storage or
+	// * retrieval system, unless as expressly permitted by CSC.
+	//
+	// * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+	// ******************************************************************************
+
+-->
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigationApp" ng-if="isShowNavBar">
+	<div class="container-fluid v3-padding-0 nav-background">
+		<div class="navbar-header left v3-margin-auto navbar-xs-homepage">
+			<a class="fa fa-bars fa-2x hamberger-button" ng-if="isLoggedIn() && currentSite !== 'ife-web-base-landing' && selectedProfiles != undefined" ng-click="toggleNavigationLeft()"></a>
+			<div class="navbar-brand cursor-auto height-auto image-padding-sm">
+				<img ng-src="{{resourceServerPath + 'images/logo/Great_Eastern_logo.png'}}" alt="logo" />
+			</div>
+			<div class="navbar-brand navbar-brand-title brand-title-lg" ng-if="commonService.hasValueNotEmpty(commonService.currentState.get())">
+<!-- 			<span class="navbar-brand-title-text1">{{'v4.siteName.' + currentSite | translate}}</span> -->
+				<span class="navbar-brand-title-text2 cursor-auto v3-margin-top-10">{{'v4.stateName.' + displayDetail() | translate}}</span>
+			</div>
+<!-- 			<div class="navbar-brand" style="padding:0px"> -->
+<!-- 				<i class="fa fa-home fa-2x header-btn header-btn-home" title="Home" style="text-align: center;line-height: 50px;" ng-click="toggleShowBubble()"> -->
+<!-- 				</i> -->
+<!-- 			</div> -->
+<!-- 			<div class="navbar-brand" style="padding:0px"> -->
+<!-- 				<i class="fa fa-clone fa-2x header-btn header-btn-home" title="Products" style="text-align: center;line-height: 50px;" ng-if="enableToggle" ng-click="toggleBubble($event) "> -->
+<!-- 				</i> -->
+<!-- 				<div class="arrow_box" ng-if="isShowBubble && enableToggle" > -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 			<div class="navbar-brand" style="padding:0px"> -->
+<!-- 				<i class="fa fa-file fa-2x header-btn header-btn-home" title="Resource" style="text-align: center;line-height: 50px;" ng-if="enableToggle"> -->
+<!-- 				</i> -->
+<!-- 			</div> -->
+<!-- 			<div class="navbar-brand" style="padding:0px"> -->
+<!-- 				<i class="fa fa-info fa-2x header-btn header-btn-home" title="Company" style="text-align: center;line-height: 50px;" ng-if="enableToggle"> -->
+<!-- 				</i> -->
+<!-- 			</div> -->
+		</div>
+		<div class="collapse navbar-collapse show right" id="toggleCollapseMenu">
+			<ul ng-if="isLoggedIn()" class="nav navbar-nav navbar-right">
+				<li style="margin-bottom: auto;margin-top: 2px;" ng-if="selectedProfiles != undefined && hasRolesInSALocalStorage()==true && commonService.currentState.get() != 'landing-home'">
+					<span tooltip-title="Report" ng-click="createNewDocument('systemadminreport')" >{{'systemadmin.report' | translate}}</span>
+				</li>
+				<li>
+					<md-select ng-change="changeSystemLanguage(systemLanguage)" ng-model="systemLanguage"class="md-no-underline" style = "margin: 0px" >
+							<md-option value="en">{{'v4.language.enum.ENGLISH' | translate}}</md-option>
+							<!-- <md-option value="id">{{'v4.country.enum.734' | translate}}</md-option> -->
+					</md-select>
+				</li>
+				<li ng-if="selectedProfiles != undefined && (hasRolesInLocalStorage(commonService.CONSTANTS.USER_ROLES.AG.name) || hasRolesInLocalStorage(commonService.CONSTANTS.USER_ROLES.SA.name) ) && commonService.currentState.get() != 'landing-home'">
+					<div class="icon-home-button">
+						<a class="pointer home-header v3-padding-0" ng-href="{{landingPagePath + '#/login?initRequest=true'}}">
+							<span class="glyphicon glyphicon-home" tooltip-title="Home" tooltip-side="bottom" tooltip-size="medium" tooltips></span>
+						</a>
+					</div>
+				</li>
+				<li ng-if="selectedProfiles != undefined && hasRolesInLocalStorage(commonService.CONSTANTS.USER_ROLES.AG.name) && commonService.currentState.get() != 'landing-home' && isDisplayPayment()">
+					<div class="icon-home-button">
+						<span class="glyphicon glyphicon-credit-card" ng-click="goToPaymentCenter()" tooltip-title="Payment" tooltip-side="bottom" tooltip-size="medium" tooltips></span>
+					</div>
+				</li>
+				<!-- hide basicquote function -->
+				<!-- <li>	
+					<div class="icon-home-button" ng-if="selectedProfiles != undefined && commonService.currentState.get() !== 'account-detail' && isRoleAgent()">
+						<span class="glyphicon glyphicon-list-alt "ng-click="navigateBasicQuote()" tooltip-title="Get Quote" tooltip-side="bottom" tooltip-size="medium" tooltips></span>
+					</div>
+				</li> -->
+				<li>					
+					<!-- <div class="hidden-sm">
+						<a ng-click="toggleBubble($event)" class="pointer">
+							<span class="navbar-brand-title-text1">{{'v4.workspace.button.loggedInAt' | translate}}</span>
+							<label class="nav-label nav-email">{{username}}</label>
+						</a>
+					</div> -->
+					<div class="icon-home-button">				
+						<span ng-click="toggleBubble($event)" class="glyphicon glyphicon-user" tooltip-title="Profile" tooltip-side="bottom" tooltip-size="medium" tooltips></span>
+					</div>
+				</li>
+				<li>
+					<!-- <div class="hidden-sm">
+						<a ng-click="doLogout()" class="pointer label-button-size">{{'v4.workspace.button.logout' | translate}}</a>
+					</div> -->
+					<div class="icon-home-button">
+						<span ng-click="doLogout()" class="glyphicon glyphicon-log-out" tooltip-title="Logout" tooltip-side="bottom" tooltip-size="medium" tooltips></span>
+					</div>
+				</li>
+			</ul>
+			<ul ng-if="!isLoggedIn()" class="nav navbar-nav navbar-right">
+				<li>
+					<md-select ng-change="changeSystemLanguage(systemLanguage)" ng-model="systemLanguage"class="md-no-underline" style = "margin: 0px" >
+							<md-option value="en">{{'v4.language.enum.ENGLISH' | translate}}</md-option>
+							<!-- <md-option value="id">{{'v4.country.enum.734' | translate}}</md-option> -->
+					</md-select>
+				</li>
+				<!-- <li>
+					<div class="icon-home-button">
+						<a ng-href="{{landingPagePath + '#/registration'}}" class="pointer v3-padding-0 padding-top-0">
+							<span class="glyphicon glyphicon-plus" tooltip-title="Sign Up" tooltip-side="bottom" tooltip-size="medium" tooltips></span>
+						</a>
+					</div>
+				</li> -->
+				<li>
+					<!-- <div class="hidden-sm">
+						<a ng-click="doLogin()" class="pointer">{{'v4.workspace.button.login' | translate}}</a>
+					</div> -->
+					<div class="icon-home-button">
+						<a ng-click="doLogin()" class="pointer v3-padding-0 padding-top-0">
+							<span class="glyphicon glyphicon-log-in" tooltip-title="Login" tooltip-side="bottom" tooltip-size="medium" tooltips></span>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="nav-border-bottom"></div>
+	</div>
+	
+</nav>
+
+<div ng-show="isShowBubble" class="v4-prototype-bubble-containers" style="left: auto; right: 10px">	
+     <div class="col-xs-12 col-sm-12 col-md-12 ">
+     	<span style="font-size: 22px">{{'v3.mynewworkspace.portlet.label.user:Profile' | translate}}</span>      	
+      <hr style="margin-top: 0px">
+     </div>    
+     <div class="col-xs-12 col-sm-12 col-md-12" ng-if="selectedProfiles != undefined">
+         <div ng-if="profile.role !== 'PR'"  class="col-xs-3 col-sm-3 col-md-3 " ng-repeat="profile in profiles track by $index" style=" margin-bottom: 5px;height: 100px; " >
+             <div class="prototype-application-icon-small box-contact " ng-click="submitProfile($index, true)">
+                 <div  class="prototype-application-iconcontener-small ">
+                 	<i ng-class="{'fa fa-check-square': profile.isCheck == true, 'fa fa-remove': profile.isCheck == false}" aria-hidden="true ">                    		
+                 	</i>                    	
+                 </div>
+             </div>
+             <div class="v4-prototype-bubble-app-icon-text " ng-if="profile.role === 'AG'">
+             	<!-- <span>{{profile.role}}</span> -->
+             	<span>{{'AG'+ ' - ' + profile.pasId}}</span>
+             </div>
+             
+             <div class="v4-prototype-bubble-app-icon-text " ng-if="profile.role === 'PO'">
+             	<span>{{'PH'+ ' - '}}{{ profile.customerId ? profile.customerId : profile.pasId}}</span>
+             </div>
+               <div class="v4-prototype-bubble-app-icon-text " ng-if="profile.role === 'SA'">
+             	<!-- <span>{{profile.role}}</span> -->
+             	<span>{{'System Admin'}}</span>
+             </div>
+         </div>            
+     </div>
+     
+     <div class="col-xs-12 col-sm-12 col-md-12 ">
+     	<span style="font-size: 22px">{{'v3.mynewworkspace.portlet.label.user:moreaction' | translate}}</span>      	
+      <hr style="margin-top: 0px">
+     </div>    
+     <div class="col-xs-12 col-sm-12 col-md-12 ">
+         <div class="col-xs-3 col-sm-3 col-md-3 " style=" margin-bottom: 5px;height: 100px; " >
+             <div class="prototype-application-icon-small box-contact " ng-click="goToUserDetail()">
+                 <div class="prototype-application-iconcontener-small ">
+                 	<i class="fa fa-user-circle" aria-hidden="true ">                    		
+                 	</i>                    	
+                 </div>
+             </div>
+             <div class="v4-prototype-bubble-app-icon-text ">
+             	<span>{{'v4.stateName.account-detail' | translate}}</span>             	
+             </div>
+         </div>            
+     </div>
+</div>
+<div ng-show="isNavigationLeft" class="navigation-side-mask" ng-click="toggleNavigationLeft()">
+</div>
+

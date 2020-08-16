@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FFNA_Inside" language="groovy" pageWidth="652" pageHeight="899" columnWidth="652" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ff8dab19-8960-4b31-811a-c974f3a1fa6c">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="92"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Text_blue_Aviva" forecolor="#004FB6" fontName="Arial" fontSize="8"/>
+	<style name="Box_Aviva" forecolor="#333333" fontName="Arial" fontSize="8">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<leftPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<bottomPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<rightPen lineWidth="0.5" lineColor="#D0D6E7"/>
+		</box>
+	</style>
+	<style name="Text_black_Aviva" forecolor="#333333" fontName="Arial" fontSize="6"/>
+	<style name="Background_title" backcolor="#EEF2FC" fontName="Arial"/>
+	<style name="Box_Aviva_Blue" fontName="Arial">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#004FB6"/>
+			<leftPen lineWidth="0.5" lineColor="#004FB6"/>
+			<bottomPen lineWidth="0.5" lineColor="#004FB6"/>
+			<rightPen lineWidth="0.5" lineColor="#004FB6"/>
+		</box>
+	</style>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F0F0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#0071DB">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="c9cb49bb-305a-4aff-9138-c023a7866d9e"/>
+	<subDataset name="New Dataset 1" uuid="8245faae-0e27-4068-be56-bfbb265a3051"/>
+	<subDataset name="Table Dataset 2" uuid="80cd41bc-36f3-4b7e-9dbf-5c0a9ce60b62"/>
+	<subDataset name="Table Dataset 3" uuid="b65a9407-6181-40a1-ad7a-508725bbbb7d"/>
+	<subDataset name="Table Dataset 4" uuid="553bb0fa-0400-4e03-91f9-f5f0f04193b9"/>
+	<subDataset name="Table_Dataset_Plan_Recommendation" uuid="8d63b27b-6777-469c-ae20-69423c90ea85">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<subDataset name="Table Dataset 5" uuid="1ebb8df4-b19f-4b76-97c9-f5eff40f4d33"/>
+	<parameter name="BASE_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NumberFormatter" class="java.text.NumberFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new java.text.DecimalFormat("#,###.##")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_DATETIME_FORMATTER" class="java.text.DateFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy hh:mm")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOB_FORMATTER" class="java.text.DateFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_NUMBER_FORMATTER" class="java.text.NumberFormat">
+		<defaultValueExpression><![CDATA[new java.text.DecimalFormat("#,##0.##")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGES_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/images/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_FORMAT_YEAR" class="java.text.DateFormat">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("yyyy")]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[//PrintData]]>
+	</queryString>
+	<detail>
+		<band height="852">
+			<frame>
+				<reportElement uuid="526bc256-4e7a-493b-81c8-81d08965f6c2" mode="Transparent" x="0" y="0" width="652" height="852" backcolor="#FFFFE1"/>
+				<image scaleImage="FillFrame">
+					<reportElement uuid="01ec77ee-4416-44f3-a3af-b4c262392b8a" stretchType="RelativeToTallestObject" mode="Transparent" x="0" y="0" width="652" height="852" backcolor="#FFFFE1">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<imageExpression><![CDATA[$P{IMAGES_DIR} + "P0004n.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement uuid="9b0da935-6b5b-4db6-a057-0723f527418a" mode="Opaque" x="13" y="695" width="18" height="157" backcolor="#FFFFD6"/>
+					<textElement rotation="Left">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[Personal Financial Record_AFA_v2.0_Oct2016]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="47">
+			<frame>
+				<reportElement uuid="7dbea7f4-1baa-49e4-931b-cddd34df4c99" mode="Opaque" x="0" y="0" width="652" height="47" backcolor="#FFFFD6"/>
+				<staticText>
+					<reportElement uuid="556a4eef-3826-424f-aa2d-160fbf44dff6" x="130" y="10" width="500" height="10" forecolor="#025BAF"/>
+					<textElement markup="html">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[51 Cuppage Road, #03-08/09/10, Singapore 229469 • T: +65 6827 7988 • Website: www.avivafa.com.sg ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="1af6e687-4dd3-48f3-80c9-6b00d706657b" x="31" y="20" width="200" height="10" forecolor="#025BAF"/>
+					<textElement markup="html">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<text><![CDATA[Company Reg No. 200005578H]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="2f398332-3324-47cb-9e58-0425cdc716cc" x="577" y="18" width="40" height="18"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement uuid="e00fcce8-3ca9-4fcb-b944-d78df5680d9e" x="617" y="18" width="25" height="18"/>
+					<textElement textAlignment="Left">
+						<font fontName="Arial" size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="64391bb0-da81-45d6-8260-3faf4c8d4758" x="31" y="10" width="100" height="10" forecolor="#025BAF"/>
+					<textElement markup="html">
+						<font fontName="Arial" size="6" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Aviva Financial Advisers Pte Ltd]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageFooter>
+</jasperReport>

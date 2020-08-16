@@ -1,0 +1,76 @@
+{
+  "listFormLetter": {
+    "value": [],
+    "arrayDefault": {
+      "key": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "false",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "false",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "false",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "fileType": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "false",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "false",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "false",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      },
+      "fileName": {
+        "value": null,
+        "meta": {
+          "encryptAlgo": "",
+          "dataMinValue": "",
+          "visible": "false",
+          "errorDesc": "",
+          "editable": "",
+          "dataFormat": "",
+          "dataType": "",
+          "errorCode": "",
+          "dataMinLength": "",
+          "mandatory": "false",
+          "dataMaxValue": "",
+          "dataSeq": "",
+          "dataGroup": "",
+          "captionDesc": "",
+          "enable": "false",
+          "encrypt": "",
+          "captionCode": "",
+          "dataMaxLength": ""
+        }
+      }
+    }
+  }
+}

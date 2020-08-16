@@ -1,0 +1,80 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div class="main-container container-fluid">
+	<div class="col-xs-12 main-content">
+		<div class="row">
+			<div class="col-xs-10 col-sm-7 col-md-5 col-lg-4 cover-margin-top v4-centered">
+				<div id="login-box" class="col-xs-12 login-container">
+					<div class="row login-title">
+						<div>
+							<a class="brand"><img th:src="@{${resourceServerPath} + 'images/logo/Great_Eastern_logo.png'}" width="100px" /></a>
+						</div>
+						<h4 class="header-title-login">
+							<span class="login-text">#{workspace.label.verificationcode}</span>
+						</h4>
+					</div>
+					<div class="row login-body">
+						#if (!${getOTPError})
+						<form id="loginForm" method="post" action="otp/verify" autocomplete="off" >
+							<div>
+								#{workspace.verificationcode.message.pre} <i>${mobile}</i> #{workspace.verificationcode.message.post}
+							</div>
+							<br/>
+							#if (${otpCode})
+							<div class="col-xs-12 col-md-12 text-left">
+								Hint: your verification code is ${otpCode} 
+							</div>
+							#end
+							<div class="col-xs-10 col-sm-8 v4-centered">
+								<span class="col-xs-12 input-row block input-icon input-icon-right" style="padding: 0 !important;">
+									<input type="text" class="input-login" name="otpCode" placeholder="#{workspace.verificationcode.placeHolder}" required id="otpCode" maxlength="60"/>
+								</span>
+							</div>
+							<div class="col-xs-12 col-md-12 text-center">
+								<span class="text-danger">
+									#if (${errorOTP})
+										${errorOTP}
+									#end
+								</span>
+							</div>
+							<div class="col-md-12 col-md-12 input-row">
+								<input type="button" class="submit-btn btn" onclick="location.href='otp';" value="#{workspace.button.resend}"/>
+								<input type="button" class="submit-btn btn" onclick="location.href='j_spring_security_logout';" value="{workspace.button.cancel}"/>
+								<input type="submit" class="submit-btn btn" style="float: right;" value="#{login.button.login.value}"/>
+							</div>
+						</form>
+						#end
+						#if (${getOTPError})
+						<div class="col-xs-12 col-md-12 text-center">
+							<span class="text-danger">
+								${getOTPError}
+							</span>
+						</div>
+						<div class="col-md-12 col-md-12 input-row">
+							<input type="button" class="submit-btn btn" onclick="location.href='otp';" value="#{workspace.button.resend}"/>
+							<input type="button" class="submit-btn btn" onclick="location.href='j_spring_security_logout';" style="float:right;" value="#{workspace.button.cancel}"/>
+						</div>		
+						#end
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

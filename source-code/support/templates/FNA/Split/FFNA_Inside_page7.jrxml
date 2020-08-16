@@ -1,0 +1,2138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-11-10T13:07:35 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="page3_page7" pageWidth="652" pageHeight="899" columnWidth="596" leftMargin="28" rightMargin="28" topMargin="28" bottomMargin="28" uuid="fc2f1a2a-4b3b-40c6-b1a0-2d41a4c2d1aa">
+	<property name="ireport.zoom" value="1.3310000000000966"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1008"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FNA_Inside"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Text_blue_Aviva" forecolor="#004FB6" fontName="Arial" fontSize="8"/>
+	<style name="Box_Aviva" forecolor="#333333" fontName="Arial" fontSize="8">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<leftPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<bottomPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<rightPen lineWidth="0.5" lineColor="#D0D6E7"/>
+		</box>
+	</style>
+	<style name="Text_black_Aviva" forecolor="#333333" fontName="Arial" fontSize="6"/>
+	<style name="Background_title" backcolor="#EEF2FC" fontName="Arial"/>
+	<style name="Box_Aviva_Blue" fontName="Arial">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#004FB6"/>
+			<leftPen lineWidth="0.5" lineColor="#004FB6"/>
+			<bottomPen lineWidth="0.5" lineColor="#004FB6"/>
+			<rightPen lineWidth="0.5" lineColor="#004FB6"/>
+		</box>
+	</style>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hTextAlign="Center" hImageAlign="Center"/>
+	<subDataset name="Table Dataset 1" uuid="c9cb49bb-305a-4aff-9138-c023a7866d9e"/>
+	<subDataset name="New Dataset 1" uuid="8245faae-0e27-4068-be56-bfbb265a3051"/>
+	<subDataset name="Table Dataset 2" uuid="80cd41bc-36f3-4b7e-9dbf-5c0a9ce60b62"/>
+	<subDataset name="Table Dataset 3" uuid="b65a9407-6181-40a1-ad7a-508725bbbb7d"/>
+	<subDataset name="Table Dataset 4" uuid="553bb0fa-0400-4e03-91f9-f5f0f04193b9"/>
+	<parameter name="BASE_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NumberFormatter" class="java.text.NumberFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new java.text.DecimalFormat("#,###.##")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_DATETIME_FORMATTER" class="java.text.DateFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy hh:mm")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOB_FORMATTER" class="java.text.DateFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_NUMBER_FORMATTER" class="java.text.NumberFormat">
+		<defaultValueExpression><![CDATA[new java.text.DecimalFormat("#,##0.##")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGES_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/images/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_FORMAT_YEAR" class="java.text.DateFormat">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("yyyy")]]></defaultValueExpression>
+	</parameter>
+	<queryString language="jsonql">
+		<![CDATA[]]>
+	</queryString>
+	<field name="client_YesNo_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.includeCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="join_YesNo_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.includeCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="client_CashFlow_GAI" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.incomeSources[0].value.value]]></fieldDescription>
+	</field>
+	<field name="client_CashFlow_LessCPFContribution" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.incomeSources[1].value.value]]></fieldDescription>
+	</field>
+	<field name="client_CashFlow_NetAnnualIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.incomeSources[2].value.value]]></fieldDescription>
+	</field>
+	<field name="client_CashFlow_OtherIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.incomeSources[3].value.value]]></fieldDescription>
+	</field>
+	<field name="client_CashFlow_TotalIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.totalIncomeValue.value]]></fieldDescription>
+	</field>
+	<field name="join_CashFlow_GAI" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.incomeSources[0].value.value]]></fieldDescription>
+	</field>
+	<field name="join_CashFlow_LessCPFContribution" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.incomeSources[1].value.value]]></fieldDescription>
+	</field>
+	<field name="join_CashFlow_NetAnnualIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.incomeSources[2].value.value]]></fieldDescription>
+	</field>
+	<field name="join_CashFlow_OtherIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.incomeSources[3].value.value]]></fieldDescription>
+	</field>
+	<field name="join_CashFlow_TotalIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.totalIncomeValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant1_CashFlow_GAI" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialInformationModel.financialPosition.cashFlow.incomeSources[0].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant1_CashFlow_LessCPFContribution" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialInformationModel.financialPosition.cashFlow.incomeSources[1].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant1_CashFlow_NetAnnualIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialInformationModel.financialPosition.cashFlow.incomeSources[2].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant1_CashFlow_OtherIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialInformationModel.financialPosition.cashFlow.incomeSources[3].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant1_CashFlow_TotalIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialInformationModel.financialPosition.cashFlow.totalIncomeValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant2_CashFlow_GAI" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialInformationModel.financialPosition.cashFlow.incomeSources[0].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant2_CashFlow_LessCPFContribution" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialInformationModel.financialPosition.cashFlow.incomeSources[1].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant2_CashFlow_NetAnnualIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialInformationModel.financialPosition.cashFlow.incomeSources[2].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant2_CashFlow_OtherIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialInformationModel.financialPosition.cashFlow.incomeSources[3].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant2_CashFlow_TotalIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialInformationModel.financialPosition.cashFlow.totalIncomeValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant3_CashFlow_GAI" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialInformationModel.financialPosition.cashFlow.incomeSources[0].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant3_CashFlow_LessCPFContribution" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialInformationModel.financialPosition.cashFlow.incomeSources[1].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant3_CashFlow_NetAnnualIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialInformationModel.financialPosition.cashFlow.incomeSources[2].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant3_CashFlow_OtherIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialInformationModel.financialPosition.cashFlow.incomeSources[3].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant3_CashFlow_TotalIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialInformationModel.financialPosition.cashFlow.totalIncomeValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant4_CashFlow_GAI" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[3].financialInformationModel.financialPosition.cashFlow.incomeSources[0].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant4_CashFlow_LessCPFContribution" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[3].financialInformationModel.financialPosition.cashFlow.incomeSources[1].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant4_CashFlow_NetAnnualIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[3].financialInformationModel.financialPosition.cashFlow.incomeSources[2].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant4_CashFlow_OtherIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[3].financialInformationModel.financialPosition.cashFlow.incomeSources[3].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant4_CashFlow_TotalIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[3].financialInformationModel.financialPosition.cashFlow.totalIncomeValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant5_CashFlow_GAI" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[4].financialInformationModel.financialPosition.cashFlow.incomeSources[0].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant5_CashFlow_LessCPFContribution" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[4].financialInformationModel.financialPosition.cashFlow.incomeSources[1].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant5_CashFlow_NetAnnualIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[4].financialInformationModel.financialPosition.cashFlow.incomeSources[2].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant5_CashFlow_OtherIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[4].financialInformationModel.financialPosition.cashFlow.incomeSources[3].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant5_CashFlow_TotalIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[4].financialInformationModel.financialPosition.cashFlow.totalIncomeValue.value]]></fieldDescription>
+	</field>
+	<field name="client_Expense_Fixed" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.expenses[0].value.value]]></fieldDescription>
+	</field>
+	<field name="client_Expense_Person" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.expenses[1].value.value]]></fieldDescription>
+	</field>
+	<field name="client_Expense_Family" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.expenses[2].value.value]]></fieldDescription>
+	</field>
+	<field name="client_Expense_LifeStyle" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.expenses[3].value.value]]></fieldDescription>
+	</field>
+	<field name="client_Expense_Others" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.expenses[4].value.value]]></fieldDescription>
+	</field>
+	<field name="client_Expense_TotalExpense" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.totalExpensesValue.value]]></fieldDescription>
+	</field>
+	<field name="join_Expense_Fixed" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.expenses[0].value.value]]></fieldDescription>
+	</field>
+	<field name="join_Expense_Person" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.expenses[1].value.value]]></fieldDescription>
+	</field>
+	<field name="join_Expense_Family" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.expenses[2].value.value]]></fieldDescription>
+	</field>
+	<field name="join_Expense_LifeStyle" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.expenses[3].value.value]]></fieldDescription>
+	</field>
+	<field name="join_Expense_Others" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.expenses[4].value.value]]></fieldDescription>
+	</field>
+	<field name="join_Expense_TotalExpense" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.totalExpensesValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant1_Expense_Fixed" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialInformationModel.financialPosition.cashFlow.expenses[0].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant1_Expense_Person" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialInformationModel.financialPosition.cashFlow.expenses[1].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant1_Expense_Family" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialInformationModel.financialPosition.cashFlow.expenses[2].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant1_Expense_LifeStyle" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialInformationModel.financialPosition.cashFlow.expenses[3].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant1_Expense_Others" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialInformationModel.financialPosition.cashFlow.expenses[4].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant1_Expense_TotalExpense" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialInformationModel.financialPosition.cashFlow.totalExpensesValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant2_Expense_Fixed" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialInformationModel.financialPosition.cashFlow.expenses[0].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant2_Expense_Person" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialInformationModel.financialPosition.cashFlow.expenses[1].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant2_Expense_Family" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialInformationModel.financialPosition.cashFlow.expenses[2].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant2_Expense_LifeStyle" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialInformationModel.financialPosition.cashFlow.expenses[3].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant2_Expense_Others" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialInformationModel.financialPosition.cashFlow.expenses[4].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant2_Expense_TotalExpense" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialInformationModel.financialPosition.cashFlow.totalExpensesValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant3_Expense_Fixed" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialInformationModel.financialPosition.cashFlow.expenses[0].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant3_Expense_Person" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialInformationModel.financialPosition.cashFlow.expenses[1].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant3_Expense_Family" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialInformationModel.financialPosition.cashFlow.expenses[2].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant3_Expense_LifeStyle" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialInformationModel.financialPosition.cashFlow.expenses[3].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant3_Expense_Others" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialInformationModel.financialPosition.cashFlow.expenses[4].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant3_Expense_TotalExpense" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialInformationModel.financialPosition.cashFlow.totalExpensesValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant4_Expense_Fixed" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[3].financialInformationModel.financialPosition.cashFlow.expenses[0].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant4_Expense_Person" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[3].financialInformationModel.financialPosition.cashFlow.expenses[1].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant4_Expense_Family" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[3].financialInformationModel.financialPosition.cashFlow.expenses[2].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant4_Expense_LifeStyle" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[3].financialInformationModel.financialPosition.cashFlow.expenses[3].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant4_Expense_Others" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[3].financialInformationModel.financialPosition.cashFlow.expenses[4].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant4_Expense_TotalExpense" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[3].financialInformationModel.financialPosition.cashFlow.totalExpensesValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant5_Expense_Fixed" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[4].financialInformationModel.financialPosition.cashFlow.expenses[0].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant5_Expense_Person" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[4].financialInformationModel.financialPosition.cashFlow.expenses[1].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant5_Expense_Family" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[4].financialInformationModel.financialPosition.cashFlow.expenses[2].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant5_Expense_LifeStyle" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[4].financialInformationModel.financialPosition.cashFlow.expenses[3].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant5_Expense_Others" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[4].financialInformationModel.financialPosition.cashFlow.expenses[4].value.value]]></fieldDescription>
+	</field>
+	<field name="dependant5_Expense_TotalExpense" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[4].financialInformationModel.financialPosition.cashFlow.totalExpensesValue.value]]></fieldDescription>
+	</field>
+	<field name="client_Net_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.totalCashFlowValue.value]]></fieldDescription>
+	</field>
+	<field name="join_Net_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.totalCashFlowValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant1_Net_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialInformationModel.financialPosition.cashFlow.totalCashFlowValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant2_Net_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialInformationModel.financialPosition.cashFlow.totalCashFlowValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant3_Net_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialInformationModel.financialPosition.cashFlow.totalCashFlowValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant4_Net_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[3].financialInformationModel.financialPosition.cashFlow.totalCashFlowValue.value]]></fieldDescription>
+	</field>
+	<field name="dependant5_Net_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[4].financialInformationModel.financialPosition.cashFlow.totalCashFlowValue.value]]></fieldDescription>
+	</field>
+	<field name="client_isEffect_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.isEffectCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="join_isEffect_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.isEffectCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="dependant1_isEffect_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialInformationModel.financialPosition.cashFlow.isEffectCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="dependant2_isEffect_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialInformationModel.financialPosition.cashFlow.isEffectCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="dependant3_isEffect_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialInformationModel.financialPosition.cashFlow.isEffectCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="dependant4_isEffect_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[3].financialInformationModel.financialPosition.cashFlow.isEffectCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="dependant5_isEffect_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[4].financialInformationModel.financialPosition.cashFlow.isEffectCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="client_SpecificEffect_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "client")[0].financialInformationModel.financialPosition.cashFlow.effectCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="join_SpecificEffect_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "join")[0].financialInformationModel.financialPosition.cashFlow.effectCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="dependant1_SpecificEffect_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialInformationModel.financialPosition.cashFlow.effectCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="dependant2_SpecificEffect_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialInformationModel.financialPosition.cashFlow.effectCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="dependant3_SpecificEffect_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialInformationModel.financialPosition.cashFlow.effectCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="dependant4_SpecificEffect_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[3].financialInformationModel.financialPosition.cashFlow.effectCashFlow.value]]></fieldDescription>
+	</field>
+	<field name="dependant5_SpecificEffect_CashFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[4].financialInformationModel.financialPosition.cashFlow.effectCashFlow.value]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="824">
+			<frame>
+				<reportElement style="Box_Aviva_Blue" x="0" y="39" width="596" height="241" uuid="bf331c7e-4b03-4418-b7cb-09db05898a03">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#004FB6"/>
+					<leftPen lineWidth="0.5" lineColor="#004FB6"/>
+					<bottomPen lineWidth="0.5" lineColor="#004FB6"/>
+					<rightPen lineWidth="0.5" lineColor="#004FB6"/>
+				</box>
+				<textField>
+					<reportElement style="Text_blue_Aviva" mode="Opaque" x="0" y="0" width="596" height="17" backcolor="#EEF2FC" uuid="9ad8c0c8-38b5-4c44-8a58-e7e1afef800b">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["CASH FLOW"]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="37" width="596" height="1" uuid="cfcd6aa1-e05f-47fb-8105-53e5454c0214">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement style="Box_Aviva_Blue" x="0" y="17" width="596" height="1" uuid="28024a34-649a-46b2-b406-cafc92d24369">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#004FB6"/>
+					</graphicElement>
+				</line>
+				<frame>
+					<reportElement x="0" y="37" width="596" height="204" uuid="985062d8-10ca-4861-b966-fd0b03505fe4"/>
+					<frame>
+						<reportElement mode="Opaque" x="0" y="181" width="596" height="23" backcolor="#DFDFF9" uuid="e1701bf4-8f26-4523-aa2c-ddf05894f39e"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="166" height="23" forecolor="#004FB6" uuid="b7d2e4e1-0c1c-4fb4-8311-410296798327">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[C. TOTAL TAKE-HOME INCOME ( A + B )]]></text>
+						</staticText>
+					</frame>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="100" y="0" width="1" height="50" uuid="fcee0205-6651-4dee-9934-132ed549832d">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="197" y="50" width="1" height="154" uuid="0a9012f3-aea3-4bcd-abf3-46abb9444fa4">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="254" y="50" width="1" height="154" uuid="6608d249-44e8-479d-b1ce-077c94c89b53">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="311" y="50" width="1" height="154" uuid="13957bbf-a456-4947-aaf5-45f80e515830">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="368" y="50" width="1" height="154" uuid="ded0d580-6b42-4bdd-9481-b008102520dc">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="425" y="50" width="1" height="154" uuid="44f6d654-0a98-4a46-97f9-a50e7e7be924">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="482" y="50" width="1" height="154" uuid="1ff65040-1f9f-4afd-81b8-149ee0491eb7">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="539" y="50" width="1" height="154" uuid="6918b292-5771-45e8-8a2e-a0ac8a170608">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<frame>
+						<reportElement x="1" y="1" width="580" height="23" uuid="5733b8f5-50cf-4dea-9747-fb94f074507c"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="90" height="13" uuid="38265ff0-2aa0-4cc4-a295-f5fad43e5d28">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Client 1]]></text>
+						</staticText>
+						<image>
+							<reportElement x="113" y="6" width="12" height="12" uuid="40511431-8186-4825-ba00-371c9ce336a2">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{client_YesNo_CashFlow}.equalsIgnoreCase( "true" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<image>
+							<reportElement x="199" y="6" width="11" height="12" uuid="883c0465-bd48-47b0-9e88-1e6cfcc49b2e">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{client_YesNo_CashFlow}.equalsIgnoreCase( "false" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="130" y="6" width="60" height="13" uuid="1dcc504d-8f96-4e55-b6f3-850dff7944ed">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Yes]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="214" y="6" width="90" height="13" uuid="da3d5c72-3601-4c6c-ba19-24883b039b0d">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[No. Please state reason:]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="26" width="596" height="23" uuid="d2ab14b4-87d4-40a1-bcb0-b7462be08b19"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="90" height="13" uuid="3a2072e2-18e8-42bd-9f5c-39ee08b86374">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Client 2]]></text>
+						</staticText>
+						<image>
+							<reportElement x="113" y="6" width="12" height="12" uuid="e962cdb7-96f8-4cbf-8a29-d7f6ecfe3322">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{join_YesNo_CashFlow}.equalsIgnoreCase( "true" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<image>
+							<reportElement x="199" y="6" width="11" height="12" uuid="2047045c-004d-4594-8185-64e20adaa1fa">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{join_YesNo_CashFlow}.equalsIgnoreCase( "false" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="130" y="6" width="60" height="13" uuid="4b58e5df-8adb-4d13-a4e6-a9ff0be9ba4e">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Yes]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="214" y="6" width="90" height="13" uuid="712be692-b95d-42de-a15d-5ab6b6153690">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[No. Please state reason:]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="52" width="596" height="29" uuid="25b3f53c-8135-4857-803a-c3c7d08a529b"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="9" width="108" height="13" uuid="4a88d401-a469-42db-b058-c43d5a8cdbbd">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[ANNUAL INCOME]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="209" y="9" width="33" height="13" uuid="f09320e9-43d7-4099-a52b-fc92ac5d5df1">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Client 1]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="265" y="9" width="33" height="13" uuid="bcb06ebe-9c38-4614-879e-a97efa8f9a44">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Client 2]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="314" y="6" width="51" height="22" uuid="b396a2ee-eadf-4b58-b9ac-e6d80a461172">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant
+1
+
+]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="370" y="6" width="51" height="22" uuid="52e6f56f-cce8-4102-b68d-800bc770d833">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant
+2]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="428" y="6" width="51" height="22" uuid="5332b1c3-5a8a-4f59-b6ba-4fa30a91ba35">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant
+3]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="484" y="6" width="51" height="22" uuid="b8ed7ad4-b91d-4926-b077-82ab810bf867">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant
+4]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="541" y="6" width="51" height="22" uuid="1554b339-d99e-45bc-959c-3594f7456bcd">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant
+5]]></text>
+						</staticText>
+					</frame>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="25" width="596" height="1" uuid="d0bb5d29-5007-45fd-b597-3348d79b96f7">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="50" width="596" height="1" uuid="f1ec05e4-3d45-4456-a810-4397598b819e">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="81" width="596" height="1" uuid="9a24d3e0-db4f-4afe-8b35-9c534f50472e">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="106" width="596" height="1" uuid="44c8350b-b39e-4077-ad33-c46212cfc020">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="131" width="596" height="1" uuid="b3241a10-8841-44d9-ad8b-be4d4be546d5">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="156" width="596" height="1" uuid="4274e0f2-dbcb-482a-900e-3356cd98d619">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="181" width="596" height="1" uuid="4e528d85-ce36-4b2c-ac6e-16d8e098c015">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<frame>
+						<reportElement x="0" y="83" width="596" height="23" uuid="bf4ef787-eddb-4b66-923b-ffa601981445"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="166" height="13" uuid="8ec8ddd3-d6b3-4393-ae45-e60a78934f27">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Gross Annual Income (include bonuses)
+
+]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="198" y="0" width="56" height="23" uuid="1a37f1fb-6ed6-43b1-8ac7-f58a21bf8b96"/>
+							<textElement textAlignment="Center"/>
+							<textFieldExpression><![CDATA[$F{client_CashFlow_GAI} != null ? $F{client_CashFlow_GAI} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="255" y="0" width="56" height="23" uuid="7c51b79f-8729-4519-baf8-f67c869ad0fc"/>
+							<textFieldExpression><![CDATA[$F{join_CashFlow_GAI} != null ? $F{join_CashFlow_GAI} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="311" y="0" width="59" height="23" uuid="c5774573-0877-47f0-b728-fa518d8a9420"/>
+							<textFieldExpression><![CDATA[$F{dependant1_CashFlow_GAI} != null ? $F{dependant1_CashFlow_GAI} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="370" y="0" width="56" height="23" uuid="a0f33f99-5611-4e8a-a28b-3b3bf56b3242"/>
+							<textFieldExpression><![CDATA[$F{dependant2_CashFlow_GAI} != null ? $F{dependant2_CashFlow_GAI} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="426" y="0" width="56" height="23" uuid="490fa3bc-a1aa-460f-b5ab-c5e5aa014e01"/>
+							<textFieldExpression><![CDATA[$F{dependant3_CashFlow_GAI} != null ? $F{dependant3_CashFlow_GAI} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="481" y="0" width="56" height="23" uuid="5f4a9b50-6179-4ea0-9d95-edb2e0861ec7"/>
+							<textFieldExpression><![CDATA[$F{dependant4_CashFlow_GAI} != null ? $F{dependant4_CashFlow_GAI} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="538" y="0" width="56" height="23" uuid="a64f29df-6e8f-4519-b461-e03ff04fb115"/>
+							<textFieldExpression><![CDATA[$F{dependant5_CashFlow_GAI} != null ? $F{dependant5_CashFlow_GAI} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="107" width="596" height="23" uuid="880ba6f4-47ff-483a-a03b-ac06119b30c6"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="156" height="13" uuid="73e131a6-ec0a-4f72-a691-4409912f6215">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Less: Employee’s CPF Contribution]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="199" y="0" width="56" height="23" uuid="5d798b43-8c96-4e22-bbef-fd46d9150fc8"/>
+							<textElement textAlignment="Center"/>
+							<textFieldExpression><![CDATA[$F{client_CashFlow_LessCPFContribution} != null ? $F{client_CashFlow_LessCPFContribution} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="255" y="0" width="56" height="23" uuid="43bd3b67-70a5-4dfe-8f86-e12dbd2d9e55"/>
+							<textFieldExpression><![CDATA[$F{join_CashFlow_LessCPFContribution} != null ? $F{join_CashFlow_LessCPFContribution} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="370" y="0" width="56" height="23" uuid="97354370-0208-4e1f-94f8-5eff7772e2e3"/>
+							<textFieldExpression><![CDATA[$F{dependant2_CashFlow_LessCPFContribution} != null ? $F{dependant2_CashFlow_LessCPFContribution} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="426" y="0" width="56" height="23" uuid="9f83cddc-30f0-4309-ba28-4fbd2321825c"/>
+							<textFieldExpression><![CDATA[$F{dependant3_CashFlow_LessCPFContribution} != null ? $F{dependant3_CashFlow_LessCPFContribution} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="481" y="0" width="56" height="23" uuid="737d6a74-d562-415a-a932-6f37c90cd5b3"/>
+							<textFieldExpression><![CDATA[$F{dependant4_CashFlow_LessCPFContribution} != null ? $F{dependant4_CashFlow_LessCPFContribution} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="538" y="0" width="56" height="23" uuid="96406664-900a-4bc1-a667-bc9f6e7dfc0d"/>
+							<textFieldExpression><![CDATA[$F{dependant5_CashFlow_LessCPFContribution} != null ? $F{dependant5_CashFlow_LessCPFContribution} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="133" width="596" height="23" uuid="14ce308f-cbf0-4fd8-a047-0b2d1d6718f9"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="25" y="6" width="90" height="13" uuid="af21acde-9c63-4597-aa3e-ced7115a8c63">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[A. Net Annual Income]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="255" y="0" width="56" height="23" uuid="8e93580b-6f3e-42ae-83e2-0fe4246282b6"/>
+							<textFieldExpression><![CDATA[$F{join_CashFlow_NetAnnualIncome} != null ? $F{join_CashFlow_NetAnnualIncome} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="312" y="0" width="58" height="23" uuid="6422927a-9098-4b07-b77b-0abb17f54b16"/>
+							<textFieldExpression><![CDATA[$F{dependant1_CashFlow_NetAnnualIncome} != null ? $F{dependant1_CashFlow_NetAnnualIncome} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="370" y="0" width="56" height="23" uuid="8e6873fd-3201-4bb6-bb7c-6d3c894944ad"/>
+							<textFieldExpression><![CDATA[$F{dependant2_CashFlow_NetAnnualIncome} != null ? $F{dependant2_CashFlow_NetAnnualIncome} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="426" y="0" width="56" height="23" uuid="8f9be500-57ac-48f0-8e28-967efa9f8323"/>
+							<textFieldExpression><![CDATA[$F{dependant3_CashFlow_NetAnnualIncome} != null ? $F{dependant3_CashFlow_NetAnnualIncome} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="481" y="0" width="56" height="23" uuid="a63b043c-5069-4b94-9cef-920e36dce3c3"/>
+							<textFieldExpression><![CDATA[$F{dependant4_CashFlow_NetAnnualIncome} != null ? $F{dependant4_CashFlow_NetAnnualIncome} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="538" y="0" width="56" height="23" uuid="b7f6ff66-ca79-43cc-ac13-54200a2d030f"/>
+							<textFieldExpression><![CDATA[$F{dependant2_CashFlow_NetAnnualIncome} != null ? $F{dependant5_CashFlow_NetAnnualIncome} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="158" width="596" height="23" uuid="0a555642-576b-415d-9127-f49653be4079"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="25" y="7" width="90" height="13" uuid="9a477fed-c3c5-4891-bc22-7fd015f5b744">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[B. Other Income ]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="370" y="0" width="56" height="23" uuid="14d391c0-9e4e-4f2b-b1ae-3cc0672a6e4a"/>
+							<textFieldExpression><![CDATA[$F{dependant2_CashFlow_OtherIncome} != null ? $F{dependant2_CashFlow_OtherIncome} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="426" y="0" width="56" height="23" uuid="06c42c61-313c-452a-8f7d-3e1d17ee2df2"/>
+							<textFieldExpression><![CDATA[$F{dependant3_CashFlow_OtherIncome} != null ? $F{dependant3_CashFlow_OtherIncome} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="481" y="0" width="56" height="23" uuid="6315e82e-634d-45d2-9259-2f4817c08236"/>
+							<textFieldExpression><![CDATA[$F{dependant4_CashFlow_OtherIncome} != null ? $F{dependant4_CashFlow_OtherIncome} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="538" y="0" width="56" height="23" uuid="6f2489a8-7e9b-49cb-9111-0fe428107202"/>
+							<textFieldExpression><![CDATA[$F{dependant5_CashFlow_OtherIncome} != null ? $F{dependant5_CashFlow_OtherIncome} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<textField>
+						<reportElement x="198" y="131" width="56" height="23" uuid="deff8113-6acf-4da2-8b8b-2c256b8a2d67"/>
+						<textElement textAlignment="Center"/>
+						<textFieldExpression><![CDATA[$F{client_CashFlow_NetAnnualIncome} != null ? $F{client_CashFlow_NetAnnualIncome} : "N.A"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="197" y="157" width="56" height="23" uuid="246819c8-1268-4a62-9b1c-f0f82ff47e8a"/>
+						<textElement textAlignment="Center"/>
+						<textFieldExpression><![CDATA[$F{client_CashFlow_OtherIncome} != null ? $F{client_CashFlow_OtherIncome} : "N.A"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="254" y="157" width="56" height="23" uuid="1aa766d0-af15-4d3a-b6f7-dfb6f18a28eb"/>
+						<textFieldExpression><![CDATA[$F{join_CashFlow_OtherIncome} != null ? $F{join_CashFlow_OtherIncome} : "N.A"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="312" y="107" width="58" height="23" uuid="8c005928-fefb-4bf0-bc56-6080fa888094"/>
+						<textFieldExpression><![CDATA[$F{dependant1_CashFlow_LessCPFContribution} != null ? $F{dependant1_CashFlow_LessCPFContribution}: "N.A"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="312" y="157" width="58" height="23" uuid="fe0882d4-64bc-4fa1-812a-e8bc54538c91"/>
+						<textFieldExpression><![CDATA[$F{dependant1_CashFlow_OtherIncome} != null ? $F{dependant1_CashFlow_OtherIncome} : "N.A"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="198" y="181" width="56" height="23" uuid="1e60ccd6-e8c5-4480-b044-b0c1a19c7be9"/>
+						<textElement textAlignment="Center"/>
+						<textFieldExpression><![CDATA[$F{client_CashFlow_TotalIncome} != null ? $F{client_CashFlow_TotalIncome} : "N.A"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="253" y="181" width="56" height="23" uuid="6e173f9d-fc59-4e83-83cc-8d799ae4293f"/>
+						<textElement textAlignment="Center"/>
+						<textFieldExpression><![CDATA[$F{join_CashFlow_TotalIncome} != null ? $F{join_CashFlow_TotalIncome} : "N.A"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="311" y="181" width="56" height="23" uuid="7b98c183-66df-4dd5-b1e4-c3ceb9c58aa0"/>
+						<textElement textAlignment="Center"/>
+						<textFieldExpression><![CDATA[$F{dependant1_CashFlow_TotalIncome} != null ? $F{dependant1_CashFlow_TotalIncome} : "N.A"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="369" y="181" width="56" height="23" uuid="7fb29547-64d0-4640-ba7e-212492aacc08"/>
+						<textElement textAlignment="Center"/>
+						<textFieldExpression><![CDATA[$F{dependant2_CashFlow_TotalIncome} != null ? $F{dependant2_CashFlow_TotalIncome} : "N.A"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="425" y="181" width="56" height="23" uuid="e5bb9c4f-448f-415b-8188-30006d536f51"/>
+						<textElement textAlignment="Center"/>
+						<textFieldExpression><![CDATA[$F{dependant3_CashFlow_TotalIncome} != null ? $F{dependant3_CashFlow_TotalIncome} : "N.A"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="484" y="181" width="56" height="23" uuid="63ddb523-3320-4330-96d1-69da7c31d7b7"/>
+						<textElement textAlignment="Center"/>
+						<textFieldExpression><![CDATA[$F{dependant4_CashFlow_TotalIncome} != null ? $F{dependant4_CashFlow_TotalIncome} : "N.A"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="540" y="181" width="56" height="23" uuid="20380e17-3c2c-4493-9313-e910f8794a6f"/>
+						<textElement textAlignment="Center"/>
+						<textFieldExpression><![CDATA[$F{dependant5_CashFlow_TotalIncome} != null ? $F{dependant5_CashFlow_TotalIncome} : "N.A"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="1" y="20" width="580" height="15" uuid="022d99b3-7c66-4d43-98af-78e4c57aefe1"/>
+					<staticText>
+						<reportElement style="Text_black_Aviva" x="4" y="1" width="389" height="12" uuid="cff034e5-018e-4e05-bce1-07a8d14599f7">
+							<property name="local_mesure_unitheight" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<textElement verticalAlignment="Middle">
+							<font fontName="Arial" size="8" isBold="false"/>
+						</textElement>
+						<text><![CDATA[Would you like your cash flow to be taken into consideration for the Needs Analysis and Recommendation(s)?]]></text>
+					</staticText>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement style="Box_Aviva_Blue" x="0" y="280" width="596" height="405" uuid="2ea511fe-02db-402e-88eb-47d06d5ab81f">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#004FB6"/>
+					<leftPen lineWidth="0.5" lineColor="#004FB6"/>
+					<bottomPen lineWidth="0.5" lineColor="#004FB6"/>
+					<rightPen lineWidth="0.5" lineColor="#004FB6"/>
+				</box>
+				<frame>
+					<reportElement x="0" y="0" width="596" height="206" uuid="c89d34e6-f87a-42a2-a64e-8053f4040dc7"/>
+					<frame>
+						<reportElement x="0" y="0" width="596" height="32" uuid="bb0a483a-55ee-4113-a7f7-5e1b79eca023"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="9" width="94" height="13" uuid="85bb6e03-35d2-4761-b89a-6753fce4c792">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[ANNUAL EXPENSES]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="200" y="9" width="33" height="13" uuid="8d7226ab-3134-4ee3-b55a-2869f3e8536c">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Client 1]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="255" y="9" width="33" height="13" uuid="b454b418-ad75-4aa0-9ed7-1775b5ccc276">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Client 2]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="305" y="6" width="51" height="22" uuid="7094e5a3-dbc6-4080-9219-d198fbbd4f2e">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant
+1
+
+]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="361" y="6" width="51" height="22" uuid="eb6e3168-4a1c-4798-becb-81b3730f0c2e">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant
+2]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="418" y="6" width="51" height="22" uuid="a071193d-b170-429d-a3f9-573dc12badbe">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant
+3]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="475" y="6" width="51" height="22" uuid="15a27ad6-6d5f-4832-9e3a-f4ebe91e5f83">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant
+4]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="532" y="6" width="51" height="22" uuid="7548eff4-1cf8-4ba0-b18f-fda2261d6fae">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant
+5]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="33" width="596" height="23" uuid="f688ca25-3b79-4d6d-95ef-fbecf4914464"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="138" height="13" uuid="a35421cb-0ed3-4705-bf29-f7750e14f59e">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Fixed (e.g. loans, insurance)]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="197" y="-1" width="56" height="22" uuid="9834f312-afd4-450b-97d9-b49e7678e8fa"/>
+							<textFieldExpression><![CDATA[$F{client_Expense_Fixed} != null ? $F{client_Expense_Fixed} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="254" y="0" width="56" height="22" uuid="8f7c9030-d4ad-425b-94d3-c7004fd8b985"/>
+							<textFieldExpression><![CDATA[$F{join_Expense_Fixed} != null ? $F{join_Expense_Fixed} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="311" y="0" width="56" height="22" uuid="d3f86fe6-c504-4356-90dc-88668ba89b7e"/>
+							<textFieldExpression><![CDATA[$F{dependant1_Expense_Fixed} != null ? $F{dependant1_Expense_Fixed} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="370" y="-1" width="56" height="22" uuid="ec1a68ef-af62-4a77-9703-875783624d82"/>
+							<textFieldExpression><![CDATA[$F{dependant2_Expense_Fixed} != null ? $F{dependant2_Expense_Fixed} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="426" y="0" width="56" height="22" uuid="ce77703a-37e1-49ee-a97c-a8ce67a539a4"/>
+							<textFieldExpression><![CDATA[$F{dependant3_Expense_Fixed} != null ? $F{dependant3_Expense_Fixed} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="484" y="0" width="56" height="22" uuid="fa61cd32-1e26-477a-a646-08fdaff093da"/>
+							<textFieldExpression><![CDATA[$F{dependant4_Expense_Fixed} != null ? $F{dependant4_Expense_Fixed} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="540" y="0" width="56" height="22" uuid="92b3265e-479b-4f57-b7f8-ce5b00dacf16"/>
+							<textFieldExpression><![CDATA[$F{dependant5_Expense_Fixed} != null ? $F{dependant5_Expense_Fixed} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="57" width="596" height="23" uuid="bd66b627-2cc4-42e0-8b81-6915c7a008c9"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="179" height="13" uuid="884a3280-56dd-413a-970e-4ed6dafa4b70">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Personal (e.g. meals, communications, transport)]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="197" y="0" width="56" height="24" uuid="9d13e372-08e6-4dbc-9af4-6027dd67ada3"/>
+							<textFieldExpression><![CDATA[$F{client_Expense_Person} != null ? $F{client_Expense_Person} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="256" y="0" width="56" height="24" uuid="74c00617-cada-4bae-8aa7-61f5a5462b9e"/>
+							<textFieldExpression><![CDATA[$F{join_Expense_Person} != null ? $F{join_Expense_Person} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="312" y="0" width="56" height="24" uuid="14cafafc-27d3-4565-afe5-bab8bd6e967e"/>
+							<textFieldExpression><![CDATA[$F{dependant1_Expense_Person} != null ? $F{dependant1_Expense_Person} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="370" y="0" width="56" height="24" uuid="7d498c59-6c6c-4d7a-b786-6f3e4eff9b2a"/>
+							<textFieldExpression><![CDATA[$F{dependant2_Expense_Person} != null ? $F{dependant2_Expense_Person} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="426" y="0" width="56" height="24" uuid="e543613a-46f7-443c-89b3-c3c26e507488"/>
+							<textFieldExpression><![CDATA[$F{dependant3_Expense_Person} != null ? $F{dependant3_Expense_Person} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="484" y="0" width="56" height="24" uuid="c77daaba-4faa-4d13-ae36-450bca8b4260"/>
+							<textFieldExpression><![CDATA[$F{dependant4_Expense_Person} != null ? $F{dependant4_Expense_Person} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="540" y="0" width="56" height="24" uuid="1af6a46c-bb8f-457c-9e3f-28a66591a8cd"/>
+							<textFieldExpression><![CDATA[$F{dependant5_Expense_Person} != null ? $F{dependant5_Expense_Person} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="83" width="596" height="23" uuid="f8b3ce83-759f-4347-99a3-e784eb6053d2"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="186" height="13" uuid="de952ed6-8532-4339-93d3-0e2041ef2c4c">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="7" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Family (e.g. groceries, utilities, allowance to parents)]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="197" y="0" width="56" height="23" uuid="a51200dc-f0c4-4554-b4b4-a629afa30b74"/>
+							<textFieldExpression><![CDATA[$F{client_Expense_Family} != null ? $F{client_Expense_Family} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="254" y="0" width="56" height="23" uuid="a1e0abe1-a12f-42e9-a6df-3af232b8c86a"/>
+							<textFieldExpression><![CDATA[$F{join_Expense_Family} != null ? $F{join_Expense_Family} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="311" y="0" width="56" height="23" uuid="08434795-ba0f-45f3-a67e-52fd4d2c6dad"/>
+							<textFieldExpression><![CDATA[$F{dependant1_Expense_Family} != null ? $F{dependant1_Expense_Family} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="369" y="-1" width="56" height="23" uuid="e97ed80b-f342-4bd6-a9e2-aa5aae5527f9"/>
+							<textFieldExpression><![CDATA[$F{dependant2_Expense_Family} != null ? $F{dependant2_Expense_Family} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="425" y="0" width="56" height="23" uuid="32146aa2-7dc9-46e4-b97a-21aec769509e"/>
+							<textFieldExpression><![CDATA[$F{dependant3_Expense_Family} != null ? $F{dependant3_Expense_Family} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="484" y="0" width="56" height="23" uuid="45ad25ce-8f50-4b67-aae9-aa3e218c75d9"/>
+							<textFieldExpression><![CDATA[$F{dependant4_Expense_Family} != null ? $F{dependant4_Expense_Family} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="540" y="0" width="56" height="23" uuid="755ee8eb-6820-46cb-8823-4c42d3017752"/>
+							<textFieldExpression><![CDATA[$F{dependant5_Expense_Family} != null ? $F{dependant5_Expense_Family} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="108" width="596" height="23" uuid="2a05ddc1-bb0a-4ef6-934c-24368c564791"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="179" height="13" uuid="5bb464ea-2aa8-453c-a78a-da9c6ceea888">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Lifestyle (e.g. entertainment, vacations, luxuries)]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="198" y="0" width="55" height="24" uuid="21fdf6cc-5121-4861-acd1-9a119c25266d"/>
+							<textFieldExpression><![CDATA[$F{client_Expense_LifeStyle} != null ? $F{client_Expense_LifeStyle} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="256" y="-1" width="55" height="24" uuid="e7d076d7-964d-4980-bc15-e27d7c5de1c6"/>
+							<textFieldExpression><![CDATA[$F{join_Expense_LifeStyle} != null ? $F{join_Expense_LifeStyle} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="312" y="-1" width="55" height="24" uuid="1b914458-140a-4af3-bdef-8a28ab9ef855"/>
+							<textFieldExpression><![CDATA[$F{dependant1_Expense_LifeStyle} != null ? $F{dependant1_Expense_LifeStyle} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="369" y="-1" width="55" height="24" uuid="23dabef6-8b42-43fa-abfa-b69e788c5e81"/>
+							<textFieldExpression><![CDATA[$F{dependant2_Expense_LifeStyle} != null ? $F{dependant2_Expense_LifeStyle} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="427" y="-1" width="55" height="24" uuid="96e2d12e-0be7-4083-b0cc-42284d4c50b3"/>
+							<textFieldExpression><![CDATA[$F{dependant3_Expense_LifeStyle} != null ? $F{dependant3_Expense_LifeStyle} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="482" y="-1" width="55" height="24" uuid="72f22a75-26e0-47b8-a6bc-a673ff8749ef"/>
+							<textFieldExpression><![CDATA[$F{dependant4_Expense_LifeStyle} != null ? $F{dependant4_Expense_LifeStyle} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="540" y="0" width="55" height="24" uuid="cfa1590f-584f-4655-8bc6-7075e595bbd9"/>
+							<textFieldExpression><![CDATA[$F{dependant5_Expense_LifeStyle} != null ? $F{dependant5_Expense_LifeStyle} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="133" width="596" height="23" uuid="6404c0c5-5689-4d73-b9e0-15c4f613e8f8"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="179" height="13" uuid="7bd6ab9c-21fd-4834-aacf-2ab405fe6f6c">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Others]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="197" y="-1" width="58" height="24" uuid="3e644dc7-f2df-4295-b457-146146a31a06"/>
+							<textFieldExpression><![CDATA[$F{client_Expense_Others} != null ? $F{client_Expense_Others} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="256" y="-1" width="55" height="24" uuid="5489000e-a438-430c-a92e-7be0bc3625b3"/>
+							<textFieldExpression><![CDATA[$F{join_Expense_Others} != null ? $F{join_Expense_Others} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="313" y="-1" width="55" height="24" uuid="e6282212-7f0e-41cf-aa8e-40dc8e00d6f2"/>
+							<textFieldExpression><![CDATA[$F{dependant1_Expense_Others} != null ? $F{dependant1_Expense_Others} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="370" y="-1" width="55" height="24" uuid="4c600ce2-23f3-4dae-b3db-75a5d6d6fc33"/>
+							<textFieldExpression><![CDATA[$F{dependant2_Expense_Others} != null ? $F{dependant2_Expense_Others} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="427" y="-1" width="55" height="24" uuid="6d11bb9c-a41b-41cf-8feb-6f9a25021665"/>
+							<textFieldExpression><![CDATA[$F{dependant3_Expense_Others} != null ? $F{dependant3_Expense_Others} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="483" y="-1" width="55" height="24" uuid="bb06e1f9-43f3-470a-8809-d43bc54b6d6d"/>
+							<textFieldExpression><![CDATA[$F{dependant4_Expense_Others} != null ? $F{dependant4_Expense_Others} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="540" y="-1" width="55" height="24" uuid="9f8202e9-011e-4c19-b50c-cc2f11b5ecca"/>
+							<textFieldExpression><![CDATA[$F{dependant5_Expense_Others} != null ? $F{dependant5_Expense_Others} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement mode="Opaque" x="0" y="156" width="596" height="26" backcolor="#DFDFF9" uuid="2f0a6729-10c4-4579-a88f-244a6d953d3b"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="161" height="13" forecolor="#004FB6" uuid="49329135-3013-4953-8a6e-9166fd1a86c8">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[D. TOTAL ANNUAL EXPENSES]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="197" y="0" width="56" height="25" uuid="534deb35-b7cf-4b1b-8b15-b15a69f60657"/>
+							<textFieldExpression><![CDATA[$F{client_Expense_TotalExpense} != null ? $F{client_Expense_TotalExpense} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="256" y="0" width="56" height="25" uuid="9e1b0012-ec6b-4420-9980-e10952fc248c"/>
+							<textFieldExpression><![CDATA[$F{join_Expense_TotalExpense} != null ? $F{join_Expense_TotalExpense} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="312" y="0" width="56" height="25" uuid="d8bcc44d-51f5-4016-b828-4d2f6b9ad472"/>
+							<textFieldExpression><![CDATA[$F{dependant1_Expense_TotalExpense} != null ? $F{dependant1_Expense_TotalExpense} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="369" y="0" width="56" height="25" uuid="809ee40c-60cd-4714-870e-3a8ee836b760"/>
+							<textFieldExpression><![CDATA[$F{dependant2_Expense_TotalExpense} != null ? $F{dependant2_Expense_TotalExpense} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="426" y="0" width="56" height="25" uuid="aed44650-3316-4405-a2ae-1b079276a08c"/>
+							<textFieldExpression><![CDATA[$F{dependant3_Expense_TotalExpense} != null ? $F{dependant3_Expense_TotalExpense} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="483" y="0" width="56" height="25" uuid="67da4ca7-3650-4488-9780-dd09f361ffce"/>
+							<textFieldExpression><![CDATA[$F{dependant4_Expense_TotalExpense} != null ? $F{dependant4_Expense_TotalExpense} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="541" y="0" width="54" height="25" uuid="7c726b3e-6786-489b-b489-fa02a2b664a3"/>
+							<textFieldExpression><![CDATA[$F{dependant5_Expense_TotalExpense} != null ? $F{dependant5_Expense_TotalExpense} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement mode="Opaque" x="0" y="181" width="596" height="25" backcolor="#B6B6F0" uuid="86c6e498-b28d-4541-a07a-6c47757f08d6"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="161" height="13" forecolor="#004FB6" uuid="0f0fd700-544a-457a-b724-4b7fac5af5f3">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[NET CASH FLOW ( C – D )]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="197" y="0" width="56" height="24" uuid="8ba95b77-ea0a-4288-83f6-b1f18914823f"/>
+							<textFieldExpression><![CDATA[$F{client_Net_CashFlow} != null ? $F{client_Net_CashFlow} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="256" y="0" width="56" height="24" uuid="816235b3-866d-4cff-9141-05e01d3e89f5"/>
+							<textFieldExpression><![CDATA[$F{join_Net_CashFlow} != null ? $F{join_Net_CashFlow} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="312" y="0" width="56" height="24" uuid="eca3a61e-2903-46f3-882f-dc5b5dc864f4"/>
+							<textFieldExpression><![CDATA[$F{dependant1_Net_CashFlow} != null ? $F{dependant1_Net_CashFlow} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="368" y="1" width="56" height="24" uuid="fb0b1864-cc69-473b-b69c-ac45319066ed"/>
+							<textFieldExpression><![CDATA[$F{dependant2_Net_CashFlow} != null ? $F{dependant2_Net_CashFlow} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="426" y="0" width="56" height="24" uuid="75fe16e8-7255-44f2-8fc2-3088bb4e5ef3"/>
+							<textFieldExpression><![CDATA[$F{dependant3_Net_CashFlow} != null ? $F{dependant3_Net_CashFlow} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="484" y="0" width="56" height="24" uuid="07427038-1d0e-4833-a1d0-0d8057205ea7"/>
+							<textFieldExpression><![CDATA[$F{dependant4_Net_CashFlow} != null ? $F{dependant4_Net_CashFlow} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="540" y="0" width="56" height="24" uuid="4869b4f8-f3e0-478b-858d-e0058b38462c"/>
+							<textFieldExpression><![CDATA[$F{dependant5_Net_CashFlow} != null ? $F{dependant5_Net_CashFlow} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="197" y="0" width="1" height="206" uuid="04e9cf5b-b8cb-4f40-8ef4-5408b9e71e69">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="254" y="0" width="1" height="206" uuid="eff00d9c-cb32-4c87-abdf-5f8638bc00b0">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="311" y="0" width="1" height="206" uuid="13a4d69b-87d3-43c8-9f46-5e39e1c36b94">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="368" y="0" width="1" height="206" uuid="a810f0ae-0c8b-43df-b0ec-24cb7fc5a581">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="425" y="0" width="1" height="206" uuid="2c470dd1-c30c-4a99-bcea-88b3bcd6154c">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="482" y="0" width="1" height="206" uuid="a934c372-675f-477f-b3f2-31fb2aa30a38">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="539" y="0" width="1" height="206" uuid="66167076-863a-485b-a7f9-b299f6b0d86c">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="0" width="596" height="1" uuid="c442085f-0edd-413c-b13c-1c1253febca5">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="31" width="596" height="1" uuid="e7315701-1b25-4087-9ed0-45f3f1424b12">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="56" width="596" height="1" uuid="052fd9ae-c963-4e2f-84e9-6c6c9bbed4c8">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="81" width="596" height="1" uuid="4b898032-1b0c-4b82-9c18-d81324e0b3f7">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="106" width="596" height="1" uuid="3761a94e-c12c-44af-8c84-fa7a00e1f6eb">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="131" width="596" height="1" uuid="592fc72f-60fb-463f-b54f-e1de21b704fc">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="156" width="596" height="1" uuid="c07aaef4-5125-419b-9a66-d6771e4e9d70">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="181" width="596" height="1" uuid="6d772cf6-b7b8-401f-82c8-e9a64868db37">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+				</frame>
+				<frame>
+					<reportElement x="0" y="205" width="596" height="200" uuid="0dddcc4c-9cff-4452-9093-a13151b2a544"/>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="0" width="596" height="1" uuid="d41afcd3-e1bd-496b-b6d7-5ea56907c23b">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="25" width="596" height="1" uuid="92de78fe-9496-4dc9-bfe0-f0152ff7b13f">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="50" width="596" height="1" uuid="678e639d-3c0b-4811-a4b5-fdd7f8a8875e">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="75" width="596" height="1" uuid="70a89192-e827-434e-a4d8-08701943e179">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="100" width="596" height="1" uuid="5171ec38-acb8-43c6-b523-2681cf11d5a8">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="125" width="596" height="1" uuid="d5d51457-06ae-4c97-a2e0-c4fd4753fde6">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="150" width="596" height="1" uuid="eb06c84e-3d7b-497e-a6bc-88f40bf45beb">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="175" width="596" height="1" uuid="36a46b38-d938-487d-91de-57192ab4c45a">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="100" y="25" width="1" height="175" uuid="63e3db07-2100-4b89-8989-c672edc22e52">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<frame>
+						<reportElement x="0" y="6" width="580" height="15" uuid="8345fdf6-519d-48f1-a851-7275164c30d8"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="1" width="576" height="12" uuid="56aa1f01-178d-4f26-827a-04f2b824cf41">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="7" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Do you have any plans or are there any factors within the next 12 months that may significantly increase or decrease your net cash flow? Please specify:]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="26" width="580" height="20" uuid="8bd6e840-181b-4240-9d3a-1535c2451430"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="90" height="13" uuid="0410e109-5138-46cc-952f-561fcaf9d7d4">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Client 1]]></text>
+						</staticText>
+						<image>
+							<reportElement x="113" y="6" width="12" height="12" uuid="f4ed333b-18c0-440c-9ac4-ba309fe38004">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{client_isEffect_CashFlow}.equalsIgnoreCase( "false" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<image>
+							<reportElement x="199" y="6" width="11" height="12" uuid="6a50f0d4-bc1f-40be-8363-cab93b211437">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{client_isEffect_CashFlow}.equalsIgnoreCase( "true" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="130" y="6" width="60" height="13" uuid="61365e67-04ce-4d90-8e2d-e24dd1359ec7">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[No]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="214" y="6" width="90" height="13" uuid="0f7d2846-fe2f-4c49-b532-bfdc3754fd97">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Yes. Please specify:]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="305" y="6" width="265" height="11" uuid="db5db4e3-9a7e-4304-bc8d-e98dc282b032"/>
+							<textFieldExpression><![CDATA[$F{client_SpecificEffect_CashFlow} != null ? $F{client_SpecificEffect_CashFlow} : ""]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="51" width="580" height="20" uuid="0f8a244e-5d96-4313-b5a4-6f1b9078f8ca"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="90" height="13" uuid="bd0e5ddf-e28d-46d2-9b22-76c8c6c52598">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Client 2]]></text>
+						</staticText>
+						<image>
+							<reportElement x="113" y="6" width="12" height="12" uuid="8024b915-155a-404c-a18b-2d1d31a6e122">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{join_isEffect_CashFlow}.equalsIgnoreCase( "false" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<image>
+							<reportElement x="199" y="6" width="11" height="12" uuid="712f5f8e-34ce-40ab-b10f-7c8fe3887d7e">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{join_isEffect_CashFlow}.equalsIgnoreCase( "true" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="130" y="6" width="60" height="13" uuid="d70ce8e2-d1b4-47c5-9a87-3b49f6c33d13">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[No]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="214" y="6" width="90" height="13" uuid="62657160-63dd-468d-9f68-786214f1b25d">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Yes. Please specify:]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="305" y="6" width="265" height="11" uuid="9ce8f012-ad97-4073-b5d6-50b6dd4e720b"/>
+							<textFieldExpression><![CDATA[$F{join_SpecificEffect_CashFlow} != null ? $F{join_SpecificEffect_CashFlow} : ""]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="76" width="580" height="20" uuid="5a07f785-5210-42ee-9939-83624cba7233"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="90" height="13" uuid="7ee69dbd-9c69-40ef-a1ee-7e25b92f9492">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant 1]]></text>
+						</staticText>
+						<image>
+							<reportElement x="113" y="6" width="12" height="12" uuid="412af882-d06f-4397-a35f-08d565d537e1">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{dependant1_isEffect_CashFlow}.equalsIgnoreCase( "false" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<image>
+							<reportElement x="199" y="6" width="11" height="12" uuid="581a78b3-72d0-425e-9ad2-987c5bf3a4a9">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{dependant1_isEffect_CashFlow}.equalsIgnoreCase( "true" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="130" y="6" width="60" height="13" uuid="980dab1a-5085-4332-bad3-1a578bef1d87">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[No]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="214" y="6" width="90" height="13" uuid="5960b1f9-47c7-4b00-a848-5e4f9ed91dd7">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Yes. Please specify:]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="305" y="6" width="265" height="11" uuid="60395096-cf63-49b1-b296-21cd90c22f45"/>
+							<textFieldExpression><![CDATA[$F{dependant1_SpecificEffect_CashFlow} != null ? $F{dependant1_SpecificEffect_CashFlow} : ""]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="101" width="580" height="20" uuid="8d9e1b6f-9134-45a4-b00d-e037f6d12331"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="90" height="13" uuid="3d86febc-327f-4259-bfbd-effa44b430b8">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant 2]]></text>
+						</staticText>
+						<image>
+							<reportElement x="113" y="6" width="12" height="12" uuid="f7f47b5d-7c8d-4ca9-9e08-e5ea55516e24">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{dependant2_isEffect_CashFlow}.equalsIgnoreCase( "false" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<image>
+							<reportElement x="199" y="6" width="11" height="12" uuid="8d005dbe-0b18-4b25-ad7c-05db5ecf96c6">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{dependant2_isEffect_CashFlow}.equalsIgnoreCase( "true" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="130" y="6" width="60" height="13" uuid="940bceb4-0caf-487b-9bb3-0c4b7c0b5a11">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[No]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="214" y="6" width="90" height="13" uuid="2a72372e-d91b-43ff-b62c-ff26f6f2e71b">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Yes. Please specify:]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="305" y="6" width="265" height="11" uuid="f9d474f1-d2db-4bce-b3a8-8e0abf1756ed"/>
+							<textFieldExpression><![CDATA[$F{dependant2_SpecificEffect_CashFlow} != null ? $F{dependant2_SpecificEffect_CashFlow} : ""]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="126" width="580" height="20" uuid="79c2e831-f0b1-4856-abb4-3e9bc1ba2416"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="90" height="13" uuid="80d487c9-5943-435a-8e93-cca2890a981c">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant 3]]></text>
+						</staticText>
+						<image>
+							<reportElement x="113" y="6" width="12" height="12" uuid="7a5b775c-18da-4b39-b104-dd1bb1daafc3">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{dependant3_isEffect_CashFlow}.equalsIgnoreCase( "false" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<image>
+							<reportElement x="199" y="6" width="11" height="12" uuid="3d622f67-cd65-4923-afac-cf518942a554">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{dependant3_isEffect_CashFlow}.equalsIgnoreCase( "true" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="130" y="6" width="60" height="13" uuid="1304350b-f933-4957-ad8e-217ec41a6a7a">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[No]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="214" y="6" width="90" height="13" uuid="63afd77e-2f39-4304-9e4e-a29213f3f3f6">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Yes. Please specify:]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="305" y="6" width="265" height="11" uuid="f517e46d-ee22-4c8e-8752-92e89c07c96e"/>
+							<textFieldExpression><![CDATA[$F{dependant3_SpecificEffect_CashFlow} != null ? $F{dependant3_SpecificEffect_CashFlow} : ""]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="151" width="580" height="20" uuid="c4c38f41-582d-4049-998f-1a483a6c7a2b"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="90" height="13" uuid="30f28c4f-d53e-4f2d-bb3b-a3c0b3f47c6b">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant 4]]></text>
+						</staticText>
+						<image>
+							<reportElement x="113" y="6" width="12" height="12" uuid="ba1d6c70-d5d9-4aec-92e8-7bdc01318661">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{dependant4_isEffect_CashFlow}.equalsIgnoreCase( "false" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<image>
+							<reportElement x="199" y="6" width="11" height="12" uuid="42ede9cf-2137-415e-ad31-d1aa08df5e81">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{dependant4_isEffect_CashFlow}.equalsIgnoreCase( "true" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="130" y="6" width="60" height="13" uuid="090b6c16-3862-49d0-b187-d63afacf73bb">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[No]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="214" y="6" width="90" height="13" uuid="7b22e024-66b4-43cb-9f5c-a76009a6588f">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Yes. Please specify:]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="305" y="6" width="265" height="11" uuid="87567864-62b1-4a54-a5f8-0b5f79ea9a9a"/>
+							<textFieldExpression><![CDATA[$F{dependant4_SpecificEffect_CashFlow} != null ? $F{dependant4_SpecificEffect_CashFlow} : ""]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="176" width="580" height="20" uuid="a49097b5-7ca7-4d55-aad8-e9e38fb484de"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="4" y="6" width="90" height="13" uuid="57b8a7dc-46ad-4eff-beea-de9596d20e7b">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Dependant 5]]></text>
+						</staticText>
+						<image>
+							<reportElement x="113" y="6" width="12" height="12" uuid="7f5653f5-7252-4c9b-87b4-fe3647006118">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{dependant5_isEffect_CashFlow}.equalsIgnoreCase( "false" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<image>
+							<reportElement x="199" y="6" width="11" height="12" uuid="0f8d5cf5-69a9-434c-b1ca-133fcaf91e4d">
+								<property name="local_mesure_unitx" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{dependant5_isEffect_CashFlow}.equalsIgnoreCase( "true" )? $P{IMAGES_DIR} + "checked.png": $P{IMAGES_DIR} + "uncheck.jpg"]]></imageExpression>
+						</image>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="130" y="6" width="60" height="13" uuid="df0ae765-3346-43a2-9c99-e4b4ebb4b152">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[No]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="214" y="6" width="90" height="13" uuid="976f3b58-2436-42fd-9ec4-f25f780657cb">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Yes. Please specify:]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="305" y="6" width="265" height="11" uuid="9058afa2-76d9-48b2-b4ef-5df362937bed"/>
+							<textFieldExpression><![CDATA[$F{dependant5_SpecificEffect_CashFlow} != null ? $F{dependant5_SpecificEffect_CashFlow} : ""]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement x="0" y="0" width="587" height="30" uuid="725b6597-d5e7-41ab-9994-390f860414d0"/>
+				<image>
+					<reportElement x="0" y="0" width="587" height="30" uuid="bb340417-f8ee-486b-9655-c715588f549d">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<imageExpression><![CDATA[$P{IMAGES_DIR} +  "background_2.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="7" y="1" width="321" height="18" uuid="904d0706-717c-4298-8cac-650f8c31b927">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="true" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[STEP 3 : LET’S DETERMINE YOUR CURRENT FINANCIAL POSITION]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="7" y="15" width="512" height="10" uuid="2726d154-c51f-4006-b798-98c7eb07103a">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[For Accident & Health policy application, please complete this section for dependant(s) if the policy owner’s dependant(s)’ is/are the life insured.]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="426" height="9" forecolor="#025BAF" uuid="fc18a825-0746-4c6b-8cc7-fe0e6ec587fb"/>
+				<textElement markup="html">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<text><![CDATA[<b>Aviva Financial Advisers Pte Ltd<b>  51 Cuppage Road, #03-08/09/10, Singapore 229469 • T: +65 6827 7988 • Website: www.avivafa.com.sg ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="426" height="9" forecolor="#025BAF" uuid="eeab5904-3f4f-48ba-b9c6-20316ffbda00"/>
+				<textElement markup="html">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<text><![CDATA[Company Reg No. 200005578H]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="1" width="40" height="18" uuid="02a84e3d-7e67-417f-ac90-9462b9789aa1"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="470" y="1" width="37" height="18" uuid="e2740f95-f7a9-4e37-9be5-02041b52d750"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,54 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div class="main-container container-fluid">
+	<div class="main-content">
+		<div class="row">
+			<div class="center padding-top-20" style="display:block">
+				<a class="brand"><img th:src="@{${resourceServerPath} + 'images/logo/Great_Eastern_logo.png'}" width="200" height="100" /></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form_login col-md-offset-3 col-md-6">
+					<div class="login-container" style="min-height:220px;">
+						<div class="login-title">
+							<h4 class="header-title">
+								<i class="icon-coffee"></i>
+								<span class="login-text">Message</span>
+							</h4>
+						</div>
+						<div class="login-body" style="padding-top: 0px;" th:inline="text">
+							<div th:if="${warning != ''}"> 
+								[[${warning}]] 
+								<br/>
+								[[#{account.login.message.MSG023}]]
+								<a href="changepwd/with?username=$username" th:text="#{account.login.message.MSG024}"></a>
+								[[#{account.login.message.MSG025}]]
+								<a href="workspace" th:text="#{account.login.message.MSG026}"></a>
+								[[#{account.login.message.MSG027}]]
+							</div>
+							<div th:if="${warning == ''}">
+								[[#{account.login.message.MSG017}]]
+							</div>
+						</div>
+					</div>	
+			</div>
+		</div>
+	</div>
+</div>

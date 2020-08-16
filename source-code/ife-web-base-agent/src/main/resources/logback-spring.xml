@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <!--<include resource="org/springframework/boot/logging/logback/base.xml"/>-->
+  <!-- <property name="LOG_PATH" value="."/> -->
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>
+        %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger.%M - %msg%n
+      </pattern>
+    </encoder>
+  </appender>
+
+  <!-- USING THE APPENDER FOR COMMON LOG -->
+  <appender name="SAVE-TO-FILE"
+            class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${LOG_PATH}/log.common.log</file>
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <Pattern>
+        %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{100}.%M - %msg%n
+      </Pattern>
+    </encoder>
+
+    <!-- Comment out rolling policies to test how the remaining one works -->
+
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- rollover daily -->
+      <fileNamePattern>
+        ${LOG_PATH}/archived/log.common.%d{dd-MM-yyyy}.log.gz
+      </fileNamePattern>
+      <maxHistory>183</maxHistory>
+    </rollingPolicy>
+
+  </appender>
+  
+  <!-- USING THE APPENDER FOR IPOS LOG -->
+  <appender name="SAVE-TO-FILE-IPOS"
+            class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${LOG_PATH}/log.ipos.log</file>
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <Pattern>
+        %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{100}.%M - %msg%n
+      </Pattern>
+    </encoder>
+
+    <!-- Comment out rolling policies to test how the remaining one works -->
+
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- rollover daily -->
+      <fileNamePattern>
+        ${LOG_PATH}/archived/log.ipos.%d{dd-MM-yyyy}.log.gz
+      </fileNamePattern>
+      <maxHistory>183</maxHistory>
+    </rollingPolicy>
+
+  </appender>
+  
+  <!-- Configuration for writing log -->
+	<springProfile name="dev">
+		<root level="debug">
+			<appender-ref ref="STDOUT" />
+		</root>
+	
+		<logger name="com.csc" additivity="false" level="debug">
+			<appender-ref ref="STDOUT" />
+		</logger>
+	</springProfile>
+
+	<springProfile name="prod">
+		<root level="debug">
+			<appender-ref ref="SAVE-TO-FILE" />
+		</root>
+
+		<logger name="com.csc" additivity="false" level="debug">
+			<appender-ref ref="SAVE-TO-FILE-IPOS" />
+		</logger>
+	</springProfile>
+</configuration>

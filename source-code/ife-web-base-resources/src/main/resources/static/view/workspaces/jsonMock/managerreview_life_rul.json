@@ -1,0 +1,59 @@
+{
+  "IposDocument": {
+    "Data": {
+      "manager:Manager": {
+      	"key": ["knowYourClient"],
+        "section": "manager:Manager",
+        "uiStyle": "tab",
+        "icons": {
+          "cardIcon": {
+            "content": "fa fa-pie-chart"
+          }
+        },
+        "permission": {
+          "openable": [
+            "managerreview_openable"
+          ],
+          "editable": [
+            "managerreview_editable"
+          ],
+          "viewable": [
+            "managerreview_viewable"
+          ]
+        },
+        "manager:Label": {
+            "key": [],
+            "group": "1"
+		},
+        "manager:Option1": {
+            "key": ["option1"],
+            "group": "2"
+		},
+        "manager:Option1Remark": {
+            "key": ["option1Remark"],
+            "group": "2"
+        },
+        "manager:Option2": {
+            "key": ["option2"],
+            "group": "3"
+		 },
+          "manager:Option2Remark": {
+            "key": ["option2Remark"],
+            "group": "3"
+          },
+          "manager:Option3": {
+            "key": ["option3"],
+            "group": "4"
+          },
+          "manager:Option3Remark": {
+            "key": ["option3Remark"],
+            "group": "4"
+          },
+          "manager:SupervisorValidation": {
+          	 "key": ["supervisorValidation"],
+          	 "group": "5"
+          }
+      }
+    }
+  }
+}

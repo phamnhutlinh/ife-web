@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-11-13T13:26:05 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FFNA_Inside - Copy - Page13.12_finished_page_15.16" pageWidth="652" pageHeight="899" columnWidth="596" leftMargin="28" rightMargin="28" topMargin="28" bottomMargin="28" uuid="cd2362a5-56c7-412c-b034-5792d1e23848">
+	<property name="ireport.zoom" value="1.4641000000001068"/>
+	<property name="ireport.x" value="30"/>
+	<property name="ireport.y" value="1152"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FNA_Inside"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Text_blue_Aviva" forecolor="#004FB6" fontName="Arial" fontSize="8"/>
+	<style name="Box_Aviva" forecolor="#333333" fontName="Arial" fontSize="8">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<leftPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<bottomPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<rightPen lineWidth="0.5" lineColor="#D0D6E7"/>
+		</box>
+	</style>
+	<style name="Text_black_Aviva" forecolor="#333333" fontName="Arial" fontSize="6"/>
+	<style name="Background_title" backcolor="#EEF2FC" fontName="Arial"/>
+	<style name="Box_Aviva_Blue" fontName="Arial">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#004FB6"/>
+			<leftPen lineWidth="0.5" lineColor="#004FB6"/>
+			<bottomPen lineWidth="0.5" lineColor="#004FB6"/>
+			<rightPen lineWidth="0.5" lineColor="#004FB6"/>
+		</box>
+	</style>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hTextAlign="Center" hImageAlign="Center"/>
+	<subDataset name="Table Dataset 1" uuid="c9cb49bb-305a-4aff-9138-c023a7866d9e"/>
+	<subDataset name="New Dataset 1" uuid="8245faae-0e27-4068-be56-bfbb265a3051"/>
+	<subDataset name="Table Dataset 2" uuid="80cd41bc-36f3-4b7e-9dbf-5c0a9ce60b62"/>
+	<subDataset name="Table Dataset 3" uuid="b65a9407-6181-40a1-ad7a-508725bbbb7d"/>
+	<subDataset name="Table Dataset 4" uuid="553bb0fa-0400-4e03-91f9-f5f0f04193b9"/>
+	<parameter name="BASE_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NumberFormatter" class="java.text.NumberFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new java.text.DecimalFormat("#,###.##")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_DATETIME_FORMATTER" class="java.text.DateFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy hh:mm")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOB_FORMATTER" class="java.text.DateFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_NUMBER_FORMATTER" class="java.text.NumberFormat">
+		<defaultValueExpression><![CDATA[new java.text.DecimalFormat("#,##0.##")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGES_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/images/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_FORMAT_YEAR" class="java.text.DateFormat">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("yyyy")]]></defaultValueExpression>
+	</parameter>
+	<queryString language="jsonql">
+		<![CDATA[]]>
+	</queryString>
+	<field name="DP1_Education_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].name.value]]></fieldDescription>
+	</field>
+	<field name="DP1_Education_YearToTertiary" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].educationList[0].value.value]]></fieldDescription>
+	</field>
+	<field name="DP1_Education_YearofStuday" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].educationList[1].value.value]]></fieldDescription>
+	</field>
+	<field name="DP1_Education_InflationRate" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].educationList[2].value.value]]></fieldDescription>
+	</field>
+	<field name="DP1_Education_AnnualTuitionFees" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].educationList[3].value.value]]></fieldDescription>
+	</field>
+	<field name="DP1_Education_FutureValueofATF" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].futureTuitionFeesValue.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].name.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_YearToTertiary" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].educationList[0].value.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_YearofStuday" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].educationList[1].value.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_InflationRate" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].educationList[2].value.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_AnnualTuitionFees" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].educationList[3].value.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_FutureValueofATF" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].futureTuitionFeesValue.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].name.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_YearToTertiary" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].educationList[0].value.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_YearofStuday" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].educationList[1].value.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_InflationRate" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].educationList[2].value.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_AnnualTuitionFees" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].educationList[3].value.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_FutureValueofATF" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].futureTuitionFeesValue.value]]></fieldDescription>
+	</field>
+	<field name="DP1_Education_TotalTuitionFee" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].totalTuitionFeesValue.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_TotalTuitionFee" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].totalTuitionFeesValue.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_TotalTuitionFee" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].totalTuitionFeesValue.value]]></fieldDescription>
+	</field>
+	<field name="DP1_Education_AnnualLivingCosts" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].educationList[4].value.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_AnnualLivingCosts" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].educationList[4].value.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_AnnualLivingCosts" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].educationList[4].value.value]]></fieldDescription>
+	</field>
+	<field name="DP1_Education_I_Rate" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].educationList[5].value.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_I_Rate" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].educationList[5].value.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_I_Rate" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].educationList[5].value.value]]></fieldDescription>
+	</field>
+	<field name="DP1_Education_FutureofValue_AnnualLivingCosts" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].fetureLivingCostValue.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_FutureofValue_AnnualLivingCosts" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].fetureLivingCostValue.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_FutureofValue_AnnualLivingCosts" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].fetureLivingCostValue.value]]></fieldDescription>
+	</field>
+	<field name="DP1_Education_TotalLivingCosts" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].totalLivingCostValue.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_TotalLivingCosts" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].totalLivingCostValue.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_TotalLivingCosts" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].totalLivingCostValue.value]]></fieldDescription>
+	</field>
+	<field name="DP1_Education_TotalEducationFunding" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].totalEducationFunddingValue.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_TotalEducationFunding" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].totalEducationFunddingValue.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_TotalEducationFunding" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].totalEducationFunddingValue.value]]></fieldDescription>
+	</field>
+	<field name="DP1_Education_LessExistingResource" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].lessExistingResources.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_LessExistingResource" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].lessExistingResources.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_LessExistingResource" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].lessExistingResources.value]]></fieldDescription>
+	</field>
+	<field name="DP1_Education_NetAmountRequire" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].totalNetValue.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_NetAmountRequire" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].totalNetValue.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_NetAmountRequire" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].totalNetValue.value]]></fieldDescription>
+	</field>
+	<field name="DP1_Education_addNote" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[0].financialsGoalAnalysis.educationFundingList[0].additionalNote.value]]></fieldDescription>
+	</field>
+	<field name="DP2_Education_addNote" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[1].financialsGoalAnalysis.educationFundingList[0].additionalNote.value]]></fieldDescription>
+	</field>
+	<field name="DP3_Education_addNote" class="java.lang.String">
+		<fieldDescription><![CDATA[fnaData.fnaStandardSummaryModel.prospects.*(prospectType.value == "dependant")[2].financialsGoalAnalysis.educationFundingList[0].additionalNote.value]]></fieldDescription>
+	</field>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<detail>
+		<band height="824">
+			<staticText>
+				<reportElement style="Text_black_Aviva" x="14" y="807" width="107" height="13" uuid="4907169d-fb18-42d7-9eeb-cb1cd425cec6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ROI – Return On Investment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Text_black_Aviva" x="11" y="807" width="7" height="7" uuid="fe23e4e8-7cfc-4581-9200-94acc64cf99f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="0" y="0" width="596" height="40" uuid="7a8fe975-33de-4652-b4b2-4eaa6f12792d"/>
+				<image>
+					<reportElement x="0" y="0" width="596" height="40" uuid="39cc0cb2-2f28-424f-917b-c799be91e627">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<imageExpression><![CDATA[$P{IMAGES_DIR} +  "background_2.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="5" y="2" width="582" height="12" uuid="61f2916f-2184-44bd-9b2b-d18a4f28011a">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="true" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[STEP 5 : LET'S ANALYSE YOUR FINANCIAL GOALS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="12" width="582" height="10" uuid="99c2b815-21be-4a83-a239-6a13d770429d">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[For Accident & Health policy application, please complete this section for dependant(s) if the policy owner’s dependant(s)’ is/are the life insured.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="258" y="2" width="58" height="12" uuid="040db5b5-d000-4791-b402-86fb775d1db9">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="false" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[(continued)]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="30" width="596" height="601" uuid="8a873e3a-ab94-4a83-baaa-4d59682565e6">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#004FB6"/>
+					<leftPen lineWidth="0.0" lineColor="#004FB6"/>
+					<bottomPen lineWidth="0.0" lineColor="#004FB6"/>
+					<rightPen lineWidth="0.0" lineColor="#004FB6"/>
+				</box>
+				<frame>
+					<reportElement mode="Opaque" x="0" y="0" width="596" height="16" backcolor="#B6B6F0" uuid="d0e22f21-b11b-41be-a540-bd3d9efc4d89"/>
+					<staticText>
+						<reportElement style="Box_Aviva_Blue" mode="Opaque" x="0" y="0" width="596" height="16" forecolor="#004FB6" backcolor="#EEF2FC" uuid="81ebaa6b-11a0-4bf6-80d2-0d713bc1defc">
+							<property name="local_mesure_unitheight" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA["WEALTH ACCUMULATION GOALS"]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement style="Box_Aviva_Blue" x="0" y="32" width="596" height="509" uuid="869e079f-25c5-443a-b858-b4342d93b5dd"/>
+					<frame>
+						<reportElement x="0" y="0" width="596" height="23" uuid="3dd02a7a-5992-4eef-b698-708369394a5e"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" mode="Opaque" x="346" y="0" width="117" height="23" backcolor="#CCCCCC" uuid="e9b66d00-f0c4-40f7-bd53-d0b87558c71a">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Child 2]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" mode="Opaque" x="224" y="0" width="117" height="23" backcolor="#CCCCCC" uuid="d272fc91-64bd-4e3a-a470-d76ca7357312">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Child 1]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" mode="Opaque" x="469" y="0" width="124" height="23" backcolor="#CCCCCC" uuid="41dfa241-36ba-4d18-b78c-7a9414cd94ae">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Child 3]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="23" width="596" height="23" uuid="75edc7c7-de7e-40df-b155-94abc7f14e92"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="155" height="23" uuid="28829277-8d0c-46bf-b0d2-e145b076fcc6">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Name]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="221" y="1" width="122" height="22" uuid="0a0a6afe-9dea-48ea-a410-d90ed1e513f4"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_Name} != null ? $F{DP1_Education_Name} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="343" y="1" width="122" height="22" uuid="29fb61e0-0350-4f48-8cb5-11813de8d60d"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_Name} != null ? $F{DP2_Education_Name} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="465" y="1" width="130" height="22" uuid="f2519423-fe0b-415c-af2f-91109b90348b"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_Name} != null ? $F{DP3_Education_Name} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="46" width="596" height="23" uuid="5e0f583c-fb5e-4f6b-91e5-56613d3a5d53"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="134" height="23" uuid="dc12662a-08e2-42c6-a14a-6174d7ea3aef">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Years to Tertiary Education (n)]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="222" y="0" width="120" height="22" uuid="0e879f19-0540-4842-bc3e-8d7e95ca3cc6"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_YearToTertiary} != null ? $F{DP1_Education_YearToTertiary} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="344" y="0" width="120" height="22" uuid="95307594-aa71-493a-b8c4-fa4d7252058c"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_YearToTertiary} != null ? $F{DP2_Education_YearToTertiary} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="465" y="0" width="130" height="22" uuid="da4f564e-ccbe-451d-ad97-9da5c9ba8abd"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_YearToTertiary} != null ? $F{DP3_Education_YearToTertiary} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="69" width="596" height="23" uuid="d15404ad-e0e8-430b-93e0-15f959c9b40a"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="198" height="23" uuid="64e4f5ee-9cbb-4ade-8ca2-fc0f71913bcd">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[No. of Years of Study (n)]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="222" y="0" width="120" height="22" uuid="cde78983-784d-4d09-9fed-83d1e096f21a"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_YearofStuday} != null ? $F{DP1_Education_YearofStuday} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="344" y="0" width="120" height="22" uuid="312f81da-a415-43b1-a21a-dba1485d59fa"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_YearofStuday} != null ? $F{DP2_Education_YearofStuday} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="466" y="0" width="129" height="22" uuid="41e26f65-41d4-424f-977f-aad790324f4d"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_YearofStuday} != null ? $F{DP3_Education_YearofStuday} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="115" width="596" height="23" uuid="3fa4e7cb-44fd-4134-b0fb-bd7ca2f99d57"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="155" height="23" uuid="6e7a3ee8-e096-4cf1-894a-01210de5da37">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Annual Tuition Fees (PV)]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="222" y="1" width="120" height="22" uuid="37984720-2542-4e16-abc0-0ba97787f76b"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_AnnualTuitionFees} != null ? $F{DP1_Education_AnnualTuitionFees} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="344" y="1" width="120" height="22" uuid="90bb398a-da8d-4702-8680-f97bef53c3e5"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_AnnualTuitionFees} != null ? $F{DP2_Education_AnnualTuitionFees} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="466" y="1" width="130" height="22" uuid="7c12cfa9-79c7-4ecf-ab77-9b6a4c028eda"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_AnnualTuitionFees} != null ? $F{DP3_Education_AnnualTuitionFees} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="138" width="596" height="23" uuid="8c701364-a170-4dde-9aaa-3a52d32e9e5d"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="134" height="23" uuid="4073b311-ee52-4344-a595-87ef80471fb3">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Education Inflation Rate (in %) (i)]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="222" y="0" width="121" height="22" uuid="23217adc-0406-4ccc-a990-c367fa7b74d9"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_InflationRate} != null ? $F{DP1_Education_InflationRate} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="344" y="1" width="121" height="22" uuid="5872e2e7-11cc-4e38-af81-3211e662344c"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_InflationRate} != null ? $F{DP2_Education_InflationRate} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="466" y="1" width="129" height="22" uuid="73002966-32a5-4473-be6b-0654de06f1b0"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_InflationRate} != null ? $F{DP3_Education_InflationRate} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="161" width="596" height="23" uuid="2e706efc-937b-4db3-bf83-6a88aa9c7e60"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="198" height="23" uuid="00ad8385-920b-40a2-bd72-24cdae64089c">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Future Value of Annual Tuition Fees (FV)]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="222" y="0" width="120" height="22" uuid="c54c65e1-39a7-4d5e-9505-56bb901530ed"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_FutureValueofATF} != null ? $F{DP1_Education_FutureValueofATF} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="344" y="1" width="120" height="22" uuid="de8574e4-1489-4677-a526-0c0a7560bdc3"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_FutureValueofATF} != null ? $F{DP2_Education_FutureValueofATF} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="466" y="1" width="130" height="22" uuid="d6c97713-c041-4e3e-b0dd-564425967c32"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_FutureValueofATF} != null ? $F{DP3_Education_FutureValueofATF} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement mode="Opaque" x="0" y="184" width="596" height="23" backcolor="#DFDFF9" uuid="fbd7a6c6-af88-4569-a4c0-4daf95dc0fff"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="198" height="23" forecolor="#004FB6" uuid="6528ce97-30c0-4369-be09-c4f5af44e7af">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[A. TOTAL TUITION FEES]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="222" y="1" width="121" height="21" uuid="895275ba-af2a-4b41-a474-1529758daad1"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_TotalTuitionFee} != null ? $F{DP1_Education_TotalTuitionFee} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="344" y="1" width="121" height="21" uuid="8f65c4cb-dcb0-457d-9465-7407e2611419"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_TotalTuitionFee} != null ? $F{DP2_Education_TotalTuitionFee} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="465" y="2" width="131" height="21" uuid="bc541250-256c-48de-837d-4e2808ad9144"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_TotalTuitionFee} != null ? $F{DP3_Education_TotalTuitionFee} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="230" width="596" height="23" uuid="5d03b4d5-940f-40e9-8f74-19ba423f9462"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="134" height="23" uuid="4cebfe7d-b12b-42b7-82b2-58d4d6fd7345">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Annual Living Costs (PV)]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="222" y="1" width="121" height="21" uuid="3a3791fc-dcad-40ce-921d-e50240f23feb"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_AnnualLivingCosts} != null ? $F{DP1_Education_AnnualLivingCosts} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="344" y="1" width="121" height="21" uuid="ad9651a6-7046-4395-8cf1-83296ccfb7e2"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_AnnualLivingCosts} != null ? $F{DP2_Education_AnnualLivingCosts} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="465" y="1" width="131" height="21" uuid="3518520b-040f-4327-a805-92b3cc3232e5"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_AnnualLivingCosts} != null ? $F{DP3_Education_AnnualLivingCosts} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="253" width="596" height="23" uuid="9528edcf-f089-41f7-aee4-78600996d199"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="198" height="23" uuid="89339bde-d92d-47e1-baaa-22cdea00113a">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Inflation Rate (in %) (i)]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="222" y="0" width="120" height="22" uuid="c61d01aa-8d2c-4932-ae3e-0eb08c918722"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_I_Rate} != null ? $F{DP1_Education_I_Rate} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="344" y="0" width="120" height="22" uuid="e74a4332-a1ef-4fca-93b8-a84e36e13a53"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_I_Rate} != null ? $F{DP2_Education_I_Rate} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="466" y="0" width="130" height="22" uuid="d4046483-a89f-41cc-8ffb-c6fdfa55f9e4"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_I_Rate} != null ? $F{DP3_Education_I_Rate} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="276" width="596" height="23" uuid="6ce72e32-165f-4659-a8c2-7014f0f0cdef"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="206" height="23" uuid="6c444496-dbfd-4fca-88ae-d57ae444418e">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Future Value of Annual Living Costs (FV)]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="222" y="1" width="120" height="21" uuid="412bc636-0e0d-4fb4-b3a1-86eb4622f062"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_FutureofValue_AnnualLivingCosts} != null ? $F{DP1_Education_FutureofValue_AnnualLivingCosts} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="344" y="1" width="120" height="21" uuid="0dbe1141-fdef-44ce-9936-95ea68ce4d9e"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_FutureofValue_AnnualLivingCosts} != null ? $F{DP2_Education_FutureofValue_AnnualLivingCosts} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="466" y="1" width="130" height="21" uuid="c10eb2a9-ea3f-4c66-9285-c291b14a40d1"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_FutureofValue_AnnualLivingCosts} != null ? $F{DP3_Education_FutureofValue_AnnualLivingCosts} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement mode="Opaque" x="0" y="322" width="596" height="23" backcolor="#DFDFF9" uuid="405a976c-f40b-4978-8438-ad43a8e0fdf0"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="198" height="23" forecolor="#004FB6" uuid="ae082534-3e08-4c82-acbd-6363e7f8b7be">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[B. TOTAL LIVING COSTS]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="222" y="1" width="120" height="21" uuid="b25f0039-3e69-4c60-bed6-cf7dc399881e"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_TotalLivingCosts} != null ? $F{DP1_Education_TotalLivingCosts} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="344" y="1" width="120" height="21" uuid="e4e0b75c-2b38-432b-b6d1-f2bc799e628e"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_TotalLivingCosts} != null ? $F{DP2_Education_TotalLivingCosts} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="465" y="1" width="130" height="21" uuid="44651a7f-5d91-4c38-a66d-ba4467aa00a2"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_TotalLivingCosts} != null ? $F{DP3_Education_TotalLivingCosts} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement mode="Opaque" x="0" y="345" width="596" height="23" backcolor="#B6B6F0" uuid="01bd8807-24a4-425f-8f2f-858030177e7d"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="198" height="23" forecolor="#004FB6" uuid="84dff485-e5b1-42a3-8673-89c909d0080b">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[TOTAL EDUCATION FUNDING (A + B)]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="222" y="1" width="120" height="21" uuid="98c8a094-4433-414e-a13b-b62ef2215ea1"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_TotalEducationFunding} != null ? $F{DP1_Education_TotalEducationFunding} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="344" y="2" width="120" height="21" uuid="da83954f-bcaf-4dc3-b7a5-9ae3705f706d"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_TotalEducationFunding} != null ? $F{DP2_Education_TotalEducationFunding} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="466" y="1" width="130" height="21" uuid="714830cb-7431-4a51-9290-d85cd18287d2"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_TotalEducationFunding} != null ? $F{DP3_Education_TotalEducationFunding} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="368" width="596" height="40" uuid="5d6aa452-98b2-4ddd-8248-705a864740f8"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="198" height="23" uuid="d1334494-7177-4a78-a2cf-f5d5e52f91ce">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Less: Future Value of Existing Resources for Education]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="26" y="8" width="152" height="23" uuid="d4ed1110-89d6-47e6-89f3-42c8c32fadc4">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[(Total Assets for Education * Gross ROI  )]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="175" y="5" width="7" height="23" uuid="93ca8974-7c45-4e83-81c7-a158516588d6">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="5" isBold="false"/>
+							</textElement>
+							<text><![CDATA[1]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="222" y="1" width="121" height="39" uuid="6188a48b-73cd-4cdb-bbba-51f3326baefb"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_LessExistingResource} != null ? $F{DP1_Education_LessExistingResource} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="344" y="1" width="121" height="39" uuid="8e8a5fd9-5fe7-4477-af3a-28205537dc89"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_LessExistingResource} != null ? $F{DP2_Education_LessExistingResource} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="466" y="1" width="129" height="39" uuid="3b0218cb-8c0f-4f91-8d76-0a47ca53f274"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_LessExistingResource} != null ? $F{DP3_Education_LessExistingResource} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement mode="Opaque" x="0" y="409" width="596" height="23" backcolor="#B6B6F0" uuid="9523f680-51f3-4a90-ae16-8b9ae3100199"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="198" height="23" forecolor="#004FB6" uuid="9516c005-47dd-4ac5-a08f-22222e898286">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Net amount required]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="222" y="0" width="121" height="21" uuid="920dfa16-cd35-457e-901d-c1d961fe1fad"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_NetAmountRequire} != null ? $F{DP1_Education_NetAmountRequire} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="344" y="0" width="121" height="21" uuid="2a23fd9e-02f9-46ee-a500-812caa9e737c"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_NetAmountRequire} != null ? $F{DP2_Education_NetAmountRequire} : "N.A"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="466" y="0" width="130" height="21" uuid="86921757-1e13-477f-b263-6e399da5051b"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_NetAmountRequire} != null ? $F{DP3_Education_NetAmountRequire} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="431" width="69" height="25" uuid="cccb5df5-d49b-4cdc-8879-8830c623477d"/>
+						<staticText>
+							<reportElement style="Text_black_Aviva" x="5" y="0" width="64" height="23" uuid="ea72148a-eae2-4cdc-8699-0e83c00c9d5b">
+								<property name="local_mesure_unitheight" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Additional notes:]]></text>
+						</staticText>
+					</frame>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="221" y="0" width="1" height="432" uuid="4d152cbf-d692-4afb-bbe1-e6aaf45766a4">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="343" y="0" width="1" height="432" uuid="dacc7890-b457-4782-b61c-6892bd401720">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="465" y="0" width="1" height="432" uuid="cf567f67-9040-4c84-8f3d-68c5d5dcf5bf">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="23" width="596" height="1" uuid="e93ac565-0ed1-4ab9-ab4c-0ff97b671bf0">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="46" width="596" height="1" uuid="c26d364c-fb84-4b8c-a886-222278672bd1">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="69" width="596" height="1" uuid="8e14df7b-77ec-4df1-8d84-08be23b39683">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="92" width="596" height="1" uuid="4919369f-fa1c-4cc7-ba43-94c7c49f4e24">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="115" width="596" height="1" uuid="bbbd16a5-0432-408c-a029-c6f58bc8adbb">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="138" width="596" height="1" uuid="19b1a0e8-918f-4e88-91c2-0098f18b5d60">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="161" width="596" height="1" uuid="84088188-1007-4f1d-bd96-cafff9edce72">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="184" width="596" height="1" uuid="a3b6444b-a966-424f-9086-76288d094d81">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="207" width="596" height="1" uuid="28b07cf2-e631-46c4-a3d8-267427839773">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="230" width="596" height="1" uuid="cf55fbe1-54bf-4ef3-81e4-81846915fafc">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="253" width="596" height="1" uuid="28e81bc6-f071-481a-a24e-21fc79d6611e">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="276" width="596" height="1" uuid="ffd60c2c-08f0-4b9f-9988-b6439a321856">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="299" width="596" height="1" uuid="77cb915c-7d50-4b76-81e1-e1022bd09aff">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="322" width="596" height="1" uuid="838fe909-9cdf-4fda-b0df-5477124103a1">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="345" width="596" height="1" uuid="0bccf9f6-f6c0-480b-884f-35f185125515">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="368" width="596" height="1" uuid="1a31f4b7-8933-45e0-890c-08fa0777cffa">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="408" width="596" height="1" uuid="27ffd440-5108-437a-8df3-0ce9d6060a46">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<line>
+						<reportElement style="Box_Aviva_Blue" x="0" y="431" width="596" height="1" uuid="9e852793-4e1b-47bf-9d4f-9d822b12a7e7">
+							<property name="local_mesure_unity" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<graphicElement>
+							<pen lineWidth="0.5" lineColor="#004FB6"/>
+						</graphicElement>
+					</line>
+					<frame>
+						<reportElement x="79" y="433" width="515" height="20" uuid="9ba55a43-0004-4042-8bf2-5f0894fc3774"/>
+						<staticText>
+							<reportElement x="0" y="0" width="39" height="20" uuid="d8f0615d-b156-4b54-ac1f-2f327c035e64"/>
+							<text><![CDATA[Child 1: ]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="42" y="0" width="471" height="20" uuid="9d66bb03-c919-4cc3-ac48-7ab4c0b35fad"/>
+							<textFieldExpression><![CDATA[$F{DP1_Education_addNote} != null ? $F{DP1_Education_addNote} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="79" y="456" width="515" height="20" uuid="2c49e816-a4d3-42b3-bdb4-b2078d6aa3e5"/>
+						<staticText>
+							<reportElement x="0" y="0" width="39" height="20" uuid="c39a6d66-1e0c-4759-82d5-c96b2b1eecef"/>
+							<text><![CDATA[Child 2: ]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="42" y="0" width="471" height="20" uuid="7f69d8c4-dcad-4c48-9243-35907ce1fdcb"/>
+							<textFieldExpression><![CDATA[$F{DP2_Education_addNote} != null ? $F{DP2_Education_addNote} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="79" y="479" width="515" height="20" uuid="a4e0b945-daa2-4d0f-b817-8e6e0a54843b"/>
+						<staticText>
+							<reportElement x="0" y="0" width="39" height="20" uuid="034a929a-7622-43a7-a9bc-379e17e2c602"/>
+							<text><![CDATA[Child 3: ]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="42" y="0" width="471" height="20" uuid="d1c8540e-1350-4c8a-b9b0-b15174b161d0"/>
+							<textFieldExpression><![CDATA[$F{DP3_Education_addNote} != null ? $F{DP3_Education_addNote} : "N.A"]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+				<staticText>
+					<reportElement style="Box_Aviva_Blue" mode="Opaque" x="0" y="16" width="596" height="16" forecolor="#004FB6" backcolor="#EEF2FC" uuid="8dc43ae8-68e2-482f-9ffb-3b9a13fd3fde">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA["EDUCATION FUNDING"]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Text_black_Aviva" x="8" y="557" width="107" height="13" uuid="dc8ca66e-357f-4f9b-9e64-59d1e8c94e2a">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[ROI – Return On Investment]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Text_black_Aviva" x="5" y="557" width="7" height="7" uuid="0baa13f9-cdb7-4842-a07c-6b66e495fdf1">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[1]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="426" height="9" forecolor="#025BAF" uuid="fc18a825-0746-4c6b-8cc7-fe0e6ec587fb"/>
+				<textElement markup="html">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<text><![CDATA[<b>Aviva Financial Advisers Pte Ltd<b>  51 Cuppage Road, #03-08/09/10, Singapore 229469 • T: +65 6827 7988 • Website: www.avivafa.com.sg ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="426" height="9" forecolor="#025BAF" uuid="eeab5904-3f4f-48ba-b9c6-20316ffbda00"/>
+				<textElement markup="html">
+					<font fontName="Arial" size="5"/>
+				</textElement>
+				<text><![CDATA[Company Reg No. 200005578H]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="1" width="40" height="18" uuid="02a84e3d-7e67-417f-ac90-9462b9789aa1"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="470" y="1" width="37" height="18" uuid="e2740f95-f7a9-4e37-9be5-02041b52d750"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

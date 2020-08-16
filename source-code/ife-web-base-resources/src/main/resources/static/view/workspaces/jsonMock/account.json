@@ -1,0 +1,192 @@
+{
+  "IposDocument": {
+    "user:User": {
+      "section": "user:User",
+      "icon": "fa fa-user",
+      "key": [],
+      "permission": {
+        "openable": [
+          "account_openable"
+        ],
+        "editable": [
+          "account_editable"
+        ],
+        "viewable": [
+          "account_viewable"
+        ]
+      },
+      "user:PersonInformation": {
+        "section": "user:User",
+        "icon": "fa fa-user",
+        "key": [],
+        "user:salutation": {
+          "key": [
+            "salutation"
+          ],
+          "group": "0"
+        },
+        "user:UserName": {
+          "key": [
+            "userName"
+          ],
+          "group": "1"
+        },
+        "user:Gender": {
+          "key": [
+            "gender"
+          ],
+          "group": "1"
+        },
+        "user:FirstName": {
+          "key": [
+            "firstName"
+          ],
+          "group": "2"
+        },
+        "user:LastName": {
+          "key": [
+            "lastName"
+          ],
+          "group": "2"
+        },
+        "user:BirthDate": {
+          "key": [
+            "dateOfBirth"
+          ],
+          "group": "3"
+        },
+        "user:MaritalStatus": {
+          "key": [
+            "maritalStatus"
+          ],
+          "group": "3"
+        },
+        "user:Nationality": {
+          "key": [
+            "nationality"
+          ],
+          "group": "4"
+        },
+        "user:Occupation": {
+          "key": [
+            "occupation"
+          ],
+          "group": "4"
+        },
+        "user:IDType": {
+          "key": [
+            "idType"
+          ],
+          "group": "5"
+        },
+        "user:IDNumber": {
+          "key": [
+            "idNumber"
+          ],
+          "group": "5"
+        }
+      },
+      "user:Contacts": {
+        "key": [],
+        "section": "user:User",
+        "icon": "fa fa-phone-square",
+        "user:Addresses": {
+          "key": [
+            "addresses"
+          ],
+          "group": "3"
+        }
+      },
+      "user:Profile": {
+        "key": [
+          "insurerProfiles"
+        ],
+        "isVisible": "!isActionCreate()",
+        "icon": "fa fa-id-card-o",
+        "section": "user:User",
+        "user:InsurerProfiles": {
+          "key": [],
+          "section": "user:Profile",
+          "cssLabelFont": "section-label-1",
+          "cssIconFont": "section-icon-1",
+          "isVisible": false,
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-address-card-o"
+            }
+          },
+          "user:ExistingInsurerProfiles": {
+            "key": [
+              "insurerProfiles"
+            ],
+            "group": "1"
+          },
+          "user:NewInsurerProfile": {
+            "key": [],
+            "group": "2"
+          }
+        },
+        "user:Roles": {
+          "key": [],
+          "onOpen": "getDistinctRoles()",
+          "section": "user:Profile",
+          "cssLabelFont": "section-label-1",
+          "cssIconFont": "section-icon-1",
+          "isVisible": "aclService.hasRole('SA')",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-address-card"
+            }
+          },
+          "user:ExistingRoles": {
+            "key": [
+              "insurerProfiles"
+            ],
+            "group": "1"
+          },
+          "user:NewRole": {
+            "key": [],
+            "group": "1"
+          },
+          "user:AddNewAgentRole": {
+            "key": [
+              "insurerProfiles"
+            ],
+            "group": "2"
+          },
+          "user:AddNewPORole": {
+            "key": [
+              ""
+            ],
+            "group": "2"
+          },
+          "user:AddNewUWRole": {
+            "key": [
+              ""
+            ],
+            "group": "2"
+          }
+          
+          
+        },
+        "user:Password": {
+          "key": [],
+          "section": "user:Profile",
+          "cssLabelFont": "section-label-1",
+          "cssIconFont": "section-icon-1",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-credit-card-alt"
+            }
+          },
+          "onOpen": "submitChangePwdForm = {}",
+          "isVisible": "isActionCreate() != true",
+          "user:ChangePassword": {
+            "key": [],
+            "group": "1"
+          }
+        }
+      }
+    }
+  }
+}

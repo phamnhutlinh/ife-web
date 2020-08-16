@@ -1,0 +1,25 @@
+{
+  "IposDocument": {
+    "SA:report": {
+      "section": "SA:report",
+      "key": [],
+      "permission": {
+        "openable": [
+          "account_openable"
+        ],
+        "editable": [
+          "account_editable"
+        ],
+        "viewable": [
+          "account_viewable"
+        ]
+      },
+      "report:criteria": {
+        "key": [
+          "criteria"
+        ],
+        "group": "1"
+      }
+    }
+  }
+}

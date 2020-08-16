@@ -1,0 +1,60 @@
+{
+  "IposDocument": {
+    "Data": {
+      "transaction:Transaction": {
+        "permission": {
+          "openable": [
+            "payment_openable"
+          ],
+          "editable": [
+            "payment_editable"
+          ],
+          "viewable": [
+            "payment_viewable"
+          ]
+        },        
+        "section": "transaction:Transaction",
+        "transaction:Step1_SelectYourTransaction": {
+          "cssClass": "v3-box-5",          
+          "section": "transaction:Transaction",
+          "onOpen": "initPaymentList(undefined, 0, pageSizes[0])",
+          "transaction:ProductName": {
+          	"key": [             
+            ]
+          },
+          "transaction:Currency": {
+          	"key": [             
+            ]
+          },          
+          "transaction:DueDateFrom": {
+          	"key": [             
+            ]
+          },
+          "transaction:DueDateTo": {
+          	"key": [             
+            ]
+          },
+          "transaction:Search": {
+          	"key": [             
+            ]
+          },
+       
+          "transaction:Table1": {
+          	"key": [             
+            ]
+          },
+          "transaction:Step2_PaymentInformation": {
+            "key": [
+              ""
+          ]
+        },
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-money"
+            }
+          }
+        }
+      }
+    }
+  }
+}

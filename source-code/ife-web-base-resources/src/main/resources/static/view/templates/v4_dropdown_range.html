@@ -1,0 +1,69 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+<style>
+.dwo {
+    background: none !important;
+}
+.dwwr{
+	border: 2px solid rgb(18, 50, 116);
+    border-radius: 5px !important;
+    color: #50535a !important;
+}
+.dwv {
+    border-bottom: 2px solid #123274 !important;
+}
+.dwwol {
+    border-top: 2px solid #123274 !important;
+    border-bottom: 2px solid #123274 !important;
+}
+.dw-arr {
+    top: 2px !important;
+     border-color: transparent transparent #123274 transparent !important;
+}
+
+</style>
+<div style="height: 30px;">
+    <div id="mask-{{name}}" class="v4-dropdown-mask" ng-click="hideDowpdown()"></div>
+    <div class="v4-multi-dropdown">
+        <button id="button-{{name}}" ng-click="toggleDowpdown()" class="v4-multi-button">
+            <div style="display: flex; text-overflow: ellipsis; overflow: hidden; margin-right: 30px;">
+                <span class="v4-multi-v4-display-inline"><b>{{from}}:&nbsp;</b>{{model.Value.from}}&nbsp;&nbsp;</span>
+                <span class="v4-multi-v4-display-inline"><b>{{to}}:&nbsp;</b>{{model.Value.to}}</span>
+            </div>
+            <div>
+                <i style="color: gray; top: 5px; right: 10px;" class="fa fa-sort-desc v4-multi-v4-caret" aria-hidden="true"></i>
+            </div>
+        </button>
+        <div id="{{name}}" class="v4-dropdown-item v4-daterange-container">
+            <div style="position: relative">
+                <label class="v3-element-label">{{from}}</label>
+                <input type="text" display="bubble" ms-datepicker class="ms-calendar" ng-model="model.Value.from" />
+            </div>
+            <div style="position: relative">
+                <label class="v3-element-label">{{to}} </label>
+                <input type="text" display="bubble" ms-datepicker class="ms-calendar" ng-model="model.Value.to" />
+            </div>
+            <div class="v4-multi-v4-display-inline">
+            	<button ng-click="clearDatRangeValue()" class="v4-daterange-button">{{clear}}</button>
+            	<button ng-click="hideDowpdown()" class="v4-daterange-button">{{close}}</button>
+            </div>
+            
+        </div>
+    </div>
+</div>

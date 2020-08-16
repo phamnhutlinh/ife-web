@@ -1,0 +1,35 @@
+<!--
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+-->
+<!-- Use by materiallizeDatetime directive - hle56 -->
+<div id="materiallizeDatetime"></div>
+<div class="v4-prototype-container">
+	<div class="card col-xs-10 col-sm-10 col-md-10 col-lg-5">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 profile-title">{{'v4.workspace.text.selectWorkspaceProfile'| translate}}</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="btn-group-vertical btn-group-profile" role="group">
+				  <button ng-repeat="profile in profiles track by $index" value="{{$index}}" type="button" ng-click="submitProfile($index)" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-if="profile.role != 'PR'">
+				      <span ng-if="profile.role == 'AG' && profile.role!='PR' ">{{'AG' + ' - ' + profile.pasId + ' - ' + profile.agentName + ' - ' + profile.pasBranch}}</span>
+				      <span ng-if="profile.role == 'SA' && profile.role">{{'v4.user.role.'+ profile.role | translate}}</span>
+				      <span ng-if="profile.role == 'PO' && profile.role"> {{'v4.user.role.'+ profile.role | translate}}{{profile.customerId!= null && profile.role == 'PO' && profile.customerId!=''?' - '+profile.customerId:''}}{{profile.pasId!= null && profile.role == 'PO' && profile.pasId!=''?' - '+profile.pasId:''}}{{profile.policyName!= null && profile.role == 'PO' && profile.policyName!=''?' - '+profile.policyName:''}}</span>
+				  </button>
+				</div>
+		    </div>
+		    
+		</div>
+	</div>
+</div>

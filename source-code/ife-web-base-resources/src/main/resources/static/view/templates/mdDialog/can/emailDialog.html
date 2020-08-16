@@ -1,0 +1,21 @@
+ <md-dialog style="height:440px;width:550px;">
+              <md-dialog-title style="height:30px;"></md-dialog-title>
+	            <md-dialog-content>
+	             <div><span style="margin-left:20px;">Email to</span> <div style="margin-top:-20px;margin-left:110px;"><input type="text"  ng-model="email" style="border:1px;height:30px;border-style:solid;margin-left:20px;width:370px;"/></div></div>
+	              <div><span style="margin-left:20px;">CC to</span> <div style="margin-top:-20px;margin-left:110px;"><input type="text" ng-model="ccto" style="border:1px;height:30px;border-style:solid;margin-left:20px;width:370px;"/></div></div>
+	             <div><span style="margin-left:20px;">Subject</span> <div style="margin-top:-20px;margin-left:110px;"><input type="text" ng-model="subject" style="border:1px;height:30px;border-style:solid;margin-left:20px;width:370px;"/></div></div>
+	             <div><span style="margin-left:20px;">Attachment</span><div style="margin-top:-20px;margin-left:110px;"><span style="height:30px;margin-left:20px;width:370px;"> <a>{{attachment}}</a></span></div></div>
+	             <div><span style="margin-left:20px;">Content</span> <div style="margin-top:-20px;margin-left:110px;"> <textarea ng-model="content"  style="width:380px;height:250px;margin-left:20px;resize: none;border-color:black;" ng-keypress="keyPressed($event)"></textarea> </div></div>
+	           
+	            
+	            </md-dialog-content> 
+
+	              <md-dialog-actions>
+	                <md-button ng-click="cancelDialog()" class="md-primary">
+	            Cancel
+	                </md-button>
+	               <md-button ng-click="sendDialog()" class="md-primary">
+	                  Send 
+	                </md-button>
+	            </md-dialog-actions>
+	           </md-dialog>

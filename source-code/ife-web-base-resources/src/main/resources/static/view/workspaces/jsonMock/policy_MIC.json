@@ -1,0 +1,103 @@
+{
+  "IposDocument": {
+    "policy:Policy": {
+      "section": "policy:Policy",
+      "key": [],
+      "permission": {
+        "openable": [
+          "account_openable"
+        ],
+        "editable": [
+          "account_editable"
+        ],
+        "viewable": [
+          "account_viewable"
+        ]
+      },
+      "policy:policyInformation": {
+        "key": [
+          "chdrnum"
+        ],
+        "group": "1"
+      },
+      "policy:statcode": {
+        "key": [
+          "statcode"
+        ],
+        "group": "1"
+      },
+      "policy:ccdate": {
+        "key": [
+          "ccdate"
+        ],
+        "group": "1"
+      },
+      "policy:crdate": {
+        "key": [
+          "crdate"
+        ],
+        "group": "1"
+      },
+      "policy:fullname": {
+        "key": [
+          "fullname"
+        ],
+        "group": "2"
+      },
+      "policy:totsi": {
+        "key": [
+          "totsi"
+        ],
+        "group": "2"
+      },
+      "policy:premiumamount": {
+        "key": [
+          "extra01"
+        ],
+        "group": "3"
+      },
+      "policy:vesselname": {
+        "key": [
+          "vname"
+        ],
+        "group": "5"
+      },
+      "policy:voygeno": {
+        "key": [
+          "voyge"
+        ],
+        "group": "5"
+      },
+      "policy:cargoroute": {
+        "key": [
+          "crgoroute"
+        ],
+        "group": "5"
+      },
+      "policy:voygefrom": {
+        "key": [
+          "vsfrom"
+        ],
+        "group": "6"
+      },
+      "policy:voygeto": {
+        "key": [
+          "vsto"
+        ],
+        "group": "6"
+      },
+      "policy:surcharge": {
+        "key": [
+          "surcharge"
+        ],
+        "group": "6"
+      },      
+      "policy:insuredcargos": {
+        "key": [
+          "insuredCargos"
+        ],
+        "group": "9"
+      }
+    }
+  }
+}

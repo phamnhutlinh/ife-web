@@ -1,0 +1,11 @@
+{
+  "personInformation": {
+    "person": {
+      "addresses": {
+        "value": [],
+        "arrayDefault": null,
+        "className": "AddressModel"
+      }
+    }
+  }
+}

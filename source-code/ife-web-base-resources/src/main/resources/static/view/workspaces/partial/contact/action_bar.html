@@ -1,0 +1,51 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<md-fab-speed-dial md-direction="down" class="md-scale">
+	<md-fab-trigger class="margin-top-20-sm">
+		<md-button aria-label="menu" class="md-fab md-primary" id="trigger">
+			<i class="fa fa-bars"></i>
+		</md-button>
+	</md-fab-trigger>
+	<md-fab-actions>
+<!-- 		<md-button class="md-fab md-raised md-mini" ng-click="resetDetail()"> -->
+<!-- 			<md-tooltip md-direction="left">{{'new.v3.mynewworkspace.actionbar.label.Reset' | translate}}</md-tooltip> -->
+<!-- 			<i class="fa fa-undo"></i> -->
+<!-- 		</md-button> -->
+		<!-- 
+		<md-button class="md-fab md-raised md-mini"	ng-click="resetDetail()" id="resetDetail">
+			<md-tooltip md-direction="left">{{'new.v4.mynewworkspace.actionbar.label.DiscardChange' | translate}}</md-tooltip>
+			<i class="fa fa-minus-circle"></i>
+		</md-button>
+		 -->
+		<md-button class="md-fab md-raised md-mini" ng-click="saveContact($event, true)" id="Save" ng-disabled="moduleService.findElementInDetail(['businessStatus']).value == 'ACCEPTED'">
+			<md-tooltip md-direction="left">{{'new.v4.mynewworkspace.actionbar.label.Save' | translate}}</md-tooltip>
+			<i class="fa fa-database"></i>
+		</md-button>
+		<md-button ng-if="isVisiblePDPAButton()" ng-disabled="isDisablePdfButton() || checkPdfExist('PDPA')" class="md-fab md-raised md-mini"
+                   ng-click="print('PDPA')">
+            <md-tooltip md-direction="left">{{'new.v4.mynewworkspace.actionbar.label.ViewPDPA' | translate}}</md-tooltip>
+            <i class="fa fa-file-pdf-o"></i>
+        </md-button>		
+<!-- 		<md-button class="md-fab md-raised md-mini" ng-click="validateDetail()" id="Validate"> -->
+<!-- 			<md-tooltip md-direction="left">{{'new.v3.mynewworkspace.actionbar.label.Validate' | translate}}</md-tooltip> -->
+<!-- 			<i class="fa fa-calculator"></i> -->
+<!-- 		</md-button> -->
+	</md-fab-actions>
+</md-fab-speed-dial>

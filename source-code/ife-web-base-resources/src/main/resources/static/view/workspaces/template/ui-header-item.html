@@ -1,0 +1,46 @@
+<div class="col-xs-2 col-sm-4 col-md-4 col-lg-2 header-item" id="{{card.name}}Stage" ng-if="$eval(card.isVisible) != false"
+    ng-class="{'cursor-pointer' : viewProp.uiStyle === 'tab', 'cursor-auto' : viewProp.uiStyle !== 'tab', 'active': card.isSelected === true,'valid': (card.isViewed && card.validStatus.toLowerCase() ==='valid')}" ng-if="card.visible === true">
+	<!-- icon -->
+	<span ng-if="card.view.icons.length === 0" >
+		<div ng-if="card.icon.main != 'undefined'" class="margin-top-20-sm">
+	         <i class="fa fa-2x {{card.icon.main}}"></i>
+	     </div>
+	     
+	     <div ng-if="card.icon.main == 'undefined'">
+	         <i class="fa fa-2x fa-user"></i>
+	     </div>
+	</span>
+	
+	<span ng-if="card.view.icons.length !== 0">
+	 	 <div ng-if="card.icons.cardIcon.content != 'undefined'" class="margin-top-20-sm">
+	         <i class="fa fa-2x {{card.icons.cardIcon.content}}"></i>
+	     </div>
+	     
+	     <div ng-if="card.icons.cardIcon.content == 'undefined'">
+	         <i class="fa fa-2x fa-user"></i>
+	     </div>
+	</span>
+     
+	<!-- section name -->
+	<div class="col-xs-12 v3-auto-text-ellipsis-2">
+          <span ng-if="!card.customName" class="v4-section-header-title" title="{{'v3.mynewworkspace.portlet.label.'+ card.name | translate}}">
+           <b ng-if="productname != 'can' ">{{'v3.mynewworkspace.portlet.label.'+ card.name | translate }}</b>
+           <b ng-if="productname == 'can' ">{{'v3.mynewworkspace.portlet.label.'+ card.name+'1' | translate }}</b>
+          
+          
+          
+          
+        
+          
+          </span>
+          <span ng-if="card.customName" class="v4-section-header-title"
+                title="{{(card.customNameTranslate !== undefined ? card.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(card.customName) | translateMessage">
+                    <b>{{(card.customNameTranslate !== undefined ? card.customNameTranslate : 'v3.mynewworkspace.portlet.label.') + $eval(card.customName) | translateMessage }}</b>
+          </span>
+     </div>
+	
+	<!-- check box -->
+	<div class="circle-icon">
+          <i class=" fa fa-check"></i>
+    </div>
+</div>

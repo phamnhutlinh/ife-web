@@ -1,0 +1,1190 @@
+{
+  "client": {
+    "dependants": {
+      "childrenObject": {
+        "children": {
+          "value": [],
+          "arrayDefault": {
+            "yearsToSupport": {
+              "value": null,
+              "meta": {
+                "errorCode": null,
+                "errorDesc": null,
+                "captionCode": null,
+                "captionDesc": null,
+                "enable": "true",
+                "visible": "true",
+                "mandatory": "false",
+                "encrypt": null,
+                "encryptAlgo": null,
+                "dataGroup": null,
+                "dataType": null,
+                "dataFormat": null,
+                "dataMinValue": null,
+                "dataMaxValue": null,
+                "dataMinLength": null,
+                "dataMaxLength": null,
+                "dataSeq": null
+              }
+            },
+            "refContact": {
+              "refDocName": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "refVersion": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "full": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "birthDate": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "genderCode": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "first": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "middle": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "last": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              }
+            },
+            "age": {
+              "value": null,
+              "meta": {
+                "errorCode": null,
+                "errorDesc": null,
+                "captionCode": null,
+                "captionDesc": null,
+                "enable": "true",
+                "visible": "true",
+                "mandatory": "false",
+                "encrypt": null,
+                "encryptAlgo": null,
+                "dataGroup": null,
+                "dataType": null,
+                "dataFormat": null,
+                "dataMinValue": null,
+                "dataMaxValue": null,
+                "dataMinLength": null,
+                "dataMaxLength": null,
+                "dataSeq": null
+              }
+            },
+            "docNameTemp": {
+              "value": null,
+              "meta": {
+                "errorCode": null,
+                "errorDesc": null,
+                "captionCode": null,
+                "captionDesc": null,
+                "enable": "true",
+                "visible": "true",
+                "mandatory": "false",
+                "encrypt": null,
+                "encryptAlgo": null,
+                "dataGroup": null,
+                "dataType": null,
+                "dataFormat": null,
+                "dataMinValue": null,
+                "dataMaxValue": null,
+                "dataMinLength": null,
+                "dataMaxLength": null,
+                "dataSeq": null
+              }
+            }
+          }
+        }
+      },
+      "elderlyObject": {
+        "elderlyDependants": {
+          "value": [],
+          "arrayDefault": {
+            "yearsToSupport": {
+              "value": null,
+              "meta": {
+                "errorCode": null,
+                "errorDesc": null,
+                "captionCode": null,
+                "captionDesc": null,
+                "enable": "true",
+                "visible": "true",
+                "mandatory": "false",
+                "encrypt": null,
+                "encryptAlgo": null,
+                "dataGroup": null,
+                "dataType": null,
+                "dataFormat": null,
+                "dataMinValue": null,
+                "dataMaxValue": null,
+                "dataMinLength": null,
+                "dataMaxLength": null,
+                "dataSeq": null
+              }
+            },
+            "relationShip": {
+              "value": null,
+              "meta": {
+                "errorCode": null,
+                "errorDesc": null,
+                "captionCode": null,
+                "captionDesc": null,
+                "enable": "true",
+                "visible": "true",
+                "mandatory": "false",
+                "encrypt": null,
+                "encryptAlgo": null,
+                "dataGroup": null,
+                "dataType": null,
+                "dataFormat": null,
+                "dataMinValue": null,
+                "dataMaxValue": null,
+                "dataMinLength": null,
+                "dataMaxLength": null,
+                "dataSeq": null
+              }
+            },
+            "othersRelationShip": {
+              "value": null,
+              "meta": {
+                "errorCode": null,
+                "errorDesc": null,
+                "captionCode": null,
+                "captionDesc": null,
+                "enable": "true",
+                "visible": "true",
+                "mandatory": "false",
+                "encrypt": null,
+                "encryptAlgo": null,
+                "dataGroup": null,
+                "dataType": null,
+                "dataFormat": null,
+                "dataMinValue": null,
+                "dataMaxValue": null,
+                "dataMinLength": null,
+                "dataMaxLength": null,
+                "dataSeq": null
+              }
+            },
+            "refContact": {
+              "refDocName": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "refVersion": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "full": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "birthDate": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "genderCode": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "first": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "middle": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "last": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              }
+            },
+            "age": {
+              "value": null,
+              "meta": {
+                "errorCode": null,
+                "errorDesc": null,
+                "captionCode": null,
+                "captionDesc": null,
+                "enable": "true",
+                "visible": "true",
+                "mandatory": "false",
+                "encrypt": null,
+                "encryptAlgo": null,
+                "dataGroup": null,
+                "dataType": null,
+                "dataFormat": null,
+                "dataMinValue": null,
+                "dataMaxValue": null,
+                "dataMinLength": null,
+                "dataMaxLength": null,
+                "dataSeq": null
+              }
+            },
+            "docNameTemp": {
+              "value": null,
+              "meta": {
+                "errorCode": null,
+                "errorDesc": null,
+                "captionCode": null,
+                "captionDesc": null,
+                "enable": "true",
+                "visible": "true",
+                "mandatory": "false",
+                "encrypt": null,
+                "encryptAlgo": null,
+                "dataGroup": null,
+                "dataType": null,
+                "dataFormat": null,
+                "dataMinValue": null,
+                "dataMaxValue": null,
+                "dataMinLength": null,
+                "dataMaxLength": null,
+                "dataSeq": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "baseContact": {
+      "analysisGoal": {
+        "educationFund": {
+          "children": {
+            "value": [],
+            "arrayDefault": null,
+            "className": "ClientChild"
+          }
+        }
+      },
+      "currentPosition": {
+        "existingPlans": {
+          "existingPlans": {
+            "value": [],
+            "arrayDefault": {
+              "owner": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "company": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "true",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "policyType": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "true",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "yearOfIssue": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "true",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "premiumValue": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "premiumType": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "true",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "deathBenefit": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "criticalIllness": {
+                "meta": {
+                  "counter": "1",
+                  "defaultOccurs": "0",
+                  "minOccurs": "0",
+                  "maxOccurs": "3",
+                  "errorCode": ""
+                },
+                "value": [],
+                "arrayDefault": {
+                  "ownerName": {
+                    "value": null,
+                    "meta": {
+                      "errorCode": null,
+                      "errorDesc": null,
+                      "captionCode": null,
+                      "captionDesc": null,
+                      "enable": "true",
+                      "visible": "true",
+                      "mandatory": "false",
+                      "encrypt": null,
+                      "encryptAlgo": null,
+                      "dataGroup": null,
+                      "dataType": null,
+                      "dataFormat": null,
+                      "dataMinValue": null,
+                      "dataMaxValue": null,
+                      "dataMinLength": null,
+                      "dataMaxLength": null,
+                      "dataSeq": null
+                    }
+                  },
+                  "investmentTypeCode": {
+                    "value": null,
+                    "meta": {
+                      "errorCode": null,
+                      "errorDesc": null,
+                      "captionCode": null,
+                      "captionDesc": null,
+                      "enable": "true",
+                      "visible": "true",
+                      "mandatory": "false",
+                      "encrypt": null,
+                      "encryptAlgo": null,
+                      "dataGroup": null,
+                      "dataType": null,
+                      "dataFormat": null,
+                      "dataMinValue": null,
+                      "dataMaxValue": null,
+                      "dataMinLength": null,
+                      "dataMaxLength": null,
+                      "dataSeq": null
+                    }
+                  },
+                  "sourceOfFundCode": {
+                    "value": null,
+                    "meta": {
+                      "errorCode": null,
+                      "errorDesc": null,
+                      "captionCode": null,
+                      "captionDesc": null,
+                      "enable": "true",
+                      "visible": "true",
+                      "mandatory": "false",
+                      "encrypt": null,
+                      "encryptAlgo": null,
+                      "dataGroup": null,
+                      "dataType": null,
+                      "dataFormat": null,
+                      "dataMinValue": null,
+                      "dataMaxValue": null,
+                      "dataMinLength": null,
+                      "dataMaxLength": null,
+                      "dataSeq": null
+                    }
+                  },
+                  "investmentAmountValue": {
+                    "value": null,
+                    "meta": {
+                      "errorCode": null,
+                      "errorDesc": null,
+                      "captionCode": null,
+                      "captionDesc": null,
+                      "enable": "true",
+                      "visible": "true",
+                      "mandatory": "false",
+                      "encrypt": null,
+                      "encryptAlgo": null,
+                      "dataGroup": null,
+                      "dataType": null,
+                      "dataFormat": null,
+                      "dataMinValue": null,
+                      "dataMaxValue": null,
+                      "dataMinLength": null,
+                      "dataMaxLength": null,
+                      "dataSeq": null
+                    }
+                  }
+                }
+              },
+              "hsBenefit": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "tpd": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "jointApplicant": {
+    "baseContact": {
+      "analysisGoal": {
+        "educationFund": {
+          "children": {
+            "value": [],
+            "arrayDefault": null,
+            "className": "JointChild"
+          }
+        }
+      },
+      "currentPosition": {
+        "existingPlans": {
+          "existingPlans": {
+            "value": [],
+            "arrayDefault": {
+              "owner": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "company": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "true",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "policyType": {
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "true",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                },
+                "value": null
+              },
+              "yearOfIssue": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "true",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "premiumValue": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "premiumType": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "true",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "deathBenefit": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "criticalIllness": {
+                "meta": {
+                  "counter": "1",
+                  "defaultOccurs": "0",
+                  "minOccurs": "0",
+                  "maxOccurs": "3",
+                  "errorCode": ""
+                },
+                "value": [],
+                "arrayDefault": {
+                  "ownerName": {
+                    "value": null,
+                    "meta": {
+                      "errorCode": null,
+                      "errorDesc": null,
+                      "captionCode": null,
+                      "captionDesc": null,
+                      "enable": "true",
+                      "visible": "true",
+                      "mandatory": "false",
+                      "encrypt": null,
+                      "encryptAlgo": null,
+                      "dataGroup": null,
+                      "dataType": null,
+                      "dataFormat": null,
+                      "dataMinValue": null,
+                      "dataMaxValue": null,
+                      "dataMinLength": null,
+                      "dataMaxLength": null,
+                      "dataSeq": null
+                    }
+                  },
+                  "investmentTypeCode": {
+                    "value": null,
+                    "meta": {
+                      "errorCode": null,
+                      "errorDesc": null,
+                      "captionCode": null,
+                      "captionDesc": null,
+                      "enable": "true",
+                      "visible": "true",
+                      "mandatory": "false",
+                      "encrypt": null,
+                      "encryptAlgo": null,
+                      "dataGroup": null,
+                      "dataType": null,
+                      "dataFormat": null,
+                      "dataMinValue": null,
+                      "dataMaxValue": null,
+                      "dataMinLength": null,
+                      "dataMaxLength": null,
+                      "dataSeq": null
+                    }
+                  },
+                  "sourceOfFundCode": {
+                    "value": null,
+                    "meta": {
+                      "errorCode": null,
+                      "errorDesc": null,
+                      "captionCode": null,
+                      "captionDesc": null,
+                      "enable": "true",
+                      "visible": "true",
+                      "mandatory": "false",
+                      "encrypt": null,
+                      "encryptAlgo": null,
+                      "dataGroup": null,
+                      "dataType": null,
+                      "dataFormat": null,
+                      "dataMinValue": null,
+                      "dataMaxValue": null,
+                      "dataMinLength": null,
+                      "dataMaxLength": null,
+                      "dataSeq": null
+                    }
+                  },
+                  "investmentAmountValue": {
+                    "value": null,
+                    "meta": {
+                      "errorCode": null,
+                      "errorDesc": null,
+                      "captionCode": null,
+                      "captionDesc": null,
+                      "enable": "true",
+                      "visible": "true",
+                      "mandatory": "false",
+                      "encrypt": null,
+                      "encryptAlgo": null,
+                      "dataGroup": null,
+                      "dataType": null,
+                      "dataFormat": null,
+                      "dataMinValue": null,
+                      "dataMaxValue": null,
+                      "dataMinLength": null,
+                      "dataMaxLength": null,
+                      "dataSeq": null
+                    }
+                  }
+                }
+              },
+              "hsBenefit": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              },
+              "tpd": {
+                "value": null,
+                "meta": {
+                  "errorCode": null,
+                  "errorDesc": null,
+                  "captionCode": null,
+                  "captionDesc": null,
+                  "enable": "true",
+                  "visible": "true",
+                  "mandatory": "false",
+                  "encrypt": null,
+                  "encryptAlgo": null,
+                  "dataGroup": null,
+                  "dataType": null,
+                  "dataFormat": null,
+                  "dataMinValue": null,
+                  "dataMaxValue": null,
+                  "dataMinLength": null,
+                  "dataMaxLength": null,
+                  "dataSeq": null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

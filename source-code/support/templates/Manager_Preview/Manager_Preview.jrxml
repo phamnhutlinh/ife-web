@@ -1,0 +1,1373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-01-11T14:08:49 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Manager_Preview" pageWidth="652" pageHeight="899" whenNoDataType="NoPages" columnWidth="652" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryWithPageHeaderAndFooter="true" resourceBundle="fieldMessage" whenResourceMissingType="Empty" uuid="447fd61f-9848-487e-b893-3784ea53626f">
+	<property name="ireport.zoom" value="1.21000000000011"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="337"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Mana"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="395"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="591"/>
+	<style name="Text_blue_Aviva" forecolor="#004FB6" fontName="Arial" fontSize="8"/>
+	<style name="Box_Aviva" forecolor="#333333" fontName="Arial" fontSize="8">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<leftPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<bottomPen lineWidth="0.5" lineColor="#D0D6E7"/>
+			<rightPen lineWidth="0.5" lineColor="#D0D6E7"/>
+		</box>
+	</style>
+	<style name="Text_black_Aviva" forecolor="#333333" fontName="Arial" fontSize="6"/>
+	<style name="Background_title" backcolor="#EEF2FC" fontName="Arial"/>
+	<style name="Box_Aviva_Blue" fontName="Arial">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#004FB6"/>
+			<leftPen lineWidth="0.5" lineColor="#004FB6"/>
+			<bottomPen lineWidth="0.5" lineColor="#004FB6"/>
+			<rightPen lineWidth="0.5" lineColor="#004FB6"/>
+		</box>
+	</style>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hTextAlign="Center" hImageAlign="Center"/>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 5_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 5_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 6_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 6_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 7_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 7_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 8_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 8_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 9_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 9_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 10_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 10_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 10_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 11_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 11_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 11_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 12_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 12_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 12_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<subDataset name="validationList" whenResourceMissingType="Error" uuid="d06df26f-b819-4aee-9515-a78904f7ee5b">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Mana"/>
+		<parameter name="IMAGES_DIR" class="java.lang.String">
+			<parameterDescription><![CDATA[]]></parameterDescription>
+			<defaultValueExpression><![CDATA["/images/"]]></defaultValueExpression>
+		</parameter>
+		<queryString language="jsonql">
+			<![CDATA[]]>
+		</queryString>
+		<field name="code" class="java.lang.String">
+			<fieldDescription><![CDATA[code.value]]></fieldDescription>
+		</field>
+		<field name="value" class="java.lang.String">
+			<fieldDescription><![CDATA[value.value]]></fieldDescription>
+		</field>
+		<variable name="code1" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{code}]]></variableExpression>
+		</variable>
+		<variable name="code2" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{code}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<subDataset name="basisofApproval" whenResourceMissingType="Key" uuid="42a76e87-1753-4734-a7af-6141bf38b1aa">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Mana"/>
+		<parameter name="IMAGES_DIR" class="java.lang.String">
+			<defaultValueExpression><![CDATA["/images/"]]></defaultValueExpression>
+		</parameter>
+		<queryString language="jsonql">
+			<![CDATA[approvalList]]>
+		</queryString>
+		<field name="code" class="java.lang.String">
+			<fieldDescription><![CDATA[code.value]]></fieldDescription>
+		</field>
+		<field name="value" class="java.lang.String">
+			<fieldDescription><![CDATA[value.value]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="reasonList" uuid="f9ab4d61-6c3a-4e76-a00e-621aa9080744">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mana"/>
+		<parameter name="IMAGES_DIR" class="java.lang.String">
+			<defaultValueExpression><![CDATA["/images/"]]></defaultValueExpression>
+		</parameter>
+		<queryString language="json">
+			<![CDATA[]]>
+		</queryString>
+		<field name="code" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="code"/>
+			<fieldDescription><![CDATA[code.value]]></fieldDescription>
+		</field>
+		<field name="value" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="value"/>
+			<fieldDescription><![CDATA[value.value]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="calllogAttempt" uuid="c185c8c2-0bcc-4bf5-a4b2-569ddfd2b1ca">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mana"/>
+		<parameter name="IMAGES_DIR" class="java.lang.String">
+			<defaultValueExpression><![CDATA["/images/"]]></defaultValueExpression>
+		</parameter>
+		<queryString language="json">
+			<![CDATA[]]>
+		</queryString>
+		<field name="code" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="code"/>
+			<fieldDescription><![CDATA[code.value]]></fieldDescription>
+		</field>
+		<field name="value" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="value"/>
+			<fieldDescription><![CDATA[value.value]]></fieldDescription>
+		</field>
+		<field name="uuid" class="java.lang.String">
+			<fieldDescription><![CDATA[uuid]]></fieldDescription>
+		</field>
+		<variable name="code1" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{code}]]></variableExpression>
+		</variable>
+		<variable name="code2" class="java.lang.Integer" calculation="DistinctCount">
+			<variableExpression><![CDATA[$F{code}]]></variableExpression>
+		</variable>
+		<variable name="value1" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{value}]]></variableExpression>
+		</variable>
+		<variable name="code3" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{code}]]></variableExpression>
+		</variable>
+		<variable name="code4" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{code}]]></variableExpression>
+		</variable>
+		<variable name="uuid1" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{uuid}]]></variableExpression>
+		</variable>
+		<group name="code">
+			<groupExpression><![CDATA[$F{code}]]></groupExpression>
+		</group>
+		<group name="value">
+			<groupExpression><![CDATA[$F{value}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="BASE_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NumberFormatter" class="java.text.NumberFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new java.text.DecimalFormat("#,###.##")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_DATETIME_FORMATTER" class="java.text.DateFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy hh:mm")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOB_FORMATTER" class="java.text.DateFormat" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_NUMBER_FORMATTER" class="java.text.NumberFormat">
+		<defaultValueExpression><![CDATA[new java.text.DecimalFormat("#,##0.##")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGES_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["/images/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IPOS_FORMAT_YEAR" class="java.text.DateFormat">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("yyyy")]]></defaultValueExpression>
+	</parameter>
+	<queryString language="jsonql">
+		<![CDATA[]]>
+	</queryString>
+	<field name="isReview" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[isReviewed.value]]></fieldDescription>
+	</field>
+	<field name="isAgree" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[decisionInfo.decisionCd.value]]></fieldDescription>
+	</field>
+	<field name="carriedOut" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[carriedOut.value]]></fieldDescription>
+	</field>
+	<field name="isDocumented" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[isDocumented.value]]></fieldDescription>
+	</field>
+	<field name="sureName" class="java.lang.String">
+		<fieldDescription><![CDATA[client.person.basic.name.first.value]]></fieldDescription>
+	</field>
+	<field name="givenName" class="java.lang.String">
+		<fieldDescription><![CDATA[client.person.basic.name.full.value]]></fieldDescription>
+	</field>
+	<field name="NRIC" class="java.lang.String">
+		<fieldDescription><![CDATA[client.person.basic.idList[0].value.value]]></fieldDescription>
+	</field>
+	<field name="modeOfContact" class="java.lang.String">
+		<fieldDescription><![CDATA[client.modeOfContact.value]]></fieldDescription>
+	</field>
+	<field name="ContactNo" class="java.lang.String">
+		<fieldDescription><![CDATA[client.contactNo.value]]></fieldDescription>
+	</field>
+	<field name="language" class="java.lang.String">
+		<fieldDescription><![CDATA[client.languageToCallback.value]]></fieldDescription>
+	</field>
+	<field name="otherLanguage" class="java.lang.String">
+		<fieldDescription><![CDATA[client.languageToCallback.value]]></fieldDescription>
+	</field>
+	<field name="isContactable" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[client.isContactable.value]]></fieldDescription>
+	</field>
+	<field name="reason" class="java.lang.String">
+		<fieldDescription><![CDATA[clientCallBack.clientsDetail.reason.value]]></fieldDescription>
+	</field>
+	<field name="basisForCallBack" class="java.lang.String">
+		<fieldDescription><![CDATA[callBackTypeCd.value]]></fieldDescription>
+	</field>
+	<field name="representativeName" class="java.lang.String">
+		<fieldDescription><![CDATA[representativeName.value]]></fieldDescription>
+	</field>
+	<field name="representativeCd" class="java.lang.String">
+		<fieldDescription><![CDATA[representativeCd.value]]></fieldDescription>
+	</field>
+	<field name="representativeNo" class="java.lang.String">
+		<fieldDescription><![CDATA[representativeNo.value]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="642">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement x="28" y="28" width="596" height="612" uuid="5cd42f15-b467-4ec1-bdf9-8b9012895214">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="596" height="20" uuid="8e3fb2db-917d-4dac-93a7-fe625fcb7a8d"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[SALES MANAGER'S ENDORSEMENT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="31" y="24" width="533" height="30" uuid="3ce554fb-71e7-48f7-98f9-1db353f77a7d"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[I have reviewed the Client's information disclosed in this Personal Finacial Record which relates to the Client's priorities and objectives, investment profile, cash flow and budget, assets and liabilities, insurance portfolio, CKA outcome and the Client's acknowledgment.]]></text>
+				</staticText>
+				<frame>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="3" y="56" width="577" height="70" uuid="4533e658-adcf-4731-821d-f8d529f3004e"/>
+					<componentElement>
+						<reportElement stretchType="ElementGroupHeight" x="28" y="30" width="534" height="30" uuid="1cc302bf-eaa4-48db-a882-89d10713c3ed"/>
+						<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical" ignoreWidth="true">
+							<datasetRun subDataset="validationList" uuid="de38fcf3-906a-430f-8e2e-a8a2b2ec50b5">
+								<datasetParameter name="REPORT_RESOURCE_BUNDLE">
+									<datasetParameterExpression><![CDATA[$P{REPORT_RESOURCE_BUNDLE}]]></datasetParameterExpression>
+								</datasetParameter>
+								<datasetParameter name="IMAGES_DIR">
+									<datasetParameterExpression><![CDATA[$P{IMAGES_DIR}]]></datasetParameterExpression>
+								</datasetParameter>
+								<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonQLDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("checkList")]]></dataSourceExpression>
+							</datasetRun>
+							<jr:listContents height="30" width="534">
+								<textField>
+									<reportElement stretchType="ElementGroupHeight" x="30" y="0" width="299" height="30" uuid="4521c48a-5379-4f5a-a881-5b23aebaa5da"/>
+									<box padding="2">
+										<pen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Left" verticalAlignment="Top">
+										<font size="9"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{code}!=null? str("new.v3.mynewworkspace.prospect.label.t12_1_H2_Q1." +$F{code}):  " "]]></textFieldExpression>
+								</textField>
+								<textField>
+									<reportElement x="0" y="0" width="30" height="30" uuid="3438c173-0357-4dbf-9a19-ecd028532790"/>
+									<box>
+										<pen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[$V{code2}]]></textFieldExpression>
+								</textField>
+								<rectangle>
+									<reportElement x="329" y="0" width="70" height="30" backcolor="#FFFFFF" uuid="a64a4033-1ce0-410f-a400-5803a1eecca6"/>
+									<graphicElement>
+										<pen lineWidth="0.5"/>
+									</graphicElement>
+								</rectangle>
+								<rectangle>
+									<reportElement x="399" y="0" width="70" height="30" backcolor="#FFFFFF" uuid="2384cbd4-70a6-4533-b5b7-0a2a38220623"/>
+									<graphicElement>
+										<pen lineWidth="0.5"/>
+									</graphicElement>
+								</rectangle>
+								<rectangle>
+									<reportElement x="469" y="0" width="65" height="30" backcolor="#FFFFFF" uuid="043e4b17-2798-44c9-b7c7-5cc883a1fba4"/>
+									<graphicElement>
+										<pen lineWidth="0.5"/>
+									</graphicElement>
+								</rectangle>
+								<image scaleImage="FillFrame">
+									<reportElement x="420" y="5" width="20" height="20" uuid="fc47fa3a-4095-4cee-8f5e-e52dc5316502">
+										<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+									</reportElement>
+									<imageExpression><![CDATA[($F{value} != null && $F{value}.equals("Y"))? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+								</image>
+								<image scaleImage="FillFrame">
+									<reportElement mode="Opaque" x="490" y="5" width="20" height="20" forecolor="#000000" uuid="887e90b5-149d-4249-b5a6-f9aaae284b12">
+										<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+									</reportElement>
+									<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+										<pen lineWidth="0.0"/>
+									</box>
+									<imageExpression><![CDATA[($F{value} != null && $F{value}.equals("N"))? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+								</image>
+								<image scaleImage="FillFrame">
+									<reportElement x="354" y="5" width="20" height="20" uuid="2ee02678-6d56-4ef3-9f17-bdb68806fe08">
+										<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+									</reportElement>
+									<imageExpression><![CDATA[($F{value}!=null && $F{value}.equals( "NA"))? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+								</image>
+							</jr:listContents>
+						</jr:list>
+					</componentElement>
+					<rectangle>
+						<reportElement x="28" y="10" width="30" height="21" uuid="6a4cc72e-0dcf-4d27-8f5c-c6d9fa80a600"/>
+					</rectangle>
+					<rectangle>
+						<reportElement x="58" y="10" width="299" height="21" uuid="c8ad8aa0-0c7e-4191-bb60-9062cf2041a5"/>
+					</rectangle>
+					<rectangle>
+						<reportElement x="357" y="10" width="70" height="21" uuid="ba7605ba-0e28-44cb-96f0-ff2c436b552f"/>
+					</rectangle>
+					<rectangle>
+						<reportElement x="427" y="10" width="70" height="21" uuid="4e4b5236-864c-4d0f-b738-c2f128b31952"/>
+					</rectangle>
+					<rectangle>
+						<reportElement x="497" y="10" width="65" height="21" uuid="d31527cc-b69e-4d37-b120-9de8bf395e9a"/>
+					</rectangle>
+					<staticText>
+						<reportElement x="28" y="11" width="29" height="19" uuid="6155baf4-a5bd-4319-9965-a50c1fed462e"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle"/>
+						<text><![CDATA[Sno.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="59" y="11" width="300" height="20" uuid="adf92f78-fb60-4fda-803a-1a703cd90059"/>
+						<textElement verticalAlignment="Middle"/>
+						<text><![CDATA[  Validation Checklist]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="358" y="10" width="69" height="21" uuid="58fdc708-4d78-4fa7-865d-cd9b70b7d4e4"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle"/>
+						<text><![CDATA[NA]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="428" y="10" width="69" height="20" uuid="5f763bb4-5bfb-4890-9d3f-78971618ba37"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle"/>
+						<text><![CDATA[Yes]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="498" y="10" width="63" height="20" uuid="db6c2dbc-df10-4205-af39-9cb977f98a1c"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle"/>
+						<text><![CDATA[No]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="2" y="128" width="578" height="471" uuid="e2315c85-c523-4522-88d8-16f8cd18defc"/>
+					<staticText>
+						<reportElement x="112" y="0" width="451" height="19" uuid="5f23e2d7-c0c0-4d59-9c26-0315ed529d35"/>
+						<textElement verticalAlignment="Middle"/>
+						<text><![CDATA[disagree with the representative's needs analysis recommendation(s)]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="30" y="20" width="532" height="18" uuid="416b4dcc-531d-482e-b52d-1cd671bd2166"/>
+						<textElement verticalAlignment="Middle"/>
+						<text><![CDATA[(If you disagree, please indicate the reasons below and advise on the follow-up action to be taken, where applicable.)]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="30" y="40" width="532" height="18" uuid="ec05e8c7-8702-43b3-bad0-451a4b1c7211"/>
+						<textElement verticalAlignment="Middle"/>
+						<text><![CDATA[Reason(s) and Follow-up Action:]]></text>
+					</staticText>
+					<image>
+						<reportElement x="93" y="5" width="11" height="11" uuid="e0264bf0-a5f1-4a04-a32a-e13c0b66bec7">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						</reportElement>
+						<imageExpression><![CDATA[$F{isAgree}!=null?($F{isAgree} == false? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"):$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+					</image>
+					<image>
+						<reportElement x="43" y="4" width="11" height="11" uuid="67450b6a-0c14-4fe1-a386-7a6c8c59f8f9">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						</reportElement>
+						<imageExpression><![CDATA[$F{isAgree}!=null?($F{isAgree} == true? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"):$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+					</image>
+					<staticText>
+						<reportElement x="30" y="0" width="10" height="19" uuid="0c67b87a-dd90-459b-825a-94612e3ee9fa"/>
+						<textElement verticalAlignment="Middle"/>
+						<text><![CDATA[I]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="58" y="0" width="31" height="19" uuid="db38dbea-9510-45ed-a94f-8cd465dd42be"/>
+						<textElement verticalAlignment="Middle"/>
+						<text><![CDATA[agree]]></text>
+					</staticText>
+					<frame>
+						<reportElement positionType="Float" x="0" y="60" width="578" height="48" isPrintInFirstWholeBand="true" uuid="905a35e9-1b3a-487b-8d9d-f7fa47ef392c"/>
+						<componentElement>
+							<reportElement x="31" y="4" width="533" height="24" uuid="ef813be0-61ac-4f88-9166-47771537f758"/>
+							<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+								<datasetRun subDataset="reasonList" uuid="aa5e36c3-91c2-4af6-93dd-df5b5296f30d">
+									<datasetParameter name="REPORT_DATA_SOURCE">
+										<datasetParameterExpression><![CDATA[$P{REPORT_DATA_SOURCE}]]></datasetParameterExpression>
+									</datasetParameter>
+									<datasetParameter name="IMAGES_DIR">
+										<datasetParameterExpression><![CDATA[$P{IMAGES_DIR}]]></datasetParameterExpression>
+									</datasetParameter>
+									<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonQLDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("decisionInfo.reasonList")]]></dataSourceExpression>
+								</datasetRun>
+								<jr:listContents height="24" width="533">
+									<rectangle>
+										<reportElement x="0" y="0" width="532" height="20" uuid="835c46cb-5b59-45c0-b116-02615d1c8bc6"/>
+									</rectangle>
+									<textField>
+										<reportElement x="10" y="0" width="522" height="20" uuid="80a66cf3-f82a-435c-8779-ec8245dd6936"/>
+										<textElement verticalAlignment="Middle"/>
+										<textFieldExpression><![CDATA[$F{value}!=null?$F{value}:""]]></textFieldExpression>
+									</textField>
+								</jr:listContents>
+							</jr:list>
+						</componentElement>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" x="16" y="108" width="562" height="351" uuid="06ee53bb-1517-4d1a-aeb1-0b8836a62ea5"/>
+						<staticText>
+							<reportElement x="13" y="10" width="532" height="18" uuid="9673115d-ee46-4153-b4c7-c24bd7f6c6a3"/>
+							<textElement verticalAlignment="Middle"/>
+							<text><![CDATA[I carried out Joint field work with the representative.]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="13" y="30" width="532" height="28" uuid="3ad00177-b17c-42fb-be0d-6dc089129cfc"/>
+							<textElement verticalAlignment="Middle"/>
+							<text><![CDATA[Where Selected Client/Clients of Selected Representative is concerned, I have performed the client call-back and document in the Client call-back form.]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="13" y="69" width="136" height="18" uuid="278a0d36-7e90-4916-aaa4-89bc7be7e037"/>
+							<textElement verticalAlignment="Middle"/>
+							<text><![CDATA[Name of Sales Manager:]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="306" y="69" width="136" height="18" uuid="2d67891d-a21c-4743-9b1c-5433cba58ef4"/>
+							<textElement verticalAlignment="Middle"/>
+							<text><![CDATA[Name of Sales Manager:]]></text>
+						</staticText>
+						<rectangle>
+							<reportElement x="306" y="94" width="239" height="19" uuid="700d694f-877d-4b17-b816-f345f5447952"/>
+						</rectangle>
+						<rectangle>
+							<reportElement x="13" y="94" width="239" height="19" uuid="96fee235-e183-49bf-a8b3-ecdc64175322"/>
+						</rectangle>
+						<staticText>
+							<reportElement x="13" y="116" width="136" height="18" uuid="07f7d67b-b5b1-4a3c-bd06-1e62b3b21c88"/>
+							<textElement verticalAlignment="Middle"/>
+							<text><![CDATA[Signature of Sales Manager:]]></text>
+						</staticText>
+						<rectangle>
+							<reportElement x="306" y="140" width="239" height="19" uuid="c33b228c-1dea-421b-b3be-1e5f1857e0f6"/>
+						</rectangle>
+						<staticText>
+							<reportElement x="306" y="116" width="136" height="18" uuid="ff9c8078-beca-47c3-ba97-3458113d66ff"/>
+							<textElement verticalAlignment="Middle"/>
+							<text><![CDATA[Date (DD/MM/YYY):]]></text>
+						</staticText>
+						<rectangle>
+							<reportElement x="13" y="140" width="275" height="99" uuid="2dc52fa4-f237-45e6-a903-0b77a4681ff1"/>
+						</rectangle>
+						<staticText>
+							<reportElement x="13" y="250" width="533" height="18" uuid="9ca28c95-30d4-451f-97df-d76b151edd71"/>
+							<textElement verticalAlignment="Middle"/>
+							<text><![CDATA[1 "Selected Client" mean any client who meets any two of the following criteria:]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="12" y="269" width="533" height="38" uuid="7a560ea8-cf9e-4482-9c16-d501ea5f15e2"/>
+							<textElement verticalAlignment="Top"/>
+							<text><![CDATA[(a)      is 62 years of age or older;
+(b)      is not proficient in spoken or written English;
+(c)      has below GCE 'O' level or 'N' level certifications, or equivalent academic qualifications.]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="13" y="320" width="533" height="28" uuid="df491d27-7f9c-4fdb-bb6c-dcdc7417eabe"/>
+							<textElement verticalAlignment="Middle"/>
+							<text><![CDATA[2 "Selected Representative" means a representative who has been assigned a BSC grade B or lower under the BSC framwork consecutively for two calendar quarter immediately preceding the measurement quarter.]]></text>
+						</staticText>
+						<image>
+							<reportElement x="-1" y="14" width="11" height="11" uuid="a8fa3d7c-8ada-4901-91f1-e88745d397cd">
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{carriedOut}!=null?($F{carriedOut} == true? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"):$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+						</image>
+						<image>
+							<reportElement x="-1" y="30" width="11" height="11" uuid="5ad2e9da-9f71-4255-b142-1d286844b273">
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							</reportElement>
+							<imageExpression><![CDATA[$F{isDocumented}!=null?($F{isDocumented}== true? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"):$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+						</image>
+					</frame>
+				</frame>
+				<image>
+					<reportElement x="13" y="31" width="18" height="11" uuid="3773c4d4-30a5-4bca-993d-29149bae0056">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[$F{isReview}!=null?($F{isReview} == true? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"):$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+		<band height="661">
+			<frame>
+				<reportElement x="29" y="21" width="596" height="630" uuid="95247be0-0d7d-41d9-b1a5-c67430f63635"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="596" height="23" uuid="aea83df3-f424-46da-baab-bf2214baf783"/>
+					<box>
+						<pen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[BASIC FOR CALL-BACK]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="31" y="31" width="275" height="18" uuid="c46ecd69-c098-4365-9e31-334fe59afc54"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Selected Client]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="325" y="31" width="238" height="18" uuid="f2f88d03-2f57-430a-a4ce-533df49fc68b"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Client from a Selected AFA Representative]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="53" width="596" height="23" uuid="dd05968d-454c-4059-a859-b36c47cab6e1"/>
+					<box>
+						<pen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[CLIENT'S DETAILS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="31" y="80" width="275" height="18" uuid="e0021729-7c10-440e-82bb-eb5e217330ee"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Selected Client: (please underline surname)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="324" y="80" width="239" height="18" uuid="12658764-1101-46de-bea9-62dd290b9be3"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[NRIC / Passport Number:]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="31" y="104" width="276" height="24" uuid="7ee9bc36-7404-4099-aa7c-417c49d1670c"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="324" y="104" width="240" height="23" uuid="0fce00c3-46bc-4dc6-a6c6-3bc7ab9d7e1e"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="31" y="140" width="275" height="18" uuid="f2f04148-2040-4843-908b-5efc6219f3c0"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Mode of Contact:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="54" y="162" width="59" height="18" uuid="b9f14882-11bb-4c07-a27b-9c54ee62049d"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Face-to-face]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="139" y="162" width="49" height="18" uuid="7d2cb089-446f-40d0-a632-b1cef60bd734"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Telephone]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="200" y="162" width="140" height="18" uuid="b348c9bf-7e7f-477b-94a0-05fdb69e75aa">
+						<printWhenExpression><![CDATA[$F{modeOfContact}.equals("TEL")]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Please specify contact number:]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="350" y="161" width="213" height="23" uuid="dbdc4c76-b187-4aaf-a266-fa3320a9d226">
+						<printWhenExpression><![CDATA[$F{modeOfContact}.equals("TEL")]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="31" y="184" width="275" height="18" uuid="fbf9e2f8-d54c-490d-b4ed-f9f484761646"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Language used during the client call-back:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="55" y="204" width="35" height="18" uuid="1c01adbd-6468-4bba-adde-1bfdd7205046"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[English]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="117" y="204" width="40" height="18" uuid="085e8b0d-39b0-4974-8c9d-efd251b6000c"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Chinese]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="183" y="204" width="29" height="18" uuid="0c62f319-a5b0-4f14-b8ff-4425faa1e1ab"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Malay]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="237" y="204" width="110" height="18" uuid="0907218c-899e-4c59-8aac-cd4aa5bea9cf">
+						<printWhenExpression><![CDATA[$F{language}.equals("OTHERS")]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Others: (Please specify)]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="350" y="204" width="213" height="23" uuid="25d1529e-f733-4eeb-9969-479c503f4eed">
+						<printWhenExpression><![CDATA[$F{language}.equals("OTHERS")]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="30" y="223" width="275" height="18" uuid="d724c867-2830-41b2-9a24-159d7ef167ea"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Log of Calls Attempt:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="39" y="108" width="265" height="16" uuid="7a79c566-875d-4271-98dc-9d2a513b8354"/>
+					<textFieldExpression><![CDATA[($F{givenName}!=null? $F{givenName}: "") + " " + ($F{sureName}!=null?$F{sureName}:"")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="329" y="108" width="232" height="15" uuid="9476fa15-51a8-476d-bea7-3e218a93b372"/>
+					<textFieldExpression><![CDATA[$F{NRIC}!=null?$F{NRIC}:""]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="32" y="165" width="18" height="15" uuid="9a4cc371-e88e-4f30-9a8e-c6312535b4a5"/>
+					<imageExpression><![CDATA[$F{modeOfContact} != null?($F{modeOfContact}.equals("FTF")? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"):$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+				</image>
+				<image>
+					<reportElement x="118" y="165" width="18" height="15" uuid="d99e2bdc-c0a4-4874-b5ef-c493302153c7"/>
+					<imageExpression><![CDATA[$F{modeOfContact}!=null?($F{modeOfContact}.equals("TEL")? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"):$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement x="355" y="165" width="203" height="15" uuid="b65794d2-bd09-4f5c-b33a-c8182ec1553b">
+						<printWhenExpression><![CDATA[$F{modeOfContact}.equals("TEL")]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{ContactNo}!=null?$F{ContactNo}:""]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="32" y="206" width="18" height="15" uuid="b33e406c-0309-4466-833c-6636d4180243"/>
+					<imageExpression><![CDATA[$F{language}!=null?($F{language}.equals( "ENGLISH")? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"):$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+				</image>
+				<image>
+					<reportElement x="95" y="206" width="18" height="15" uuid="9c736e08-83ef-414c-9a07-b572a260d44f"/>
+					<imageExpression><![CDATA[$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+				</image>
+				<image>
+					<reportElement x="163" y="206" width="18" height="15" uuid="30384bf1-786a-4d20-a9fc-c92b8008f3c4"/>
+					<imageExpression><![CDATA[$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+				</image>
+				<image>
+					<reportElement x="217" y="206" width="18" height="15" uuid="d8f125c6-a64d-41d2-9b85-f79d7575741d"/>
+					<imageExpression><![CDATA[$F{language}!=null?($F{language} .equals("OTHERS")? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"):$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement x="355" y="208" width="203" height="15" uuid="6b6cc8f4-3dac-4e6f-b515-4c2747fe7800">
+						<printWhenExpression><![CDATA[$F{language}.equals("OTHERS")]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{otherLanguage}!=null?$F{otherLanguage}:""]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="13" y="35" width="18" height="11" uuid="09b210d5-fc4d-43d5-b39f-d3e10b4eafb5">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[$F{basisForCallBack} != null?($F{basisForCallBack}.equals("SS")? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"):$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+				</image>
+				<image>
+					<reportElement x="305" y="35" width="18" height="11" uuid="f6b723e1-763f-4d1d-8efd-343658e23b51">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[$F{basisForCallBack}!=null?($F{basisForCallBack}.equals("SAR")? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"):$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+				</image>
+				<frame>
+					<reportElement positionType="Float" x="-1" y="241" width="596" height="20" uuid="f83f5f55-8fab-4aa7-9e15-f34575fad50d"/>
+					<componentElement>
+						<reportElement positionType="Float" x="32" y="-2" width="180" height="60" uuid="8968a7f3-cfc2-4610-9e67-184e89e7914b">
+							<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+							<property name="com.jaspersoft.studio.unit.CONTENTS.width" value="pixel"/>
+						</reportElement>
+						<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Horizontal" ignoreWidth="true">
+							<datasetRun subDataset="calllogAttempt" uuid="1ba028e6-7a31-4b8e-af5a-64562de5e61c">
+								<datasetParameter name="REPORT_DATA_SOURCE">
+									<datasetParameterExpression><![CDATA[$P{REPORT_DATA_SOURCE}]]></datasetParameterExpression>
+								</datasetParameter>
+								<datasetParameter name="IMAGES_DIR">
+									<datasetParameterExpression><![CDATA[$P{IMAGES_DIR}]]></datasetParameterExpression>
+								</datasetParameter>
+								<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonQLDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("client.callHistory")]]></dataSourceExpression>
+							</datasetRun>
+							<jr:listContents height="60" width="180">
+								<textField>
+									<reportElement x="0" y="40" width="180" height="20" uuid="8fccfe1a-42ce-4d27-b62a-42590b98f367"/>
+									<box leftPadding="10">
+										<pen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[$F{value}!=null?$F{value}:""]]></textFieldExpression>
+								</textField>
+								<textField>
+									<reportElement x="0" y="0" width="180" height="20" uuid="a9b2f4e8-7c0b-44db-84e2-fd28b79a1b88"/>
+									<box leftPadding="10">
+										<pen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[($V{uuid1}==1?"1st":($V{uuid1}==2?"2nd":($V{uuid1}==3?"3rd":""))) + " Attempt"]]></textFieldExpression>
+								</textField>
+								<textField>
+									<reportElement x="0" y="20" width="180" height="20" uuid="97323046-cc33-4b6d-90a3-67d46b60b8b3"/>
+									<box leftPadding="10">
+										<pen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[$F{code}!=null?$F{code}: ""]]></textFieldExpression>
+								</textField>
+							</jr:listContents>
+						</jr:list>
+					</componentElement>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="1" y="275" width="595" height="355" uuid="6f0f7719-2d51-4f77-ab88-9aac27a7be62"/>
+					<staticText>
+						<reportElement x="30" y="-1" width="126" height="18" uuid="cdd668ed-fd31-47ee-a7f2-b1a942b47328"/>
+						<textElement verticalAlignment="Middle">
+							<font isBold="true"/>
+						</textElement>
+						<text><![CDATA[Is the client contactable?]]></text>
+					</staticText>
+					<image>
+						<reportElement x="164" y="1" width="18" height="15" uuid="cff43905-b735-4fff-85a7-c8ec8af676de"/>
+						<imageExpression><![CDATA[$F{isContactable}!=null?($F{isContactable}==true? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"):$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+					</image>
+					<staticText>
+						<reportElement x="184" y="-1" width="19" height="18" uuid="bd87132c-9d7d-4367-ab24-e15ee4601125"/>
+						<textElement verticalAlignment="Middle">
+							<font isBold="true"/>
+						</textElement>
+						<text><![CDATA[Yes]]></text>
+					</staticText>
+					<image>
+						<reportElement x="207" y="1" width="18" height="15" uuid="e6285bc7-ba07-4338-ad78-45e5acc172a1"/>
+						<imageExpression><![CDATA[$F{isContactable}!=null?($F{isContactable}== false? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"):$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+					</image>
+					<staticText>
+						<reportElement x="224" y="-1" width="19" height="18" uuid="92857960-695a-4421-ade6-e608f3b84867"/>
+						<textElement verticalAlignment="Middle">
+							<font isBold="true"/>
+						</textElement>
+						<text><![CDATA[No]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="249" y="-1" width="140" height="18" uuid="253c2cbb-5404-4fea-bcf1-1f8dea11d635">
+							<printWhenExpression><![CDATA[$F{isContactable}==false]]></printWhenExpression>
+						</reportElement>
+						<textElement verticalAlignment="Middle">
+							<font isBold="false"/>
+						</textElement>
+						<text><![CDATA[If "No", please provide reasons:]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="406" y="3" width="152" height="16" uuid="8ce5b4b5-c6c1-417c-8b4a-609fbd3be322">
+							<printWhenExpression><![CDATA[$F{isContactable}==false]]></printWhenExpression>
+						</reportElement>
+						<textFieldExpression><![CDATA[$F{reason}!=null?$F{reason}:""]]></textFieldExpression>
+					</textField>
+					<rectangle>
+						<reportElement x="400" y="-1" width="163" height="23" uuid="bf44b5f7-7453-46e8-ba35-d7c684b57a85">
+							<printWhenExpression><![CDATA[$F{isContactable}==false]]></printWhenExpression>
+						</reportElement>
+					</rectangle>
+					<staticText>
+						<reportElement x="-1" y="29" width="596" height="23" uuid="50938b79-368b-4b34-b26e-fab2dcc6d3c0"/>
+						<box>
+							<pen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font isBold="true"/>
+						</textElement>
+						<text><![CDATA[AFA REPRESENATIVE]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="9" y="54" width="126" height="18" uuid="0bf368a7-e655-4e08-8f9f-8dae7ce6cd8e"/>
+						<textElement verticalAlignment="Middle">
+							<font isBold="true"/>
+						</textElement>
+						<text><![CDATA[Name of Representative: ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="235" y="54" width="126" height="18" uuid="9d8eb411-c773-4e65-96de-14fa5af0f57d"/>
+						<textElement verticalAlignment="Middle">
+							<font isBold="true"/>
+						</textElement>
+						<text><![CDATA[Name of Representative: ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="399" y="54" width="126" height="18" uuid="48e3d726-b63a-42d1-8305-af49eca06388"/>
+						<textElement verticalAlignment="Middle">
+							<font isBold="true"/>
+						</textElement>
+						<text><![CDATA[Name of Representative: ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="-1" y="102" width="596" height="23" uuid="94417471-80bf-4018-b6b4-b81f73b54047"/>
+						<box>
+							<pen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font isBold="true"/>
+						</textElement>
+						<text><![CDATA[SALES MANAGER'S ENDORSEMENT]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="9" y="129" width="127" height="18" uuid="3f23bfe5-5b70-43a7-958e-ec6c4d370b01"/>
+						<textElement verticalAlignment="Middle">
+							<font isBold="true"/>
+						</textElement>
+						<text><![CDATA[Basis of Approval:]]></text>
+					</staticText>
+					<frame>
+						<reportElement positionType="Float" x="-1" y="161" width="596" height="13" uuid="88d7f3a4-e2b2-433f-b9fc-b4ef2ca581d5"/>
+						<componentElement>
+							<reportElement positionType="Float" x="3" y="-11" width="593" height="24" uuid="0ecf5146-0832-4b9b-b490-eab2d5fcad56"/>
+							<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+								<datasetRun subDataset="basisofApproval" uuid="0a47102d-fdeb-48a6-b6f8-5998d3f237b1">
+									<datasetParameter name="REPORT_DATA_SOURCE">
+										<datasetParameterExpression><![CDATA[$P{REPORT_DATA_SOURCE}]]></datasetParameterExpression>
+									</datasetParameter>
+									<datasetParameter name="IMAGES_DIR">
+										<datasetParameterExpression><![CDATA[$P{IMAGES_DIR}]]></datasetParameterExpression>
+									</datasetParameter>
+									<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonQLDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("approvalList")]]></dataSourceExpression>
+								</datasetRun>
+								<jr:listContents height="24" width="593">
+									<frame>
+										<reportElement x="30" y="5" width="563" height="19" uuid="284ebd02-6c94-4855-941c-2f7d2fb3fd70"/>
+										<textField>
+											<reportElement x="0" y="0" width="563" height="19" uuid="99df7161-0c54-4fb1-ac96-0637cfc17f33"/>
+											<textElement verticalAlignment="Top">
+												<font size="9"/>
+											</textElement>
+											<textFieldExpression><![CDATA[$F{code}!=null?str("new.v3.mynewworkspace.prospect.label.t13_1_ClientCallBack_4_1."+$F{code} ): ""]]></textFieldExpression>
+										</textField>
+										<rectangle>
+											<reportElement x="-29" y="-3" width="589" height="38" uuid="09f2f310-9b40-4f18-b58f-f95b9b16d5a4">
+												<printWhenExpression><![CDATA[$F{code}.equals("6_COM")]]></printWhenExpression>
+											</reportElement>
+										</rectangle>
+										<textField>
+											<reportElement x="0" y="1" width="439" height="15" uuid="2f460d10-6f58-4767-9a0c-cac091c6629b">
+												<printWhenExpression><![CDATA[$F{code}.equals("6_COM")]]></printWhenExpression>
+											</reportElement>
+											<textElement>
+												<font size="9"/>
+											</textElement>
+											<textFieldExpression><![CDATA[$F{code}!=null?str("new.v3.mynewworkspace.prospect.label.t13_1_ClientCallBack_4_1."+$F{code} )+ " " + ($F{code}.equals("6_COM")? $F{value}: ""): ""]]></textFieldExpression>
+										</textField>
+										<image>
+											<reportElement x="-20" y="3" width="10" height="10" uuid="904553a5-592c-4ae7-a5e0-5f561ddea3fc">
+												<printWhenExpression><![CDATA[!$F{code}.equals("6_COM")]]></printWhenExpression>
+											</reportElement>
+											<imageExpression><![CDATA[$F{value}!=null?($F{value}.equals("Y")? $P{IMAGES_DIR} + "checked.png":$P{IMAGES_DIR} + "unchecked.png"):$P{IMAGES_DIR} + "unchecked.png"]]></imageExpression>
+										</image>
+									</frame>
+								</jr:listContents>
+							</jr:list>
+						</componentElement>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" x="0" y="176" width="594" height="171" uuid="9787cac9-48f3-4bf4-a521-6537b6413ac2"/>
+						<rectangle>
+							<reportElement x="34" y="68" width="275" height="99" uuid="3a1aa73d-ce1e-49b9-a26e-c6cc81d9f417"/>
+						</rectangle>
+						<staticText>
+							<reportElement x="34" y="46" width="136" height="18" uuid="2142de22-321a-4191-b890-56442a8c8269"/>
+							<textElement verticalAlignment="Middle"/>
+							<text><![CDATA[Signature of Sales Manager:]]></text>
+						</staticText>
+						<rectangle>
+							<reportElement x="34" y="23" width="239" height="19" uuid="8767b3fa-9768-456c-b756-df18fc234533"/>
+						</rectangle>
+						<staticText>
+							<reportElement x="34" y="3" width="136" height="18" uuid="783b9744-6563-4dfc-ac7a-b05391b22094"/>
+							<textElement verticalAlignment="Middle"/>
+							<text><![CDATA[Name of Sales Manager:]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="327" y="2" width="136" height="18" uuid="4aae596b-7ce1-4172-863c-8f040703aec4"/>
+							<textElement verticalAlignment="Middle"/>
+							<text><![CDATA[name of Sales Manager:]]></text>
+						</staticText>
+						<rectangle>
+							<reportElement x="327" y="23" width="239" height="19" uuid="9ccc00c3-2a71-4352-b5ef-48e716fde52a"/>
+						</rectangle>
+						<staticText>
+							<reportElement x="327" y="46" width="136" height="18" uuid="fcf57722-1271-4781-b45f-4dab42396ec2"/>
+							<textElement verticalAlignment="Middle"/>
+							<text><![CDATA[Date (DD/MM/YYY):]]></text>
+						</staticText>
+						<rectangle>
+							<reportElement x="327" y="68" width="239" height="19" uuid="d2e5f116-e6d8-4448-998d-1124c450b841"/>
+						</rectangle>
+					</frame>
+					<rectangle>
+						<reportElement x="9" y="75" width="190" height="24" uuid="60f4c0a4-0619-41a7-89b3-34f1fe3dae62"/>
+					</rectangle>
+					<textField>
+						<reportElement x="15" y="75" width="185" height="24" uuid="7fdfbf33-e63f-499b-a6cf-bd463358e17c"/>
+						<textFieldExpression><![CDATA[$F{representativeName}!=null?$F{representativeName}:""]]></textFieldExpression>
+					</textField>
+					<rectangle>
+						<reportElement x="209" y="75" width="161" height="24" uuid="7369cfb6-7e7e-4e4b-9c4e-4b6b3105b1bd"/>
+					</rectangle>
+					<rectangle>
+						<reportElement x="396" y="75" width="161" height="24" uuid="de283d31-f120-47eb-b983-39792b5f3236"/>
+					</rectangle>
+					<textField>
+						<reportElement x="212" y="75" width="152" height="20" uuid="c7011047-776c-4044-b3a9-3bf126d180da"/>
+						<textFieldExpression><![CDATA[$F{representativeCd}!=null?$F{representativeNo}:""]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="398" y="75" width="156" height="20" uuid="f9a3956b-60cc-4a98-a173-6624a53062c7"/>
+						<textFieldExpression><![CDATA[$F{representativeNo}!=null?$F{representativeNo}:""]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="40">
+			<textField>
+				<reportElement x="486" y="3" width="100" height="30" uuid="b0229aa0-de19-41d5-a51b-634a14fd19d6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="588" y="3" width="34" height="30" uuid="d7771d63-957a-447d-b2fc-2aa48bda354d"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="3" width="460" height="30" uuid="ac86db72-4e02-4c87-8591-248de3cba976"/>
+				<text><![CDATA[Aviva Financial Advisers Pte Ltd 51 Cuppage Road, #03-08/09/10, Singapore 229469 T: +65 6827 7988 Website: www.avivafa.com.sg]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

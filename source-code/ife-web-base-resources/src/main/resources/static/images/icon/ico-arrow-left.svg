@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="15px" viewBox="0 0 9 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-arrow-left</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Agent-Sales-Channel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.0-Login" transform="translate(-675.000000, -533.000000)" fill="#010002">
+            <g id="content" transform="translate(520.000000, 200.000000)">
+                <g id="login">
+                    <g id="button" transform="translate(40.000000, 310.000000)">
+                        <path d="M123.205894,31.2119316 L116.709278,37.7085469 C116.318631,38.097151 115.683566,38.097151 115.292985,37.7085469 C114.902338,37.3178999 114.902338,36.6808579 115.292985,36.2922538 L121.084485,30.5007537 L115.292985,24.7092536 C114.902338,24.3186066 114.902338,23.6835417 115.292985,23.2929605 C115.683632,22.9023794 116.318697,22.9023135 116.709278,23.2929605 L123.205894,29.7895758 C123.406225,29.9858878 123.500395,30.2443422 123.498352,30.5007537 C123.498352,30.7592081 123.402206,31.0156196 123.205894,31.2119316 Z" id="ico-arrow-left"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

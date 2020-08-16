@@ -1,0 +1,60 @@
+ <md-dialog style="height:320px;width:740px;">
+              <md-dialog-title style="height:20px;">
+              <br/>
+              <div style=" margin-left: 10px;
+    font-weight: 700;">Clone to new Business Case with below information:</div>
+              </md-dialog-title>
+              
+              <br/><br/>
+	            <md-dialog-content>
+	          <div fieldId="declarationPeriod:shipmentStarts" class="col-xs-11 col-sm-11 col-md-11 col-lg-11" style="width:700px;">
+	<div class="row col-xs-11 col-sm-11 col-md-11 col-lg-11 v4-materialize-container">
+		<label class="label-field">
+			Marine Open Cover Number
+		</label>
+		<div class="input-field" style="margin-left:220px;margin-top:-30px; width: 393px;">
+			<input id = "quotation_shipmentStarts" type="text" style="margin-left: 5px; background: #F0F0F0;" ng-model="marineOpen" ng-disabled="true"></span>
+		</div>
+	</div>
+</div>   
+	       <br/>
+	        
+		<div fieldId="declarationPeriod:shipmentStarts" class="col-xs-11 col-sm-11 col-md-11 col-lg-11" style="margin-top:10px;">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-container">
+		<label class="label-field">
+			{{::'v3.mynewworkspace.quotation.label.shipmentStarts'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field" style="margin-left:220px;margin-top:-30px;">
+			<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+			<input id = "quotation_shipmentStarts" type="text" autocomplete="off" style="margin-left:5px;" clear-error-code class="datepicker" materiallize-datetime 
+			 formatdisplay='DD/MM/YYYY' ng-model="shipmentStarts" ng-change='changeDate()'></span>
+		</div>
+	</div>
+</div><br/>
+
+<div fieldId="declarationPeriod:shipmentEnds" class="col-xs-11 col-sm-11 col-md-11 col-lg-11" style="margin-top:10px;">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-container">
+		<label class="label-field">
+			{{::'v3.mynewworkspace.quotation.label.shipmentEnds'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field" style="margin-left:220px;margin-top:-30px;">
+			<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+			<input id = "quotation_shipmentEnds" type="text" autocomplete="off" style="margin-left:5px;" clear-error-code class="datepicker" materiallize-datetime
+			 formatdisplay='DD/MM/YYYY' ng-model="shipmentEnds"></span>
+		</div>
+	</div>
+</div>
+	            
+	            </md-dialog-content> 
+
+	              <md-dialog-actions style="margin-top: 20px;">
+	                <md-button ng-click="cloneDialog()" class="md-primary">
+	            Clone
+	                </md-button>
+	               <md-button ng-click="cancelDialog()" class="md-primary">
+	                  Cancel 
+	                </md-button>
+	            </md-dialog-actions>
+	           </md-dialog>

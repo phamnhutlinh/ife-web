@@ -1,0 +1,12 @@
+{
+ "content" :[
+      {
+        "title": "Personal",
+         "onClick":"addNewProspectCard(card, 'contact', 'personal', '',[currentRole])"
+      }, 
+      {
+      	"title": "Corporate", 
+      	"onClick": "addNewProspectCard(card, 'contact', 'corporate', '',[currentRole])"
+      	}
+   ]
+}

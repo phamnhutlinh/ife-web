@@ -1,0 +1,46 @@
+{
+  "IposDocument": {
+    "Data": {
+      "application:Application": {
+        "section": "application:Application",
+        "icons": {
+          "cardIcon": {
+            "content": "fa fa-pie-chart"
+          }
+        },
+        "uiStyle": "tab",
+        "permission": {
+          "openable": [
+            "case_openable"
+          ],
+          "editable": [
+            "case_editable"
+          ],
+          "viewable": [
+            "case_viewable"
+          ]
+        },
+        "application:review": {
+          "key": [
+          ],
+          "uiStyle": "section",
+          "section": "application:Application",
+          "icon": "fa fa-envelope-square",
+          "review:reviewRequiredapplication": {
+            "key": [
+              "reviewRequiredAppliCation"
+            ],
+            "group": "1"
+          },
+          "review:reviewNotesapplication": {
+            "key": [
+              "reviewNotesApplication"
+            ],
+            "group": "1"
+          }
+        }
+      }
+    }
+    }
+  
+}

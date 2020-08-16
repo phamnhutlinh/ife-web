@@ -1,0 +1,719 @@
+{
+  "IposDocument": {
+    "Data": {
+      "application:Application": {
+        "section": "application:Application",
+        "icons": {
+          "cardIcon": {
+            "content": "fa fa-pie-chart"
+          }
+        },
+        "uiStyle": "tab",
+        "permission": {
+          "openable": [
+            "case_openable"
+          ],
+          "editable": [
+            "case_editable"
+          ],
+          "viewable": [
+            "case_viewable"
+          ]
+        },
+        "application:PolicyOwner": {
+          "key": [
+            "policyOwnerDetails"
+          ],
+          "uiStyle": "section",
+          "section": "application:Application",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+          "application:PolicyOwnerInfor": {
+            "key": [
+              "policyOwnerDetails",
+              "proporserInformation"
+            ],
+            "uiStyle": "section",
+            "section": "application:PolicyOwner",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-user"
+              }
+            },
+            "prospect:BasicInformation": {
+              "key": [
+                "policyOwnerDetails",
+                "proporserInformation",
+                "person",
+                "basic"
+              ],
+              "section": "application:PolicyOwnerInfor",
+              "icon": "fa fa-user",
+              "prospect:Salutation": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "name",
+                  "titleCode"
+                ],
+                "group": "1"
+              },
+              "prospect:FirstName": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "name",
+                  "first"
+                ],
+                "group": "2"
+              },
+              "prospect:LastName": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "name",
+                  "last"
+                ],
+                "group": "2"
+              },
+              "prospect:DOB": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "birthDate"
+                ],
+                "group": "3"
+              },
+              "prospect:Gender": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "genderCode"
+                ],
+                "group": "3"
+              },
+              "prospect:MaritalStatus": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "maritalStatusCode"
+                ],
+                "group": "4"
+              },
+              "prospect:Race": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "raceInfor"
+                ],
+                "group": "4"
+              },
+              "prospect:SmokerStatus": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "smokerStatus"
+                ],
+                "group": "5"
+              },
+              "prospect:Religion": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "religionCode"
+                ],
+                "group": "5"
+              },
+              "prospect:IDType": {
+                "key": [
+                  "person",
+                  "basic",
+                  "idType"
+                ],
+                "group": "6"
+              },
+              "prospect:IDNumber": {
+                "key": [
+                  "person",
+                  "basic",
+                  "idNumber"
+                ],
+                "group": "6"
+              },
+              "prospect:township": {
+                "key": [
+                  "person",
+                  "basic",
+                  "township"
+                ],
+                "group": "7"
+              },
+              "prospect:segNo": {
+                "key": [
+                  "person",
+                  "basic",
+                  "seqno"
+                ],
+                "group": "7"
+              },
+              "prospect:Industry": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "industry"
+                ],
+                "group": "7"
+              },
+              "prospect:Nationality": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "nationalityCode"
+                ],
+                "group": "7"
+              },
+              "prospect:ClientStatus": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "basic",
+                  "clientStatus"
+                ],
+                "group": "8"
+              },
+              "prospect:Occupation": {
+                "key": [
+                  "policyOwnerDetails",
+                  "occupationModel",
+                  "occupationCode"
+                ],
+                "group": "8"
+              }
+            },
+            "prospect:Contact": {
+              "onOpen": true,
+              "key": [
+                "policyOwnerDetails",
+                "proporserInformation",
+                "person",
+                "contacts"
+              ],
+              "section": "application:PolicyOwnerInfor",
+              "icon": "fa fa-phone-square",
+              "prospect:EmailAddress": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "contacts",
+                  "email"
+                ],
+                "group": "1"
+              },
+              "prospect:HandPhone": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "contacts",
+                  "handPhone"
+                ],
+                "group": "1"
+              },
+              "prospect:HomePhone": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "contacts",
+                  "homePhone"
+                ],
+                "group": "2"
+              },
+              "prospect:OfficePhone": {
+                "key": [
+                  "policyOwnerDetails",
+                  "person",
+                  "contacts",
+                  "officePhone"
+                ],
+                "group": "2"
+              }
+            },
+            "application:Address": {
+              "key": [
+                "policyOwnerDetails",
+                "proporserInformation"
+              ],
+              "section": "application:PolicyOwnerInfor",
+              "icon": "fa fa-address-card",
+              "cssClass": "v3-box-1",
+              "address:PrimaryAddress": {
+                "key": [
+                  "policyOwnerDetails",
+                  "proporserInformation",
+                  "person",
+                  "addresses"
+                ]
+              }
+            },
+            "application:OtherInformation": {
+              "key": [
+                "otherInformation"
+              ],
+              "section": "application:PolicyOwnerInfor",
+              "icon": "fa fa-user",
+              "otherInfor:CountryOfBirth": {
+                "key": [
+                  "countryOfBirth"
+                ],
+                "group": "1"
+              },
+              "otherInfor:Education": {
+                "key": [
+                  "education"
+                ],
+                "group": "1"
+              },
+              "otherInfor:Staff": {
+                "key": [
+                  "staff"
+                ],
+                "group": "2"
+              },
+              "otherInfor:VIP": {
+                "key": [
+                  "vip"
+                ],
+                "group": "2"
+              },
+              "otherInfor:EmployerName": {
+                "key": [
+                  "employerName"
+                ],
+                "group": "3"
+              },
+              "otherInfor:EmploymentStatus": {
+                "key": [
+                  "employmentStatus"
+                ],
+                "group": "3"
+              },
+              "otherInfor:AnnualEmployeeIncome": {
+                "key": [
+                  "annualEmployeeIncome"
+                ],
+                "group": "4"
+              },
+              "otherInfor:SourceOfFund": {
+                "key": [
+                  "sourceOfFund"
+                ],
+                "group": "4"
+              },
+              "otherInfor:ClientNumber": {
+                "key": [
+                  "clientNumber"
+                ],
+                "group": "5"
+              },
+              "otherInfor:SourceOfName": {
+                "key": [
+                  "sourceOfName"
+                ],
+                "group": "5"
+              }
+            },
+            "isVisible": "moduleService.findElementInDetail(['policyOwnerType']).value == 'INDIVIDUAL'"
+          },
+          "application:CorporateInformation": {
+            "key": [
+              "policyOwnerDetails",
+              "corporateInformation"
+            ],
+            "uiStyle": "section",
+            "section": "application:PolicyOwner",
+            "icons": {
+              "cardIcon": {
+                "content": "fa fa-user"
+              }
+            },
+            "isVisible": "moduleService.findElementInDetail(['policyOwnerType']).value == 'CORPORATE'",
+            "corporate:BasicInformation": {
+              "key": [
+                "policyOwnerDetails",
+                "corporateInformation",
+                "basicInformation"
+              ],
+              "section": "application:CorporateInformation",
+              "icon": "fa fa-user",
+              "cssClass": "v3-box-1",
+              "corporate:CorporateName": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "basicInformation",
+                  "corporateName"
+                ],
+                "group": "1"
+              },
+              "corporate:CompanyRegistrationNumber": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "basicInformation",
+                  "companyRegistrationNumber"
+                ],
+                "group": "1"
+              },
+              "corporate:PersonInCharge": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "basicInformation",
+                  "personInCharge"
+                ],
+                "group": "2"
+              },
+              "corporate:Subsidiaries": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "basicInformation",
+                  "subsidiaries"
+                ],
+                "group": "2"
+              },
+              "corporate:CountryOfOrigin": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "basicInformation",
+                  "countryOfOrigin"
+                ],
+                "group": "3"
+              },
+              "corporate:S/TaxApplicable": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "basicInformation",
+                  "staxApplicable"
+                ],
+                "group": "3"
+              },
+              "corporate:Industry": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "basicInformation",
+                  "industry"
+                ],
+                "group": "4"
+              },
+              "corporate:ClientStatus": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "basicInformation",
+                  "clientStatus"
+                ],
+                "group": "4"
+              },
+              "corporate:DateOfIncorporate": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "basicInformation",
+                  "dateOfIncorporate1"
+                ],
+                "group": "4"
+              }
+            },
+            "corporate:Contact": {
+              "key": [
+                "policyOwnerDetails",
+                "corporateInformation",
+                "contacts"
+              ],
+              "section": "application:CorporateInformation",
+              "icon": "fa fa-phone-square",
+              "cssClass": "v3-box-1",
+              "corporate:CorporateWebURL": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "contacts",
+                  "webSite"
+                ],
+                "group": "1"
+              },
+              "corporate:Email": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "contacts",
+                  "corpEmail"
+                ],
+                "group": "2"
+              },
+              "corporate:Telephone": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "contacts",
+                  "mainLinePhone"
+                ],
+                "group": "2"
+              },
+              "corporate:Mobilephone": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "contacts",
+                  "mobilePhone"
+                ],
+                "group": "3"
+              },
+              "corporate:FasimileNo": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "contacts",
+                  "fasimileNo"
+                ],
+                "group": "3"
+              }
+            },
+            "corporate:Address": {
+              "key": [
+                "policyOwnerDetails",
+                "corporateInformation"
+              ],
+              "section": "application:CorporateInformation",
+              "icon": "fa fa-address-card",
+              "cssClass": "v3-box-1",
+              "corporate:Addressgroup": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "addresses"
+                ]
+              }
+            },
+            "corporate:OtherInformation": {
+              "key": [
+                "policyOwnerDetails",
+                "corporateInformation",
+                "corporateOtherInfo"
+              ],
+              "section": "application:CorporateInformation",
+              "icon": "fa fa-info",
+              "cssClass": "v3-box-1",
+              "corporate:GSTRegNumber": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "corporateOtherInfo",
+                  "gstNumber"
+                ],
+                "group": "1"
+              },
+              "corporate:AuthorizedCapital": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "corporateOtherInfo",
+                  "authorizedCapital"
+                ],
+                "group": "1"
+              },
+              "corporate:Category": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "corporateOtherInfo",
+                  "category"
+                ],
+                "group": "2"
+              },
+              "corporate:FreeTradeZone": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "corporateOtherInfo",
+                  "freeTradeZone"
+                ],
+                "group": "2"
+              },
+              "corporate:ClientNumber": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "corporateOtherInfo",
+                  "clientNumber"
+                ],
+                "group": "3"
+              },
+              "corporate:SourceNumber": {
+                "key": [
+                  "policyOwnerDetails",
+                  "corporateInformation",
+                  "corporateOtherInfo",
+                  "sourceNumber"
+                ],
+                "group": "3"
+              }
+            }
+          }
+        },
+        "application:additionalVehicle": {
+          "key": [
+            ""
+          ],
+          "section": "application:Application",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+          "additionalVehicle:makeModel": {
+            "key": [
+              "makeModel"
+            ],
+            "group": "1"
+          },
+          "additionalVehicle:body": {
+            "key": [
+              "body"
+            ],
+            "group": "1"
+          },
+          "additionalVehicle:yearMade": {
+            "key": [
+              "yearMake"
+            ],
+            "group": "2"
+          },
+          "additionalVehicle:engine": {
+            "key": [
+              "engine"
+            ],
+            "group": "2"
+          },
+          "additionalVehicle:chassis": {
+            "key": [
+              "chassis"
+            ],
+            "group": "3"
+          }
+        },
+        "application:namedDriver": {
+          "key": [
+            ""
+          ],
+          "section": "application:Application",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+          "namedDriver:addDriver": {
+            "key": [
+              "driver"
+            ],
+            "group": "1"
+          }
+        },
+        "application:MailingAddress": {
+          "key": [
+            "mailingAddress"
+          ],
+          "section": "application:Application",
+          "icon": "fa fa-envelope-square",
+          "onOpen": "getAddressList()",
+          "mailingAddress:isDifferent": {
+            "key": [
+              ""
+            ],
+            "group": "0"
+          },
+          "mailingAddress:listAddress": {
+            "key": [
+              "mailingAddress",
+              "addressType"
+            ],
+            "group": "1"
+          },
+          "mailingAddress:addressType": {
+            "key": [
+              "mailingAddress",
+              "typeCode"
+            ],
+            "group": "1"
+          },
+          "mailingAddress:street": {
+            "key": [
+              "mailingAddress",
+              "street"
+            ],
+            "group": "2"
+          },
+          "mailingAddress:line1": {
+            "key": [
+              "mailingAddress",
+              "line1"
+            ],
+            "group": "2"
+          },
+          "mailingAddress:line2": {
+            "key": [
+              "mailingAddress",
+              "line2"
+            ],
+            "group": "2"
+          },
+          "mailingAddress:district": {
+            "key": [
+              "mailingAddress",
+              "district"
+            ],
+            "group": "3"
+          },
+          "mailingAddress:postCode": {
+            "key": [
+              "mailingAddress",
+              "postalCode"
+            ],
+            "group": "3"
+          },
+          "mailingAddress:state": {
+            "key": [
+              "mailingAddress",
+              "state"
+            ],
+            "group": "3"
+          },
+          "mailingAddress:country": {
+            "key": [
+              "mailingAddress",
+              "countryCode"
+            ],
+            "group": "3"
+          }
+        }
+      }
+    }
+  }
+}

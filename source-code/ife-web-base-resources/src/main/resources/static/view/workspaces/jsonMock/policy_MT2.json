@@ -1,0 +1,139 @@
+{
+  "IposDocument": {
+    "policy:Policy": {
+      "section": "policy:Policy",
+      "key": [],
+      "permission": {
+        "openable": [
+          "account_openable"
+        ],
+        "editable": [
+          "account_editable"
+        ],
+        "viewable": [
+          "account_viewable"
+        ]
+      },
+      "policy:policyInformation": {
+        "key": [
+          "chdrnum"
+        ],
+        "group": "1"
+      },
+      "policy:statcode": {
+        "key": [
+          "statcode"
+        ],
+        "group": "1"
+      },
+      "policy:ccdate": {
+        "key": [
+          "ccdate"
+        ],
+        "group": "1"
+      },
+      "policy:crdate": {
+        "key": [
+          "crdate"
+        ],
+        "group": "1"
+      },
+      "policy:fullname": {
+        "key": [
+          "fullname"
+        ],
+        "group": "2"
+      },
+      "policy:cover": {
+        "key": [
+          "cover"
+        ],
+        "group": "2"
+      },
+      "policy:totsi": {
+        "key": [
+          "totsi"
+        ],
+        "group": "2"
+      },
+      "policy:extra01": {
+        "key": [
+          "extra01"
+        ],
+        "group": "3"
+      },
+      "policy:smcp": {
+        "key": [
+          "smcp"
+        ],
+        "group": "4"
+      },
+      "policy:regno": {
+        "key": [
+          "regno"
+        ],
+        "group": "5"
+      },
+      "policy:dpflg": {
+        "key": [
+          "dpflg"
+        ],
+        "group": "5"
+      },
+      "policy:vhmake": {
+        "key": [
+          "vhmake"
+        ],
+        "group": "5"
+      },
+      "policy:vhbody": {
+        "key": [
+          "vhbody"
+        ],
+        "group": "6"
+      },
+      "policy:yrmanf": {
+        "key": [
+          "yrmanf"
+        ],
+        "group": "6"
+      },
+      "policy:engine": {
+        "key": [
+          "engine"
+        ],
+        "group": "6"
+      },
+      "policy:chassi": {
+        "key": [
+          "chassi"
+        ],
+        "group": "7"
+      },
+      "policy:capcty": {
+        "key": [
+          "capcty"
+        ],
+        "group": "7"
+      },
+      "policy:vehcls": {
+        "key": [
+          "vehcls"
+        ],
+        "group": "7"
+      },
+      "policy:ncbamt": {
+        "key": [
+          "zncbamt"
+        ],
+        "group": "8"
+      },
+      "policy:nameDriver": {
+        "key": [
+          "nameDrivers"
+        ],
+        "group": "9"
+      }
+    }
+  }
+}

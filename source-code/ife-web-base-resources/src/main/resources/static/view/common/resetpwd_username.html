@@ -1,0 +1,44 @@
+<!--
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+-->
+
+<div class="v4-prototype-container div-centerBlock">
+	<div class="card col-xs-10 col-sm-10 col-md-10 col-lg-5 v4-prototype-centerBlock">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-prototype-registration-title">{{'v4.workspace.text.requestResetPwdTitle'| translate}}</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row v4-materialize-container">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v4-materialize-content-center no-padding-left">
+						<label class="text-body">{{'v4.workspace.text.requestResetPwdMessage'| translate}}<span> *</span></label>
+						<div class="input-field">
+							<input placeholder="{{'new.v3.userProfile.user.label.Email'| translate}}"
+								type="text" maxlength="120"
+								ng-model="requestResetPwdForm.username" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-xs-12 col-sm-6">
+					<button ng-click="goToState('root.list.home')" class="btn waves-effect waves-light">{{'v4.workspace.button.cancel'| translate}}</button>
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					 <button ng-click="requestResetPwd()" class="btn waves-effect waves-light">{{'v4.workspace.button.submit'| translate}}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,197 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div class="" ng-init="selectedDashboard = 'my-new-case'">
+	<div class="col-xs-11 v4-prototype-centerBlock v3-padding-0 card">
+		<div class="row col-xs-11 col-md-11 "
+			style="margin-top: 20px; margin-left: -5px; margin-bottom: 25px">
+			<div class=" row col-xs-4 col-md-4 v3-margin-auto">
+				<div class="col-xs-10 label-field-sumary label-dasboard">
+					<div id="my-new-case" class="active"
+						ng-click="selectTab('my-new-case')">
+						<p class="tab-title" style="margin-top: 14px; margin-bottom: 0px">{{'v3.dashboardportlet.portlet.label.my-new-case'
+							| translate}}</p>
+						<label class="label-section-bigger"><total-records
+								class="tab-summary" doc-type="case"
+								query="{{[{
+									fields: ['metaData.ownerName'],
+									values: [ownerName]
+								}, {
+									fields: ['metaData.businessStatus'],
+									values: [
+										commonService.CONSTANTS.BUSINESS_STATUS.DR
+									]
+								},{
+									fields: ['metaData.profileId'],
+									values: [agentId]
+								}]}}" /></label>
+					</div>
+				</div>
+				<!-- start to create button to add -->
+				<div class="col-xs-2 col-md-2 col-sm-2 col-lg-2 add-new-button no-left-padding no-right-padding">
+					<i 
+
+						ng-click="showListNewDocumentOptionDlg($event,'agentsale')"
+
+						class="pointer fa fa-plus add-new-item" tooltips
+						tooltip-title="Add New" tooltip-side="top" tooltip-size="medium"></i>
+				</div>
+				<!-- end -->
+			</div>
+
+			<div class="col-xs-4 col-md-4 v3-margin-auto">
+				<div class="col-xs-12 label-field-sumary label-dasboard">
+					<div id="my-ready-case" ng-click="selectTab('my-ready-case')">
+						<p class="tab-title" style="margin-top: 14px; margin-bottom: 0px">{{'v3.dashboardportlet.portlet.label.my-ready-case'
+							| translate}}</p>
+						<label class="label-section-bigger"><total-records
+								class="tab-summary" doc-type="case"
+								query="{{[{
+									fields: ['metaData.ownerName'],
+									values: [ownerName]
+								}, {
+									fields: ['metaData.businessStatus'],
+									values: [
+										commonService.CONSTANTS.BUSINESS_STATUS.READY_FOR_SUBMISSION,
+										commonService.CONSTANTS.BUSINESS_STATUS.SUBMITTING,
+										commonService.CONSTANTS.BUSINESS_STATUS.FAILED
+									]
+								},{
+									fields: ['metaData.profileId'],
+									values: [agentId]
+								}]}}" /></label>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-4 col-md-4 v3-margin-auto">
+				<div class="col-xs-12 label-field-sumary label-dasboard">
+					<div id="my-submitted-case"
+						ng-click="selectTab('my-submitted-case')">
+						<p class="tab-title" style="margin-top: 14px; margin-bottom: 0px">{{'v3.dashboardportlet.portlet.label.my-submitted-case'
+							| translate}}</p>
+						<label class="label-section-bigger"><total-records
+								class="tab-summary" doc-type="case"
+								query="{{[{
+									fields: ['metaData.ownerName'],
+									values: [ownerName]
+								}, {
+									fields: ['metaData.businessStatus'],
+									values: [
+										commonService.CONSTANTS.BUSINESS_STATUS.SUBMITTED
+									]
+								},{
+									fields: ['metaData.profileId'],
+									values: [agentId]
+								}]}}" /></label>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="col-xs-12 col-md-12">
+		<div class="tab-content" ng-if="selectedDashboard === 'my-new-case'">
+			<div class="listViewContainer container-fluid v3-padding-0">
+				<div class="row v3-margin-auto">
+					<document-list-view datalist="caseList" doctype="case"
+						listtitle="my-new-case" isloadlist="isLoadList"
+						dashboarddoctype="dashboardDoctype"
+						isdashboard ="true"
+						defaultquery="{{[{
+								fields: ['metaData.ownerName'],
+								values: [ownerName]
+							}, {
+								fields: ['metaData.businessStatus'],
+								values: [
+									commonService.CONSTANTS.BUSINESS_STATUS.DR
+								]
+							},{
+									fields: ['metaData.profileId'],
+									values: [agentId]
+								}]}}"
+						searchcriteria="[
+								'metaData.docName',
+								'metaData.docName.search'
+							]"
+						lazy-choice-list="moduleService.lazyChoiceList" />
+				</div>
+			</div>
+		</div>
+		<div class="tab-content" ng-if="selectedDashboard === 'my-ready-case'">
+			<div class="listViewContainer container-fluid v3-padding-0">
+				<div class="row v3-margin-auto">
+					<document-list-view datalist="caseList" doctype="case"
+						listtitle="my-ready-case" isloadlist="isLoadList"
+						isdashboard ="true"
+						defaultquery="{{[{
+								fields: ['metaData.ownerName'],
+								values: [ownerName]
+							}, {
+								fields: ['metaData.businessStatus'],
+								values: [
+									commonService.CONSTANTS.BUSINESS_STATUS.READY_FOR_SUBMISSION,
+									commonService.CONSTANTS.BUSINESS_STATUS.SUBMITTING,
+									commonService.CONSTANTS.BUSINESS_STATUS.FAILED
+								]
+							},{
+									fields: ['metaData.profileId'],
+									values: [agentId]
+								}]}}"
+						searchcriteria="[
+								'metaData.docName',
+								'metaData.docName.search'
+							]"
+						active-roles="commonService.CONSTANTS.USER_GROUPS.AGENT.roles"
+						current-date="currentDate"
+						lazy-choice-list="moduleService.lazyChoiceList" />
+				</div>
+			</div>
+		</div>
+		<div class="tab-content"
+			ng-if="selectedDashboard === 'my-submitted-case'">
+			<div class="listViewContainer container-fluid v3-padding-0">
+				<div class="row v3-margin-auto">
+					<document-list-view datalist="caseList" doctype="case"
+						listtitle="my-submitted-case" isloadlist="isLoadList"
+						isdashboard ="true"
+						defaultquery="{{[{
+								fields: ['metaData.ownerName'],
+								values: [ownerName]
+							}, {
+								fields: ['metaData.businessStatus'],
+								values: [
+									commonService.CONSTANTS.BUSINESS_STATUS.SUBMITTED
+								]
+							},{
+									fields: ['metaData.profileId'],
+									values: [agentId]
+								}]}}"
+						searchcriteria="[
+								'metaData.docName',
+								'metaData.docName.search'
+							]"
+						active-roles="commonService.CONSTANTS.USER_GROUPS.AGENT.roles"
+						lazy-choice-list="moduleService.lazyChoiceList" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,9 @@
+{
+ "content" :[
+      {
+        "title": "PnC",
+         "onClick":"goToProductIntroducionPage('PnC_mt2', 'case_management')",
+         "isVisible": "currentRole === commonService.CONSTANTS.USER_ROLES.AG.name"
+      }
+   ]
+}

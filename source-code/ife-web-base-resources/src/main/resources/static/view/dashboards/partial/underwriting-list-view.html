@@ -1,0 +1,106 @@
+<!--
+
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+
+-->
+
+<div class="row v3-margin-auto" ng-if="isListView" style="margin-bottom: 0px;" ng-cloak>
+	<div class="ipos_medium_mobile_table ipos_table_v4">
+		<div class="hidden-xs ipos_medium_mobile_table_table_listRow ipos_table_v4_header md-whiteframe-z1">
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.underwriting.label.postDate' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.underwriting.label.businessCase' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.underwriting.label.effectiveDate' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.underwriting.label.product' | translate}}
+			</div>
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.underwriting.label.policyOwner' | translate}}
+			</div>	
+			<!-- <div class="v3-auto-text-ellipsis ipos-box-opacity" ng-if="listtitle == 'my-underwriting'">
+				{{'v4.dashboard.underwriting.label.sumInsured' | translate}}
+			</div> -->	
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				{{'v4.dashboard.underwriting.label.reasons' | translate}}
+			</div>	
+			<div class="v3-auto-text-ellipsis ipos-box-opacity" ng-if="listtitle == 'my-underwriting'">
+				<span>{{'v4.dashboard.underwriting.label.result' | translate}}</span>
+			</div>	
+			<div class="v3-auto-text-ellipsis ipos-box-opacity">
+				<span ng-if="listtitle == 'underwriting-requests-list'">{{'v4.dashboard.underwriting.label.addToMyList' | translate}}</span>
+				<span ng-if="listtitle == 'my-underwriting'">{{'v4.dashboard.underwriting.label.action' | translate}}</span>
+			</div>					
+		</div>
+		
+		<md-virtual-repeat-container
+				class="scrollStyle" md-top-index="topIndex" ng-if="datalist.length >= 1">
+		<div id="table-row-{{$index}}" name="dashboard-item" 
+			class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto repeated-item"
+			md-virtual-repeat="item in infiniteItems" md-on-demand flex>
+			<md-card class="col-xs-12 v3-padding-0" style="margin: 0px;">
+				<div style="display: flex;padding-left: 0px;padding-right: 0px;text-align: left;">
+					<div class="v3-auto-text-ellipsis" tooltips tooltip-title="{{item.createDate | datetimeFilter:'DD/MM/YYYY HH:MM:SS'}}">{{item.createDate | datetimeFilter:'DD/MM/YYYY HH:MM:SS'}}</div>
+					<div class="v3-auto-text-ellipsis" tooltips tooltip-title="{{item.caseName}}">{{item.caseName}}</div>
+					<div class="v3-auto-text-ellipsis" tooltips tooltip-title="{{item.effectiveDate | datetimeFilter:'DD/MM/YYYY'}}">{{item.effectiveDate | datetimeFilter:'DD/MM/YYYY'}}</div>
+					<div class="v3-auto-text-ellipsis" tooltips tooltip-title="{{'v4.sidebar.title.' + item.productName | translate}}">{{'v4.sidebar.title.' + item.productName | translate}}</div>
+					<div class="v3-auto-text-ellipsis" tooltips tooltip-title="{{item.poName}}">{{item.poName}}</div>
+<!-- 					<div class="v3-auto-text-ellipsis" tooltips tooltip-title="{{item.sumInsured}}" ng-if="listtitle == 'my-underwriting'">{{item.sumInsured}}</div> -->
+										<div class="v3-auto-text-ellipsis" ng-init="listFindingCode = infiniteItems.items[0].findingCode.split(';')" ng-if="$index == 0">
+						<div ng-repeat="codeFinding in listFindingCode track by $index" tooltips tooltip-title="{{codeFinding}}" class="v3-auto-text-ellipsis-1" ng-if="codeFinding !== ''">
+							{{codeFinding}}
+						</div>
+					</div>
+					<div class="v3-auto-text-ellipsis" ng-init="listFindingCode = item.findingCode.split(';')" ng-if="$index != 0">
+						<div ng-repeat="codeFinding in listFindingCode track by $index" tooltips tooltip-title="{{codeFinding}}" class="v3-auto-text-ellipsis-1" ng-if="codeFinding !== ''">
+							{{codeFinding}}
+						</div>
+					</div>
+					<div class="v3-auto-text-ellipsis" ng-if="listtitle == 'my-underwriting'">
+						<div ng-if="item.businessStatus != 'DR'" tooltips tooltip-title="{{item.businessStatus}}">{{item.businessStatus}}</div>
+						<div ng-if="item.businessStatus == 'DR'"></div>
+					</div>
+					<div class="v3-auto-text-ellipsis">
+						<div ng-if="listtitle == 'underwriting-requests-list'">
+							<a style="color: #26a69a;" class="pointer" ng-click="pickupUnderwriting(item.docType, item.docId, item.businessType, item.productName, datalist, $index)">
+								<i class="fa fa-plus fa-2x" style="font-size: 20px;"></i>
+							</a>
+						</div>
+						<div ng-if="listtitle == 'my-underwriting'">
+							<a style="color: #26a69a; margin: 0px 2px;" class="pointer" ng-click="navigateFromUnderwritingToBusinessCase(item.caseId, item.businessType, item.productName)">
+								<i class="fa fa-info-circle" style="font-size: 20px;"></i>
+							</a>
+							<a style="color: #26a69a; margin: 0px 2px;" class="pointer" ng-click="returnUnderwriting(item.docType, item.docId, item.businessType, item.productName, datalist, $index)">
+								<i class="fa fa-reply" style="font-size: 20px;"></i>
+							</a>
+						</div>
+					</div>					
+				</div>
+			</md-card>
+		</div>
+		</md-virtual-repeat-container>	
+		<!-- loading -->
+		<div id="table-row-{{$index}}" name="dashboard-item" ng-show = "isLoad"  ng-cloak 
+				class="ipos_table_v4_row ipos_medium_mobile_table_table_listRow row v3-margin-auto pointer row">
+				<!-- <md-progress-circular class= "md-hue-2" md-diameter="20px"></md-progress-circular> -->
+				<p><i class = "fa fa-spinner fa-spin" style="margin-right: 5px;">  </i>  Loading...</p>
+		</div>
+	</div>
+</div>

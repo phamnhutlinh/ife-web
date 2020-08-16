@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="28px" viewBox="0 0 30 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-address</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Agent-Sales-Channel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.2-Contacts---Personal" transform="translate(-500.000000, -166.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="steps" transform="translate(40.000000, 140.000000)">
+                <g id="s3" transform="translate(400.000000, 0.000000)">
+                    <g id="ico-address" transform="translate(60.000000, 26.000000)">
+                        <rect id="Rectangle-path" x="15" y="18.2182836" width="1.875" height="1.73507463"></rect>
+                        <rect id="Rectangle-path" x="18.75" y="18.2182836" width="1.875" height="1.73507463"></rect>
+                        <rect id="Rectangle-path" x="15" y="14.7481343" width="1.875" height="1.73507463"></rect>
+                        <rect id="Rectangle-path" x="18.75" y="14.7481343" width="1.875" height="1.73507463"></rect>
+                        <rect id="Rectangle-path" x="3.75" y="18.2182836" width="1.875" height="1.73507463"></rect>
+                        <rect id="Rectangle-path" x="7.5" y="18.2182836" width="1.875" height="1.73507463"></rect>
+                        <rect id="Rectangle-path" x="3.75" y="14.7481343" width="1.875" height="1.73507463"></rect>
+                        <rect id="Rectangle-path" x="7.5" y="14.7481343" width="1.875" height="1.73507463"></rect>
+                        <rect id="Rectangle-path" x="5.625" y="11.2779851" width="1.875" height="1.73507463"></rect>
+                        <path d="M13.125,0 L13.125,11.2779851 L12.46875,11.2779851 L6.5625,7.63432836 L0,11.6813899 L0,27.761194 L30,27.761194 L30,0 L13.125,0 Z M7.5,26.0261194 L5.625,26.0261194 L5.625,23.4235075 L7.5,23.4235075 L7.5,26.0261194 Z M11.25,26.0261194 L9.375,26.0261194 L9.375,21.6884328 L3.75,21.6884328 L3.75,26.0261194 L1.875,26.0261194 L1.875,12.6096549 L6.5625,9.71641791 L11.25,12.6079198 L11.25,26.0261194 Z M18.75,26.0261194 L16.875,26.0261194 L16.875,23.4235075 L18.75,23.4235075 L18.75,26.0261194 Z M22.5,26.0261194 L20.625,26.0261194 L20.625,21.6884328 L15,21.6884328 L15,26.0261194 L13.125,26.0261194 L13.125,13.0130597 L22.5,13.0130597 L22.5,26.0261194 Z M28.125,26.0261194 L24.375,26.0261194 L24.375,11.2779851 L15,11.2779851 L15,1.73507463 L28.125,1.73507463 L28.125,26.0261194 Z" id="Shape"></path>
+                        <rect id="Rectangle-path" x="16.875" y="4.33768657" width="1.875" height="1.73507463"></rect>
+                        <rect id="Rectangle-path" x="20.625" y="4.33768657" width="1.875" height="1.73507463"></rect>
+                        <rect id="Rectangle-path" x="24.375" y="4.33768657" width="1.875" height="1.73507463"></rect>
+                        <rect id="Rectangle-path" x="16.875" y="7.80783582" width="1.875" height="1.73507463"></rect>
+                        <rect id="Rectangle-path" x="20.625" y="7.80783582" width="1.875" height="1.73507463"></rect>
+                        <rect id="Rectangle-path" x="24.375" y="7.80783582" width="1.875" height="1.73507463"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,204 @@
+<!-- <!--
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+-->
+<div  fieldId="report:criteria" style="margin-top: 4rem;">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<!-- Product -->
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<div class="padding-left-0 v4-materialize-content-center">
+					<label class="text-body">{{::'systemadmin.report.product'| translate}}</label>
+					<div class="input-field">
+						<select id="report_criteria" ui-select2 ng-model="uiElement.refDetail.value[0].searchType.value" ng-disabled="moduleService.freeze == true || uiElement.refDetail.value[0].searchType.meta.enable == 'false'">
+							<option></option>
+							<option ng-repeat="product in moduleService.lazyChoiceList.ProductCode" value="{{product.key.toLowerCase()}}">{{product.group[0]}}
+							</option>
+						</select>
+						<span class="errorMessage" ng-bind="uiElement.refDetail.value[0].searchType.meta.errorCode | translate"></span>
+					</div>
+				</div>
+			</div>
+			<!-- user -->
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<div class="padding-left-0 v4-materialize-content-center">
+					<label class="text-body">{{::'systemadmin.report.user'| translate}}</label>
+					<div class="input-field">
+						<select id="report_user" ng-init="getUserAccount()" ui-select2 ng-change="uiElement.refDetail.value[1].searchType.value = uiElement.refDetail.value[1].searchType.value.toLowerCase()" ng-model="uiElement.refDetail.value[1].searchType.value" ng-disabled="moduleService.freeze == true || uiElement.refDetail.value[1].searchType.meta.enable == 'false'">
+							<option></option>
+							<option ng-repeat="user in userList" value="{{user.userName}}">{{user.fullName}}
+							</option>
+						</select>
+						<span class="errorMessage" ng-bind="uiElement.refDetail.value[1].searchType.meta.errorCode | translate"></span>
+					</div>
+				</div>
+			</div>
+			<!-- branch -->
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<div class="padding-left-0 v4-materialize-content-center">
+					<label class="text-body">{{::'systemadmin.report.branch'| translate}}</label>
+					<div class="input-field">
+						<select id="report_user" ui-select2 ng-model="uiElement.refDetail.value[2].searchType.value" ng-disabled="moduleService.freeze == true || uiElement.refDetail.value[2].searchType.meta.enable == 'false'">
+							<option></option>
+							<option ng-repeat="branch in moduleService.lazyChoiceList.BranchName" value="{{branch.group[0]}}">{{branch.group[0]}}
+							</option>
+						</select>
+						<span class="errorMessage" ng-bind="uiElement.refDetail.value[2].searchType.meta.errorCode | translate"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Second Row -->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<!-- submitDate -->
+			<!-- From -->
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 padding-left-0" >
+					<label class="text-body padding-left-0">{{::'systemadmin.report.submitDateFrom'| translate}}</label>
+					<div class="padding-left-0 v4-materialize-content-center">
+						<div class="input-field" id="submitDateFrom">
+							<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+							<input clear-error-code type="text" class="datepicker"  id="inputSubmitDF" 
+								materiallize-datetime
+								includemaxdate="true" formatdisplay='DD/MM/YYYY'
+								ng-model="submitDateFrom"
+								ng-disabled="moduleService.freeze == true || uiElement.refDetail.value[3].searchType.meta.enable == 'false'" />
+							<span class="errorMessage"
+							ng-bind="uiElement.refDetail.value[3].searchType.meta.errorCode | translate"></span>
+						</div>
+					</div>
+				</div>
+			<!-- To -->
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 padding-right-0" >
+					<label class="text-body padding-left-0">{{::'systemadmin.report.submitDateTo'| translate}}</label>
+					<div class="padding-left-0 v4-materialize-content-center">
+					<label class="text-body" ng-show="false">{{::'systemadmin.report.submitDate'| translate}}</label>
+						<div class="input-field" id="submitDateTo">
+							<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+							<input clear-error-code type="text" class="datepicker" id="inputSubmitDT" ng-change="clearErrorSubTo()"
+								materiallize-datetime
+								includemaxdate="true" formatdisplay='DD/MM/YYYY'
+								ng-model="submitDateTo"
+								ng-disabled="moduleService.freeze == true || uiElement.refDetail.value[3].searchType.meta.enable == 'false'" />
+							<span class="errorMessage"
+								ng-bind="inValidSubTo"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Case Status -->
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<div class="padding-left-0 v4-materialize-content-center">
+					<label class="text-body">{{::'systemadmin.report.caseStatus'| translate}}</label>
+					<div class="input-field">
+						<select id="report_caseStatus" ui-select2 ng-model="uiElement.refDetail.value[5].searchType.value" ng-disabled="moduleService.freeze == true || uiElement.refDetail.value[5].searchType.meta.enable == 'false'">
+							<option></option>
+							<option ng-repeat="status in moduleService.lazyChoiceList.BCStatus" value="{{status.key}}">{{status.group[0]}}
+							</option>
+						</select>
+						<span class="errorMessage" ng-bind="uiElement.refDetail.value[5].searchType.meta.errorCode | translate"></span>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!-- Third row -->
+		<!-- createDate -->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<!-- createDate -->
+			<!-- From -->
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 padding-left-0" >
+					<label class="text-body padding-left-0">{{::'systemadmin.report.createDateFrom'| translate}}</label>
+					<div class="padding-left-0 v4-materialize-content-center">
+						<div class="input-field" id="createDateFrom">
+							<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+							<input clear-error-code type="text" class="datepicker" id="inputCreateDF"
+								materiallize-datetime
+								includemaxdate="true" formatdisplay='DD/MM/YYYY'
+								ng-model="createDateFrom"
+								ng-disabled="moduleService.freeze == true || uiElement.refDetail.value[3].searchType.meta.enable == 'false'" />
+							<span class="errorMessage"
+							ng-bind="uiElement.refDetail.value[3].searchType.meta.errorCode | translate"></span>
+						</div>
+					</div>
+				</div>
+			<!-- To -->
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 padding-right-0" >
+					<label class="text-body padding-left-0">{{::'systemadmin.report.createDateTo'| translate}}</label>
+					<div class="padding-left-0 v4-materialize-content-center">
+					<label class="text-body" ng-show="false">{{::'systemadmin.report.createDate'| translate}}</label>
+						<div class="input-field" id="createDateTo">
+							<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+								<input clear-error-code type="text" class="datepicker"  id="inputCreateDT" ng-change="clearErrorCreTo()"
+									materiallize-datetime
+									includemaxdate="true" formatdisplay='DD/MM/YYYY'
+									ng-model="createDateTo"
+									ng-disabled="moduleService.freeze == true || uiElement.refDetail.value[3].searchType.meta.enable == 'false'" />
+								<span class="errorMessage"
+									ng-bind="inValidCreTo"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="v4-materialize-container">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div  class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+				<button id ="report_generate" ng-disabled="moduleService.freeze == true" class="button-add-more-address btn btn-lg v3-btn-danger v3-fna-button-addchildren v4-prototype-middleView-main"
+				 ng-click="generateReport(submitDateFrom,submitDateTo,createDateFrom,createDateTo)"><label class="text-body">{{'systemadmin.report.generate' | translate}}</label></button>
+			</div>
+			<div  class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+				<button id ="report_clearSearch" ng-disabled="moduleService.freeze == true" class="button-add-more-address btn btn-lg v3-btn-danger v3-fna-button-addchildren v4-prototype-middleView-main"
+				 ng-click="clearSearch(submitDateFrom,submitDateTo,createDateFrom,createDateTo);submitDateFrom = '';submitDateTo = '';createDateFrom='';createDateTo=''"><label class="text-body">{{'systemadmin.report.clearSearch' | translate}}</label></button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

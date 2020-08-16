@@ -1,0 +1,13 @@
+ <md-dialog style="resize: none;">
+            <md-dialog-title>General Info-Reference Only</md-dialog-title>
+	             <md-dialog-content><textarea ng-disabled="isValue=='ACCEPTED' " id="generalInfo" style="width:700px;height:250px;resize: none;" ng-disabled="isValue=='ACCEPTED' " ng-change="handleValue()" ng-model="generalInfoRef"></textarea> </md-dialog-content>
+
+	            <md-dialog-actions>
+	               <md-button ng-disabled="isValue=='ACCEPTED' " ng-click="saveDialog()" class="md-primary">
+	            Save
+	               </md-button>
+	               <md-button ng-click="closeDialog()" class="md-primary">
+	                 Close 
+	               </md-button>
+	            </md-dialog-actions>
+	            </md-dialog>

@@ -1,0 +1,220 @@
+<!-- <!--
+    //*******************************************************************************
+    // * Copyright (c) 2011-2014 CSC.
+    // * Copyright (C) 2010-2016 CSC - All rights reserved.
+    // *
+    // * The information contained in this document is the exclusive property of
+    // * CSC.  This work is protected under USA copyright law
+    // * and the copyright laws of given countries of origin and international
+    // * laws, treaties and/or conventions. No part of this document may be
+    // * reproduced or transmitted in any form or by any means, electronic or
+    // * mechanical including photocopying or by any informational storage or
+    // * retrieval system, unless as expressly permitted by CSC.
+    //
+    // * Design, Develop and Manage by Team Integral Point-of-Sales & Services
+    // ******************************************************************************
+-->
+<!-- Vehicle Class -->
+<div fieldId="vehicleInfo:vehicleClass" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'v3.mynewworkspace.quotation.label.vehicleClass'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0" ng-if="commonService.hasValueNotEmpty(moduleService.lazyChoiceList)" ng-init = "filterVehicleClass()">
+            <select id = "vehicleInfo:vehicleClass" ui-select2 ng-disabled="moduleService.freeze == true" ng-model="moduleService.detail.vehicleClass.value">
+                <option ng-repeat="titleVehicleMT1 in moduleService.lazyListVehicleClass track by $index" value="{{titleVehicleMT1.key}}">{{titleVehicleMT1.group[0]}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="vehicleInfo:cubicCapacity" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'v3.mynewworkspace.quotation.label.cubicCapacity'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <input id = "vehicleInfo_cubicCapacity" pos-autonumeric max="99999" decimal = '2' clear-error-code ng-disabled="moduleService.freeze == true" placeholder="" type="text" maxlength="40" ng-model="uiElement.refDetail.value"/>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="vehicleInfo:registrationNo"	class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">{{::'pnc.mt2.application.title.registrationNo'|
+			translate}}<span
+			ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field margin-right-0">
+			<input id="vehicleInfo_registrationNo" clear-error-code
+				ng-disabled="moduleService.freeze == true" placeholder=""
+				type="text" maxlength="16" ng-model="uiElement.refDetail.value" /> <span
+				class="errorMessage"
+				ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<!-- Coverage -->
+<div fieldId="coverage:coverFrom" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">
+			{{::'v3.mynewworkspace.quotation.label.coverFrom'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field">
+			<i class="fa fa-calendar fa-2x subfix-icon" aria-hidden="true"></i>
+			<input id = "quotation_coverFrom" type="text" autocomplete="off" clear-error-code class="datepicker" materiallize-datetime mindate="today"
+			 formatdisplay='DD/MM/YYYY' ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true || uiElement.refDetail.meta.enable == 'false'"
+			 , ng-change="uiElement.refDetail.value = configTimeZoneForSingapore(uiElement.refDetail.value)" />
+			<span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="coverage:coverTo" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+		<label class="text-body">
+			{{::'v3.mynewworkspace.quotation.label.coverTo'| translate}}
+			<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span>
+		</label>
+		<div class="input-field" >
+			<input id = "quotation_coverTo" ng-init="hideDatepickerIcon()" type="text" autocomplete="off" clear-error-code class="datepicker" materiallize-datetime maxdate="today"
+			 formatdisplay='DD/MM/YYYY' ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true || uiElement.refDetail.meta.enable == 'false' || uiElement.refDetail.meta.editable == 'false'"
+			 , ng-change="uiElement.refDetail.value = configTimeZoneForSingapore(uiElement.refDetail.value)"  />
+			<span  class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+		</div>
+	</div>
+</div>
+<div fieldId="coverage:coverType" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'v3.mynewworkspace.quotation.label.coverType'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <select id = "quotation_coverType" ui-select2 ng-model="uiElement.refDetail.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true || uiElement.refDetail.meta.mandatory == 'false' || uiElement.refDetail.meta.editable == 'false' ">
+                <option ng-repeat="title in moduleService.lazyChoiceList.CoverType" value="{{title.key}}">{{title.group[0]}}</option>
+            </select>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="coverage:noClaimBonus" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'v3.mynewworkspace.quotation.label.noClaimBonus'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <input id = "quotation_noClaimBonus" pos-autonumeric max="99999999999" decimal = '2' clear-error-code ng-disabled="moduleService.freeze == true" type="text" ng-model="uiElement.refDetail.value"/>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="coverage:contractCurrency" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'new.v4.mynewworkspace.illustration.label.ContractCurrency'| translate}}<span ng-show="moduleService.detail.contractCurrency.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <input id = "quotation_contractCurrency" clear-error-code type="text" ng-model="moduleService.detail.contractCurrency.value" ng-disabled="isAcceptQuotation == true || moduleService.freeze == true || moduleService.detail.contractCurrency.meta.mandatory == 'false' || moduleService.detail.contractCurrency.meta.editable == 'false'"/>
+            <span class="errorMessage" ng-bind="moduleService.detail.contractCurrency.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+<div fieldId="coverage:sumInsured" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 v4-materialize-container">
+        <label class="text-body">{{::'new.v4.mynewworkspace.illustration.label.SumInsured'| translate}}<span ng-show="uiElement.refDetail.meta.mandatory == 'true'">*</span></label>
+        <div class="input-field margin-right-0">
+            <input id = "quotation_sumInsured" pos-autonumeric max="99999999999" decimal = '2' clear-error-code ng-disabled="moduleService.freeze == true" placeholder="" type="text" maxlength="40" ng-model="uiElement.refDetail.value"/>
+            <span class="errorMessage" ng-bind="uiElement.refDetail.meta.errorCode | translate"></span>
+        </div>
+    </div>
+</div>
+
+<!-- Addtional Coverage -->
+<div fieldId="addtionalCoverage:coverage" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v3-padding-0">
+	<div class="row v4-materialize-container">
+		<div class="col-xs-11 col-sm-12 col-md-12 col-lg-12 text-body flexy" ng-repeat="item in uiElement.refDetail.value track by $index">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-body bottom-align-text">
+				<md-checkbox ng-attr-id="{{ 'quotation_addtionalCoverage' + item.key.value}}"  style="position: sticky; opacity: 100;" class="pdpa-checkbox" ng-disabled="moduleService.freeze == true || uiElement.refDetail.meta.enable == 'false'"
+				 ng-model="item.value.value" ng-change="updateAdditionalCoverage(item.key.value,item.value.value,$index)" ng-true-value="'true'" ng-false-value="'false'" >
+					<span ng-bind-html="displayAddtionalCoverage(item.key.value)"></span>
+				</md-checkbox>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-body" ng-if="item.key.value == 'MPWS'">
+				<label class="text-body">{{::'v4.page.policy.label.sumInsured' | translate}}<span> ({{moduleService.detail.contractCurrency.value}})</span><span ng-show="item.value.value == 'true'">*</span></label>
+				<div class="input-field margin-right-0">
+		            <input id = "quotation_input_MPWS" pos-autonumeric max="999999999999999" decimal = '2' clear-error-code ng-disabled="moduleService.freeze == true" type="text" ng-model='moduleService.detail.addCovSumInsured.value'/>
+		            <span class="errorMessage" ng-bind="moduleService.detail.addCovSumInsured.meta.errorCode | translate"></span>
+        		</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div fieldId="premiumSumary:summary" class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+	<div class="row">
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5 v4-materialize-container">
+	    </div>
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 v4-materialize-container right-align">
+	    	<label class="text-body text-bold text-20">{{moduleService.detail.contractCurrency.value}}</label>
+	    </div>
+    </div>
+    <div class="row">
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5 v4-materialize-container">
+	    	<label class="text-body ">{{::'v3.mynewworkspace.quotation.label.basicPremium'| translate}}</label>
+	    </div>
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 v4-materialize-container right-align">
+	    	<label class="text-body text-bold ">{{card.refDetail.basicPremium.value | v3Currency:2}}</label>
+	    </div>
+    </div>
+    <div class="row" ng-repeat="item in card.refDetail.addPremiumSummaries.value track by $index" ng-if="commonService.hasValueNotEmpty(item.additionalKey.value)&& item.additionalValue.value === 'true'">
+	    <div>
+		    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5 v4-materialize-container" >
+		    	<label class="text-body" ng-bind-html="displayAddtionalCoverage(item.additionalKey.value)"></label>
+		    </div>
+		    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 v4-materialize-container right-align">
+		    	<label class="text-body text-bold ">{{item.additionalPremium.value | v3Currency:2}}</label>
+		    </div>
+	    </div>
+    </div>
+    <div class="row mb-4">
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5 v4-materialize-container">
+	    	<label class="text-body">{{::'v3.mynewworkspace.quotation.label.noClaimBonus'| translate}}</label>
+	    </div>
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 v4-materialize-container text-16 mb-4 right-align">
+	    	<label class="text-body text-bold">{{moduleService.detail.noClaimBonus.value | v3Currency:2}}</label>
+	    </div>
+    </div>
+    <div class="row">
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5 v4-materialize-container">
+	    	<label class="text-body  text-bold">{{::'v3.mynewworkspace.quotation.label.totalPayable'| translate}}</label>
+	    </div>
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 v4-materialize-container right-align">
+	    	<label class="text-body text-bold">{{card.refDetail.totalPremium.value | v3Currency:2}}</label>
+   		 </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

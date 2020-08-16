@@ -1,0 +1,406 @@
+{
+  "IposDocument": {
+    "Data": {
+      "illustration:Illustration": {
+        "section": "illustration:Illustration",
+        "uiStyle": "tab",
+        "icons": {
+          "cardIcon": {
+            "content": "fa fa-pie-chart"
+          }
+        },
+        "permission": {
+          "openable": [
+            "case_openable"
+          ],
+          "editable": [
+            "case_editable"
+          ],
+          "viewable": [
+            "case_viewable"
+          ]
+        },
+        "illustration:PolicyOwner": {
+          "key": [
+            "policyOwner"
+          ],
+          "section": "illustration:Illustration",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-o"
+            }
+          },
+          "policyOwner:Salutation": {
+            "key": [
+              "person",
+              "name",
+              "titleCode"
+            ],
+            "group": "1"
+          },
+          "policyOwner:FirstName": {
+            "key": [
+              "person",
+              "name",
+              "first"
+            ],
+            "group": "2"
+          },
+          "policyOwner:LastName": {
+            "key": [
+              "person",
+              "name",
+              "last"
+            ],
+            "group": "2"
+          },
+          "policyOwner:DOB": {
+            "key": [
+              "person",
+              "birthDate"
+            ],
+            "group": "3"
+          },
+          "policyOwner:ANB": {
+            "key": [
+              "person",
+              "age"
+            ],
+            "group": "3"
+          },
+          "policyOwner:Gender": {
+            "key": [
+              "person",
+              "genderCode"
+            ],
+            "group": "4"
+          },
+          "policyOwner:SmokerStatus": {
+            "key": [
+              "person",
+              "smokerStatus"
+            ],
+            "group": "4"
+          },
+          "policyOwner:NOB": {
+            "key": [
+              "natureOfBusiness"
+            ],
+            "group": "5"
+          },
+          "policyOwner:Occupation": {
+            "key": [
+              "occupationModel",
+              "occupationCode"
+            ],
+            "group": "5"
+          }
+        },
+        "illustration:AddLifeInsured": {
+          "key": [],
+          "section": "illustration:Illustration",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-circle-o"
+            },
+            "cardIconPlus": {}
+          },
+          "onOpen": "toggleLifeInsured(card)",
+          "isVisible": "moduleService.detail.isAddLifeInsured.value == commonService.CONSTANTS.PO_LI_RELATION.SAME"
+        },
+        "illustration:LifeInsured": {
+          "key": [
+            "lifeInsured"
+          ],
+          "onOpen": "searchContact()",
+          "section": "illustration:Illustration",
+          "isVisible": "moduleService.detail.isAddLifeInsured.value != commonService.CONSTANTS.PO_LI_RELATION.SAME",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-user-circle-o"
+            },
+            "removeCard": {
+              "onClick": "toggleLifeInsured(card)"
+            }
+          },
+          "lifeInsured:listContact": {
+            "key": [
+              ""
+            ],
+            "group": "0"
+          },
+          "lifeInsured:RPO": {
+            "key": [
+              "lifeInsured",
+              "relationship"
+            ],
+            "group": "0"
+          },
+          "lifeInsured:Salutation": {
+            "key": [
+              "lifeInsured",
+              "person",
+              "name",
+              "titleCode"
+            ],
+            "group": "0"
+          },
+          "lifeInsured:FirstName": {
+            "key": [
+              "lifeInsured",
+              "person",
+              "name",
+              "first"
+            ],
+            "group": "2"
+          },
+          "lifeInsured:LastName": {
+            "key": [
+              "lifeInsured",
+              "person",
+              "name",
+              "last"
+            ],
+            "group": "2"
+          },
+          "lifeInsured:DOB": {
+            "key": [
+              "lifeInsured",
+              "person",
+              "birthDate"
+            ],
+            "group": "3"
+          },
+          "lifeInsured:ANB": {
+            "key": [
+              "lifeInsured",
+              "person",
+              "age"
+            ],
+            "group": "3"
+          },
+          "lifeInsured:Gender": {
+            "key": [
+              "lifeInsured",
+              "person",
+              "genderCode"
+            ],
+            "group": "4"
+          },
+          "lifeInsured:SmokerStatus": {
+            "key": [
+              "lifeInsured",
+              "person",
+              "smokerStatus"
+            ],
+            "group": "4"
+          },
+          "lifeInsured:NOB": {
+            "key": [
+              "lifeInsured",
+              "natureOfBusiness"
+            ],
+            "group": "5"
+          },
+          "lifeInsured:Occupation": {
+            "key": [
+              "lifeInsured",
+              "occupationModel",
+              "occupationCode"
+            ],
+            "group": "5"
+          },
+          "lifeInsured:DedupCheck": {
+            "key": [
+              ""
+            ],
+            "group": "6"
+          },
+          "lifeInsured:DeleteLifeInsured": {
+            "key": [
+              ""
+            ],
+            "isVisible": "shouldInitNormalQuotation() == false",
+            "group": "6"
+          }
+        },
+        "illustration:BasicPlan": {
+          "key": [
+            "basicPlan"
+          ],
+          "uiStyle": "section",
+          "section": "illustration:Illustration",
+          "icons": {
+            "cardIcon": {
+              "content": "fa fa-asterisk"
+            }
+          },
+          "illustration:BasicInformation": {
+            "key": [
+              "information"
+            ],
+            "section": "illustration:BasicPlan",
+            "icon": "fa fa-folder-open",
+            "illustration:EffectiveDate": {
+              "key": [
+                "effectiveDate"
+              ],
+              "group": "1"
+            },
+            "illustration:PremiumFrequency": {
+              "key": [
+                "premiumFrequency"
+              ],
+              "group": "1"
+            },
+            "illustration:ContractCurrency": {
+              "key": [
+                "contractCurrency"
+              ],
+              "group": "2"
+            },
+            "illustration:BillingCurrency": {
+              "key": [
+                "billingCurrency"
+              ],
+              "group": "2"
+            },
+            "illustration:PolicyTerm": {
+              "key": [
+                "policyTerm"
+              ],
+              "group": "3"
+            },
+            "illustration:PremiumTerm": {
+              "key": [
+                "premiumTerm"
+              ],
+              "group": "3"
+            },
+            "illustration:SumAssured": {
+              "key": [
+                "sumAssured"
+              ],
+              "group": "4"
+            },
+            "illustration:RegularPremium": {
+              "key": [
+                "regularPremium"
+              ],
+              "group": "4"
+            }
+          },
+          "illustration:Fund": {
+            "key": [
+              "funds"
+            ],
+            "section": "illustration:BasicPlan",
+            "icon": "fa fa-euro",
+            "previewHtml": "v4-preview-static-quotation-fund.html",
+            "illustration:FundSelection": {
+              "key": [],
+              "validStatus": "commonService.CONSTANTS.DOCUMENT_STATUS.VALID"
+            },
+            "illustration:FundList": {
+              "key": [
+                "funds"
+              ]
+            }
+          },
+          "illustration:SingleTopUp": {
+            "key": [
+              "singleTopUp"
+            ],
+            "section": "illustration:BasicPlan",
+            "icon": "fa fa-sort",
+            "previewHtml": "v4-preview-static-quotation-singletopup.html",
+            "illustration:SingleTopUps": {
+              "key": [],
+              "validStatus": "commonService.CONSTANTS.DOCUMENT_STATUS.VALID"
+            },
+            "illustration:SingleTopUpList": {
+              "key": [
+                "singleTopUp"
+              ]
+            }
+          },
+          "illustration:Withdrawal": {
+            "isVisible": "true",
+            "key": [
+              "withdrawal"
+            ],
+            "section": "illustration:BasicPlan",
+            "icon": "fa fa-credit-card",
+            "previewHtml": "v4-preview-static-quotation-withdrawal.html",
+            "illustration:AddWithdrawals": {
+              "key": [],
+              "validStatus": "commonService.CONSTANTS.DOCUMENT_STATUS.VALID"
+            },
+            "illustration:WithdrawalsList": {
+              "key": [
+                "withdrawal"
+              ]
+            }
+          },
+          "illustration:LoadingInformation": {
+            "isVisible": "moduleService.detail.quotationType.value == 'UW_QUO'",
+            "key": [
+              "loadingInformation"
+            ],
+            "section": "illustration:BasicPlan",
+            "icon": "fa fa-pencil-square-o",
+            "illustration:AddLoadingInformation": {
+              "key": [],
+              "validStatus": "commonService.CONSTANTS.DOCUMENT_STATUS.VALID"
+            },
+            "illustration:LoadingList": {
+              "key": [
+                "loadingInformation"
+              ]
+            }
+          },
+          "illustration:ExclusionsCauses": {
+            "isVisible": "moduleService.detail.quotationType.value == 'UW_QUO'",
+            "key": [
+              ""
+            ],
+            "section": "illustration:BasicPlan",
+            "icon": "fa fa-commenting",
+            "illustration:ExclusionsClauses": {
+              "key": [
+                "exclusion"
+              ]
+            }
+          }
+        },
+        "illustration:Rider": {
+          "key": [
+            ""
+          ],
+          "icon": "fa fa-pencil-square-o",
+          "uiStyle": "section",
+          "section": "illustration:Illustration",
+          "illustration:RiderInformation": {
+            "key": [
+              "riders"
+            ]
+          }
+        },
+        "illustration:Summary": {
+          "key": [
+            ""
+          ],
+          "isVisible": "shouldInitNormalQuotation() == false",
+          "icon": "fa fa-pencil-square-o",
+          "uiStyle": "section",
+          "section": "illustration:Illustration",
+          "illustration:DetailSummary": {
+            "key": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  }
+}
